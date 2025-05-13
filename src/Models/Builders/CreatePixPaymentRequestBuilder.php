@@ -12,6 +12,7 @@ namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use PagarmeApiSDKLib\Models\CreatePixPaymentRequest;
+use PagarmeApiSDKLib\Models\PixAdditionalInformation;
 
 /**
  * Builder for model CreatePixPaymentRequest
@@ -31,7 +32,7 @@ class CreatePixPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create pix payment request Builder object.
+     * Initializes a new Create Pix Payment Request Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +41,8 @@ class CreatePixPaymentRequestBuilder
 
     /**
      * Sets expires at field.
+     *
+     * @param \DateTime|null $value
      */
     public function expiresAt(?\DateTime $value): self
     {
@@ -49,6 +52,8 @@ class CreatePixPaymentRequestBuilder
 
     /**
      * Sets expires in field.
+     *
+     * @param int|null $value
      */
     public function expiresIn(?int $value): self
     {
@@ -58,6 +63,8 @@ class CreatePixPaymentRequestBuilder
 
     /**
      * Sets additional information field.
+     *
+     * @param PixAdditionalInformation[]|null $value
      */
     public function additionalInformation(?array $value): self
     {
@@ -66,7 +73,7 @@ class CreatePixPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create pix payment request object.
+     * Initializes a new Create Pix Payment Request object.
      */
     public function build(): CreatePixPaymentRequest
     {

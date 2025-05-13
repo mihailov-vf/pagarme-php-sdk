@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetPriceBracketResponse;
 use PagarmeApiSDKLib\Models\GetPricingSchemeResponse;
 
 /**
@@ -31,7 +32,7 @@ class GetPricingSchemeResponseBuilder
     }
 
     /**
-     * Initializes a new get pricing scheme response Builder object.
+     * Initializes a new Get Pricing Scheme Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +41,8 @@ class GetPricingSchemeResponseBuilder
 
     /**
      * Sets price field.
+     *
+     * @param int|null $value
      */
     public function price(?int $value): self
     {
@@ -58,6 +61,8 @@ class GetPricingSchemeResponseBuilder
 
     /**
      * Sets scheme type field.
+     *
+     * @param string|null $value
      */
     public function schemeType(?string $value): self
     {
@@ -76,6 +81,8 @@ class GetPricingSchemeResponseBuilder
 
     /**
      * Sets price brackets field.
+     *
+     * @param GetPriceBracketResponse[]|null $value
      */
     public function priceBrackets(?array $value): self
     {
@@ -94,6 +101,8 @@ class GetPricingSchemeResponseBuilder
 
     /**
      * Sets minimum price field.
+     *
+     * @param int|null $value
      */
     public function minimumPrice(?int $value): self
     {
@@ -112,6 +121,8 @@ class GetPricingSchemeResponseBuilder
 
     /**
      * Sets percentage field.
+     *
+     * @param float|null $value
      */
     public function percentage(?float $value): self
     {
@@ -129,7 +140,7 @@ class GetPricingSchemeResponseBuilder
     }
 
     /**
-     * Initializes a new get pricing scheme response object.
+     * Initializes a new Get Pricing Scheme Response object.
      */
     public function build(): GetPricingSchemeResponse
     {

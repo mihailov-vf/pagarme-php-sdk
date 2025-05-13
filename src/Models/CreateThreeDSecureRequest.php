@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -199,6 +200,27 @@ class CreateThreeDSecureRequest implements \JsonSerializable
     public function setVersion(?string $version): void
     {
         $this->version = $version;
+    }
+
+    /**
+     * Converts the CreateThreeDSecureRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateThreeDSecureRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateThreeDSecureRequest',
+            [
+                'mpi' => $this->mpi,
+                'cavv' => $this->cavv,
+                'eci' => $this->eci,
+                'transactionId' => $this->transactionId,
+                'successUrl' => $this->successUrl,
+                'dsTransactionId' => $this->dsTransactionId,
+                'version' => $this->version
+            ]
+        );
     }
 
     /**

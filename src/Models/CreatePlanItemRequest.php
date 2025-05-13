@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -187,6 +188,26 @@ class CreatePlanItemRequest implements \JsonSerializable
     public function setQuantity(?int $quantity): void
     {
         $this->quantity = $quantity;
+    }
+
+    /**
+     * Converts the CreatePlanItemRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreatePlanItemRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreatePlanItemRequest',
+            [
+                'name' => $this->name,
+                'pricingScheme' => $this->pricingScheme,
+                'id' => $this->id,
+                'description' => $this->description,
+                'cycles' => $this->cycles,
+                'quantity' => $this->quantity
+            ]
+        );
     }
 
     /**

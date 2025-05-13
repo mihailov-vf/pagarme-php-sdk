@@ -31,7 +31,7 @@ class GetMovementObjectBaseResponseBuilder
     }
 
     /**
-     * Initializes a new get movement object base response Builder object.
+     * Initializes a new Get Movement Object Base Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetMovementObjectBaseResponseBuilder
 
     /**
      * Sets object field.
+     *
+     * @param string|null $value
      */
     public function object(?string $value): self
     {
@@ -49,6 +51,8 @@ class GetMovementObjectBaseResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -67,6 +71,8 @@ class GetMovementObjectBaseResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -85,6 +91,8 @@ class GetMovementObjectBaseResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param string|null $value
      */
     public function amount(?string $value): self
     {
@@ -103,6 +111,8 @@ class GetMovementObjectBaseResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param string|null $value
      */
     public function createdAt(?string $value): self
     {
@@ -121,6 +131,8 @@ class GetMovementObjectBaseResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -139,6 +151,8 @@ class GetMovementObjectBaseResponseBuilder
 
     /**
      * Sets charge id field.
+     *
+     * @param string|null $value
      */
     public function chargeId(?string $value): self
     {
@@ -157,6 +171,8 @@ class GetMovementObjectBaseResponseBuilder
 
     /**
      * Sets gateway id field.
+     *
+     * @param string|null $value
      */
     public function gatewayId(?string $value): self
     {
@@ -174,7 +190,7 @@ class GetMovementObjectBaseResponseBuilder
     }
 
     /**
-     * Initializes a new get movement object base response object.
+     * Initializes a new Get Movement Object Base Response object.
      */
     public function build(): GetMovementObjectBaseResponse
     {

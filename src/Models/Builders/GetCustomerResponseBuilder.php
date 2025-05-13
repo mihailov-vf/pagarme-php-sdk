@@ -33,7 +33,7 @@ class GetCustomerResponseBuilder
     }
 
     /**
-     * Initializes a new get customer response Builder object.
+     * Initializes a new Get Customer Response Builder object.
      */
     public static function init(): self
     {
@@ -42,6 +42,8 @@ class GetCustomerResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -60,6 +62,8 @@ class GetCustomerResponseBuilder
 
     /**
      * Sets name field.
+     *
+     * @param string|null $value
      */
     public function name(?string $value): self
     {
@@ -78,6 +82,8 @@ class GetCustomerResponseBuilder
 
     /**
      * Sets email field.
+     *
+     * @param string|null $value
      */
     public function email(?string $value): self
     {
@@ -96,6 +102,8 @@ class GetCustomerResponseBuilder
 
     /**
      * Sets delinquent field.
+     *
+     * @param bool|null $value
      */
     public function delinquent(?bool $value): self
     {
@@ -114,6 +122,8 @@ class GetCustomerResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -132,6 +142,8 @@ class GetCustomerResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -150,6 +162,8 @@ class GetCustomerResponseBuilder
 
     /**
      * Sets document field.
+     *
+     * @param string|null $value
      */
     public function document(?string $value): self
     {
@@ -168,6 +182,8 @@ class GetCustomerResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -186,6 +202,8 @@ class GetCustomerResponseBuilder
 
     /**
      * Sets fb access token field.
+     *
+     * @param string|null $value
      */
     public function fbAccessToken(?string $value): self
     {
@@ -204,6 +222,8 @@ class GetCustomerResponseBuilder
 
     /**
      * Sets address field.
+     *
+     * @param GetAddressResponse|null $value
      */
     public function address(?GetAddressResponse $value): self
     {
@@ -222,6 +242,8 @@ class GetCustomerResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -240,6 +262,8 @@ class GetCustomerResponseBuilder
 
     /**
      * Sets phones field.
+     *
+     * @param GetPhonesResponse|null $value
      */
     public function phones(?GetPhonesResponse $value): self
     {
@@ -258,6 +282,8 @@ class GetCustomerResponseBuilder
 
     /**
      * Sets fb id field.
+     *
+     * @param int|null $value
      */
     public function fbId(?int $value): self
     {
@@ -276,6 +302,8 @@ class GetCustomerResponseBuilder
 
     /**
      * Sets code field.
+     *
+     * @param string|null $value
      */
     public function code(?string $value): self
     {
@@ -294,6 +322,8 @@ class GetCustomerResponseBuilder
 
     /**
      * Sets document type field.
+     *
+     * @param string|null $value
      */
     public function documentType(?string $value): self
     {
@@ -311,7 +341,7 @@ class GetCustomerResponseBuilder
     }
 
     /**
-     * Initializes a new get customer response object.
+     * Initializes a new Get Customer Response object.
      */
     public function build(): GetCustomerResponse
     {

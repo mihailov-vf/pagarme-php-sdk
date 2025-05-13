@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -571,6 +572,37 @@ class GetCreditCardTransactionResponse extends GetTransactionResponse implements
     public function unsetIndirectAcceptor(): void
     {
         $this->indirectAcceptor = [];
+    }
+
+    /**
+     * Converts the GetCreditCardTransactionResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetCreditCardTransactionResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetCreditCardTransactionResponse',
+            [
+                'statementDescriptor' => $this->getStatementDescriptor(),
+                'acquirerName' => $this->acquirerName,
+                'acquirerAffiliationCode' => $this->getAcquirerAffiliationCode(),
+                'acquirerTid' => $this->acquirerTid,
+                'acquirerNsu' => $this->acquirerNsu,
+                'acquirerAuthCode' => $this->getAcquirerAuthCode(),
+                'operationType' => $this->getOperationType(),
+                'card' => $this->getCard(),
+                'acquirerMessage' => $this->getAcquirerMessage(),
+                'acquirerReturnCode' => $this->getAcquirerReturnCode(),
+                'installments' => $this->getInstallments(),
+                'threedAuthenticationUrl' => $this->getThreedAuthenticationUrl(),
+                'fundingSource' => $this->getFundingSource(),
+                'retryInfo' => $this->getRetryInfo(),
+                'brandId' => $this->getBrandId(),
+                'indirectAcceptor' => $this->getIndirectAcceptor()
+            ],
+            parent::__toString()
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -280,6 +281,29 @@ class UpdateChargePaymentMethodRequest implements \JsonSerializable
     public function setPrivateLabel(CreatePrivateLabelPaymentRequest $privateLabel): void
     {
         $this->privateLabel = $privateLabel;
+    }
+
+    /**
+     * Converts the UpdateChargePaymentMethodRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateChargePaymentMethodRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'UpdateChargePaymentMethodRequest',
+            [
+                'updateSubscription' => $this->updateSubscription,
+                'paymentMethod' => $this->paymentMethod,
+                'creditCard' => $this->creditCard,
+                'debitCard' => $this->debitCard,
+                'boleto' => $this->boleto,
+                'voucher' => $this->voucher,
+                'cash' => $this->cash,
+                'bankTransfer' => $this->bankTransfer,
+                'privateLabel' => $this->privateLabel
+            ]
+        );
     }
 
     /**

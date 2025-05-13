@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class CreateClearSaleRequest implements \JsonSerializable
@@ -44,6 +45,16 @@ class CreateClearSaleRequest implements \JsonSerializable
     public function setCustomSla(int $customSla): void
     {
         $this->customSla = $customSla;
+    }
+
+    /**
+     * Converts the CreateClearSaleRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateClearSaleRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('CreateClearSaleRequest', ['customSla' => $this->customSla]);
     }
 
     /**

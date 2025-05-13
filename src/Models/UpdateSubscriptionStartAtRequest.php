@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -51,6 +52,16 @@ class UpdateSubscriptionStartAtRequest implements \JsonSerializable
     public function setStartAt(\DateTime $startAt): void
     {
         $this->startAt = $startAt;
+    }
+
+    /**
+     * Converts the UpdateSubscriptionStartAtRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateSubscriptionStartAtRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('UpdateSubscriptionStartAtRequest', ['startAt' => $this->startAt]);
     }
 
     /**

@@ -11,7 +11,7 @@ Request for canceling a subscription
 
 | Name | Type | Tags | Description | Getter | Setter |
 |  --- | --- | --- | --- | --- | --- |
-| `cancelPendingInvoices` | `bool` | Required | Indicates if the pending invoices must also be canceled.<br>**Default**: `true` | getCancelPendingInvoices(): bool | setCancelPendingInvoices(bool cancelPendingInvoices): void |
+| `cancelPendingInvoices` | `bool` | Required | Indicates if the pending invoices must also be canceled.<br><br>**Default**: `true` | getCancelPendingInvoices(): bool | setCancelPendingInvoices(bool cancelPendingInvoices): void |
 
 ## Example (as JSON)
 

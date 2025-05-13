@@ -32,7 +32,7 @@ class CreateCardPayloadRequestBuilder
     }
 
     /**
-     * Initializes a new create card payload request Builder object.
+     * Initializes a new Create Card Payload Request Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class CreateCardPayloadRequestBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -59,6 +61,8 @@ class CreateCardPayloadRequestBuilder
 
     /**
      * Sets google pay field.
+     *
+     * @param CreateGooglePayRequest|null $value
      */
     public function googlePay(?CreateGooglePayRequest $value): self
     {
@@ -76,7 +80,7 @@ class CreateCardPayloadRequestBuilder
     }
 
     /**
-     * Initializes a new create card payload request object.
+     * Initializes a new Create Card Payload Request object.
      */
     public function build(): CreateCardPayloadRequest
     {

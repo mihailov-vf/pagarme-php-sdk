@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -55,6 +56,20 @@ class GetCashTransactionResponse extends GetTransactionResponse implements \Json
     public function unsetDescription(): void
     {
         $this->description = [];
+    }
+
+    /**
+     * Converts the GetCashTransactionResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetCashTransactionResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetCashTransactionResponse',
+            ['description' => $this->getDescription()],
+            parent::__toString()
+        );
     }
 
     /**

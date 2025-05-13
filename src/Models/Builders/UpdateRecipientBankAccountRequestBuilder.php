@@ -32,7 +32,10 @@ class UpdateRecipientBankAccountRequestBuilder
     }
 
     /**
-     * Initializes a new update recipient bank account request Builder object.
+     * Initializes a new Update Recipient Bank Account Request Builder object.
+     *
+     * @param CreateBankAccountRequest $bankAccount
+     * @param string $paymentMode
      */
     public static function init(CreateBankAccountRequest $bankAccount, string $paymentMode): self
     {
@@ -40,7 +43,7 @@ class UpdateRecipientBankAccountRequestBuilder
     }
 
     /**
-     * Initializes a new update recipient bank account request object.
+     * Initializes a new Update Recipient Bank Account Request object.
      */
     public function build(): UpdateRecipientBankAccountRequest
     {

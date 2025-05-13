@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -461,6 +462,36 @@ class CreateCheckoutPaymentRequest implements \JsonSerializable
     public function setPix(?CreateCheckoutPixPaymentRequest $pix): void
     {
         $this->pix = $pix;
+    }
+
+    /**
+     * Converts the CreateCheckoutPaymentRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateCheckoutPaymentRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateCheckoutPaymentRequest',
+            [
+                'acceptedPaymentMethods' => $this->acceptedPaymentMethods,
+                'acceptedMultiPaymentMethods' => $this->acceptedMultiPaymentMethods,
+                'successUrl' => $this->successUrl,
+                'defaultPaymentMethod' => $this->defaultPaymentMethod,
+                'gatewayAffiliationId' => $this->gatewayAffiliationId,
+                'creditCard' => $this->creditCard,
+                'debitCard' => $this->debitCard,
+                'boleto' => $this->boleto,
+                'customerEditable' => $this->customerEditable,
+                'expiresIn' => $this->expiresIn,
+                'skipCheckoutSuccessPage' => $this->skipCheckoutSuccessPage,
+                'billingAddressEditable' => $this->billingAddressEditable,
+                'billingAddress' => $this->billingAddress,
+                'bankTransfer' => $this->bankTransfer,
+                'acceptedBrands' => $this->acceptedBrands,
+                'pix' => $this->pix
+            ]
+        );
     }
 
     /**

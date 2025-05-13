@@ -31,7 +31,7 @@ class GetUsageReportResponseBuilder
     }
 
     /**
-     * Initializes a new get usage report response Builder object.
+     * Initializes a new Get Usage Report Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetUsageReportResponseBuilder
 
     /**
      * Sets url field.
+     *
+     * @param string|null $value
      */
     public function url(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetUsageReportResponseBuilder
 
     /**
      * Sets usage report url field.
+     *
+     * @param string|null $value
      */
     public function usageReportUrl(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetUsageReportResponseBuilder
 
     /**
      * Sets grouped report url field.
+     *
+     * @param string|null $value
      */
     public function groupedReportUrl(?string $value): self
     {
@@ -93,7 +99,7 @@ class GetUsageReportResponseBuilder
     }
 
     /**
-     * Initializes a new get usage report response object.
+     * Initializes a new Get Usage Report Response object.
      */
     public function build(): GetUsageReportResponse
     {

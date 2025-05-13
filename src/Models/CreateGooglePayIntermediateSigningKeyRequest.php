@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -96,6 +97,20 @@ class CreateGooglePayIntermediateSigningKeyRequest implements \JsonSerializable
     public function unsetSignatures(): void
     {
         $this->signatures = [];
+    }
+
+    /**
+     * Converts the CreateGooglePayIntermediateSigningKeyRequest object to a human-readable string
+     * representation.
+     *
+     * @return string The string representation of the CreateGooglePayIntermediateSigningKeyRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateGooglePayIntermediateSigningKeyRequest',
+            ['signedKey' => $this->getSignedKey(), 'signatures' => $this->getSignatures()]
+        );
     }
 
     /**

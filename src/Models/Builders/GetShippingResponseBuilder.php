@@ -32,7 +32,7 @@ class GetShippingResponseBuilder
     }
 
     /**
-     * Initializes a new get shipping response Builder object.
+     * Initializes a new Get Shipping Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetShippingResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -59,6 +61,8 @@ class GetShippingResponseBuilder
 
     /**
      * Sets description field.
+     *
+     * @param string|null $value
      */
     public function description(?string $value): self
     {
@@ -77,6 +81,8 @@ class GetShippingResponseBuilder
 
     /**
      * Sets recipient name field.
+     *
+     * @param string|null $value
      */
     public function recipientName(?string $value): self
     {
@@ -95,6 +101,8 @@ class GetShippingResponseBuilder
 
     /**
      * Sets recipient phone field.
+     *
+     * @param string|null $value
      */
     public function recipientPhone(?string $value): self
     {
@@ -113,6 +121,8 @@ class GetShippingResponseBuilder
 
     /**
      * Sets address field.
+     *
+     * @param GetAddressResponse|null $value
      */
     public function address(?GetAddressResponse $value): self
     {
@@ -131,6 +141,8 @@ class GetShippingResponseBuilder
 
     /**
      * Sets max delivery date field.
+     *
+     * @param \DateTime|null $value
      */
     public function maxDeliveryDate(?\DateTime $value): self
     {
@@ -149,6 +161,8 @@ class GetShippingResponseBuilder
 
     /**
      * Sets estimated delivery date field.
+     *
+     * @param \DateTime|null $value
      */
     public function estimatedDeliveryDate(?\DateTime $value): self
     {
@@ -167,6 +181,8 @@ class GetShippingResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -184,7 +200,7 @@ class GetShippingResponseBuilder
     }
 
     /**
-     * Initializes a new get shipping response object.
+     * Initializes a new Get Shipping Response object.
      */
     public function build(): GetShippingResponse
     {

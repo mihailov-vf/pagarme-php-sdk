@@ -12,6 +12,7 @@ namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use PagarmeApiSDKLib\Models\CreateCaptureChargeRequest;
+use PagarmeApiSDKLib\Models\CreateSplitRequest;
 
 /**
  * Builder for model CreateCaptureChargeRequest
@@ -31,7 +32,10 @@ class CreateCaptureChargeRequestBuilder
     }
 
     /**
-     * Initializes a new create capture charge request Builder object.
+     * Initializes a new Create Capture Charge Request Builder object.
+     *
+     * @param string $code
+     * @param string $operationReference
      */
     public static function init(string $code, string $operationReference): self
     {
@@ -40,6 +44,8 @@ class CreateCaptureChargeRequestBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -49,6 +55,8 @@ class CreateCaptureChargeRequestBuilder
 
     /**
      * Sets split field.
+     *
+     * @param CreateSplitRequest[]|null $value
      */
     public function split(?array $value): self
     {
@@ -57,7 +65,7 @@ class CreateCaptureChargeRequestBuilder
     }
 
     /**
-     * Initializes a new create capture charge request object.
+     * Initializes a new Create Capture Charge Request object.
      */
     public function build(): CreateCaptureChargeRequest
     {

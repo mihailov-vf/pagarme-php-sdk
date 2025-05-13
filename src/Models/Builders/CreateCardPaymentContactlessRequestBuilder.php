@@ -34,7 +34,9 @@ class CreateCardPaymentContactlessRequestBuilder
     }
 
     /**
-     * Initializes a new create card payment contactless request Builder object.
+     * Initializes a new Create Card Payment Contactless Request Builder object.
+     *
+     * @param string $type
      */
     public static function init(string $type): self
     {
@@ -43,6 +45,8 @@ class CreateCardPaymentContactlessRequestBuilder
 
     /**
      * Sets apple pay field.
+     *
+     * @param CreateApplePayRequest|null $value
      */
     public function applePay(?CreateApplePayRequest $value): self
     {
@@ -52,6 +56,8 @@ class CreateCardPaymentContactlessRequestBuilder
 
     /**
      * Sets google pay field.
+     *
+     * @param CreateGooglePayRequest|null $value
      */
     public function googlePay(?CreateGooglePayRequest $value): self
     {
@@ -61,6 +67,8 @@ class CreateCardPaymentContactlessRequestBuilder
 
     /**
      * Sets emv field.
+     *
+     * @param CreateEmvDecryptRequest|null $value
      */
     public function emv(?CreateEmvDecryptRequest $value): self
     {
@@ -69,7 +77,7 @@ class CreateCardPaymentContactlessRequestBuilder
     }
 
     /**
-     * Initializes a new create card payment contactless request object.
+     * Initializes a new Create Card Payment Contactless Request object.
      */
     public function build(): CreateCardPaymentContactlessRequest
     {

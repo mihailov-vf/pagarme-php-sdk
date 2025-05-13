@@ -31,7 +31,12 @@ class CreateOrderItemRequestBuilder
     }
 
     /**
-     * Initializes a new create order item request Builder object.
+     * Initializes a new Create Order Item Request Builder object.
+     *
+     * @param int $amount
+     * @param string $description
+     * @param int $quantity
+     * @param string $category
      */
     public static function init(int $amount, string $description, int $quantity, string $category): self
     {
@@ -40,6 +45,8 @@ class CreateOrderItemRequestBuilder
 
     /**
      * Sets code field.
+     *
+     * @param string|null $value
      */
     public function code(?string $value): self
     {
@@ -48,7 +55,7 @@ class CreateOrderItemRequestBuilder
     }
 
     /**
-     * Initializes a new create order item request object.
+     * Initializes a new Create Order Item Request object.
      */
     public function build(): CreateOrderItemRequest
     {

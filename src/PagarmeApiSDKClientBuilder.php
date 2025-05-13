@@ -13,6 +13,7 @@ namespace PagarmeApiSDKLib;
 use Core\Types\Sdk\CoreCallback;
 use Core\Utils\CoreHelper;
 use PagarmeApiSDKLib\Authentication\BasicAuthCredentialsBuilder;
+use PagarmeApiSDKLib\Proxy\ProxyConfigurationBuilder;
 
 class PagarmeApiSDKClientBuilder
 {
@@ -158,6 +159,12 @@ class PagarmeApiSDKClientBuilder
             return $this;
         }
         $this->config['httpCallback'] = $httpCallback;
+        return $this;
+    }
+
+    public function proxyConfiguration(ProxyConfigurationBuilder $proxyConfiguration): self
+    {
+        $this->config['proxyConfiguration'] = $proxyConfiguration->getConfiguration();
         return $this;
     }
 

@@ -33,7 +33,7 @@ class GetPlanItemResponseBuilder
     }
 
     /**
-     * Initializes a new get plan item response Builder object.
+     * Initializes a new Get Plan Item Response Builder object.
      */
     public static function init(): self
     {
@@ -42,6 +42,8 @@ class GetPlanItemResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -60,6 +62,8 @@ class GetPlanItemResponseBuilder
 
     /**
      * Sets name field.
+     *
+     * @param string|null $value
      */
     public function name(?string $value): self
     {
@@ -78,6 +82,8 @@ class GetPlanItemResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -96,6 +102,8 @@ class GetPlanItemResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -114,6 +122,8 @@ class GetPlanItemResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -132,6 +142,8 @@ class GetPlanItemResponseBuilder
 
     /**
      * Sets pricing scheme field.
+     *
+     * @param GetPricingSchemeResponse|null $value
      */
     public function pricingScheme(?GetPricingSchemeResponse $value): self
     {
@@ -150,6 +162,8 @@ class GetPlanItemResponseBuilder
 
     /**
      * Sets description field.
+     *
+     * @param string|null $value
      */
     public function description(?string $value): self
     {
@@ -168,6 +182,8 @@ class GetPlanItemResponseBuilder
 
     /**
      * Sets plan field.
+     *
+     * @param GetPlanResponse|null $value
      */
     public function plan(?GetPlanResponse $value): self
     {
@@ -186,6 +202,8 @@ class GetPlanItemResponseBuilder
 
     /**
      * Sets quantity field.
+     *
+     * @param int|null $value
      */
     public function quantity(?int $value): self
     {
@@ -204,6 +222,8 @@ class GetPlanItemResponseBuilder
 
     /**
      * Sets cycles field.
+     *
+     * @param int|null $value
      */
     public function cycles(?int $value): self
     {
@@ -222,6 +242,8 @@ class GetPlanItemResponseBuilder
 
     /**
      * Sets deleted at field.
+     *
+     * @param \DateTime|null $value
      */
     public function deletedAt(?\DateTime $value): self
     {
@@ -239,7 +261,7 @@ class GetPlanItemResponseBuilder
     }
 
     /**
-     * Initializes a new get plan item response object.
+     * Initializes a new Get Plan Item Response object.
      */
     public function build(): GetPlanItemResponse
     {

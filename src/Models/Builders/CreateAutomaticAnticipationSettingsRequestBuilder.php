@@ -31,7 +31,13 @@ class CreateAutomaticAnticipationSettingsRequestBuilder
     }
 
     /**
-     * Initializes a new create automatic anticipation settings request Builder object.
+     * Initializes a new Create Automatic Anticipation Settings Request Builder object.
+     *
+     * @param bool $enabled
+     * @param string $type
+     * @param int $volumePercentage
+     * @param int $delay
+     * @param int[] $days
      */
     public static function init(bool $enabled, string $type, int $volumePercentage, int $delay, array $days): self
     {
@@ -41,7 +47,7 @@ class CreateAutomaticAnticipationSettingsRequestBuilder
     }
 
     /**
-     * Initializes a new create automatic anticipation settings request object.
+     * Initializes a new Create Automatic Anticipation Settings Request object.
      */
     public function build(): CreateAutomaticAnticipationSettingsRequest
     {

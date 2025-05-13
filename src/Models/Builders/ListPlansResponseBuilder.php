@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetPlanResponse;
 use PagarmeApiSDKLib\Models\ListPlansResponse;
 use PagarmeApiSDKLib\Models\PagingResponse;
 
@@ -32,7 +33,7 @@ class ListPlansResponseBuilder
     }
 
     /**
-     * Initializes a new list plans response Builder object.
+     * Initializes a new List Plans Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +42,8 @@ class ListPlansResponseBuilder
 
     /**
      * Sets data field.
+     *
+     * @param GetPlanResponse[]|null $value
      */
     public function data(?array $value): self
     {
@@ -59,6 +62,8 @@ class ListPlansResponseBuilder
 
     /**
      * Sets paging field.
+     *
+     * @param PagingResponse|null $value
      */
     public function paging(?PagingResponse $value): self
     {
@@ -76,7 +81,7 @@ class ListPlansResponseBuilder
     }
 
     /**
-     * Initializes a new list plans response object.
+     * Initializes a new List Plans Response object.
      */
     public function build(): ListPlansResponse
     {

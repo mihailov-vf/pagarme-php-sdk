@@ -32,7 +32,7 @@ class GetAddressResponseBuilder
     }
 
     /**
-     * Initializes a new get address response Builder object.
+     * Initializes a new Get Address Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -59,6 +61,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets street field.
+     *
+     * @param string|null $value
      */
     public function street(?string $value): self
     {
@@ -77,6 +81,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets number field.
+     *
+     * @param string|null $value
      */
     public function number(?string $value): self
     {
@@ -95,6 +101,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets complement field.
+     *
+     * @param string|null $value
      */
     public function complement(?string $value): self
     {
@@ -113,6 +121,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets zip code field.
+     *
+     * @param string|null $value
      */
     public function zipCode(?string $value): self
     {
@@ -131,6 +141,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets neighborhood field.
+     *
+     * @param string|null $value
      */
     public function neighborhood(?string $value): self
     {
@@ -149,6 +161,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets city field.
+     *
+     * @param string|null $value
      */
     public function city(?string $value): self
     {
@@ -167,6 +181,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets state field.
+     *
+     * @param string|null $value
      */
     public function state(?string $value): self
     {
@@ -185,6 +201,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets country field.
+     *
+     * @param string|null $value
      */
     public function country(?string $value): self
     {
@@ -203,6 +221,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -221,6 +241,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -239,6 +261,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -257,6 +281,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets customer field.
+     *
+     * @param GetCustomerResponse|null $value
      */
     public function customer(?GetCustomerResponse $value): self
     {
@@ -275,6 +301,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -293,6 +321,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets line 1 field.
+     *
+     * @param string|null $value
      */
     public function line1(?string $value): self
     {
@@ -311,6 +341,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets line 2 field.
+     *
+     * @param string|null $value
      */
     public function line2(?string $value): self
     {
@@ -329,6 +361,8 @@ class GetAddressResponseBuilder
 
     /**
      * Sets deleted at field.
+     *
+     * @param \DateTime|null $value
      */
     public function deletedAt(?\DateTime $value): self
     {
@@ -346,7 +380,7 @@ class GetAddressResponseBuilder
     }
 
     /**
-     * Initializes a new get address response object.
+     * Initializes a new Get Address Response object.
      */
     public function build(): GetAddressResponse
     {

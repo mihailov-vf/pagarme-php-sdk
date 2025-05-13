@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -259,6 +260,30 @@ class CreateDebitCardPaymentRequest implements \JsonSerializable
     public function setPaymentOrigin(?CreatePaymentOriginRequest $paymentOrigin): void
     {
         $this->paymentOrigin = $paymentOrigin;
+    }
+
+    /**
+     * Converts the CreateDebitCardPaymentRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateDebitCardPaymentRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateDebitCardPaymentRequest',
+            [
+                'statementDescriptor' => $this->statementDescriptor,
+                'card' => $this->card,
+                'cardId' => $this->cardId,
+                'cardToken' => $this->cardToken,
+                'recurrence' => $this->recurrence,
+                'authentication' => $this->authentication,
+                'token' => $this->token,
+                'initiatedType' => $this->initiatedType,
+                'recurrenceModel' => $this->recurrenceModel,
+                'paymentOrigin' => $this->paymentOrigin
+            ]
+        );
     }
 
     /**

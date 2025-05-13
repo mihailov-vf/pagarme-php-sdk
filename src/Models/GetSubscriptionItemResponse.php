@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -469,6 +470,33 @@ class GetSubscriptionItemResponse implements \JsonSerializable
     public function unsetDeletedAt(): void
     {
         $this->deletedAt = [];
+    }
+
+    /**
+     * Converts the GetSubscriptionItemResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetSubscriptionItemResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetSubscriptionItemResponse',
+            [
+                'id' => $this->getId(),
+                'description' => $this->getDescription(),
+                'status' => $this->getStatus(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt(),
+                'pricingScheme' => $this->getPricingScheme(),
+                'discounts' => $this->getDiscounts(),
+                'increments' => $this->getIncrements(),
+                'subscription' => $this->getSubscription(),
+                'name' => $this->getName(),
+                'quantity' => $this->getQuantity(),
+                'cycles' => $this->getCycles(),
+                'deletedAt' => $this->getDeletedAt()
+            ]
+        );
     }
 
     /**

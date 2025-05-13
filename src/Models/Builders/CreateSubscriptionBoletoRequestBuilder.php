@@ -33,7 +33,7 @@ class CreateSubscriptionBoletoRequestBuilder
     }
 
     /**
-     * Initializes a new create subscription boleto request Builder object.
+     * Initializes a new Create Subscription Boleto Request Builder object.
      */
     public static function init(): self
     {
@@ -42,6 +42,8 @@ class CreateSubscriptionBoletoRequestBuilder
 
     /**
      * Sets interest field.
+     *
+     * @param CreateInterestRequest|null $value
      */
     public function interest(?CreateInterestRequest $value): self
     {
@@ -51,6 +53,8 @@ class CreateSubscriptionBoletoRequestBuilder
 
     /**
      * Sets fine field.
+     *
+     * @param CreateFineRequest|null $value
      */
     public function fine(?CreateFineRequest $value): self
     {
@@ -60,6 +64,8 @@ class CreateSubscriptionBoletoRequestBuilder
 
     /**
      * Sets max days to pay past due field.
+     *
+     * @param int|null $value
      */
     public function maxDaysToPayPastDue(?int $value): self
     {
@@ -77,7 +83,7 @@ class CreateSubscriptionBoletoRequestBuilder
     }
 
     /**
-     * Initializes a new create subscription boleto request object.
+     * Initializes a new Create Subscription Boleto Request object.
      */
     public function build(): CreateSubscriptionBoletoRequest
     {

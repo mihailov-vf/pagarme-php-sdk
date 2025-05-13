@@ -31,7 +31,7 @@ class GetCheckoutBoletoPaymentResponseBuilder
     }
 
     /**
-     * Initializes a new get checkout boleto payment response Builder object.
+     * Initializes a new Get Checkout Boleto Payment Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetCheckoutBoletoPaymentResponseBuilder
 
     /**
      * Sets due at field.
+     *
+     * @param \DateTime|null $value
      */
     public function dueAt(?\DateTime $value): self
     {
@@ -58,6 +60,8 @@ class GetCheckoutBoletoPaymentResponseBuilder
 
     /**
      * Sets instructions field.
+     *
+     * @param string|null $value
      */
     public function instructions(?string $value): self
     {
@@ -75,7 +79,7 @@ class GetCheckoutBoletoPaymentResponseBuilder
     }
 
     /**
-     * Initializes a new get checkout boleto payment response object.
+     * Initializes a new Get Checkout Boleto Payment Response object.
      */
     public function build(): GetCheckoutBoletoPaymentResponse
     {

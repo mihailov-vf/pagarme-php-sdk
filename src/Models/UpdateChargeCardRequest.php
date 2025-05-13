@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -227,6 +228,28 @@ class UpdateChargeCardRequest implements \JsonSerializable
     public function setIndirectAcceptor(?string $indirectAcceptor): void
     {
         $this->indirectAcceptor = $indirectAcceptor;
+    }
+
+    /**
+     * Converts the UpdateChargeCardRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateChargeCardRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'UpdateChargeCardRequest',
+            [
+                'updateSubscription' => $this->updateSubscription,
+                'cardId' => $this->cardId,
+                'card' => $this->card,
+                'recurrence' => $this->recurrence,
+                'initiatedType' => $this->initiatedType,
+                'recurrenceModel' => $this->recurrenceModel,
+                'paymentOrigin' => $this->paymentOrigin,
+                'indirectAcceptor' => $this->indirectAcceptor
+            ]
+        );
     }
 
     /**

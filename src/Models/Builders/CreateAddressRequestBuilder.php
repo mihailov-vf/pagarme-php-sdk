@@ -31,7 +31,18 @@ class CreateAddressRequestBuilder
     }
 
     /**
-     * Initializes a new create address request Builder object.
+     * Initializes a new Create Address Request Builder object.
+     *
+     * @param string $street
+     * @param string $number
+     * @param string $zipCode
+     * @param string $neighborhood
+     * @param string $city
+     * @param string $state
+     * @param string $country
+     * @param string $complement
+     * @param string $line1
+     * @param string $line2
      */
     public static function init(
         string $street,
@@ -61,6 +72,8 @@ class CreateAddressRequestBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -78,7 +91,7 @@ class CreateAddressRequestBuilder
     }
 
     /**
-     * Initializes a new create address request object.
+     * Initializes a new Create Address Request object.
      */
     public function build(): CreateAddressRequest
     {

@@ -18,6 +18,7 @@ use PagarmeApiSDKLib\Models\GetFineResponse;
 use PagarmeApiSDKLib\Models\GetGatewayResponseResponse;
 use PagarmeApiSDKLib\Models\GetInterestResponse;
 use PagarmeApiSDKLib\Models\GetRetryTransactionInformationResponse;
+use PagarmeApiSDKLib\Models\GetSplitResponse;
 
 /**
  * Builder for model GetDebitCardTransactionResponse
@@ -37,7 +38,7 @@ class GetDebitCardTransactionResponseBuilder
     }
 
     /**
-     * Initializes a new get debit card transaction response Builder object.
+     * Initializes a new Get Debit Card Transaction Response Builder object.
      */
     public static function init(): self
     {
@@ -46,6 +47,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets gateway id field.
+     *
+     * @param string|null $value
      */
     public function gatewayId(?string $value): self
     {
@@ -64,6 +67,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -82,6 +87,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -100,6 +107,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets success field.
+     *
+     * @param bool|null $value
      */
     public function success(?bool $value): self
     {
@@ -118,6 +127,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -136,6 +147,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -154,6 +167,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets attempt count field.
+     *
+     * @param int|null $value
      */
     public function attemptCount(?int $value): self
     {
@@ -172,6 +187,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets max attempts field.
+     *
+     * @param int|null $value
      */
     public function maxAttempts(?int $value): self
     {
@@ -190,6 +207,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets splits field.
+     *
+     * @param GetSplitResponse[]|null $value
      */
     public function splits(?array $value): self
     {
@@ -208,6 +227,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets next attempt field.
+     *
+     * @param \DateTime|null $value
      */
     public function nextAttempt(?\DateTime $value): self
     {
@@ -226,6 +247,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets transaction type field.
+     *
+     * @param string|null $value
      */
     public function transactionType(?string $value): self
     {
@@ -235,6 +258,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -253,6 +278,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets gateway response field.
+     *
+     * @param GetGatewayResponseResponse|null $value
      */
     public function gatewayResponse(?GetGatewayResponseResponse $value): self
     {
@@ -271,6 +298,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets antifraud response field.
+     *
+     * @param GetAntifraudResponse|null $value
      */
     public function antifraudResponse(?GetAntifraudResponse $value): self
     {
@@ -289,6 +318,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -307,6 +338,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets split field.
+     *
+     * @param GetSplitResponse[]|null $value
      */
     public function split(?array $value): self
     {
@@ -325,6 +358,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets interest field.
+     *
+     * @param GetInterestResponse|null $value
      */
     public function interest(?GetInterestResponse $value): self
     {
@@ -343,6 +378,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets fine field.
+     *
+     * @param GetFineResponse|null $value
      */
     public function fine(?GetFineResponse $value): self
     {
@@ -361,6 +398,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets max days to pay past due field.
+     *
+     * @param int|null $value
      */
     public function maxDaysToPayPastDue(?int $value): self
     {
@@ -379,6 +418,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets statement descriptor field.
+     *
+     * @param string|null $value
      */
     public function statementDescriptor(?string $value): self
     {
@@ -397,6 +438,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets acquirer name field.
+     *
+     * @param string|null $value
      */
     public function acquirerName(?string $value): self
     {
@@ -415,6 +458,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets acquirer affiliation code field.
+     *
+     * @param string|null $value
      */
     public function acquirerAffiliationCode(?string $value): self
     {
@@ -433,6 +478,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets acquirer tid field.
+     *
+     * @param string|null $value
      */
     public function acquirerTid(?string $value): self
     {
@@ -451,6 +498,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets acquirer nsu field.
+     *
+     * @param string|null $value
      */
     public function acquirerNsu(?string $value): self
     {
@@ -469,6 +518,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets acquirer auth code field.
+     *
+     * @param string|null $value
      */
     public function acquirerAuthCode(?string $value): self
     {
@@ -487,6 +538,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets operation type field.
+     *
+     * @param string|null $value
      */
     public function operationType(?string $value): self
     {
@@ -505,6 +558,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets card field.
+     *
+     * @param GetCardResponse|null $value
      */
     public function card(?GetCardResponse $value): self
     {
@@ -523,6 +578,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets acquirer message field.
+     *
+     * @param string|null $value
      */
     public function acquirerMessage(?string $value): self
     {
@@ -541,6 +598,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets acquirer return code field.
+     *
+     * @param string|null $value
      */
     public function acquirerReturnCode(?string $value): self
     {
@@ -559,6 +618,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets mpi field.
+     *
+     * @param string|null $value
      */
     public function mpi(?string $value): self
     {
@@ -577,6 +638,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets eci field.
+     *
+     * @param string|null $value
      */
     public function eci(?string $value): self
     {
@@ -595,6 +658,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets authentication type field.
+     *
+     * @param string|null $value
      */
     public function authenticationType(?string $value): self
     {
@@ -613,6 +678,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets threed authentication url field.
+     *
+     * @param string|null $value
      */
     public function threedAuthenticationUrl(?string $value): self
     {
@@ -631,6 +698,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets funding source field.
+     *
+     * @param string|null $value
      */
     public function fundingSource(?string $value): self
     {
@@ -649,6 +718,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets retry info field.
+     *
+     * @param GetRetryTransactionInformationResponse|null $value
      */
     public function retryInfo(?GetRetryTransactionInformationResponse $value): self
     {
@@ -667,6 +738,8 @@ class GetDebitCardTransactionResponseBuilder
 
     /**
      * Sets brand id field.
+     *
+     * @param string|null $value
      */
     public function brandId(?string $value): self
     {
@@ -684,7 +757,7 @@ class GetDebitCardTransactionResponseBuilder
     }
 
     /**
-     * Initializes a new get debit card transaction response object.
+     * Initializes a new Get Debit Card Transaction Response object.
      */
     public function build(): GetDebitCardTransactionResponse
     {

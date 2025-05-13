@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -129,6 +130,24 @@ class CreateCaptureChargeRequest implements \JsonSerializable
     public function setOperationReference(string $operationReference): void
     {
         $this->operationReference = $operationReference;
+    }
+
+    /**
+     * Converts the CreateCaptureChargeRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateCaptureChargeRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateCaptureChargeRequest',
+            [
+                'code' => $this->code,
+                'amount' => $this->amount,
+                'split' => $this->split,
+                'operationReference' => $this->operationReference
+            ]
+        );
     }
 
     /**

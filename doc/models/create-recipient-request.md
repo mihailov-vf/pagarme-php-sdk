@@ -20,7 +20,7 @@ Request for creating a recipient
 | `metadata` | `array<string,string>` | Required | Metadata | getMetadata(): array | setMetadata(array metadata): void |
 | `transferSettings` | [`?CreateTransferSettingsRequest`](../../doc/models/create-transfer-settings-request.md) | Optional | Receiver Transfer Information | getTransferSettings(): ?CreateTransferSettingsRequest | setTransferSettings(?CreateTransferSettingsRequest transferSettings): void |
 | `code` | `string` | Required | Recipient code | getCode(): string | setCode(string code): void |
-| `paymentMode` | `string` | Required | Payment mode<br>**Default**: `'bank_transfer'` | getPaymentMode(): string | setPaymentMode(string paymentMode): void |
+| `paymentMode` | `string` | Required | Payment mode<br><br>**Default**: `'bank_transfer'` | getPaymentMode(): string | setPaymentMode(string paymentMode): void |
 | `registerInformation` | [`?CreateRegisterInformationBaseRequest`](../../doc/models/create-register-information-base-request.md) | Optional | Register Information | getRegisterInformation(): ?CreateRegisterInformationBaseRequest | setRegisterInformation(?CreateRegisterInformationBaseRequest registerInformation): void |
 
 ## Example (as JSON)

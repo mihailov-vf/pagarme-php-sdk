@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class CreateRegisterInformationIndividualRequest extends CreateRegisterInformationBaseRequest implements \JsonSerializable
@@ -196,6 +197,28 @@ class CreateRegisterInformationIndividualRequest extends CreateRegisterInformati
     public function setAddress(CreateRegisterInformationAddressRequest $address): void
     {
         $this->address = $address;
+    }
+
+    /**
+     * Converts the CreateRegisterInformationIndividualRequest object to a human-readable string
+     * representation.
+     *
+     * @return string The string representation of the CreateRegisterInformationIndividualRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateRegisterInformationIndividualRequest',
+            [
+                'name' => $this->name,
+                'motherName' => $this->getMotherName(),
+                'birthdate' => $this->birthdate,
+                'monthlyIncome' => $this->monthlyIncome,
+                'professionalOccupation' => $this->professionalOccupation,
+                'address' => $this->address
+            ],
+            parent::__toString()
+        );
     }
 
     /**

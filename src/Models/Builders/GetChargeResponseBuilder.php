@@ -36,7 +36,7 @@ class GetChargeResponseBuilder
     }
 
     /**
-     * Initializes a new get charge response Builder object.
+     * Initializes a new Get Charge Response Builder object.
      */
     public static function init(): self
     {
@@ -45,6 +45,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -63,6 +65,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets code field.
+     *
+     * @param string|null $value
      */
     public function code(?string $value): self
     {
@@ -81,6 +85,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets gateway id field.
+     *
+     * @param string|null $value
      */
     public function gatewayId(?string $value): self
     {
@@ -99,6 +105,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -117,6 +125,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -135,6 +145,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets currency field.
+     *
+     * @param string|null $value
      */
     public function currency(?string $value): self
     {
@@ -153,6 +165,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets payment method field.
+     *
+     * @param string|null $value
      */
     public function paymentMethod(?string $value): self
     {
@@ -171,6 +185,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets due at field.
+     *
+     * @param \DateTime|null $value
      */
     public function dueAt(?\DateTime $value): self
     {
@@ -189,6 +205,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -207,6 +225,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -225,6 +245,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets last transaction field.
+     *
+     * @param GetTransactionResponse|null $value
      */
     public function lastTransaction(?GetTransactionResponse $value): self
     {
@@ -243,6 +265,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets invoice field.
+     *
+     * @param GetInvoiceResponse|null $value
      */
     public function invoice(?GetInvoiceResponse $value): self
     {
@@ -261,6 +285,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets order field.
+     *
+     * @param GetOrderResponse|null $value
      */
     public function order(?GetOrderResponse $value): self
     {
@@ -279,6 +305,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets customer field.
+     *
+     * @param GetCustomerResponse|null $value
      */
     public function customer(?GetCustomerResponse $value): self
     {
@@ -297,6 +325,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -315,6 +345,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets paid at field.
+     *
+     * @param \DateTime|null $value
      */
     public function paidAt(?\DateTime $value): self
     {
@@ -333,6 +365,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets canceled at field.
+     *
+     * @param \DateTime|null $value
      */
     public function canceledAt(?\DateTime $value): self
     {
@@ -351,6 +385,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets canceled amount field.
+     *
+     * @param int|null $value
      */
     public function canceledAmount(?int $value): self
     {
@@ -369,6 +405,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets paid amount field.
+     *
+     * @param int|null $value
      */
     public function paidAmount(?int $value): self
     {
@@ -387,6 +425,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets interest and fine paid field.
+     *
+     * @param int|null $value
      */
     public function interestAndFinePaid(?int $value): self
     {
@@ -405,6 +445,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets recurrency cycle field.
+     *
+     * @param string|null $value
      */
     public function recurrencyCycle(?string $value): self
     {
@@ -423,6 +465,8 @@ class GetChargeResponseBuilder
 
     /**
      * Sets payment origin field.
+     *
+     * @param GetPaymentOriginResponse|null $value
      */
     public function paymentOrigin(?GetPaymentOriginResponse $value): self
     {
@@ -440,7 +484,7 @@ class GetChargeResponseBuilder
     }
 
     /**
-     * Initializes a new get charge response object.
+     * Initializes a new Get Charge Response object.
      */
     public function build(): GetChargeResponse
     {

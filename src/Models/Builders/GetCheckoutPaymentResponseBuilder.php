@@ -39,7 +39,7 @@ class GetCheckoutPaymentResponseBuilder
     }
 
     /**
-     * Initializes a new get checkout payment response Builder object.
+     * Initializes a new Get Checkout Payment Response Builder object.
      */
     public static function init(): self
     {
@@ -48,6 +48,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -66,6 +68,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -84,6 +88,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets default payment method field.
+     *
+     * @param string|null $value
      */
     public function defaultPaymentMethod(?string $value): self
     {
@@ -102,6 +108,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets success url field.
+     *
+     * @param string|null $value
      */
     public function successUrl(?string $value): self
     {
@@ -120,6 +128,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets payment url field.
+     *
+     * @param string|null $value
      */
     public function paymentUrl(?string $value): self
     {
@@ -138,6 +148,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets gateway affiliation id field.
+     *
+     * @param string|null $value
      */
     public function gatewayAffiliationId(?string $value): self
     {
@@ -156,6 +168,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets accepted payment methods field.
+     *
+     * @param string[]|null $value
      */
     public function acceptedPaymentMethods(?array $value): self
     {
@@ -174,6 +188,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -192,6 +208,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets skip checkout success page field.
+     *
+     * @param bool|null $value
      */
     public function skipCheckoutSuccessPage(?bool $value): self
     {
@@ -210,6 +228,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -228,6 +248,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -246,6 +268,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets canceled at field.
+     *
+     * @param \DateTime|null $value
      */
     public function canceledAt(?\DateTime $value): self
     {
@@ -264,6 +288,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets customer editable field.
+     *
+     * @param bool|null $value
      */
     public function customerEditable(?bool $value): self
     {
@@ -282,6 +308,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets customer field.
+     *
+     * @param GetCustomerResponse|null $value
      */
     public function customer(?GetCustomerResponse $value): self
     {
@@ -300,6 +328,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets billingaddress field.
+     *
+     * @param GetAddressResponse|null $value
      */
     public function billingaddress(?GetAddressResponse $value): self
     {
@@ -318,6 +348,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets credit card field.
+     *
+     * @param GetCheckoutCreditCardPaymentResponse|null $value
      */
     public function creditCard(?GetCheckoutCreditCardPaymentResponse $value): self
     {
@@ -336,6 +368,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets boleto field.
+     *
+     * @param GetCheckoutBoletoPaymentResponse|null $value
      */
     public function boleto(?GetCheckoutBoletoPaymentResponse $value): self
     {
@@ -354,6 +388,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets billing address editable field.
+     *
+     * @param bool|null $value
      */
     public function billingAddressEditable(?bool $value): self
     {
@@ -372,6 +408,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets shipping field.
+     *
+     * @param GetShippingResponse|null $value
      */
     public function shipping(?GetShippingResponse $value): self
     {
@@ -390,6 +428,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets shippable field.
+     *
+     * @param bool|null $value
      */
     public function shippable(?bool $value): self
     {
@@ -408,6 +448,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets closed at field.
+     *
+     * @param \DateTime|null $value
      */
     public function closedAt(?\DateTime $value): self
     {
@@ -426,6 +468,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets expires at field.
+     *
+     * @param \DateTime|null $value
      */
     public function expiresAt(?\DateTime $value): self
     {
@@ -444,6 +488,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets currency field.
+     *
+     * @param string|null $value
      */
     public function currency(?string $value): self
     {
@@ -462,6 +508,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets debit card field.
+     *
+     * @param GetCheckoutDebitCardPaymentResponse|null $value
      */
     public function debitCard(?GetCheckoutDebitCardPaymentResponse $value): self
     {
@@ -480,6 +528,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets bank transfer field.
+     *
+     * @param GetCheckoutBankTransferPaymentResponse|null $value
      */
     public function bankTransfer(?GetCheckoutBankTransferPaymentResponse $value): self
     {
@@ -498,6 +548,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets accepted brands field.
+     *
+     * @param string[]|null $value
      */
     public function acceptedBrands(?array $value): self
     {
@@ -516,6 +568,8 @@ class GetCheckoutPaymentResponseBuilder
 
     /**
      * Sets pix field.
+     *
+     * @param GetCheckoutPixPaymentResponse|null $value
      */
     public function pix(?GetCheckoutPixPaymentResponse $value): self
     {
@@ -533,7 +587,7 @@ class GetCheckoutPaymentResponseBuilder
     }
 
     /**
-     * Initializes a new get checkout payment response object.
+     * Initializes a new Get Checkout Payment Response object.
      */
     public function build(): GetCheckoutPaymentResponse
     {

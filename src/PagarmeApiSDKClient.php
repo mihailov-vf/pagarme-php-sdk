@@ -29,6 +29,7 @@ use PagarmeApiSDKLib\Controllers\TokensController;
 use PagarmeApiSDKLib\Controllers\TransactionsController;
 use PagarmeApiSDKLib\Controllers\TransfersController;
 use PagarmeApiSDKLib\Exceptions;
+use PagarmeApiSDKLib\Proxy\ProxyConfigurationBuilder;
 use PagarmeApiSDKLib\Utils\CompatibilityConverter;
 use Unirest\Configuration;
 use Unirest\HttpClient;
@@ -61,6 +62,8 @@ class PagarmeApiSDKClient implements ConfigurationInterface
 
     private $basicAuthManager;
 
+    private $proxyConfiguration;
+
     private $config;
 
     private $client;
@@ -75,11 +78,14 @@ class PagarmeApiSDKClient implements ConfigurationInterface
     {
         $this->config = array_merge(ConfigurationDefaults::_ALL, CoreHelper::clone($config));
         $this->basicAuthManager = new BasicAuthManager($this->config);
-        $this->client = ClientBuilder::init(new HttpClient(Configuration::init($this)))
+        $this->proxyConfiguration = $this->config['proxyConfiguration'] ?? ConfigurationDefaults::PROXY_CONFIGURATION;
+        $this->client = ClientBuilder::init(
+            new HttpClient(Configuration::init($this)->proxyConfiguration($this->proxyConfiguration))
+        )
             ->converter(new CompatibilityConverter())
             ->jsonHelper(ApiHelper::getJsonHelper())
             ->apiCallback($this->config['httpCallback'] ?? null)
-            ->userAgent('PagarmeApiSDK - PHP 6.8.15')
+            ->userAgent('PagarmeApiSDK - PHP 6.8.17')
             ->globalConfig($this->getGlobalConfiguration())
             ->globalErrors($this->getGlobalErrors())
             ->serverUrls(self::ENVIRONMENT_MAP[$this->getEnvironment()], Server::DEFAULT_)
@@ -106,7 +112,8 @@ class PagarmeApiSDKClient implements ConfigurationInterface
             ->httpMethodsToRetry($this->getHttpMethodsToRetry())
             ->serviceRefererName($this->getServiceRefererName())
             ->environment($this->getEnvironment())
-            ->httpCallback($this->config['httpCallback'] ?? null);
+            ->httpCallback($this->config['httpCallback'] ?? null)
+            ->proxyConfiguration($this->getProxyConfigurationBuilder());
 
         $basicAuth = $this->getBasicAuthCredentialsBuilder();
         if ($basicAuth != null) {
@@ -187,6 +194,18 @@ class PagarmeApiSDKClient implements ConfigurationInterface
             $this->basicAuthManager->getBasicAuthUserName(),
             $this->basicAuthManager->getBasicAuthPassword()
         );
+    }
+
+    /**
+     * Get the proxy configuration builder
+     */
+    public function getProxyConfigurationBuilder(): ProxyConfigurationBuilder
+    {
+        return ProxyConfigurationBuilder::init($this->proxyConfiguration['address'])
+            ->port($this->proxyConfiguration['port'])
+            ->tunnel($this->proxyConfiguration['tunnel'])
+            ->auth($this->proxyConfiguration['auth']['user'], $this->proxyConfiguration['auth']['pass'])
+            ->authMethod($this->proxyConfiguration['auth']['method']);
     }
 
     /**

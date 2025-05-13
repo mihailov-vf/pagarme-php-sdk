@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -1106,6 +1107,51 @@ class GetSubscriptionResponse implements \JsonSerializable
     public function unsetIndirectAcceptor(): void
     {
         $this->indirectAcceptor = [];
+    }
+
+    /**
+     * Converts the GetSubscriptionResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetSubscriptionResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetSubscriptionResponse',
+            [
+                'id' => $this->getId(),
+                'code' => $this->getCode(),
+                'startAt' => $this->getStartAt(),
+                'interval' => $this->getInterval(),
+                'intervalCount' => $this->getIntervalCount(),
+                'billingType' => $this->getBillingType(),
+                'currentCycle' => $this->getCurrentCycle(),
+                'paymentMethod' => $this->getPaymentMethod(),
+                'currency' => $this->getCurrency(),
+                'installments' => $this->getInstallments(),
+                'status' => $this->getStatus(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt(),
+                'customer' => $this->getCustomer(),
+                'card' => $this->getCard(),
+                'items' => $this->getItems(),
+                'statementDescriptor' => $this->getStatementDescriptor(),
+                'metadata' => $this->getMetadata(),
+                'setup' => $this->getSetup(),
+                'gatewayAffiliationId' => $this->getGatewayAffiliationId(),
+                'nextBillingAt' => $this->getNextBillingAt(),
+                'billingDay' => $this->getBillingDay(),
+                'minimumPrice' => $this->getMinimumPrice(),
+                'canceledAt' => $this->getCanceledAt(),
+                'discounts' => $this->getDiscounts(),
+                'increments' => $this->getIncrements(),
+                'boletoDueDays' => $this->getBoletoDueDays(),
+                'split' => $this->getSplit(),
+                'boleto' => $this->getBoleto(),
+                'manualBilling' => $this->getManualBilling(),
+                'indirectAcceptor' => $this->getIndirectAcceptor()
+            ]
+        );
     }
 
     /**

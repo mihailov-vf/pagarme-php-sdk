@@ -32,7 +32,10 @@ class UpdateSubscriptionCardRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription card request Builder object.
+     * Initializes a new Update Subscription Card Request Builder object.
+     *
+     * @param CreateCardRequest $card
+     * @param string $cardId
      */
     public static function init(CreateCardRequest $card, string $cardId): self
     {
@@ -41,6 +44,8 @@ class UpdateSubscriptionCardRequestBuilder
 
     /**
      * Sets indirect acceptor field.
+     *
+     * @param string|null $value
      */
     public function indirectAcceptor(?string $value): self
     {
@@ -49,7 +54,7 @@ class UpdateSubscriptionCardRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription card request object.
+     * Initializes a new Update Subscription Card Request object.
      */
     public function build(): UpdateSubscriptionCardRequest
     {

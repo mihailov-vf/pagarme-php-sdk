@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -158,6 +159,25 @@ class CreateOrderItemRequest implements \JsonSerializable
     public function setCode(?string $code): void
     {
         $this->code = $code;
+    }
+
+    /**
+     * Converts the CreateOrderItemRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateOrderItemRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateOrderItemRequest',
+            [
+                'amount' => $this->amount,
+                'description' => $this->description,
+                'quantity' => $this->quantity,
+                'category' => $this->category,
+                'code' => $this->code
+            ]
+        );
     }
 
     /**

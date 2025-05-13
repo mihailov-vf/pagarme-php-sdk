@@ -38,7 +38,17 @@ class UpdateChargePaymentMethodRequestBuilder
     }
 
     /**
-     * Initializes a new update charge payment method request Builder object.
+     * Initializes a new Update Charge Payment Method Request Builder object.
+     *
+     * @param bool $updateSubscription
+     * @param string $paymentMethod
+     * @param CreateCreditCardPaymentRequest $creditCard
+     * @param CreateDebitCardPaymentRequest $debitCard
+     * @param CreateBoletoPaymentRequest $boleto
+     * @param CreateVoucherPaymentRequest $voucher
+     * @param CreateCashPaymentRequest $cash
+     * @param CreateBankTransferPaymentRequest $bankTransfer
+     * @param CreatePrivateLabelPaymentRequest $privateLabel
      */
     public static function init(
         bool $updateSubscription,
@@ -65,7 +75,7 @@ class UpdateChargePaymentMethodRequestBuilder
     }
 
     /**
-     * Initializes a new update charge payment method request object.
+     * Initializes a new Update Charge Payment Method Request object.
      */
     public function build(): UpdateChargePaymentMethodRequest
     {

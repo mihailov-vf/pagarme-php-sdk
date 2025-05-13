@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -263,6 +264,30 @@ class CreatePrivateLabelPaymentRequest implements \JsonSerializable
     public function setRecurrencyCycle(?string $recurrencyCycle): void
     {
         $this->recurrencyCycle = $recurrencyCycle;
+    }
+
+    /**
+     * Converts the CreatePrivateLabelPaymentRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreatePrivateLabelPaymentRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreatePrivateLabelPaymentRequest',
+            [
+                'installments' => $this->installments,
+                'statementDescriptor' => $this->statementDescriptor,
+                'card' => $this->card,
+                'cardId' => $this->cardId,
+                'cardToken' => $this->cardToken,
+                'recurrence' => $this->recurrence,
+                'capture' => $this->capture,
+                'extendedLimitEnabled' => $this->extendedLimitEnabled,
+                'extendedLimitCode' => $this->extendedLimitCode,
+                'recurrencyCycle' => $this->recurrencyCycle
+            ]
+        );
     }
 
     /**

@@ -31,7 +31,7 @@ class PixAdditionalInformationBuilder
     }
 
     /**
-     * Initializes a new pix additional information Builder object.
+     * Initializes a new Pix Additional Information Builder object.
      */
     public static function init(): self
     {
@@ -39,7 +39,9 @@ class PixAdditionalInformationBuilder
     }
 
     /**
-     * Sets name field.
+     * Sets Name field.
+     *
+     * @param string|null $value
      */
     public function name(?string $value): self
     {
@@ -48,7 +50,7 @@ class PixAdditionalInformationBuilder
     }
 
     /**
-     * Unsets name field.
+     * Unsets Name field.
      */
     public function unsetName(): self
     {
@@ -57,7 +59,9 @@ class PixAdditionalInformationBuilder
     }
 
     /**
-     * Sets value field.
+     * Sets Value field.
+     *
+     * @param string|null $value
      */
     public function value(?string $value): self
     {
@@ -66,7 +70,7 @@ class PixAdditionalInformationBuilder
     }
 
     /**
-     * Unsets value field.
+     * Unsets Value field.
      */
     public function unsetValue(): self
     {
@@ -75,7 +79,7 @@ class PixAdditionalInformationBuilder
     }
 
     /**
-     * Initializes a new pix additional information object.
+     * Initializes a new Pix Additional Information object.
      */
     public function build(): PixAdditionalInformation
     {

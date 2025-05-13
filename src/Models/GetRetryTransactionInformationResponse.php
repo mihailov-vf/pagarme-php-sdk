@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -86,6 +87,23 @@ class GetRetryTransactionInformationResponse implements \JsonSerializable
     public function setTransactionDateLimit(?\DateTime $transactionDateLimit): void
     {
         $this->transactionDateLimit = $transactionDateLimit;
+    }
+
+    /**
+     * Converts the GetRetryTransactionInformationResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetRetryTransactionInformationResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetRetryTransactionInformationResponse',
+            [
+                'brandFailureReturnCode' => $this->brandFailureReturnCode,
+                'transactionLimit' => $this->transactionLimit,
+                'transactionDateLimit' => $this->transactionDateLimit
+            ]
+        );
     }
 
     /**

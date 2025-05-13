@@ -31,7 +31,7 @@ class GetTransferSettingsResponseBuilder
     }
 
     /**
-     * Initializes a new get transfer settings response Builder object.
+     * Initializes a new Get Transfer Settings Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetTransferSettingsResponseBuilder
 
     /**
      * Sets transfer enabled field.
+     *
+     * @param bool|null $value
      */
     public function transferEnabled(?bool $value): self
     {
@@ -58,6 +60,8 @@ class GetTransferSettingsResponseBuilder
 
     /**
      * Sets transfer interval field.
+     *
+     * @param string|null $value
      */
     public function transferInterval(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetTransferSettingsResponseBuilder
 
     /**
      * Sets transfer day field.
+     *
+     * @param int|null $value
      */
     public function transferDay(?int $value): self
     {
@@ -93,7 +99,7 @@ class GetTransferSettingsResponseBuilder
     }
 
     /**
-     * Initializes a new get transfer settings response object.
+     * Initializes a new Get Transfer Settings Response object.
      */
     public function build(): GetTransferSettingsResponse
     {

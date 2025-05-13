@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -705,6 +706,39 @@ class GetTransactionResponse implements \JsonSerializable
     public function unsetMaxDaysToPayPastDue(): void
     {
         $this->maxDaysToPayPastDue = [];
+    }
+
+    /**
+     * Converts the GetTransactionResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetTransactionResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetTransactionResponse',
+            [
+                'gatewayId' => $this->getGatewayId(),
+                'amount' => $this->getAmount(),
+                'status' => $this->getStatus(),
+                'success' => $this->getSuccess(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt(),
+                'attemptCount' => $this->getAttemptCount(),
+                'maxAttempts' => $this->getMaxAttempts(),
+                'splits' => $this->getSplits(),
+                'nextAttempt' => $this->getNextAttempt(),
+                'transactionType' => $this->transactionType,
+                'id' => $this->getId(),
+                'gatewayResponse' => $this->getGatewayResponse(),
+                'antifraudResponse' => $this->getAntifraudResponse(),
+                'metadata' => $this->getMetadata(),
+                'split' => $this->getSplit(),
+                'interest' => $this->getInterest(),
+                'fine' => $this->getFine(),
+                'maxDaysToPayPastDue' => $this->getMaxDaysToPayPastDue()
+            ]
+        );
     }
 
     /**

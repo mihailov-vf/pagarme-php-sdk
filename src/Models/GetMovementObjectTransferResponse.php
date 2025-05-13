@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -288,6 +289,29 @@ class GetMovementObjectTransferResponse extends GetMovementObjectBaseResponse im
     public function unsetBankAccount(): void
     {
         $this->bankAccount = [];
+    }
+
+    /**
+     * Converts the GetMovementObjectTransferResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetMovementObjectTransferResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetMovementObjectTransferResponse',
+            [
+                'sourceType' => $this->getSourceType(),
+                'sourceId' => $this->getSourceId(),
+                'targetType' => $this->getTargetType(),
+                'targetId' => $this->getTargetId(),
+                'fee' => $this->getFee(),
+                'fundingDate' => $this->getFundingDate(),
+                'fundingEstimatedDate' => $this->getFundingEstimatedDate(),
+                'bankAccount' => $this->getBankAccount()
+            ],
+            parent::__toString()
+        );
     }
 
     /**

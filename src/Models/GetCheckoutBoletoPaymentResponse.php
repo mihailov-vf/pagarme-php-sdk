@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -88,6 +89,19 @@ class GetCheckoutBoletoPaymentResponse implements \JsonSerializable
     public function unsetInstructions(): void
     {
         $this->instructions = [];
+    }
+
+    /**
+     * Converts the GetCheckoutBoletoPaymentResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetCheckoutBoletoPaymentResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetCheckoutBoletoPaymentResponse',
+            ['dueAt' => $this->getDueAt(), 'instructions' => $this->getInstructions()]
+        );
     }
 
     /**

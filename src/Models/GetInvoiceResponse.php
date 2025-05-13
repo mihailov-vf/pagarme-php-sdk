@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -820,6 +821,43 @@ class GetInvoiceResponse implements \JsonSerializable
     public function unsetSubscriptionId(): void
     {
         $this->subscriptionId = [];
+    }
+
+    /**
+     * Converts the GetInvoiceResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetInvoiceResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetInvoiceResponse',
+            [
+                'id' => $this->getId(),
+                'code' => $this->getCode(),
+                'url' => $this->getUrl(),
+                'amount' => $this->getAmount(),
+                'status' => $this->getStatus(),
+                'paymentMethod' => $this->getPaymentMethod(),
+                'createdAt' => $this->getCreatedAt(),
+                'items' => $this->getItems(),
+                'customer' => $this->getCustomer(),
+                'charge' => $this->getCharge(),
+                'installments' => $this->getInstallments(),
+                'billingAddress' => $this->getBillingAddress(),
+                'subscription' => $this->getSubscription(),
+                'cycle' => $this->getCycle(),
+                'shipping' => $this->getShipping(),
+                'metadata' => $this->getMetadata(),
+                'dueAt' => $this->getDueAt(),
+                'canceledAt' => $this->getCanceledAt(),
+                'billingAt' => $this->getBillingAt(),
+                'seenAt' => $this->getSeenAt(),
+                'totalDiscount' => $this->getTotalDiscount(),
+                'totalIncrement' => $this->getTotalIncrement(),
+                'subscriptionId' => $this->getSubscriptionId()
+            ]
+        );
     }
 
     /**

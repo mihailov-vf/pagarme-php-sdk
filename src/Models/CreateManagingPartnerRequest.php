@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -302,6 +303,30 @@ class CreateManagingPartnerRequest implements \JsonSerializable
     public function setPhoneNumbers(array $phoneNumbers): void
     {
         $this->phoneNumbers = $phoneNumbers;
+    }
+
+    /**
+     * Converts the CreateManagingPartnerRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateManagingPartnerRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateManagingPartnerRequest',
+            [
+                'name' => $this->name,
+                'email' => $this->email,
+                'document' => $this->document,
+                'motherName' => $this->getMotherName(),
+                'birthdate' => $this->birthdate,
+                'monthlyIncome' => $this->monthlyIncome,
+                'professionalOccupation' => $this->professionalOccupation,
+                'selfDeclaredLegalRepresentative' => $this->selfDeclaredLegalRepresentative,
+                'address' => $this->address,
+                'phoneNumbers' => $this->phoneNumbers
+            ]
+        );
     }
 
     /**

@@ -31,7 +31,7 @@ class UpdateSubscriptionMinimumPriceRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription minimum price request Builder object.
+     * Initializes a new Update Subscription Minimum Price Request Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class UpdateSubscriptionMinimumPriceRequestBuilder
 
     /**
      * Sets minimum price field.
+     *
+     * @param int|null $value
      */
     public function minimumPrice(?int $value): self
     {
@@ -48,7 +50,7 @@ class UpdateSubscriptionMinimumPriceRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription minimum price request object.
+     * Initializes a new Update Subscription Minimum Price Request object.
      */
     public function build(): UpdateSubscriptionMinimumPriceRequest
     {

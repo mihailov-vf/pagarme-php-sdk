@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -768,6 +769,42 @@ class GetPayableResponse implements \JsonSerializable
     public function unsetLiquidationArrangementId(): void
     {
         $this->liquidationArrangementId = [];
+    }
+
+    /**
+     * Converts the GetPayableResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetPayableResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetPayableResponse',
+            [
+                'id' => $this->getId(),
+                'status' => $this->getStatus(),
+                'amount' => $this->getAmount(),
+                'fee' => $this->getFee(),
+                'anticipationFee' => $this->getAnticipationFee(),
+                'fraudCoverageFee' => $this->getFraudCoverageFee(),
+                'installment' => $this->getInstallment(),
+                'gatewayId' => $this->getGatewayId(),
+                'chargeId' => $this->getChargeId(),
+                'splitId' => $this->getSplitId(),
+                'bulkAnticipationId' => $this->getBulkAnticipationId(),
+                'anticipationId' => $this->getAnticipationId(),
+                'recipientId' => $this->getRecipientId(),
+                'originatorModel' => $this->getOriginatorModel(),
+                'originatorModelId' => $this->getOriginatorModelId(),
+                'paymentDate' => $this->getPaymentDate(),
+                'originalPaymentDate' => $this->getOriginalPaymentDate(),
+                'type' => $this->getType(),
+                'paymentMethod' => $this->getPaymentMethod(),
+                'accrualAt' => $this->getAccrualAt(),
+                'createdAt' => $this->getCreatedAt(),
+                'liquidationArrangementId' => $this->getLiquidationArrangementId()
+            ]
+        );
     }
 
     /**

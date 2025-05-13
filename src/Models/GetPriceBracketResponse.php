@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -151,6 +152,24 @@ class GetPriceBracketResponse implements \JsonSerializable
     public function unsetOveragePrice(): void
     {
         $this->overagePrice = [];
+    }
+
+    /**
+     * Converts the GetPriceBracketResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetPriceBracketResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetPriceBracketResponse',
+            [
+                'startQuantity' => $this->getStartQuantity(),
+                'price' => $this->getPrice(),
+                'endQuantity' => $this->getEndQuantity(),
+                'overagePrice' => $this->getOveragePrice()
+            ]
+        );
     }
 
     /**

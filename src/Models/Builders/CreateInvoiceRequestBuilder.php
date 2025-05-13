@@ -31,7 +31,9 @@ class CreateInvoiceRequestBuilder
     }
 
     /**
-     * Initializes a new create invoice request Builder object.
+     * Initializes a new Create Invoice Request Builder object.
+     *
+     * @param array<string,string> $metadata
      */
     public static function init(array $metadata): self
     {
@@ -39,7 +41,7 @@ class CreateInvoiceRequestBuilder
     }
 
     /**
-     * Initializes a new create invoice request object.
+     * Initializes a new Create Invoice Request object.
      */
     public function build(): CreateInvoiceRequest
     {

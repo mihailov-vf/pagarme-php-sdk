@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -168,6 +169,25 @@ class GetSafetyPayTransactionResponse extends GetTransactionResponse implements 
     public function unsetPaidAmount(): void
     {
         $this->paidAmount = [];
+    }
+
+    /**
+     * Converts the GetSafetyPayTransactionResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetSafetyPayTransactionResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetSafetyPayTransactionResponse',
+            [
+                'url' => $this->getUrl(),
+                'bankTid' => $this->getBankTid(),
+                'paidAt' => $this->getPaidAt(),
+                'paidAmount' => $this->getPaidAmount()
+            ],
+            parent::__toString()
+        );
     }
 
     /**

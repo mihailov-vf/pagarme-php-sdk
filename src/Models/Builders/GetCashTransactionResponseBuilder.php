@@ -16,6 +16,7 @@ use PagarmeApiSDKLib\Models\GetCashTransactionResponse;
 use PagarmeApiSDKLib\Models\GetFineResponse;
 use PagarmeApiSDKLib\Models\GetGatewayResponseResponse;
 use PagarmeApiSDKLib\Models\GetInterestResponse;
+use PagarmeApiSDKLib\Models\GetSplitResponse;
 
 /**
  * Builder for model GetCashTransactionResponse
@@ -35,7 +36,7 @@ class GetCashTransactionResponseBuilder
     }
 
     /**
-     * Initializes a new get cash transaction response Builder object.
+     * Initializes a new Get Cash Transaction Response Builder object.
      */
     public static function init(): self
     {
@@ -44,6 +45,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets gateway id field.
+     *
+     * @param string|null $value
      */
     public function gatewayId(?string $value): self
     {
@@ -62,6 +65,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -80,6 +85,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -98,6 +105,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets success field.
+     *
+     * @param bool|null $value
      */
     public function success(?bool $value): self
     {
@@ -116,6 +125,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -134,6 +145,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -152,6 +165,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets attempt count field.
+     *
+     * @param int|null $value
      */
     public function attemptCount(?int $value): self
     {
@@ -170,6 +185,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets max attempts field.
+     *
+     * @param int|null $value
      */
     public function maxAttempts(?int $value): self
     {
@@ -188,6 +205,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets splits field.
+     *
+     * @param GetSplitResponse[]|null $value
      */
     public function splits(?array $value): self
     {
@@ -206,6 +225,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets next attempt field.
+     *
+     * @param \DateTime|null $value
      */
     public function nextAttempt(?\DateTime $value): self
     {
@@ -224,6 +245,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets transaction type field.
+     *
+     * @param string|null $value
      */
     public function transactionType(?string $value): self
     {
@@ -233,6 +256,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -251,6 +276,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets gateway response field.
+     *
+     * @param GetGatewayResponseResponse|null $value
      */
     public function gatewayResponse(?GetGatewayResponseResponse $value): self
     {
@@ -269,6 +296,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets antifraud response field.
+     *
+     * @param GetAntifraudResponse|null $value
      */
     public function antifraudResponse(?GetAntifraudResponse $value): self
     {
@@ -287,6 +316,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -305,6 +336,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets split field.
+     *
+     * @param GetSplitResponse[]|null $value
      */
     public function split(?array $value): self
     {
@@ -323,6 +356,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets interest field.
+     *
+     * @param GetInterestResponse|null $value
      */
     public function interest(?GetInterestResponse $value): self
     {
@@ -341,6 +376,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets fine field.
+     *
+     * @param GetFineResponse|null $value
      */
     public function fine(?GetFineResponse $value): self
     {
@@ -359,6 +396,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets max days to pay past due field.
+     *
+     * @param int|null $value
      */
     public function maxDaysToPayPastDue(?int $value): self
     {
@@ -377,6 +416,8 @@ class GetCashTransactionResponseBuilder
 
     /**
      * Sets description field.
+     *
+     * @param string|null $value
      */
     public function description(?string $value): self
     {
@@ -394,7 +435,7 @@ class GetCashTransactionResponseBuilder
     }
 
     /**
-     * Initializes a new get cash transaction response object.
+     * Initializes a new Get Cash Transaction Response object.
      */
     public function build(): GetCashTransactionResponse
     {

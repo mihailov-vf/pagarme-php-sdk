@@ -33,7 +33,7 @@ class CreateCardRequestBuilder
     }
 
     /**
-     * Initializes a new create card request Builder object.
+     * Initializes a new Create Card Request Builder object.
      */
     public static function init(): self
     {
@@ -42,6 +42,8 @@ class CreateCardRequestBuilder
 
     /**
      * Sets number field.
+     *
+     * @param string|null $value
      */
     public function number(?string $value): self
     {
@@ -51,6 +53,8 @@ class CreateCardRequestBuilder
 
     /**
      * Sets holder name field.
+     *
+     * @param string|null $value
      */
     public function holderName(?string $value): self
     {
@@ -60,6 +64,8 @@ class CreateCardRequestBuilder
 
     /**
      * Sets exp month field.
+     *
+     * @param int|null $value
      */
     public function expMonth(?int $value): self
     {
@@ -69,6 +75,8 @@ class CreateCardRequestBuilder
 
     /**
      * Sets exp year field.
+     *
+     * @param int|null $value
      */
     public function expYear(?int $value): self
     {
@@ -78,6 +86,8 @@ class CreateCardRequestBuilder
 
     /**
      * Sets cvv field.
+     *
+     * @param string|null $value
      */
     public function cvv(?string $value): self
     {
@@ -87,6 +97,8 @@ class CreateCardRequestBuilder
 
     /**
      * Sets billing address field.
+     *
+     * @param CreateAddressRequest|null $value
      */
     public function billingAddress(?CreateAddressRequest $value): self
     {
@@ -96,6 +108,8 @@ class CreateCardRequestBuilder
 
     /**
      * Sets brand field.
+     *
+     * @param string|null $value
      */
     public function brand(?string $value): self
     {
@@ -105,6 +119,8 @@ class CreateCardRequestBuilder
 
     /**
      * Sets billing address id field.
+     *
+     * @param string|null $value
      */
     public function billingAddressId(?string $value): self
     {
@@ -114,6 +130,8 @@ class CreateCardRequestBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -123,6 +141,8 @@ class CreateCardRequestBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -132,6 +152,8 @@ class CreateCardRequestBuilder
 
     /**
      * Sets options field.
+     *
+     * @param CreateCardOptionsRequest|null $value
      */
     public function options(?CreateCardOptionsRequest $value): self
     {
@@ -141,6 +163,8 @@ class CreateCardRequestBuilder
 
     /**
      * Sets holder document field.
+     *
+     * @param string|null $value
      */
     public function holderDocument(?string $value): self
     {
@@ -150,6 +174,8 @@ class CreateCardRequestBuilder
 
     /**
      * Sets private label field.
+     *
+     * @param bool|null $value
      */
     public function privateLabel(?bool $value): self
     {
@@ -159,6 +185,8 @@ class CreateCardRequestBuilder
 
     /**
      * Sets label field.
+     *
+     * @param string|null $value
      */
     public function label(?string $value): self
     {
@@ -168,6 +196,8 @@ class CreateCardRequestBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -177,6 +207,8 @@ class CreateCardRequestBuilder
 
     /**
      * Sets token field.
+     *
+     * @param string|null $value
      */
     public function token(?string $value): self
     {
@@ -185,7 +217,7 @@ class CreateCardRequestBuilder
     }
 
     /**
-     * Initializes a new create card request object.
+     * Initializes a new Create Card Request object.
      */
     public function build(): CreateCardRequest
     {

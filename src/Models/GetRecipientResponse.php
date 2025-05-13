@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -685,6 +686,38 @@ class GetRecipientResponse implements \JsonSerializable
     public function unsetRegisterInformation(): void
     {
         $this->registerInformation = [];
+    }
+
+    /**
+     * Converts the GetRecipientResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetRecipientResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetRecipientResponse',
+            [
+                'id' => $this->getId(),
+                'name' => $this->getName(),
+                'email' => $this->getEmail(),
+                'document' => $this->getDocument(),
+                'description' => $this->getDescription(),
+                'type' => $this->getType(),
+                'status' => $this->getStatus(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt(),
+                'deletedAt' => $this->getDeletedAt(),
+                'defaultBankAccount' => $this->getDefaultBankAccount(),
+                'gatewayRecipients' => $this->getGatewayRecipients(),
+                'metadata' => $this->getMetadata(),
+                'automaticAnticipationSettings' => $this->getAutomaticAnticipationSettings(),
+                'transferSettings' => $this->getTransferSettings(),
+                'code' => $this->getCode(),
+                'paymentMode' => $this->getPaymentMode(),
+                'registerInformation' => $this->getRegisterInformation()
+            ]
+        );
     }
 
     /**

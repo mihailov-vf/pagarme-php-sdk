@@ -41,6 +41,13 @@ class ConfigurationDefaults
 
     public const BASIC_AUTH_PASSWORD = '';
 
+    public const PROXY_CONFIGURATION = [
+        'port' => 0,
+        'tunnel' => false,
+        'address' => '',
+        'auth' => ['user' => '', 'pass' => '', 'method' => CURLAUTH_BASIC]
+    ];
+
     /**
      * @var array Associative list of all default configurations
      */
@@ -57,6 +64,7 @@ class ConfigurationDefaults
         'serviceRefererName' => self::SERVICE_REFERER_NAME,
         'environment' => self::ENVIRONMENT,
         'basicAuthUserName' => self::BASIC_AUTH_USER_NAME,
-        'basicAuthPassword' => self::BASIC_AUTH_PASSWORD
+        'basicAuthPassword' => self::BASIC_AUTH_PASSWORD,
+        'proxyConfiguration' => self::PROXY_CONFIGURATION
     ];
 }

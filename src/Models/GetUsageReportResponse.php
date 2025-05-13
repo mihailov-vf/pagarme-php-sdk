@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class GetUsageReportResponse implements \JsonSerializable
@@ -114,6 +115,23 @@ class GetUsageReportResponse implements \JsonSerializable
     public function unsetGroupedReportUrl(): void
     {
         $this->groupedReportUrl = [];
+    }
+
+    /**
+     * Converts the GetUsageReportResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetUsageReportResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetUsageReportResponse',
+            [
+                'url' => $this->getUrl(),
+                'usageReportUrl' => $this->getUsageReportUrl(),
+                'groupedReportUrl' => $this->getGroupedReportUrl()
+            ]
+        );
     }
 
     /**

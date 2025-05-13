@@ -31,7 +31,11 @@ class CreateCancelChargeSplitRulesRequestBuilder
     }
 
     /**
-     * Initializes a new create cancel charge split rules request Builder object.
+     * Initializes a new Create Cancel Charge Split Rules Request Builder object.
+     *
+     * @param string $id
+     * @param int $amount
+     * @param string $type
      */
     public static function init(string $id, int $amount, string $type): self
     {
@@ -39,7 +43,7 @@ class CreateCancelChargeSplitRulesRequestBuilder
     }
 
     /**
-     * Initializes a new create cancel charge split rules request object.
+     * Initializes a new Create Cancel Charge Split Rules Request object.
      */
     public function build(): CreateCancelChargeSplitRulesRequest
     {

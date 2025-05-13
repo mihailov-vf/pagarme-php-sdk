@@ -33,7 +33,7 @@ class UpdateCustomerRequestBuilder
     }
 
     /**
-     * Initializes a new update customer request Builder object.
+     * Initializes a new Update Customer Request Builder object.
      */
     public static function init(): self
     {
@@ -42,6 +42,8 @@ class UpdateCustomerRequestBuilder
 
     /**
      * Sets name field.
+     *
+     * @param string|null $value
      */
     public function name(?string $value): self
     {
@@ -51,6 +53,8 @@ class UpdateCustomerRequestBuilder
 
     /**
      * Sets email field.
+     *
+     * @param string|null $value
      */
     public function email(?string $value): self
     {
@@ -60,6 +64,8 @@ class UpdateCustomerRequestBuilder
 
     /**
      * Sets document field.
+     *
+     * @param string|null $value
      */
     public function document(?string $value): self
     {
@@ -69,6 +75,8 @@ class UpdateCustomerRequestBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -78,6 +86,8 @@ class UpdateCustomerRequestBuilder
 
     /**
      * Sets address field.
+     *
+     * @param CreateAddressRequest|null $value
      */
     public function address(?CreateAddressRequest $value): self
     {
@@ -87,6 +97,8 @@ class UpdateCustomerRequestBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -96,6 +108,8 @@ class UpdateCustomerRequestBuilder
 
     /**
      * Sets phones field.
+     *
+     * @param CreatePhonesRequest|null $value
      */
     public function phones(?CreatePhonesRequest $value): self
     {
@@ -105,6 +119,8 @@ class UpdateCustomerRequestBuilder
 
     /**
      * Sets code field.
+     *
+     * @param string|null $value
      */
     public function code(?string $value): self
     {
@@ -114,6 +130,8 @@ class UpdateCustomerRequestBuilder
 
     /**
      * Sets gender field.
+     *
+     * @param string|null $value
      */
     public function gender(?string $value): self
     {
@@ -123,6 +141,8 @@ class UpdateCustomerRequestBuilder
 
     /**
      * Sets document type field.
+     *
+     * @param string|null $value
      */
     public function documentType(?string $value): self
     {
@@ -131,7 +151,7 @@ class UpdateCustomerRequestBuilder
     }
 
     /**
-     * Initializes a new update customer request object.
+     * Initializes a new Update Customer Request object.
      */
     public function build(): UpdateCustomerRequest
     {

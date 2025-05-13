@@ -31,7 +31,10 @@ class UpdatePriceBracketRequestBuilder
     }
 
     /**
-     * Initializes a new update price bracket request Builder object.
+     * Initializes a new Update Price Bracket Request Builder object.
+     *
+     * @param int $startQuantity
+     * @param int $price
      */
     public static function init(int $startQuantity, int $price): self
     {
@@ -40,6 +43,8 @@ class UpdatePriceBracketRequestBuilder
 
     /**
      * Sets end quantity field.
+     *
+     * @param int|null $value
      */
     public function endQuantity(?int $value): self
     {
@@ -49,6 +54,8 @@ class UpdatePriceBracketRequestBuilder
 
     /**
      * Sets overage price field.
+     *
+     * @param int|null $value
      */
     public function overagePrice(?int $value): self
     {
@@ -57,7 +64,7 @@ class UpdatePriceBracketRequestBuilder
     }
 
     /**
-     * Initializes a new update price bracket request object.
+     * Initializes a new Update Price Bracket Request object.
      */
     public function build(): UpdatePriceBracketRequest
     {

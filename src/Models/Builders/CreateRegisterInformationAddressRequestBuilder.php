@@ -31,7 +31,16 @@ class CreateRegisterInformationAddressRequestBuilder
     }
 
     /**
-     * Initializes a new create register information address request Builder object.
+     * Initializes a new Create Register Information Address Request Builder object.
+     *
+     * @param string $street
+     * @param string $complementary
+     * @param string $streetNumber
+     * @param string $neighborhood
+     * @param string $city
+     * @param string $state
+     * @param string $zipCode
+     * @param string $referencePoint
      */
     public static function init(
         string $street,
@@ -56,7 +65,7 @@ class CreateRegisterInformationAddressRequestBuilder
     }
 
     /**
-     * Initializes a new create register information address request object.
+     * Initializes a new Create Register Information Address Request object.
      */
     public function build(): CreateRegisterInformationAddressRequest
     {

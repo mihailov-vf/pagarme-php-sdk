@@ -31,7 +31,9 @@ class CreateTransactionReportFileRequestBuilder
     }
 
     /**
-     * Initializes a new create transaction report file request Builder object.
+     * Initializes a new Create Transaction Report File Request Builder object.
+     *
+     * @param string $name
      */
     public static function init(string $name): self
     {
@@ -40,6 +42,8 @@ class CreateTransactionReportFileRequestBuilder
 
     /**
      * Sets start at field.
+     *
+     * @param \DateTime|null $value
      */
     public function startAt(?\DateTime $value): self
     {
@@ -49,6 +53,8 @@ class CreateTransactionReportFileRequestBuilder
 
     /**
      * Sets end at field.
+     *
+     * @param string|null $value
      */
     public function endAt(?string $value): self
     {
@@ -57,7 +63,7 @@ class CreateTransactionReportFileRequestBuilder
     }
 
     /**
-     * Initializes a new create transaction report file request object.
+     * Initializes a new Create Transaction Report File Request object.
      */
     public function build(): CreateTransactionReportFileRequest
     {

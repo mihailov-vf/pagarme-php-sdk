@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -256,6 +257,27 @@ class GetInvoiceItemResponse implements \JsonSerializable
     public function unsetSubscriptionItemId(): void
     {
         $this->subscriptionItemId = [];
+    }
+
+    /**
+     * Converts the GetInvoiceItemResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetInvoiceItemResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetInvoiceItemResponse',
+            [
+                'amount' => $this->getAmount(),
+                'description' => $this->getDescription(),
+                'pricingScheme' => $this->getPricingScheme(),
+                'priceBracket' => $this->getPriceBracket(),
+                'quantity' => $this->getQuantity(),
+                'name' => $this->getName(),
+                'subscriptionItemId' => $this->getSubscriptionItemId()
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -282,6 +283,29 @@ class CreateBankAccountRefundingDTO implements \JsonSerializable
     public function setType(string $type): void
     {
         $this->type = $type;
+    }
+
+    /**
+     * Converts the CreateBankAccountRefundingDTO object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateBankAccountRefundingDTO object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateBankAccountRefundingDTO',
+            [
+                'holderName' => $this->holderName,
+                'holderType' => $this->holderType,
+                'holderDocument' => $this->holderDocument,
+                'bank' => $this->bank,
+                'branchNumber' => $this->branchNumber,
+                'branchCheckDigit' => $this->branchCheckDigit,
+                'accountNumber' => $this->accountNumber,
+                'accountCheckDigit' => $this->accountCheckDigit,
+                'type' => $this->type
+            ]
+        );
     }
 
     /**

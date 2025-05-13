@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -610,6 +611,37 @@ class GetCardResponse implements \JsonSerializable
     public function unsetLabel(): void
     {
         $this->label = [];
+    }
+
+    /**
+     * Converts the GetCardResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetCardResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetCardResponse',
+            [
+                'id' => $this->getId(),
+                'lastFourDigits' => $this->getLastFourDigits(),
+                'brand' => $this->getBrand(),
+                'holderName' => $this->getHolderName(),
+                'expMonth' => $this->getExpMonth(),
+                'expYear' => $this->getExpYear(),
+                'status' => $this->getStatus(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt(),
+                'billingAddress' => $this->getBillingAddress(),
+                'customer' => $this->getCustomer(),
+                'metadata' => $this->getMetadata(),
+                'type' => $this->getType(),
+                'holderDocument' => $this->getHolderDocument(),
+                'deletedAt' => $this->getDeletedAt(),
+                'firstSixDigits' => $this->getFirstSixDigits(),
+                'label' => $this->getLabel()
+            ]
+        );
     }
 
     /**

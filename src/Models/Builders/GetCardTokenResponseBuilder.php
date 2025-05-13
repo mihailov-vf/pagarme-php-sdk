@@ -31,7 +31,7 @@ class GetCardTokenResponseBuilder
     }
 
     /**
-     * Initializes a new get card token response Builder object.
+     * Initializes a new Get Card Token Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetCardTokenResponseBuilder
 
     /**
      * Sets last four digits field.
+     *
+     * @param string|null $value
      */
     public function lastFourDigits(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetCardTokenResponseBuilder
 
     /**
      * Sets holder name field.
+     *
+     * @param string|null $value
      */
     public function holderName(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetCardTokenResponseBuilder
 
     /**
      * Sets holder document field.
+     *
+     * @param string|null $value
      */
     public function holderDocument(?string $value): self
     {
@@ -94,6 +100,8 @@ class GetCardTokenResponseBuilder
 
     /**
      * Sets exp month field.
+     *
+     * @param int|null $value
      */
     public function expMonth(?int $value): self
     {
@@ -112,6 +120,8 @@ class GetCardTokenResponseBuilder
 
     /**
      * Sets exp year field.
+     *
+     * @param int|null $value
      */
     public function expYear(?int $value): self
     {
@@ -130,6 +140,8 @@ class GetCardTokenResponseBuilder
 
     /**
      * Sets brand field.
+     *
+     * @param string|null $value
      */
     public function brand(?string $value): self
     {
@@ -148,6 +160,8 @@ class GetCardTokenResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -166,6 +180,8 @@ class GetCardTokenResponseBuilder
 
     /**
      * Sets label field.
+     *
+     * @param string|null $value
      */
     public function label(?string $value): self
     {
@@ -183,7 +199,7 @@ class GetCardTokenResponseBuilder
     }
 
     /**
-     * Initializes a new get card token response object.
+     * Initializes a new Get Card Token Response object.
      */
     public function build(): GetCardTokenResponse
     {

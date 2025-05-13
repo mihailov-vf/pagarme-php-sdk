@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\UpdatePriceBracketRequest;
 use PagarmeApiSDKLib\Models\UpdatePricingSchemeRequest;
 
 /**
@@ -31,7 +32,10 @@ class UpdatePricingSchemeRequestBuilder
     }
 
     /**
-     * Initializes a new update pricing scheme request Builder object.
+     * Initializes a new Update Pricing Scheme Request Builder object.
+     *
+     * @param string $schemeType
+     * @param UpdatePriceBracketRequest[] $priceBrackets
      */
     public static function init(string $schemeType, array $priceBrackets): self
     {
@@ -40,6 +44,8 @@ class UpdatePricingSchemeRequestBuilder
 
     /**
      * Sets price field.
+     *
+     * @param int|null $value
      */
     public function price(?int $value): self
     {
@@ -49,6 +55,8 @@ class UpdatePricingSchemeRequestBuilder
 
     /**
      * Sets minimum price field.
+     *
+     * @param int|null $value
      */
     public function minimumPrice(?int $value): self
     {
@@ -58,6 +66,8 @@ class UpdatePricingSchemeRequestBuilder
 
     /**
      * Sets percentage field.
+     *
+     * @param float|null $value
      */
     public function percentage(?float $value): self
     {
@@ -66,7 +76,7 @@ class UpdatePricingSchemeRequestBuilder
     }
 
     /**
-     * Initializes a new update pricing scheme request object.
+     * Initializes a new Update Pricing Scheme Request object.
      */
     public function build(): UpdatePricingSchemeRequest
     {

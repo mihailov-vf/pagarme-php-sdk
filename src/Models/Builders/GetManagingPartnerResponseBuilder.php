@@ -12,6 +12,7 @@ namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use PagarmeApiSDKLib\Models\GetManagingPartnerResponse;
+use PagarmeApiSDKLib\Models\GetPhoneNumberResponse;
 use PagarmeApiSDKLib\Models\GetRegisterInformationAddressResponse;
 
 /**
@@ -32,7 +33,7 @@ class GetManagingPartnerResponseBuilder
     }
 
     /**
-     * Initializes a new get managing partner response Builder object.
+     * Initializes a new Get Managing Partner Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +42,8 @@ class GetManagingPartnerResponseBuilder
 
     /**
      * Sets name field.
+     *
+     * @param string|null $value
      */
     public function name(?string $value): self
     {
@@ -59,6 +62,8 @@ class GetManagingPartnerResponseBuilder
 
     /**
      * Sets email field.
+     *
+     * @param string|null $value
      */
     public function email(?string $value): self
     {
@@ -77,6 +82,8 @@ class GetManagingPartnerResponseBuilder
 
     /**
      * Sets document field.
+     *
+     * @param string|null $value
      */
     public function document(?string $value): self
     {
@@ -95,6 +102,8 @@ class GetManagingPartnerResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -113,6 +122,8 @@ class GetManagingPartnerResponseBuilder
 
     /**
      * Sets mother name field.
+     *
+     * @param string|null $value
      */
     public function motherName(?string $value): self
     {
@@ -131,6 +142,8 @@ class GetManagingPartnerResponseBuilder
 
     /**
      * Sets birthdate field.
+     *
+     * @param string|null $value
      */
     public function birthdate(?string $value): self
     {
@@ -149,6 +162,8 @@ class GetManagingPartnerResponseBuilder
 
     /**
      * Sets monthly income field.
+     *
+     * @param string|null $value
      */
     public function monthlyIncome(?string $value): self
     {
@@ -167,6 +182,8 @@ class GetManagingPartnerResponseBuilder
 
     /**
      * Sets professional occupation field.
+     *
+     * @param string|null $value
      */
     public function professionalOccupation(?string $value): self
     {
@@ -185,6 +202,8 @@ class GetManagingPartnerResponseBuilder
 
     /**
      * Sets self declared representative field.
+     *
+     * @param bool|null $value
      */
     public function selfDeclaredRepresentative(?bool $value): self
     {
@@ -194,6 +213,8 @@ class GetManagingPartnerResponseBuilder
 
     /**
      * Sets address field.
+     *
+     * @param GetRegisterInformationAddressResponse|null $value
      */
     public function address(?GetRegisterInformationAddressResponse $value): self
     {
@@ -212,6 +233,8 @@ class GetManagingPartnerResponseBuilder
 
     /**
      * Sets phone numbers field.
+     *
+     * @param GetPhoneNumberResponse[]|null $value
      */
     public function phoneNumbers(?array $value): self
     {
@@ -229,7 +252,7 @@ class GetManagingPartnerResponseBuilder
     }
 
     /**
-     * Initializes a new get managing partner response object.
+     * Initializes a new Get Managing Partner Response object.
      */
     public function build(): GetManagingPartnerResponse
     {

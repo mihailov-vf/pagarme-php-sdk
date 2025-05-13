@@ -32,7 +32,7 @@ class GetPaymentAuthenticationResponseBuilder
     }
 
     /**
-     * Initializes a new get payment authentication response Builder object.
+     * Initializes a new Get Payment Authentication Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetPaymentAuthenticationResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -59,6 +61,8 @@ class GetPaymentAuthenticationResponseBuilder
 
     /**
      * Sets threed secure field.
+     *
+     * @param GetThreeDSecureResponse|null $value
      */
     public function threedSecure(?GetThreeDSecureResponse $value): self
     {
@@ -76,7 +80,7 @@ class GetPaymentAuthenticationResponseBuilder
     }
 
     /**
-     * Initializes a new get payment authentication response object.
+     * Initializes a new Get Payment Authentication Response object.
      */
     public function build(): GetPaymentAuthenticationResponse
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -95,6 +96,19 @@ class GetCheckoutPixPaymentResponse implements \JsonSerializable
     public function unsetAdditionalInformation(): void
     {
         $this->additionalInformation = [];
+    }
+
+    /**
+     * Converts the GetCheckoutPixPaymentResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetCheckoutPixPaymentResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetCheckoutPixPaymentResponse',
+            ['expiresAt' => $this->getExpiresAt(), 'additionalInformation' => $this->getAdditionalInformation()]
+        );
     }
 
     /**

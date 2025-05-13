@@ -32,7 +32,7 @@ class GetBalanceResponseBuilder
     }
 
     /**
-     * Initializes a new get balance response Builder object.
+     * Initializes a new Get Balance Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetBalanceResponseBuilder
 
     /**
      * Sets currency field.
+     *
+     * @param string|null $value
      */
     public function currency(?string $value): self
     {
@@ -59,6 +61,8 @@ class GetBalanceResponseBuilder
 
     /**
      * Sets available amount field.
+     *
+     * @param int|null $value
      */
     public function availableAmount(?int $value): self
     {
@@ -77,6 +81,8 @@ class GetBalanceResponseBuilder
 
     /**
      * Sets recipient field.
+     *
+     * @param GetRecipientResponse|null $value
      */
     public function recipient(?GetRecipientResponse $value): self
     {
@@ -95,6 +101,8 @@ class GetBalanceResponseBuilder
 
     /**
      * Sets transferred amount field.
+     *
+     * @param int|null $value
      */
     public function transferredAmount(?int $value): self
     {
@@ -113,6 +121,8 @@ class GetBalanceResponseBuilder
 
     /**
      * Sets waiting funds amount field.
+     *
+     * @param int|null $value
      */
     public function waitingFundsAmount(?int $value): self
     {
@@ -130,7 +140,7 @@ class GetBalanceResponseBuilder
     }
 
     /**
-     * Initializes a new get balance response object.
+     * Initializes a new Get Balance Response object.
      */
     public function build(): GetBalanceResponse
     {

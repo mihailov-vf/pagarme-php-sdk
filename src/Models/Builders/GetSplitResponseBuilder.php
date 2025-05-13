@@ -33,7 +33,7 @@ class GetSplitResponseBuilder
     }
 
     /**
-     * Initializes a new get split response Builder object.
+     * Initializes a new Get Split Response Builder object.
      */
     public static function init(): self
     {
@@ -42,6 +42,8 @@ class GetSplitResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -60,6 +62,8 @@ class GetSplitResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -78,6 +82,8 @@ class GetSplitResponseBuilder
 
     /**
      * Sets recipient field.
+     *
+     * @param GetRecipientResponse|null $value
      */
     public function recipient(?GetRecipientResponse $value): self
     {
@@ -96,6 +102,8 @@ class GetSplitResponseBuilder
 
     /**
      * Sets gateway id field.
+     *
+     * @param string|null $value
      */
     public function gatewayId(?string $value): self
     {
@@ -114,6 +122,8 @@ class GetSplitResponseBuilder
 
     /**
      * Sets options field.
+     *
+     * @param GetSplitOptionsResponse|null $value
      */
     public function options(?GetSplitOptionsResponse $value): self
     {
@@ -132,6 +142,8 @@ class GetSplitResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -149,7 +161,7 @@ class GetSplitResponseBuilder
     }
 
     /**
-     * Initializes a new get split response object.
+     * Initializes a new Get Split Response object.
      */
     public function build(): GetSplitResponse
     {

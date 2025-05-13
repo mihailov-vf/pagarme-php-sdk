@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -279,6 +280,28 @@ class GetMovementObjectBaseResponse implements \JsonSerializable
     public function unsetGatewayId(): void
     {
         $this->gatewayId = [];
+    }
+
+    /**
+     * Converts the GetMovementObjectBaseResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetMovementObjectBaseResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetMovementObjectBaseResponse',
+            [
+                'object' => $this->object,
+                'id' => $this->getId(),
+                'status' => $this->getStatus(),
+                'amount' => $this->getAmount(),
+                'createdAt' => $this->getCreatedAt(),
+                'type' => $this->getType(),
+                'chargeId' => $this->getChargeId(),
+                'gatewayId' => $this->getGatewayId()
+            ]
+        );
     }
 
     /**

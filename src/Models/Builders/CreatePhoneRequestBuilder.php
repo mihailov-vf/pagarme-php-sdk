@@ -31,7 +31,7 @@ class CreatePhoneRequestBuilder
     }
 
     /**
-     * Initializes a new create phone request Builder object.
+     * Initializes a new Create Phone Request Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class CreatePhoneRequestBuilder
 
     /**
      * Sets country code field.
+     *
+     * @param string|null $value
      */
     public function countryCode(?string $value): self
     {
@@ -49,6 +51,8 @@ class CreatePhoneRequestBuilder
 
     /**
      * Sets number field.
+     *
+     * @param string|null $value
      */
     public function number(?string $value): self
     {
@@ -58,6 +62,8 @@ class CreatePhoneRequestBuilder
 
     /**
      * Sets area code field.
+     *
+     * @param string|null $value
      */
     public function areaCode(?string $value): self
     {
@@ -66,7 +72,9 @@ class CreatePhoneRequestBuilder
     }
 
     /**
-     * Sets type field.
+     * Sets Type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -75,7 +83,7 @@ class CreatePhoneRequestBuilder
     }
 
     /**
-     * Unsets type field.
+     * Unsets Type field.
      */
     public function unsetType(): self
     {
@@ -84,7 +92,7 @@ class CreatePhoneRequestBuilder
     }
 
     /**
-     * Initializes a new create phone request object.
+     * Initializes a new Create Phone Request object.
      */
     public function build(): CreatePhoneRequest
     {

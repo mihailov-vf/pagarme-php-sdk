@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetPayableResponse;
 use PagarmeApiSDKLib\Models\ListPayablesResponse;
 use PagarmeApiSDKLib\Models\PagingResponse;
 
@@ -32,7 +33,7 @@ class ListPayablesResponseBuilder
     }
 
     /**
-     * Initializes a new list payables response Builder object.
+     * Initializes a new List Payables Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +42,8 @@ class ListPayablesResponseBuilder
 
     /**
      * Sets data field.
+     *
+     * @param GetPayableResponse[]|null $value
      */
     public function data(?array $value): self
     {
@@ -59,6 +62,8 @@ class ListPayablesResponseBuilder
 
     /**
      * Sets paging field.
+     *
+     * @param PagingResponse|null $value
      */
     public function paging(?PagingResponse $value): self
     {
@@ -76,7 +81,7 @@ class ListPayablesResponseBuilder
     }
 
     /**
-     * Initializes a new list payables response object.
+     * Initializes a new List Payables Response object.
      */
     public function build(): ListPayablesResponse
     {

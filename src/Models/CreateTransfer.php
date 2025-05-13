@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class CreateTransfer implements \JsonSerializable
@@ -123,6 +124,24 @@ class CreateTransfer implements \JsonSerializable
     public function setMetadata(?array $metadata): void
     {
         $this->metadata = $metadata;
+    }
+
+    /**
+     * Converts the CreateTransfer object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateTransfer object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateTransfer',
+            [
+                'amount' => $this->amount,
+                'sourceId' => $this->sourceId,
+                'targetId' => $this->targetId,
+                'metadata' => $this->metadata
+            ]
+        );
     }
 
     /**

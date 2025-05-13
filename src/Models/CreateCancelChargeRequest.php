@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -153,6 +154,25 @@ class CreateCancelChargeRequest implements \JsonSerializable
     public function setBankAccount(?CreateBankAccountRefundingDTO $bankAccount): void
     {
         $this->bankAccount = $bankAccount;
+    }
+
+    /**
+     * Converts the CreateCancelChargeRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateCancelChargeRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateCancelChargeRequest',
+            [
+                'amount' => $this->amount,
+                'splitRules' => $this->splitRules,
+                'split' => $this->split,
+                'operationReference' => $this->operationReference,
+                'bankAccount' => $this->bankAccount
+            ]
+        );
     }
 
     /**

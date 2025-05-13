@@ -31,7 +31,9 @@ class CreateGooglePayHeaderRequestBuilder
     }
 
     /**
-     * Initializes a new create google pay header request Builder object.
+     * Initializes a new Create Google Pay Header Request Builder object.
+     *
+     * @param string $ephemeralPublicKey
      */
     public static function init(string $ephemeralPublicKey): self
     {
@@ -39,7 +41,7 @@ class CreateGooglePayHeaderRequestBuilder
     }
 
     /**
-     * Initializes a new create google pay header request object.
+     * Initializes a new Create Google Pay Header Request object.
      */
     public function build(): CreateGooglePayHeaderRequest
     {

@@ -32,7 +32,7 @@ class GetAnticipationLimitsResponseBuilder
     }
 
     /**
-     * Initializes a new get anticipation limits response Builder object.
+     * Initializes a new Get Anticipation Limits Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetAnticipationLimitsResponseBuilder
 
     /**
      * Sets max field.
+     *
+     * @param GetAnticipationLimitResponse|null $value
      */
     public function max(?GetAnticipationLimitResponse $value): self
     {
@@ -59,6 +61,8 @@ class GetAnticipationLimitsResponseBuilder
 
     /**
      * Sets min field.
+     *
+     * @param GetAnticipationLimitResponse|null $value
      */
     public function min(?GetAnticipationLimitResponse $value): self
     {
@@ -76,7 +80,7 @@ class GetAnticipationLimitsResponseBuilder
     }
 
     /**
-     * Initializes a new get anticipation limits response object.
+     * Initializes a new Get Anticipation Limits Response object.
      */
     public function build(): GetAnticipationLimitsResponse
     {

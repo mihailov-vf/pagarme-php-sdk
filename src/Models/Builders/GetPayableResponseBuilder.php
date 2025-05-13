@@ -31,7 +31,7 @@ class GetPayableResponseBuilder
     }
 
     /**
-     * Initializes a new get payable response Builder object.
+     * Initializes a new Get Payable Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param int|null $value
      */
     public function id(?int $value): self
     {
@@ -58,6 +60,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -94,6 +100,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets fee field.
+     *
+     * @param int|null $value
      */
     public function fee(?int $value): self
     {
@@ -112,6 +120,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets anticipation fee field.
+     *
+     * @param int|null $value
      */
     public function anticipationFee(?int $value): self
     {
@@ -130,6 +140,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets fraud coverage fee field.
+     *
+     * @param int|null $value
      */
     public function fraudCoverageFee(?int $value): self
     {
@@ -148,6 +160,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets installment field.
+     *
+     * @param int|null $value
      */
     public function installment(?int $value): self
     {
@@ -166,6 +180,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets gateway id field.
+     *
+     * @param int|null $value
      */
     public function gatewayId(?int $value): self
     {
@@ -184,6 +200,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets charge id field.
+     *
+     * @param string|null $value
      */
     public function chargeId(?string $value): self
     {
@@ -202,6 +220,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets split id field.
+     *
+     * @param string|null $value
      */
     public function splitId(?string $value): self
     {
@@ -220,6 +240,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets bulk anticipation id field.
+     *
+     * @param string|null $value
      */
     public function bulkAnticipationId(?string $value): self
     {
@@ -238,6 +260,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets anticipation id field.
+     *
+     * @param string|null $value
      */
     public function anticipationId(?string $value): self
     {
@@ -256,6 +280,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets recipient id field.
+     *
+     * @param string|null $value
      */
     public function recipientId(?string $value): self
     {
@@ -274,6 +300,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets originator model field.
+     *
+     * @param string|null $value
      */
     public function originatorModel(?string $value): self
     {
@@ -292,6 +320,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets originator model id field.
+     *
+     * @param string|null $value
      */
     public function originatorModelId(?string $value): self
     {
@@ -310,6 +340,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets payment date field.
+     *
+     * @param \DateTime|null $value
      */
     public function paymentDate(?\DateTime $value): self
     {
@@ -328,6 +360,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets original payment date field.
+     *
+     * @param \DateTime|null $value
      */
     public function originalPaymentDate(?\DateTime $value): self
     {
@@ -346,6 +380,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -364,6 +400,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets payment method field.
+     *
+     * @param string|null $value
      */
     public function paymentMethod(?string $value): self
     {
@@ -382,6 +420,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets accrual at field.
+     *
+     * @param \DateTime|null $value
      */
     public function accrualAt(?\DateTime $value): self
     {
@@ -400,6 +440,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -418,6 +460,8 @@ class GetPayableResponseBuilder
 
     /**
      * Sets liquidation arrangement id field.
+     *
+     * @param string|null $value
      */
     public function liquidationArrangementId(?string $value): self
     {
@@ -435,7 +479,7 @@ class GetPayableResponseBuilder
     }
 
     /**
-     * Initializes a new get payable response object.
+     * Initializes a new Get Payable Response object.
      */
     public function build(): GetPayableResponse
     {

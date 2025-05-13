@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -389,6 +390,30 @@ class GetAnticipationResponse implements \JsonSerializable
     public function unsetTimeframe(): void
     {
         $this->timeframe = [];
+    }
+
+    /**
+     * Converts the GetAnticipationResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetAnticipationResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetAnticipationResponse',
+            [
+                'id' => $this->getId(),
+                'requestedAmount' => $this->getRequestedAmount(),
+                'approvedAmount' => $this->getApprovedAmount(),
+                'recipient' => $this->getRecipient(),
+                'pgid' => $this->getPgid(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt(),
+                'paymentDate' => $this->getPaymentDate(),
+                'status' => $this->getStatus(),
+                'timeframe' => $this->getTimeframe()
+            ]
+        );
     }
 
     /**

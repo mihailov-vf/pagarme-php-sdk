@@ -17,6 +17,7 @@ use PagarmeApiSDKLib\Models\GetBoletoTransactionResponse;
 use PagarmeApiSDKLib\Models\GetFineResponse;
 use PagarmeApiSDKLib\Models\GetGatewayResponseResponse;
 use PagarmeApiSDKLib\Models\GetInterestResponse;
+use PagarmeApiSDKLib\Models\GetSplitResponse;
 
 /**
  * Builder for model GetBoletoTransactionResponse
@@ -36,7 +37,7 @@ class GetBoletoTransactionResponseBuilder
     }
 
     /**
-     * Initializes a new get boleto transaction response Builder object.
+     * Initializes a new Get Boleto Transaction Response Builder object.
      */
     public static function init(): self
     {
@@ -45,6 +46,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets gateway id field.
+     *
+     * @param string|null $value
      */
     public function gatewayId(?string $value): self
     {
@@ -63,6 +66,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -81,6 +86,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -99,6 +106,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets success field.
+     *
+     * @param bool|null $value
      */
     public function success(?bool $value): self
     {
@@ -117,6 +126,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -135,6 +146,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -153,6 +166,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets attempt count field.
+     *
+     * @param int|null $value
      */
     public function attemptCount(?int $value): self
     {
@@ -171,6 +186,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets max attempts field.
+     *
+     * @param int|null $value
      */
     public function maxAttempts(?int $value): self
     {
@@ -189,6 +206,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets splits field.
+     *
+     * @param GetSplitResponse[]|null $value
      */
     public function splits(?array $value): self
     {
@@ -207,6 +226,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets next attempt field.
+     *
+     * @param \DateTime|null $value
      */
     public function nextAttempt(?\DateTime $value): self
     {
@@ -225,6 +246,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets transaction type field.
+     *
+     * @param string|null $value
      */
     public function transactionType(?string $value): self
     {
@@ -234,6 +257,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -252,6 +277,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets gateway response field.
+     *
+     * @param GetGatewayResponseResponse|null $value
      */
     public function gatewayResponse(?GetGatewayResponseResponse $value): self
     {
@@ -270,6 +297,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets antifraud response field.
+     *
+     * @param GetAntifraudResponse|null $value
      */
     public function antifraudResponse(?GetAntifraudResponse $value): self
     {
@@ -288,6 +317,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -306,6 +337,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets split field.
+     *
+     * @param GetSplitResponse[]|null $value
      */
     public function split(?array $value): self
     {
@@ -324,6 +357,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets interest field.
+     *
+     * @param GetInterestResponse|null $value
      */
     public function interest(?GetInterestResponse $value): self
     {
@@ -342,6 +377,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets fine field.
+     *
+     * @param GetFineResponse|null $value
      */
     public function fine(?GetFineResponse $value): self
     {
@@ -360,6 +397,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets max days to pay past due field.
+     *
+     * @param int|null $value
      */
     public function maxDaysToPayPastDue(?int $value): self
     {
@@ -378,6 +417,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets url field.
+     *
+     * @param string|null $value
      */
     public function url(?string $value): self
     {
@@ -396,6 +437,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets barcode field.
+     *
+     * @param string|null $value
      */
     public function barcode(?string $value): self
     {
@@ -414,6 +457,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets nosso numero field.
+     *
+     * @param string|null $value
      */
     public function nossoNumero(?string $value): self
     {
@@ -432,6 +477,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets bank field.
+     *
+     * @param string|null $value
      */
     public function bank(?string $value): self
     {
@@ -450,6 +497,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets document number field.
+     *
+     * @param string|null $value
      */
     public function documentNumber(?string $value): self
     {
@@ -468,6 +517,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets instructions field.
+     *
+     * @param string|null $value
      */
     public function instructions(?string $value): self
     {
@@ -486,6 +537,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets billing address field.
+     *
+     * @param GetBillingAddressResponse|null $value
      */
     public function billingAddress(?GetBillingAddressResponse $value): self
     {
@@ -504,6 +557,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets due at field.
+     *
+     * @param \DateTime|null $value
      */
     public function dueAt(?\DateTime $value): self
     {
@@ -522,6 +577,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets qr code field.
+     *
+     * @param string|null $value
      */
     public function qrCode(?string $value): self
     {
@@ -540,6 +597,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets line field.
+     *
+     * @param string|null $value
      */
     public function line(?string $value): self
     {
@@ -558,6 +617,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets pdf password field.
+     *
+     * @param string|null $value
      */
     public function pdfPassword(?string $value): self
     {
@@ -576,6 +637,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets pdf field.
+     *
+     * @param string|null $value
      */
     public function pdf(?string $value): self
     {
@@ -594,6 +657,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets paid at field.
+     *
+     * @param \DateTime|null $value
      */
     public function paidAt(?\DateTime $value): self
     {
@@ -612,6 +677,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets paid amount field.
+     *
+     * @param string|null $value
      */
     public function paidAmount(?string $value): self
     {
@@ -630,6 +697,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -648,6 +717,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets credit at field.
+     *
+     * @param \DateTime|null $value
      */
     public function creditAt(?\DateTime $value): self
     {
@@ -666,6 +737,8 @@ class GetBoletoTransactionResponseBuilder
 
     /**
      * Sets statement descriptor field.
+     *
+     * @param string|null $value
      */
     public function statementDescriptor(?string $value): self
     {
@@ -683,7 +756,7 @@ class GetBoletoTransactionResponseBuilder
     }
 
     /**
-     * Initializes a new get boleto transaction response object.
+     * Initializes a new Get Boleto Transaction Response object.
      */
     public function build(): GetBoletoTransactionResponse
     {

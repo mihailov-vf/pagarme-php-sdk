@@ -33,7 +33,12 @@ class UpdateChargeCardRequestBuilder
     }
 
     /**
-     * Initializes a new update charge card request Builder object.
+     * Initializes a new Update Charge Card Request Builder object.
+     *
+     * @param bool $updateSubscription
+     * @param string $cardId
+     * @param CreateCardRequest $card
+     * @param bool $recurrence
      */
     public static function init(
         bool $updateSubscription,
@@ -46,6 +51,8 @@ class UpdateChargeCardRequestBuilder
 
     /**
      * Sets initiated type field.
+     *
+     * @param string|null $value
      */
     public function initiatedType(?string $value): self
     {
@@ -55,6 +62,8 @@ class UpdateChargeCardRequestBuilder
 
     /**
      * Sets recurrence model field.
+     *
+     * @param string|null $value
      */
     public function recurrenceModel(?string $value): self
     {
@@ -64,6 +73,8 @@ class UpdateChargeCardRequestBuilder
 
     /**
      * Sets payment origin field.
+     *
+     * @param CreatePaymentOriginRequest|null $value
      */
     public function paymentOrigin(?CreatePaymentOriginRequest $value): self
     {
@@ -73,6 +84,8 @@ class UpdateChargeCardRequestBuilder
 
     /**
      * Sets indirect acceptor field.
+     *
+     * @param string|null $value
      */
     public function indirectAcceptor(?string $value): self
     {
@@ -81,7 +94,7 @@ class UpdateChargeCardRequestBuilder
     }
 
     /**
-     * Initializes a new update charge card request object.
+     * Initializes a new Update Charge Card Request object.
      */
     public function build(): UpdateChargeCardRequest
     {

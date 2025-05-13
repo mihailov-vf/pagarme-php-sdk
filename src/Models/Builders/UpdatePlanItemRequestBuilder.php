@@ -32,7 +32,12 @@ class UpdatePlanItemRequestBuilder
     }
 
     /**
-     * Initializes a new update plan item request Builder object.
+     * Initializes a new Update Plan Item Request Builder object.
+     *
+     * @param string $name
+     * @param string $description
+     * @param string $status
+     * @param UpdatePricingSchemeRequest $pricingScheme
      */
     public static function init(
         string $name,
@@ -45,6 +50,8 @@ class UpdatePlanItemRequestBuilder
 
     /**
      * Sets quantity field.
+     *
+     * @param int|null $value
      */
     public function quantity(?int $value): self
     {
@@ -54,6 +61,8 @@ class UpdatePlanItemRequestBuilder
 
     /**
      * Sets cycles field.
+     *
+     * @param int|null $value
      */
     public function cycles(?int $value): self
     {
@@ -62,7 +71,7 @@ class UpdatePlanItemRequestBuilder
     }
 
     /**
-     * Initializes a new update plan item request object.
+     * Initializes a new Update Plan Item Request object.
      */
     public function build(): UpdatePlanItemRequest
     {

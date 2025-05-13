@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetSplitResponse;
 use PagarmeApiSDKLib\Models\GetSubscriptionSplitResponse;
 
 /**
@@ -31,7 +32,7 @@ class GetSubscriptionSplitResponseBuilder
     }
 
     /**
-     * Initializes a new get subscription split response Builder object.
+     * Initializes a new Get Subscription Split Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +41,8 @@ class GetSubscriptionSplitResponseBuilder
 
     /**
      * Sets enabled field.
+     *
+     * @param bool|null $value
      */
     public function enabled(?bool $value): self
     {
@@ -58,6 +61,8 @@ class GetSubscriptionSplitResponseBuilder
 
     /**
      * Sets rules field.
+     *
+     * @param GetSplitResponse[]|null $value
      */
     public function rules(?array $value): self
     {
@@ -75,7 +80,7 @@ class GetSubscriptionSplitResponseBuilder
     }
 
     /**
-     * Initializes a new get subscription split response object.
+     * Initializes a new Get Subscription Split Response object.
      */
     public function build(): GetSubscriptionSplitResponse
     {

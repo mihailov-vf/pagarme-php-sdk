@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetAnticipationResponse;
 use PagarmeApiSDKLib\Models\ListAnticipationResponse;
 use PagarmeApiSDKLib\Models\PagingResponse;
 
@@ -32,7 +33,7 @@ class ListAnticipationResponseBuilder
     }
 
     /**
-     * Initializes a new list anticipation response Builder object.
+     * Initializes a new List Anticipation Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +42,8 @@ class ListAnticipationResponseBuilder
 
     /**
      * Sets data field.
+     *
+     * @param GetAnticipationResponse[]|null $value
      */
     public function data(?array $value): self
     {
@@ -59,6 +62,8 @@ class ListAnticipationResponseBuilder
 
     /**
      * Sets paging field.
+     *
+     * @param PagingResponse|null $value
      */
     public function paging(?PagingResponse $value): self
     {
@@ -76,7 +81,7 @@ class ListAnticipationResponseBuilder
     }
 
     /**
-     * Initializes a new list anticipation response object.
+     * Initializes a new List Anticipation Response object.
      */
     public function build(): ListAnticipationResponse
     {

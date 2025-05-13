@@ -12,6 +12,7 @@ namespace PagarmeApiSDKLib;
 
 use CoreInterfaces\Http\HttpConfigurations;
 use PagarmeApiSDKLib\Authentication\BasicAuthCredentialsBuilder;
+use PagarmeApiSDKLib\Proxy\ProxyConfigurationBuilder;
 
 /**
  * An interface for all configuration parameters required by the SDK.
@@ -37,6 +38,11 @@ interface ConfigurationInterface extends HttpConfigurations
      * Get the credentials builder instance to update credentials for BasicAuth
      */
     public function getBasicAuthCredentialsBuilder(): ?BasicAuthCredentialsBuilder;
+
+    /**
+     * Represents the proxy configurations for API calls.
+     */
+    public function getProxyConfigurationBuilder(): ProxyConfigurationBuilder;
 
     /**
      * Get the base uri for a given server in the current environment.

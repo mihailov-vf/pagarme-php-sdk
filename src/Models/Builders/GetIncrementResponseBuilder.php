@@ -33,7 +33,7 @@ class GetIncrementResponseBuilder
     }
 
     /**
-     * Initializes a new get increment response Builder object.
+     * Initializes a new Get Increment Response Builder object.
      */
     public static function init(): self
     {
@@ -42,6 +42,8 @@ class GetIncrementResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -60,6 +62,8 @@ class GetIncrementResponseBuilder
 
     /**
      * Sets value field.
+     *
+     * @param float|null $value
      */
     public function value(?float $value): self
     {
@@ -78,6 +82,8 @@ class GetIncrementResponseBuilder
 
     /**
      * Sets increment type field.
+     *
+     * @param string|null $value
      */
     public function incrementType(?string $value): self
     {
@@ -96,6 +102,8 @@ class GetIncrementResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -114,6 +122,8 @@ class GetIncrementResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -132,6 +142,8 @@ class GetIncrementResponseBuilder
 
     /**
      * Sets cycles field.
+     *
+     * @param int|null $value
      */
     public function cycles(?int $value): self
     {
@@ -150,6 +162,8 @@ class GetIncrementResponseBuilder
 
     /**
      * Sets deleted at field.
+     *
+     * @param \DateTime|null $value
      */
     public function deletedAt(?\DateTime $value): self
     {
@@ -168,6 +182,8 @@ class GetIncrementResponseBuilder
 
     /**
      * Sets description field.
+     *
+     * @param string|null $value
      */
     public function description(?string $value): self
     {
@@ -186,6 +202,8 @@ class GetIncrementResponseBuilder
 
     /**
      * Sets subscription field.
+     *
+     * @param GetSubscriptionResponse|null $value
      */
     public function subscription(?GetSubscriptionResponse $value): self
     {
@@ -204,6 +222,8 @@ class GetIncrementResponseBuilder
 
     /**
      * Sets subscription item field.
+     *
+     * @param GetSubscriptionItemResponse|null $value
      */
     public function subscriptionItem(?GetSubscriptionItemResponse $value): self
     {
@@ -221,7 +241,7 @@ class GetIncrementResponseBuilder
     }
 
     /**
-     * Initializes a new get increment response object.
+     * Initializes a new Get Increment Response object.
      */
     public function build(): GetIncrementResponse
     {

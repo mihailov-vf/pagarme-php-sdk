@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -106,6 +107,19 @@ class CreateSetupRequest implements \JsonSerializable
     public function setPayment(CreatePaymentRequest $payment): void
     {
         $this->payment = $payment;
+    }
+
+    /**
+     * Converts the CreateSetupRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateSetupRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateSetupRequest',
+            ['amount' => $this->amount, 'description' => $this->description, 'payment' => $this->payment]
+        );
     }
 
     /**

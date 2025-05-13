@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -42,6 +43,16 @@ class UpdateCurrentCycleEndDateRequest implements \JsonSerializable
     public function setEndAt(?\DateTime $endAt): void
     {
         $this->endAt = $endAt;
+    }
+
+    /**
+     * Converts the UpdateCurrentCycleEndDateRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateCurrentCycleEndDateRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('UpdateCurrentCycleEndDateRequest', ['endAt' => $this->endAt]);
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -231,6 +232,26 @@ class GetSplitResponse implements \JsonSerializable
     public function unsetId(): void
     {
         $this->id = [];
+    }
+
+    /**
+     * Converts the GetSplitResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetSplitResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetSplitResponse',
+            [
+                'type' => $this->getType(),
+                'amount' => $this->getAmount(),
+                'recipient' => $this->getRecipient(),
+                'gatewayId' => $this->getGatewayId(),
+                'options' => $this->getOptions(),
+                'id' => $this->getId()
+            ]
+        );
     }
 
     /**

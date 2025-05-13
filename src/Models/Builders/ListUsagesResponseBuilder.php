@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetUsageResponse;
 use PagarmeApiSDKLib\Models\ListUsagesResponse;
 use PagarmeApiSDKLib\Models\PagingResponse;
 
@@ -32,7 +33,7 @@ class ListUsagesResponseBuilder
     }
 
     /**
-     * Initializes a new list usages response Builder object.
+     * Initializes a new List Usages Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +42,8 @@ class ListUsagesResponseBuilder
 
     /**
      * Sets data field.
+     *
+     * @param GetUsageResponse[]|null $value
      */
     public function data(?array $value): self
     {
@@ -59,6 +62,8 @@ class ListUsagesResponseBuilder
 
     /**
      * Sets paging field.
+     *
+     * @param PagingResponse|null $value
      */
     public function paging(?PagingResponse $value): self
     {
@@ -76,7 +81,7 @@ class ListUsagesResponseBuilder
     }
 
     /**
-     * Initializes a new list usages response object.
+     * Initializes a new List Usages Response object.
      */
     public function build(): ListUsagesResponse
     {

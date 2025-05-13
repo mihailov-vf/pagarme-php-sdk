@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\CreatePlanItemRequest;
 use PagarmeApiSDKLib\Models\CreatePlanRequest;
 use PagarmeApiSDKLib\Models\CreatePricingSchemeRequest;
 
@@ -32,7 +33,22 @@ class CreatePlanRequestBuilder
     }
 
     /**
-     * Initializes a new create plan request Builder object.
+     * Initializes a new Create Plan Request Builder object.
+     *
+     * @param string $name
+     * @param string $description
+     * @param string $statementDescriptor
+     * @param CreatePlanItemRequest[] $items
+     * @param bool $shippable
+     * @param string[] $paymentMethods
+     * @param int[] $installments
+     * @param string $currency
+     * @param string $interval
+     * @param int $intervalCount
+     * @param int[] $billingDays
+     * @param string $billingType
+     * @param CreatePricingSchemeRequest $pricingScheme
+     * @param array<string,string> $metadata
      */
     public static function init(
         string $name,
@@ -70,6 +86,8 @@ class CreatePlanRequestBuilder
 
     /**
      * Sets minimum price field.
+     *
+     * @param int|null $value
      */
     public function minimumPrice(?int $value): self
     {
@@ -79,6 +97,8 @@ class CreatePlanRequestBuilder
 
     /**
      * Sets cycles field.
+     *
+     * @param int|null $value
      */
     public function cycles(?int $value): self
     {
@@ -88,6 +108,8 @@ class CreatePlanRequestBuilder
 
     /**
      * Sets quantity field.
+     *
+     * @param int|null $value
      */
     public function quantity(?int $value): self
     {
@@ -97,6 +119,8 @@ class CreatePlanRequestBuilder
 
     /**
      * Sets trial period days field.
+     *
+     * @param int|null $value
      */
     public function trialPeriodDays(?int $value): self
     {
@@ -105,7 +129,7 @@ class CreatePlanRequestBuilder
     }
 
     /**
-     * Initializes a new create plan request object.
+     * Initializes a new Create Plan Request object.
      */
     public function build(): CreatePlanRequest
     {

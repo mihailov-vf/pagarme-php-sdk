@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -265,6 +266,28 @@ class GetPixTransactionResponse extends GetTransactionResponse implements \JsonS
     public function unsetPixProviderTid(): void
     {
         $this->pixProviderTid = [];
+    }
+
+    /**
+     * Converts the GetPixTransactionResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetPixTransactionResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetPixTransactionResponse',
+            [
+                'qrCode' => $this->getQrCode(),
+                'qrCodeUrl' => $this->getQrCodeUrl(),
+                'expiresAt' => $this->getExpiresAt(),
+                'additionalInformation' => $this->getAdditionalInformation(),
+                'endToEndId' => $this->getEndToEndId(),
+                'payer' => $this->getPayer(),
+                'pixProviderTid' => $this->getPixProviderTid()
+            ],
+            parent::__toString()
+        );
     }
 
     /**

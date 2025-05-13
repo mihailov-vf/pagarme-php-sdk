@@ -31,7 +31,7 @@ class GetMovementObjectTransferResponseBuilder
     }
 
     /**
-     * Initializes a new get movement object transfer response Builder object.
+     * Initializes a new Get Movement Object Transfer Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetMovementObjectTransferResponseBuilder
 
     /**
      * Sets object field.
+     *
+     * @param string|null $value
      */
     public function object(?string $value): self
     {
@@ -49,6 +51,8 @@ class GetMovementObjectTransferResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -67,6 +71,8 @@ class GetMovementObjectTransferResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -85,6 +91,8 @@ class GetMovementObjectTransferResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param string|null $value
      */
     public function amount(?string $value): self
     {
@@ -103,6 +111,8 @@ class GetMovementObjectTransferResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param string|null $value
      */
     public function createdAt(?string $value): self
     {
@@ -121,6 +131,8 @@ class GetMovementObjectTransferResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -139,6 +151,8 @@ class GetMovementObjectTransferResponseBuilder
 
     /**
      * Sets charge id field.
+     *
+     * @param string|null $value
      */
     public function chargeId(?string $value): self
     {
@@ -157,6 +171,8 @@ class GetMovementObjectTransferResponseBuilder
 
     /**
      * Sets gateway id field.
+     *
+     * @param string|null $value
      */
     public function gatewayId(?string $value): self
     {
@@ -175,6 +191,8 @@ class GetMovementObjectTransferResponseBuilder
 
     /**
      * Sets source type field.
+     *
+     * @param string|null $value
      */
     public function sourceType(?string $value): self
     {
@@ -193,6 +211,8 @@ class GetMovementObjectTransferResponseBuilder
 
     /**
      * Sets source id field.
+     *
+     * @param string|null $value
      */
     public function sourceId(?string $value): self
     {
@@ -211,6 +231,8 @@ class GetMovementObjectTransferResponseBuilder
 
     /**
      * Sets target type field.
+     *
+     * @param string|null $value
      */
     public function targetType(?string $value): self
     {
@@ -229,6 +251,8 @@ class GetMovementObjectTransferResponseBuilder
 
     /**
      * Sets target id field.
+     *
+     * @param string|null $value
      */
     public function targetId(?string $value): self
     {
@@ -247,6 +271,8 @@ class GetMovementObjectTransferResponseBuilder
 
     /**
      * Sets fee field.
+     *
+     * @param string|null $value
      */
     public function fee(?string $value): self
     {
@@ -265,6 +291,8 @@ class GetMovementObjectTransferResponseBuilder
 
     /**
      * Sets funding date field.
+     *
+     * @param string|null $value
      */
     public function fundingDate(?string $value): self
     {
@@ -283,6 +311,8 @@ class GetMovementObjectTransferResponseBuilder
 
     /**
      * Sets funding estimated date field.
+     *
+     * @param string|null $value
      */
     public function fundingEstimatedDate(?string $value): self
     {
@@ -301,6 +331,8 @@ class GetMovementObjectTransferResponseBuilder
 
     /**
      * Sets bank account field.
+     *
+     * @param string|null $value
      */
     public function bankAccount(?string $value): self
     {
@@ -318,7 +350,7 @@ class GetMovementObjectTransferResponseBuilder
     }
 
     /**
-     * Initializes a new get movement object transfer response object.
+     * Initializes a new Get Movement Object Transfer Response object.
      */
     public function build(): GetMovementObjectTransferResponse
     {

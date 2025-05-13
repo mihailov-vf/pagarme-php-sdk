@@ -31,7 +31,9 @@ class UpdateSubscriptionAffiliationIdRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription affiliation id request Builder object.
+     * Initializes a new Update Subscription Affiliation Id Request Builder object.
+     *
+     * @param string $gatewayAffiliationId
      */
     public static function init(string $gatewayAffiliationId): self
     {
@@ -39,7 +41,7 @@ class UpdateSubscriptionAffiliationIdRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription affiliation id request object.
+     * Initializes a new Update Subscription Affiliation Id Request object.
      */
     public function build(): UpdateSubscriptionAffiliationIdRequest
     {

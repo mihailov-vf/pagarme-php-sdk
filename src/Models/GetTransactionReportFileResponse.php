@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -82,6 +83,19 @@ class GetTransactionReportFileResponse implements \JsonSerializable
     public function unsetDate(): void
     {
         $this->date = [];
+    }
+
+    /**
+     * Converts the GetTransactionReportFileResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetTransactionReportFileResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetTransactionReportFileResponse',
+            ['name' => $this->getName(), 'date' => $this->getDate()]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -194,6 +195,25 @@ class GetBalanceResponse implements \JsonSerializable
     public function unsetWaitingFundsAmount(): void
     {
         $this->waitingFundsAmount = [];
+    }
+
+    /**
+     * Converts the GetBalanceResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetBalanceResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetBalanceResponse',
+            [
+                'currency' => $this->getCurrency(),
+                'availableAmount' => $this->getAvailableAmount(),
+                'recipient' => $this->getRecipient(),
+                'transferredAmount' => $this->getTransferredAmount(),
+                'waitingFundsAmount' => $this->getWaitingFundsAmount()
+            ]
+        );
     }
 
     /**

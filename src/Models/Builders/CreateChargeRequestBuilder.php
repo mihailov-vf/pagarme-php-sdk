@@ -34,7 +34,11 @@ class CreateChargeRequestBuilder
     }
 
     /**
-     * Initializes a new create charge request Builder object.
+     * Initializes a new Create Charge Request Builder object.
+     *
+     * @param int $amount
+     * @param CreatePaymentRequest $payment
+     * @param string $orderId
      */
     public static function init(int $amount, CreatePaymentRequest $payment, string $orderId): self
     {
@@ -43,6 +47,8 @@ class CreateChargeRequestBuilder
 
     /**
      * Sets code field.
+     *
+     * @param string|null $value
      */
     public function code(?string $value): self
     {
@@ -61,6 +67,8 @@ class CreateChargeRequestBuilder
 
     /**
      * Sets customer id field.
+     *
+     * @param string|null $value
      */
     public function customerId(?string $value): self
     {
@@ -79,6 +87,8 @@ class CreateChargeRequestBuilder
 
     /**
      * Sets customer field.
+     *
+     * @param CreateCustomerRequest|null $value
      */
     public function customer(?CreateCustomerRequest $value): self
     {
@@ -97,6 +107,8 @@ class CreateChargeRequestBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -115,6 +127,8 @@ class CreateChargeRequestBuilder
 
     /**
      * Sets due at field.
+     *
+     * @param \DateTime|null $value
      */
     public function dueAt(?\DateTime $value): self
     {
@@ -133,6 +147,8 @@ class CreateChargeRequestBuilder
 
     /**
      * Sets antifraud field.
+     *
+     * @param CreateAntifraudRequest|null $value
      */
     public function antifraud(?CreateAntifraudRequest $value): self
     {
@@ -150,7 +166,7 @@ class CreateChargeRequestBuilder
     }
 
     /**
-     * Initializes a new create charge request object.
+     * Initializes a new Create Charge Request object.
      */
     public function build(): CreateChargeRequest
     {

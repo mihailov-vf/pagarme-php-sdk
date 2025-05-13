@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -88,6 +89,23 @@ class CreateSplitOptionsRequest implements \JsonSerializable
     public function setChargeRemainderFee(?bool $chargeRemainderFee): void
     {
         $this->chargeRemainderFee = $chargeRemainderFee;
+    }
+
+    /**
+     * Converts the CreateSplitOptionsRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateSplitOptionsRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateSplitOptionsRequest',
+            [
+                'liable' => $this->liable,
+                'chargeProcessingFee' => $this->chargeProcessingFee,
+                'chargeRemainderFee' => $this->chargeRemainderFee
+            ]
+        );
     }
 
     /**

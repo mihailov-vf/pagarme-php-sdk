@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetCheckoutCardInstallmentOptionsResponse;
 use PagarmeApiSDKLib\Models\GetCheckoutCreditCardPaymentResponse;
 use PagarmeApiSDKLib\Models\GetPaymentAuthenticationResponse;
 
@@ -32,7 +33,7 @@ class GetCheckoutCreditCardPaymentResponseBuilder
     }
 
     /**
-     * Initializes a new get checkout credit card payment response Builder object.
+     * Initializes a new Get Checkout Credit Card Payment Response Builder object.
      */
     public static function init(): self
     {
@@ -40,7 +41,9 @@ class GetCheckoutCreditCardPaymentResponseBuilder
     }
 
     /**
-     * Sets statement descriptor field.
+     * Sets statement Descriptor field.
+     *
+     * @param string|null $value
      */
     public function statementDescriptor(?string $value): self
     {
@@ -49,7 +52,7 @@ class GetCheckoutCreditCardPaymentResponseBuilder
     }
 
     /**
-     * Unsets statement descriptor field.
+     * Unsets statement Descriptor field.
      */
     public function unsetStatementDescriptor(): self
     {
@@ -59,6 +62,8 @@ class GetCheckoutCreditCardPaymentResponseBuilder
 
     /**
      * Sets installments field.
+     *
+     * @param GetCheckoutCardInstallmentOptionsResponse[]|null $value
      */
     public function installments(?array $value): self
     {
@@ -77,6 +82,8 @@ class GetCheckoutCreditCardPaymentResponseBuilder
 
     /**
      * Sets authentication field.
+     *
+     * @param GetPaymentAuthenticationResponse|null $value
      */
     public function authentication(?GetPaymentAuthenticationResponse $value): self
     {
@@ -94,7 +101,7 @@ class GetCheckoutCreditCardPaymentResponseBuilder
     }
 
     /**
-     * Initializes a new get checkout credit card payment response object.
+     * Initializes a new Get Checkout Credit Card Payment Response object.
      */
     public function build(): GetCheckoutCreditCardPaymentResponse
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -1025,6 +1026,47 @@ class GetCheckoutPaymentResponse implements \JsonSerializable
     public function unsetPix(): void
     {
         $this->pix = [];
+    }
+
+    /**
+     * Converts the GetCheckoutPaymentResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetCheckoutPaymentResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetCheckoutPaymentResponse',
+            [
+                'id' => $this->getId(),
+                'amount' => $this->getAmount(),
+                'defaultPaymentMethod' => $this->getDefaultPaymentMethod(),
+                'successUrl' => $this->getSuccessUrl(),
+                'paymentUrl' => $this->getPaymentUrl(),
+                'gatewayAffiliationId' => $this->getGatewayAffiliationId(),
+                'acceptedPaymentMethods' => $this->getAcceptedPaymentMethods(),
+                'status' => $this->getStatus(),
+                'skipCheckoutSuccessPage' => $this->getSkipCheckoutSuccessPage(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt(),
+                'canceledAt' => $this->getCanceledAt(),
+                'customerEditable' => $this->getCustomerEditable(),
+                'customer' => $this->getCustomer(),
+                'billingaddress' => $this->getBillingaddress(),
+                'creditCard' => $this->getCreditCard(),
+                'boleto' => $this->getBoleto(),
+                'billingAddressEditable' => $this->getBillingAddressEditable(),
+                'shipping' => $this->getShipping(),
+                'shippable' => $this->getShippable(),
+                'closedAt' => $this->getClosedAt(),
+                'expiresAt' => $this->getExpiresAt(),
+                'currency' => $this->getCurrency(),
+                'debitCard' => $this->getDebitCard(),
+                'bankTransfer' => $this->getBankTransfer(),
+                'acceptedBrands' => $this->getAcceptedBrands(),
+                'pix' => $this->getPix()
+            ]
+        );
     }
 
     /**

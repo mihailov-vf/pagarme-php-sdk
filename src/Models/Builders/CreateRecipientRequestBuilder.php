@@ -34,7 +34,12 @@ class CreateRecipientRequestBuilder
     }
 
     /**
-     * Initializes a new create recipient request Builder object.
+     * Initializes a new Create Recipient Request Builder object.
+     *
+     * @param CreateBankAccountRequest $defaultBankAccount
+     * @param array<string,string> $metadata
+     * @param string $code
+     * @param string $paymentMode
      */
     public static function init(
         CreateBankAccountRequest $defaultBankAccount,
@@ -47,6 +52,8 @@ class CreateRecipientRequestBuilder
 
     /**
      * Sets name field.
+     *
+     * @param string|null $value
      */
     public function name(?string $value): self
     {
@@ -65,6 +72,8 @@ class CreateRecipientRequestBuilder
 
     /**
      * Sets email field.
+     *
+     * @param string|null $value
      */
     public function email(?string $value): self
     {
@@ -83,6 +92,8 @@ class CreateRecipientRequestBuilder
 
     /**
      * Sets description field.
+     *
+     * @param string|null $value
      */
     public function description(?string $value): self
     {
@@ -101,6 +112,8 @@ class CreateRecipientRequestBuilder
 
     /**
      * Sets document field.
+     *
+     * @param string|null $value
      */
     public function document(?string $value): self
     {
@@ -119,6 +132,8 @@ class CreateRecipientRequestBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -137,6 +152,8 @@ class CreateRecipientRequestBuilder
 
     /**
      * Sets transfer settings field.
+     *
+     * @param CreateTransferSettingsRequest|null $value
      */
     public function transferSettings(?CreateTransferSettingsRequest $value): self
     {
@@ -146,6 +163,8 @@ class CreateRecipientRequestBuilder
 
     /**
      * Sets register information field.
+     *
+     * @param CreateRegisterInformationBaseRequest|null $value
      */
     public function registerInformation(?CreateRegisterInformationBaseRequest $value): self
     {
@@ -163,7 +182,7 @@ class CreateRecipientRequestBuilder
     }
 
     /**
-     * Initializes a new create recipient request object.
+     * Initializes a new Create Recipient Request object.
      */
     public function build(): CreateRecipientRequest
     {

@@ -31,7 +31,7 @@ class PagingResponseBuilder
     }
 
     /**
-     * Initializes a new paging response Builder object.
+     * Initializes a new Paging Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class PagingResponseBuilder
 
     /**
      * Sets total field.
+     *
+     * @param int|null $value
      */
     public function total(?int $value): self
     {
@@ -58,6 +60,8 @@ class PagingResponseBuilder
 
     /**
      * Sets previous field.
+     *
+     * @param string|null $value
      */
     public function previous(?string $value): self
     {
@@ -76,6 +80,8 @@ class PagingResponseBuilder
 
     /**
      * Sets next field.
+     *
+     * @param string|null $value
      */
     public function next(?string $value): self
     {
@@ -93,7 +99,7 @@ class PagingResponseBuilder
     }
 
     /**
-     * Initializes a new paging response object.
+     * Initializes a new Paging Response object.
      */
     public function build(): PagingResponse
     {

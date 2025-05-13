@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -117,6 +118,19 @@ class GetPhoneNumberResponse implements \JsonSerializable
     public function unsetType(): void
     {
         $this->type = [];
+    }
+
+    /**
+     * Converts the GetPhoneNumberResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetPhoneNumberResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetPhoneNumberResponse',
+            ['ddd' => $this->getDdd(), 'number' => $this->getNumber(), 'type' => $this->getType()]
+        );
     }
 
     /**

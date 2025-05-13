@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -187,6 +188,25 @@ class GetTokenResponse implements \JsonSerializable
     public function unsetCard(): void
     {
         $this->card = [];
+    }
+
+    /**
+     * Converts the GetTokenResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetTokenResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetTokenResponse',
+            [
+                'id' => $this->getId(),
+                'type' => $this->getType(),
+                'createdAt' => $this->getCreatedAt(),
+                'expiresAt' => $this->getExpiresAt(),
+                'card' => $this->getCard()
+            ]
+        );
     }
 
     /**

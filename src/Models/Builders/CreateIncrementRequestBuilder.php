@@ -31,7 +31,11 @@ class CreateIncrementRequestBuilder
     }
 
     /**
-     * Initializes a new create increment request Builder object.
+     * Initializes a new Create Increment Request Builder object.
+     *
+     * @param float $value
+     * @param string $incrementType
+     * @param string $itemId
      */
     public static function init(float $value, string $incrementType, string $itemId): self
     {
@@ -40,6 +44,8 @@ class CreateIncrementRequestBuilder
 
     /**
      * Sets cycles field.
+     *
+     * @param int|null $value
      */
     public function cycles(?int $value): self
     {
@@ -49,6 +55,8 @@ class CreateIncrementRequestBuilder
 
     /**
      * Sets description field.
+     *
+     * @param string|null $value
      */
     public function description(?string $value): self
     {
@@ -57,7 +65,7 @@ class CreateIncrementRequestBuilder
     }
 
     /**
-     * Initializes a new create increment request object.
+     * Initializes a new Create Increment Request object.
      */
     public function build(): CreateIncrementRequest
     {

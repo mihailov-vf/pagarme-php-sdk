@@ -33,7 +33,7 @@ class GetInvoiceItemResponseBuilder
     }
 
     /**
-     * Initializes a new get invoice item response Builder object.
+     * Initializes a new Get Invoice Item Response Builder object.
      */
     public static function init(): self
     {
@@ -42,6 +42,8 @@ class GetInvoiceItemResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -60,6 +62,8 @@ class GetInvoiceItemResponseBuilder
 
     /**
      * Sets description field.
+     *
+     * @param string|null $value
      */
     public function description(?string $value): self
     {
@@ -78,6 +82,8 @@ class GetInvoiceItemResponseBuilder
 
     /**
      * Sets pricing scheme field.
+     *
+     * @param GetPricingSchemeResponse|null $value
      */
     public function pricingScheme(?GetPricingSchemeResponse $value): self
     {
@@ -96,6 +102,8 @@ class GetInvoiceItemResponseBuilder
 
     /**
      * Sets price bracket field.
+     *
+     * @param GetPriceBracketResponse|null $value
      */
     public function priceBracket(?GetPriceBracketResponse $value): self
     {
@@ -114,6 +122,8 @@ class GetInvoiceItemResponseBuilder
 
     /**
      * Sets quantity field.
+     *
+     * @param int|null $value
      */
     public function quantity(?int $value): self
     {
@@ -132,6 +142,8 @@ class GetInvoiceItemResponseBuilder
 
     /**
      * Sets name field.
+     *
+     * @param string|null $value
      */
     public function name(?string $value): self
     {
@@ -150,6 +162,8 @@ class GetInvoiceItemResponseBuilder
 
     /**
      * Sets subscription item id field.
+     *
+     * @param string|null $value
      */
     public function subscriptionItemId(?string $value): self
     {
@@ -167,7 +181,7 @@ class GetInvoiceItemResponseBuilder
     }
 
     /**
-     * Initializes a new get invoice item response object.
+     * Initializes a new Get Invoice Item Response object.
      */
     public function build(): GetInvoiceItemResponse
     {

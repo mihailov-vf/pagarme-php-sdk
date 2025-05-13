@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -51,6 +52,19 @@ class UpdateSubscriptionBillingDateRequest implements \JsonSerializable
     public function setNextBillingAt(\DateTime $nextBillingAt): void
     {
         $this->nextBillingAt = $nextBillingAt;
+    }
+
+    /**
+     * Converts the UpdateSubscriptionBillingDateRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateSubscriptionBillingDateRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'UpdateSubscriptionBillingDateRequest',
+            ['nextBillingAt' => $this->nextBillingAt]
+        );
     }
 
     /**

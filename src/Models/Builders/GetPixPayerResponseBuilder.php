@@ -32,7 +32,7 @@ class GetPixPayerResponseBuilder
     }
 
     /**
-     * Initializes a new get pix payer response Builder object.
+     * Initializes a new Get Pix Payer Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetPixPayerResponseBuilder
 
     /**
      * Sets name field.
+     *
+     * @param string|null $value
      */
     public function name(?string $value): self
     {
@@ -59,6 +61,8 @@ class GetPixPayerResponseBuilder
 
     /**
      * Sets document field.
+     *
+     * @param string|null $value
      */
     public function document(?string $value): self
     {
@@ -77,6 +81,8 @@ class GetPixPayerResponseBuilder
 
     /**
      * Sets document type field.
+     *
+     * @param string|null $value
      */
     public function documentType(?string $value): self
     {
@@ -95,6 +101,8 @@ class GetPixPayerResponseBuilder
 
     /**
      * Sets bank account field.
+     *
+     * @param GetPixBankAccountResponse|null $value
      */
     public function bankAccount(?GetPixBankAccountResponse $value): self
     {
@@ -112,7 +120,7 @@ class GetPixPayerResponseBuilder
     }
 
     /**
-     * Initializes a new get pix payer response object.
+     * Initializes a new Get Pix Payer Response object.
      */
     public function build(): GetPixPayerResponse
     {

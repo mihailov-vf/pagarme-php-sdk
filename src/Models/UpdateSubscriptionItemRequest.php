@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -212,6 +213,27 @@ class UpdateSubscriptionItemRequest implements \JsonSerializable
     public function setMinimumPrice(?int $minimumPrice): void
     {
         $this->minimumPrice = $minimumPrice;
+    }
+
+    /**
+     * Converts the UpdateSubscriptionItemRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateSubscriptionItemRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'UpdateSubscriptionItemRequest',
+            [
+                'description' => $this->description,
+                'status' => $this->status,
+                'pricingScheme' => $this->pricingScheme,
+                'name' => $this->name,
+                'cycles' => $this->cycles,
+                'quantity' => $this->quantity,
+                'minimumPrice' => $this->minimumPrice
+            ]
+        );
     }
 
     /**

@@ -12,6 +12,7 @@ namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use PagarmeApiSDKLib\Models\CreateRegisterInformationBaseRequest;
+use PagarmeApiSDKLib\Models\CreateRegisterInformationPhoneRequest;
 
 /**
  * Builder for model CreateRegisterInformationBaseRequest
@@ -31,7 +32,12 @@ class CreateRegisterInformationBaseRequestBuilder
     }
 
     /**
-     * Initializes a new create register information base request Builder object.
+     * Initializes a new Create Register Information Base Request Builder object.
+     *
+     * @param string $email
+     * @param string $document
+     * @param string $type
+     * @param CreateRegisterInformationPhoneRequest[] $phoneNumbers
      */
     public static function init(string $email, string $document, string $type, array $phoneNumbers): self
     {
@@ -40,6 +46,8 @@ class CreateRegisterInformationBaseRequestBuilder
 
     /**
      * Sets site url field.
+     *
+     * @param string|null $value
      */
     public function siteUrl(?string $value): self
     {
@@ -57,7 +65,7 @@ class CreateRegisterInformationBaseRequestBuilder
     }
 
     /**
-     * Initializes a new create register information base request object.
+     * Initializes a new Create Register Information Base Request object.
      */
     public function build(): CreateRegisterInformationBaseRequest
     {

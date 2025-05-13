@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -140,6 +141,25 @@ class CreateVoucherPaymentRequest implements \JsonSerializable
     public function setRecurrencyCycle(?string $recurrencyCycle): void
     {
         $this->recurrencyCycle = $recurrencyCycle;
+    }
+
+    /**
+     * Converts the CreateVoucherPaymentRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateVoucherPaymentRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateVoucherPaymentRequest',
+            [
+                'statementDescriptor' => $this->statementDescriptor,
+                'cardId' => $this->cardId,
+                'cardToken' => $this->cardToken,
+                'card' => $this->card,
+                'recurrencyCycle' => $this->recurrencyCycle
+            ]
+        );
     }
 
     /**

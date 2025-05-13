@@ -31,7 +31,7 @@ class GetGatewayErrorResponseBuilder
     }
 
     /**
-     * Initializes a new get gateway error response Builder object.
+     * Initializes a new Get Gateway Error Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetGatewayErrorResponseBuilder
 
     /**
      * Sets message field.
+     *
+     * @param string|null $value
      */
     public function message(?string $value): self
     {
@@ -57,7 +59,7 @@ class GetGatewayErrorResponseBuilder
     }
 
     /**
-     * Initializes a new get gateway error response object.
+     * Initializes a new Get Gateway Error Response object.
      */
     public function build(): GetGatewayErrorResponse
     {

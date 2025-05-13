@@ -31,7 +31,7 @@ class GetPixBankAccountResponseBuilder
     }
 
     /**
-     * Initializes a new get pix bank account response Builder object.
+     * Initializes a new Get Pix Bank Account Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetPixBankAccountResponseBuilder
 
     /**
      * Sets bank name field.
+     *
+     * @param string|null $value
      */
     public function bankName(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetPixBankAccountResponseBuilder
 
     /**
      * Sets ispb field.
+     *
+     * @param string|null $value
      */
     public function ispb(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetPixBankAccountResponseBuilder
 
     /**
      * Sets branch code field.
+     *
+     * @param string|null $value
      */
     public function branchCode(?string $value): self
     {
@@ -94,6 +100,8 @@ class GetPixBankAccountResponseBuilder
 
     /**
      * Sets account number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -111,7 +119,7 @@ class GetPixBankAccountResponseBuilder
     }
 
     /**
-     * Initializes a new get pix bank account response object.
+     * Initializes a new Get Pix Bank Account Response object.
      */
     public function build(): GetPixBankAccountResponse
     {

@@ -31,7 +31,7 @@ class UpdateAutomaticAnticipationSettingsRequestBuilder
     }
 
     /**
-     * Initializes a new update automatic anticipation settings request Builder object.
+     * Initializes a new Update Automatic Anticipation Settings Request Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class UpdateAutomaticAnticipationSettingsRequestBuilder
 
     /**
      * Sets enabled field.
+     *
+     * @param bool|null $value
      */
     public function enabled(?bool $value): self
     {
@@ -49,6 +51,8 @@ class UpdateAutomaticAnticipationSettingsRequestBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -58,6 +62,8 @@ class UpdateAutomaticAnticipationSettingsRequestBuilder
 
     /**
      * Sets volume percentage field.
+     *
+     * @param int|null $value
      */
     public function volumePercentage(?int $value): self
     {
@@ -67,6 +73,8 @@ class UpdateAutomaticAnticipationSettingsRequestBuilder
 
     /**
      * Sets delay field.
+     *
+     * @param int|null $value
      */
     public function delay(?int $value): self
     {
@@ -76,6 +84,8 @@ class UpdateAutomaticAnticipationSettingsRequestBuilder
 
     /**
      * Sets days field.
+     *
+     * @param int|null $value
      */
     public function days(?int $value): self
     {
@@ -84,7 +94,7 @@ class UpdateAutomaticAnticipationSettingsRequestBuilder
     }
 
     /**
-     * Initializes a new update automatic anticipation settings request object.
+     * Initializes a new Update Automatic Anticipation Settings Request object.
      */
     public function build(): UpdateAutomaticAnticipationSettingsRequest
     {

@@ -33,7 +33,11 @@ class UpdateSubscriptionPaymentMethodRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription payment method request Builder object.
+     * Initializes a new Update Subscription Payment Method Request Builder object.
+     *
+     * @param string $paymentMethod
+     * @param string $cardId
+     * @param CreateCardRequest $card
      */
     public static function init(string $paymentMethod, string $cardId, CreateCardRequest $card): self
     {
@@ -42,6 +46,8 @@ class UpdateSubscriptionPaymentMethodRequestBuilder
 
     /**
      * Sets card token field.
+     *
+     * @param string|null $value
      */
     public function cardToken(?string $value): self
     {
@@ -51,6 +57,8 @@ class UpdateSubscriptionPaymentMethodRequestBuilder
 
     /**
      * Sets boleto field.
+     *
+     * @param CreateSubscriptionBoletoRequest|null $value
      */
     public function boleto(?CreateSubscriptionBoletoRequest $value): self
     {
@@ -60,6 +68,8 @@ class UpdateSubscriptionPaymentMethodRequestBuilder
 
     /**
      * Sets indirect acceptor field.
+     *
+     * @param string|null $value
      */
     public function indirectAcceptor(?string $value): self
     {
@@ -77,7 +87,7 @@ class UpdateSubscriptionPaymentMethodRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription payment method request object.
+     * Initializes a new Update Subscription Payment Method Request object.
      */
     public function build(): UpdateSubscriptionPaymentMethodRequest
     {

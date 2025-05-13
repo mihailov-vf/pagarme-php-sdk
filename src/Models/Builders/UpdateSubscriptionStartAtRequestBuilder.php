@@ -31,7 +31,9 @@ class UpdateSubscriptionStartAtRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription start at request Builder object.
+     * Initializes a new Update Subscription Start At Request Builder object.
+     *
+     * @param \DateTime $startAt
      */
     public static function init(\DateTime $startAt): self
     {
@@ -39,7 +41,7 @@ class UpdateSubscriptionStartAtRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription start at request object.
+     * Initializes a new Update Subscription Start At Request object.
      */
     public function build(): UpdateSubscriptionStartAtRequest
     {

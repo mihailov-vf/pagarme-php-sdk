@@ -31,7 +31,9 @@ class UpdateRecipientCodeRequestBuilder
     }
 
     /**
-     * Initializes a new update recipient code request Builder object.
+     * Initializes a new Update Recipient Code Request Builder object.
+     *
+     * @param string $code
      */
     public static function init(string $code): self
     {
@@ -39,7 +41,7 @@ class UpdateRecipientCodeRequestBuilder
     }
 
     /**
-     * Initializes a new update recipient code request object.
+     * Initializes a new Update Recipient Code Request object.
      */
     public function build(): UpdateRecipientCodeRequest
     {

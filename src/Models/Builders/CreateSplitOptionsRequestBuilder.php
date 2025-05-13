@@ -31,7 +31,7 @@ class CreateSplitOptionsRequestBuilder
     }
 
     /**
-     * Initializes a new create split options request Builder object.
+     * Initializes a new Create Split Options Request Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class CreateSplitOptionsRequestBuilder
 
     /**
      * Sets liable field.
+     *
+     * @param bool|null $value
      */
     public function liable(?bool $value): self
     {
@@ -49,6 +51,8 @@ class CreateSplitOptionsRequestBuilder
 
     /**
      * Sets charge processing fee field.
+     *
+     * @param bool|null $value
      */
     public function chargeProcessingFee(?bool $value): self
     {
@@ -58,6 +62,8 @@ class CreateSplitOptionsRequestBuilder
 
     /**
      * Sets charge remainder fee field.
+     *
+     * @param bool|null $value
      */
     public function chargeRemainderFee(?bool $value): self
     {
@@ -66,7 +72,7 @@ class CreateSplitOptionsRequestBuilder
     }
 
     /**
-     * Initializes a new create split options request object.
+     * Initializes a new Create Split Options Request object.
      */
     public function build(): CreateSplitOptionsRequest
     {

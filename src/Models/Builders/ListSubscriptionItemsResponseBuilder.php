@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetSubscriptionItemResponse;
 use PagarmeApiSDKLib\Models\ListSubscriptionItemsResponse;
 use PagarmeApiSDKLib\Models\PagingResponse;
 
@@ -32,7 +33,7 @@ class ListSubscriptionItemsResponseBuilder
     }
 
     /**
-     * Initializes a new list subscription items response Builder object.
+     * Initializes a new List Subscription Items Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +42,8 @@ class ListSubscriptionItemsResponseBuilder
 
     /**
      * Sets data field.
+     *
+     * @param GetSubscriptionItemResponse[]|null $value
      */
     public function data(?array $value): self
     {
@@ -59,6 +62,8 @@ class ListSubscriptionItemsResponseBuilder
 
     /**
      * Sets paging field.
+     *
+     * @param PagingResponse|null $value
      */
     public function paging(?PagingResponse $value): self
     {
@@ -76,7 +81,7 @@ class ListSubscriptionItemsResponseBuilder
     }
 
     /**
-     * Initializes a new list subscription items response object.
+     * Initializes a new List Subscription Items Response object.
      */
     public function build(): ListSubscriptionItemsResponse
     {

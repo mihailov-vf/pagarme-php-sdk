@@ -31,7 +31,10 @@ class CreateLocationRequestBuilder
     }
 
     /**
-     * Initializes a new create location request Builder object.
+     * Initializes a new Create Location Request Builder object.
+     *
+     * @param string $latitude
+     * @param string $longitude
      */
     public static function init(string $latitude, string $longitude): self
     {
@@ -39,7 +42,7 @@ class CreateLocationRequestBuilder
     }
 
     /**
-     * Initializes a new create location request object.
+     * Initializes a new Create Location Request object.
      */
     public function build(): CreateLocationRequest
     {

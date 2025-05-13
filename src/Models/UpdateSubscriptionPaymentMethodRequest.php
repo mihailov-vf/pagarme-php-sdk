@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -192,6 +193,26 @@ class UpdateSubscriptionPaymentMethodRequest implements \JsonSerializable
     public function unsetIndirectAcceptor(): void
     {
         $this->indirectAcceptor = [];
+    }
+
+    /**
+     * Converts the UpdateSubscriptionPaymentMethodRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateSubscriptionPaymentMethodRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'UpdateSubscriptionPaymentMethodRequest',
+            [
+                'paymentMethod' => $this->paymentMethod,
+                'cardId' => $this->cardId,
+                'card' => $this->card,
+                'cardToken' => $this->cardToken,
+                'boleto' => $this->boleto,
+                'indirectAcceptor' => $this->getIndirectAcceptor()
+            ]
+        );
     }
 
     /**

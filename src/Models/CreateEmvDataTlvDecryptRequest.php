@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class CreateEmvDataTlvDecryptRequest implements \JsonSerializable
@@ -102,6 +103,19 @@ class CreateEmvDataTlvDecryptRequest implements \JsonSerializable
     public function setValue(string $value): void
     {
         $this->value = $value;
+    }
+
+    /**
+     * Converts the CreateEmvDataTlvDecryptRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateEmvDataTlvDecryptRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateEmvDataTlvDecryptRequest',
+            ['tag' => $this->tag, 'lenght' => $this->lenght, 'value' => $this->value]
+        );
     }
 
     /**

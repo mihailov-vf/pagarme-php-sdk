@@ -31,7 +31,7 @@ class GetAntifraudResponseBuilder
     }
 
     /**
-     * Initializes a new get antifraud response Builder object.
+     * Initializes a new Get Antifraud Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetAntifraudResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetAntifraudResponseBuilder
 
     /**
      * Sets return code field.
+     *
+     * @param string|null $value
      */
     public function returnCode(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetAntifraudResponseBuilder
 
     /**
      * Sets return message field.
+     *
+     * @param string|null $value
      */
     public function returnMessage(?string $value): self
     {
@@ -94,6 +100,8 @@ class GetAntifraudResponseBuilder
 
     /**
      * Sets provider name field.
+     *
+     * @param string|null $value
      */
     public function providerName(?string $value): self
     {
@@ -112,6 +120,8 @@ class GetAntifraudResponseBuilder
 
     /**
      * Sets score field.
+     *
+     * @param string|null $value
      */
     public function score(?string $value): self
     {
@@ -129,7 +139,7 @@ class GetAntifraudResponseBuilder
     }
 
     /**
-     * Initializes a new get antifraud response object.
+     * Initializes a new Get Antifraud Response object.
      */
     public function build(): GetAntifraudResponse
     {

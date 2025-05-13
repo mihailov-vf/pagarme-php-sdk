@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetPeriodResponse;
 use PagarmeApiSDKLib\Models\ListCyclesResponse;
 use PagarmeApiSDKLib\Models\PagingResponse;
 
@@ -32,7 +33,7 @@ class ListCyclesResponseBuilder
     }
 
     /**
-     * Initializes a new list cycles response Builder object.
+     * Initializes a new List Cycles Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +42,8 @@ class ListCyclesResponseBuilder
 
     /**
      * Sets data field.
+     *
+     * @param GetPeriodResponse[]|null $value
      */
     public function data(?array $value): self
     {
@@ -59,6 +62,8 @@ class ListCyclesResponseBuilder
 
     /**
      * Sets paging field.
+     *
+     * @param PagingResponse|null $value
      */
     public function paging(?PagingResponse $value): self
     {
@@ -76,7 +81,7 @@ class ListCyclesResponseBuilder
     }
 
     /**
-     * Initializes a new list cycles response object.
+     * Initializes a new List Cycles Response object.
      */
     public function build(): ListCyclesResponse
     {

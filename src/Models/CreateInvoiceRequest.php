@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -53,6 +54,16 @@ class CreateInvoiceRequest implements \JsonSerializable
     public function setMetadata(array $metadata): void
     {
         $this->metadata = $metadata;
+    }
+
+    /**
+     * Converts the CreateInvoiceRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateInvoiceRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('CreateInvoiceRequest', ['metadata' => $this->metadata]);
     }
 
     /**

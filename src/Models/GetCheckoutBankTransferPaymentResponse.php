@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -56,6 +57,16 @@ class GetCheckoutBankTransferPaymentResponse implements \JsonSerializable
     public function unsetBank(): void
     {
         $this->bank = [];
+    }
+
+    /**
+     * Converts the GetCheckoutBankTransferPaymentResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetCheckoutBankTransferPaymentResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('GetCheckoutBankTransferPaymentResponse', ['bank' => $this->getBank()]);
     }
 
     /**

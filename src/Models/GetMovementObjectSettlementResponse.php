@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -324,6 +325,30 @@ class GetMovementObjectSettlementResponse extends GetMovementObjectBaseResponse 
     public function unsetExternalEnginePaymentId(): void
     {
         $this->externalEnginePaymentId = [];
+    }
+
+    /**
+     * Converts the GetMovementObjectSettlementResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetMovementObjectSettlementResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetMovementObjectSettlementResponse',
+            [
+                'product' => $this->getProduct(),
+                'brand' => $this->getBrand(),
+                'paymentDate' => $this->getPaymentDate(),
+                'recipientId' => $this->getRecipientId(),
+                'documentType' => $this->getDocumentType(),
+                'document' => $this->getDocument(),
+                'contractObligationId' => $this->getContractObligationId(),
+                'liquidationArrangementId' => $this->getLiquidationArrangementId(),
+                'externalEnginePaymentId' => $this->getExternalEnginePaymentId()
+            ],
+            parent::__toString()
+        );
     }
 
     /**

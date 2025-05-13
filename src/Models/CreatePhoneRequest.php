@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class CreatePhoneRequest implements \JsonSerializable
@@ -115,6 +116,24 @@ class CreatePhoneRequest implements \JsonSerializable
     public function unsetType(): void
     {
         $this->type = [];
+    }
+
+    /**
+     * Converts the CreatePhoneRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreatePhoneRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreatePhoneRequest',
+            [
+                'countryCode' => $this->countryCode,
+                'number' => $this->number,
+                'areaCode' => $this->areaCode,
+                'type' => $this->getType()
+            ]
+        );
     }
 
     /**

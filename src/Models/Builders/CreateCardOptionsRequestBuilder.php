@@ -31,7 +31,9 @@ class CreateCardOptionsRequestBuilder
     }
 
     /**
-     * Initializes a new create card options request Builder object.
+     * Initializes a new Create Card Options Request Builder object.
+     *
+     * @param bool $verifyCard
      */
     public static function init(bool $verifyCard): self
     {
@@ -39,7 +41,7 @@ class CreateCardOptionsRequestBuilder
     }
 
     /**
-     * Initializes a new create card options request object.
+     * Initializes a new Create Card Options Request object.
      */
     public function build(): CreateCardOptionsRequest
     {

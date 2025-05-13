@@ -31,7 +31,7 @@ class GetThreeDSecureResponseBuilder
     }
 
     /**
-     * Initializes a new get three dsecure response Builder object.
+     * Initializes a new Get Three D Secure Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetThreeDSecureResponseBuilder
 
     /**
      * Sets mpi field.
+     *
+     * @param string|null $value
      */
     public function mpi(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetThreeDSecureResponseBuilder
 
     /**
      * Sets eci field.
+     *
+     * @param string|null $value
      */
     public function eci(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetThreeDSecureResponseBuilder
 
     /**
      * Sets cavv field.
+     *
+     * @param string|null $value
      */
     public function cavv(?string $value): self
     {
@@ -93,7 +99,9 @@ class GetThreeDSecureResponseBuilder
     }
 
     /**
-     * Sets transaction id field.
+     * Sets transaction Id field.
+     *
+     * @param string|null $value
      */
     public function transactionId(?string $value): self
     {
@@ -102,7 +110,7 @@ class GetThreeDSecureResponseBuilder
     }
 
     /**
-     * Unsets transaction id field.
+     * Unsets transaction Id field.
      */
     public function unsetTransactionId(): self
     {
@@ -112,6 +120,8 @@ class GetThreeDSecureResponseBuilder
 
     /**
      * Sets success url field.
+     *
+     * @param string|null $value
      */
     public function successUrl(?string $value): self
     {
@@ -129,7 +139,7 @@ class GetThreeDSecureResponseBuilder
     }
 
     /**
-     * Initializes a new get three dsecure response object.
+     * Initializes a new Get Three D Secure Response object.
      */
     public function build(): GetThreeDSecureResponse
     {

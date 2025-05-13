@@ -31,7 +31,10 @@ class CreateCashPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create cash payment request Builder object.
+     * Initializes a new Create Cash Payment Request Builder object.
+     *
+     * @param string $description
+     * @param bool $confirm
      */
     public static function init(string $description, bool $confirm): self
     {
@@ -39,7 +42,7 @@ class CreateCashPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create cash payment request object.
+     * Initializes a new Create Cash Payment Request object.
      */
     public function build(): CreateCashPaymentRequest
     {

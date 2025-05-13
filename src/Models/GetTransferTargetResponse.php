@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class GetTransferTargetResponse implements \JsonSerializable
@@ -80,6 +81,19 @@ class GetTransferTargetResponse implements \JsonSerializable
     public function unsetType(): void
     {
         $this->type = [];
+    }
+
+    /**
+     * Converts the GetTransferTargetResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetTransferTargetResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetTransferTargetResponse',
+            ['targetId' => $this->getTargetId(), 'type' => $this->getType()]
+        );
     }
 
     /**

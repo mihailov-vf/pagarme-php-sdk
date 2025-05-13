@@ -31,7 +31,7 @@ class GetTransferTargetResponseBuilder
     }
 
     /**
-     * Initializes a new get transfer target response Builder object.
+     * Initializes a new Get Transfer Target Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetTransferTargetResponseBuilder
 
     /**
      * Sets target id field.
+     *
+     * @param string|null $value
      */
     public function targetId(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetTransferTargetResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -75,7 +79,7 @@ class GetTransferTargetResponseBuilder
     }
 
     /**
-     * Initializes a new get transfer target response object.
+     * Initializes a new Get Transfer Target Response object.
      */
     public function build(): GetTransferTargetResponse
     {

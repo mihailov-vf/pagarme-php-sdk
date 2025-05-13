@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetAddressResponse;
 use PagarmeApiSDKLib\Models\ListAddressesResponse;
 use PagarmeApiSDKLib\Models\PagingResponse;
 
@@ -32,7 +33,7 @@ class ListAddressesResponseBuilder
     }
 
     /**
-     * Initializes a new list addresses response Builder object.
+     * Initializes a new List Addresses Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +42,8 @@ class ListAddressesResponseBuilder
 
     /**
      * Sets data field.
+     *
+     * @param GetAddressResponse[]|null $value
      */
     public function data(?array $value): self
     {
@@ -59,6 +62,8 @@ class ListAddressesResponseBuilder
 
     /**
      * Sets paging field.
+     *
+     * @param PagingResponse|null $value
      */
     public function paging(?PagingResponse $value): self
     {
@@ -76,7 +81,7 @@ class ListAddressesResponseBuilder
     }
 
     /**
-     * Initializes a new list addresses response object.
+     * Initializes a new List Addresses Response object.
      */
     public function build(): ListAddressesResponse
     {

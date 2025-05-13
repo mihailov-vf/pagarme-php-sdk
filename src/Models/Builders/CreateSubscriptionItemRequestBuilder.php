@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\CreateDiscountRequest;
 use PagarmeApiSDKLib\Models\CreatePricingSchemeRequest;
 use PagarmeApiSDKLib\Models\CreateSubscriptionItemRequest;
 
@@ -32,7 +33,14 @@ class CreateSubscriptionItemRequestBuilder
     }
 
     /**
-     * Initializes a new create subscription item request Builder object.
+     * Initializes a new Create Subscription Item Request Builder object.
+     *
+     * @param string $description
+     * @param CreatePricingSchemeRequest $pricingScheme
+     * @param string $id
+     * @param string $planItemId
+     * @param CreateDiscountRequest[] $discounts
+     * @param string $name
      */
     public static function init(
         string $description,
@@ -49,6 +57,8 @@ class CreateSubscriptionItemRequestBuilder
 
     /**
      * Sets cycles field.
+     *
+     * @param int|null $value
      */
     public function cycles(?int $value): self
     {
@@ -58,6 +68,8 @@ class CreateSubscriptionItemRequestBuilder
 
     /**
      * Sets quantity field.
+     *
+     * @param int|null $value
      */
     public function quantity(?int $value): self
     {
@@ -67,6 +79,8 @@ class CreateSubscriptionItemRequestBuilder
 
     /**
      * Sets minimum price field.
+     *
+     * @param int|null $value
      */
     public function minimumPrice(?int $value): self
     {
@@ -75,7 +89,7 @@ class CreateSubscriptionItemRequestBuilder
     }
 
     /**
-     * Initializes a new create subscription item request object.
+     * Initializes a new Create Subscription Item Request object.
      */
     public function build(): CreateSubscriptionItemRequest
     {

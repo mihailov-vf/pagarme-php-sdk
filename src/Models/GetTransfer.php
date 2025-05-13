@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -362,6 +363,33 @@ class GetTransfer implements \JsonSerializable
     public function setTarget(GetTransferTargetResponse $target): void
     {
         $this->target = $target;
+    }
+
+    /**
+     * Converts the GetTransfer object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetTransfer object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetTransfer',
+            [
+                'id' => $this->id,
+                'gatewayId' => $this->gatewayId,
+                'amount' => $this->amount,
+                'status' => $this->status,
+                'createdAt' => $this->createdAt,
+                'updatedAt' => $this->updatedAt,
+                'metadata' => $this->metadata,
+                'fee' => $this->fee,
+                'fundingDate' => $this->fundingDate,
+                'fundingEstimatedDate' => $this->fundingEstimatedDate,
+                'type' => $this->type,
+                'source' => $this->source,
+                'target' => $this->target
+            ]
+        );
     }
 
     /**

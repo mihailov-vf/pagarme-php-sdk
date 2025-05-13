@@ -31,7 +31,7 @@ class CreatePaymentOriginRequestBuilder
     }
 
     /**
-     * Initializes a new create payment origin request Builder object.
+     * Initializes a new Create Payment Origin Request Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class CreatePaymentOriginRequestBuilder
 
     /**
      * Sets brand id field.
+     *
+     * @param string|null $value
      */
     public function brandId(?string $value): self
     {
@@ -58,6 +60,8 @@ class CreatePaymentOriginRequestBuilder
 
     /**
      * Sets charge id field.
+     *
+     * @param string|null $value
      */
     public function chargeId(?string $value): self
     {
@@ -75,7 +79,7 @@ class CreatePaymentOriginRequestBuilder
     }
 
     /**
-     * Initializes a new create payment origin request object.
+     * Initializes a new Create Payment Origin Request object.
      */
     public function build(): CreatePaymentOriginRequest
     {

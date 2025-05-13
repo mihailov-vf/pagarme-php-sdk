@@ -32,7 +32,10 @@ class CreateTokenRequestBuilder
     }
 
     /**
-     * Initializes a new create token request Builder object.
+     * Initializes a new Create Token Request Builder object.
+     *
+     * @param string $type
+     * @param CreateCardTokenRequest $card
      */
     public static function init(string $type, CreateCardTokenRequest $card): self
     {
@@ -40,7 +43,7 @@ class CreateTokenRequestBuilder
     }
 
     /**
-     * Initializes a new create token request object.
+     * Initializes a new Create Token Request object.
      */
     public function build(): CreateTokenRequest
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -90,6 +91,19 @@ class ListTransactionsFilesResponse implements \JsonSerializable
     public function unsetPaging(): void
     {
         $this->paging = [];
+    }
+
+    /**
+     * Converts the ListTransactionsFilesResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the ListTransactionsFilesResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'ListTransactionsFilesResponse',
+            ['data' => $this->getData(), 'paging' => $this->getPaging()]
+        );
     }
 
     /**

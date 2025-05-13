@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -74,6 +75,19 @@ class CreateCheckoutDebitCardPaymentRequest implements \JsonSerializable
     public function setAuthentication(CreatePaymentAuthenticationRequest $authentication): void
     {
         $this->authentication = $authentication;
+    }
+
+    /**
+     * Converts the CreateCheckoutDebitCardPaymentRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateCheckoutDebitCardPaymentRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateCheckoutDebitCardPaymentRequest',
+            ['statementDescriptor' => $this->statementDescriptor, 'authentication' => $this->authentication]
+        );
     }
 
     /**

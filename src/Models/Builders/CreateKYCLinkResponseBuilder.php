@@ -31,7 +31,7 @@ class CreateKYCLinkResponseBuilder
     }
 
     /**
-     * Initializes a new create kyclink response Builder object.
+     * Initializes a new Create KYC Link Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class CreateKYCLinkResponseBuilder
 
     /**
      * Sets base 64 field.
+     *
+     * @param string|null $value
      */
     public function base64(?string $value): self
     {
@@ -58,6 +60,8 @@ class CreateKYCLinkResponseBuilder
 
     /**
      * Sets url field.
+     *
+     * @param string|null $value
      */
     public function url(?string $value): self
     {
@@ -76,6 +80,8 @@ class CreateKYCLinkResponseBuilder
 
     /**
      * Sets expiration date field.
+     *
+     * @param string|null $value
      */
     public function expirationDate(?string $value): self
     {
@@ -93,7 +99,7 @@ class CreateKYCLinkResponseBuilder
     }
 
     /**
-     * Initializes a new create kyclink response object.
+     * Initializes a new Create KYC Link Response object.
      */
     public function build(): CreateKYCLinkResponse
     {

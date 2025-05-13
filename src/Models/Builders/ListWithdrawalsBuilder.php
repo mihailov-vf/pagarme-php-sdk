@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetWithdrawResponse;
 use PagarmeApiSDKLib\Models\ListWithdrawals;
 use PagarmeApiSDKLib\Models\PagingResponse;
 
@@ -32,7 +33,10 @@ class ListWithdrawalsBuilder
     }
 
     /**
-     * Initializes a new list withdrawals Builder object.
+     * Initializes a new List Withdrawals Builder object.
+     *
+     * @param GetWithdrawResponse[] $data
+     * @param PagingResponse $paging
      */
     public static function init(array $data, PagingResponse $paging): self
     {
@@ -40,7 +44,7 @@ class ListWithdrawalsBuilder
     }
 
     /**
-     * Initializes a new list withdrawals object.
+     * Initializes a new List Withdrawals object.
      */
     public function build(): ListWithdrawals
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -237,6 +238,29 @@ class CreateRegisterInformationAddressRequest implements \JsonSerializable
     public function setReferencePoint(string $referencePoint): void
     {
         $this->referencePoint = $referencePoint;
+    }
+
+    /**
+     * Converts the CreateRegisterInformationAddressRequest object to a human-readable string
+     * representation.
+     *
+     * @return string The string representation of the CreateRegisterInformationAddressRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateRegisterInformationAddressRequest',
+            [
+                'street' => $this->street,
+                'complementary' => $this->complementary,
+                'streetNumber' => $this->streetNumber,
+                'neighborhood' => $this->neighborhood,
+                'city' => $this->city,
+                'state' => $this->state,
+                'zipCode' => $this->zipCode,
+                'referencePoint' => $this->referencePoint
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -151,6 +152,24 @@ class GetPixPayerResponse implements \JsonSerializable
     public function unsetBankAccount(): void
     {
         $this->bankAccount = [];
+    }
+
+    /**
+     * Converts the GetPixPayerResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetPixPayerResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetPixPayerResponse',
+            [
+                'name' => $this->getName(),
+                'document' => $this->getDocument(),
+                'documentType' => $this->getDocumentType(),
+                'bankAccount' => $this->getBankAccount()
+            ]
+        );
     }
 
     /**

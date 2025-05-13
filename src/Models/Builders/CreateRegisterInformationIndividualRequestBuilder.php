@@ -13,6 +13,7 @@ namespace PagarmeApiSDKLib\Models\Builders;
 use Core\Utils\CoreHelper;
 use PagarmeApiSDKLib\Models\CreateRegisterInformationAddressRequest;
 use PagarmeApiSDKLib\Models\CreateRegisterInformationIndividualRequest;
+use PagarmeApiSDKLib\Models\CreateRegisterInformationPhoneRequest;
 
 /**
  * Builder for model CreateRegisterInformationIndividualRequest
@@ -32,7 +33,17 @@ class CreateRegisterInformationIndividualRequestBuilder
     }
 
     /**
-     * Initializes a new create register information individual request Builder object.
+     * Initializes a new Create Register Information Individual Request Builder object.
+     *
+     * @param string $email
+     * @param string $document
+     * @param string $type
+     * @param CreateRegisterInformationPhoneRequest[] $phoneNumbers
+     * @param string $name
+     * @param string $birthdate
+     * @param int $monthlyIncome
+     * @param string $professionalOccupation
+     * @param CreateRegisterInformationAddressRequest $address
      */
     public static function init(
         string $email,
@@ -60,6 +71,8 @@ class CreateRegisterInformationIndividualRequestBuilder
 
     /**
      * Sets site url field.
+     *
+     * @param string|null $value
      */
     public function siteUrl(?string $value): self
     {
@@ -78,6 +91,8 @@ class CreateRegisterInformationIndividualRequestBuilder
 
     /**
      * Sets mother name field.
+     *
+     * @param string|null $value
      */
     public function motherName(?string $value): self
     {
@@ -95,7 +110,7 @@ class CreateRegisterInformationIndividualRequestBuilder
     }
 
     /**
-     * Initializes a new create register information individual request object.
+     * Initializes a new Create Register Information Individual Request object.
      */
     public function build(): CreateRegisterInformationIndividualRequest
     {

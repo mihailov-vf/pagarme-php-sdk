@@ -32,7 +32,7 @@ class CreateVoucherPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create voucher payment request Builder object.
+     * Initializes a new Create Voucher Payment Request Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class CreateVoucherPaymentRequestBuilder
 
     /**
      * Sets statement descriptor field.
+     *
+     * @param string|null $value
      */
     public function statementDescriptor(?string $value): self
     {
@@ -50,6 +52,8 @@ class CreateVoucherPaymentRequestBuilder
 
     /**
      * Sets card id field.
+     *
+     * @param string|null $value
      */
     public function cardId(?string $value): self
     {
@@ -59,6 +63,8 @@ class CreateVoucherPaymentRequestBuilder
 
     /**
      * Sets card token field.
+     *
+     * @param string|null $value
      */
     public function cardToken(?string $value): self
     {
@@ -67,7 +73,9 @@ class CreateVoucherPaymentRequestBuilder
     }
 
     /**
-     * Sets card field.
+     * Sets Card field.
+     *
+     * @param CreateCardRequest|null $value
      */
     public function card(?CreateCardRequest $value): self
     {
@@ -77,6 +85,8 @@ class CreateVoucherPaymentRequestBuilder
 
     /**
      * Sets recurrency cycle field.
+     *
+     * @param string|null $value
      */
     public function recurrencyCycle(?string $value): self
     {
@@ -85,7 +95,7 @@ class CreateVoucherPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create voucher payment request object.
+     * Initializes a new Create Voucher Payment Request object.
      */
     public function build(): CreateVoucherPaymentRequest
     {

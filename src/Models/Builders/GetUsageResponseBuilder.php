@@ -32,7 +32,7 @@ class GetUsageResponseBuilder
     }
 
     /**
-     * Initializes a new get usage response Builder object.
+     * Initializes a new Get Usage Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetUsageResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -59,6 +61,8 @@ class GetUsageResponseBuilder
 
     /**
      * Sets quantity field.
+     *
+     * @param int|null $value
      */
     public function quantity(?int $value): self
     {
@@ -77,6 +81,8 @@ class GetUsageResponseBuilder
 
     /**
      * Sets description field.
+     *
+     * @param string|null $value
      */
     public function description(?string $value): self
     {
@@ -95,6 +101,8 @@ class GetUsageResponseBuilder
 
     /**
      * Sets used at field.
+     *
+     * @param \DateTime|null $value
      */
     public function usedAt(?\DateTime $value): self
     {
@@ -113,6 +121,8 @@ class GetUsageResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -131,6 +141,8 @@ class GetUsageResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -149,6 +161,8 @@ class GetUsageResponseBuilder
 
     /**
      * Sets deleted at field.
+     *
+     * @param \DateTime|null $value
      */
     public function deletedAt(?\DateTime $value): self
     {
@@ -167,6 +181,8 @@ class GetUsageResponseBuilder
 
     /**
      * Sets subscription item field.
+     *
+     * @param GetSubscriptionItemResponse|null $value
      */
     public function subscriptionItem(?GetSubscriptionItemResponse $value): self
     {
@@ -185,6 +201,8 @@ class GetUsageResponseBuilder
 
     /**
      * Sets code field.
+     *
+     * @param string|null $value
      */
     public function code(?string $value): self
     {
@@ -203,6 +221,8 @@ class GetUsageResponseBuilder
 
     /**
      * Sets group field.
+     *
+     * @param string|null $value
      */
     public function group(?string $value): self
     {
@@ -221,6 +241,8 @@ class GetUsageResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -238,7 +260,7 @@ class GetUsageResponseBuilder
     }
 
     /**
-     * Initializes a new get usage response object.
+     * Initializes a new Get Usage Response object.
      */
     public function build(): GetUsageResponse
     {

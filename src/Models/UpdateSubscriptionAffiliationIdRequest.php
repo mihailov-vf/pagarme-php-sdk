@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -47,6 +48,19 @@ class UpdateSubscriptionAffiliationIdRequest implements \JsonSerializable
     public function setGatewayAffiliationId(string $gatewayAffiliationId): void
     {
         $this->gatewayAffiliationId = $gatewayAffiliationId;
+    }
+
+    /**
+     * Converts the UpdateSubscriptionAffiliationIdRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateSubscriptionAffiliationIdRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'UpdateSubscriptionAffiliationIdRequest',
+            ['gatewayAffiliationId' => $this->gatewayAffiliationId]
+        );
     }
 
     /**

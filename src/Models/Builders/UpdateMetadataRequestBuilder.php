@@ -31,7 +31,9 @@ class UpdateMetadataRequestBuilder
     }
 
     /**
-     * Initializes a new update metadata request Builder object.
+     * Initializes a new Update Metadata Request Builder object.
+     *
+     * @param array<string,string> $metadata
      */
     public static function init(array $metadata): self
     {
@@ -39,7 +41,7 @@ class UpdateMetadataRequestBuilder
     }
 
     /**
-     * Initializes a new update metadata request object.
+     * Initializes a new Update Metadata Request object.
      */
     public function build(): UpdateMetadataRequest
     {

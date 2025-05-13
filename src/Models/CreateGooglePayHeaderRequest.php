@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -49,6 +50,19 @@ class CreateGooglePayHeaderRequest implements \JsonSerializable
     public function setEphemeralPublicKey(string $ephemeralPublicKey): void
     {
         $this->ephemeralPublicKey = $ephemeralPublicKey;
+    }
+
+    /**
+     * Converts the CreateGooglePayHeaderRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateGooglePayHeaderRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateGooglePayHeaderRequest',
+            ['ephemeralPublicKey' => $this->ephemeralPublicKey]
+        );
     }
 
     /**

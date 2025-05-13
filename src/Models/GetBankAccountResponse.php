@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -612,6 +613,36 @@ class GetBankAccountResponse implements \JsonSerializable
     public function unsetPixKey(): void
     {
         $this->pixKey = [];
+    }
+
+    /**
+     * Converts the GetBankAccountResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetBankAccountResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetBankAccountResponse',
+            [
+                'id' => $this->getId(),
+                'holderName' => $this->getHolderName(),
+                'holderType' => $this->getHolderType(),
+                'bank' => $this->getBank(),
+                'branchNumber' => $this->getBranchNumber(),
+                'branchCheckDigit' => $this->getBranchCheckDigit(),
+                'accountNumber' => $this->getAccountNumber(),
+                'accountCheckDigit' => $this->getAccountCheckDigit(),
+                'type' => $this->getType(),
+                'status' => $this->getStatus(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt(),
+                'deletedAt' => $this->getDeletedAt(),
+                'recipient' => $this->getRecipient(),
+                'metadata' => $this->getMetadata(),
+                'pixKey' => $this->getPixKey()
+            ]
+        );
     }
 
     /**

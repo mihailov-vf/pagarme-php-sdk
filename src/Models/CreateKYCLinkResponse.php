@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -126,6 +127,23 @@ class CreateKYCLinkResponse implements \JsonSerializable
     public function unsetExpirationDate(): void
     {
         $this->expirationDate = [];
+    }
+
+    /**
+     * Converts the CreateKYCLinkResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateKYCLinkResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateKYCLinkResponse',
+            [
+                'base64' => $this->getBase64(),
+                'url' => $this->getUrl(),
+                'expirationDate' => $this->getExpirationDate()
+            ]
+        );
     }
 
     /**

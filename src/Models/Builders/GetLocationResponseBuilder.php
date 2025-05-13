@@ -31,7 +31,7 @@ class GetLocationResponseBuilder
     }
 
     /**
-     * Initializes a new get location response Builder object.
+     * Initializes a new Get Location Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetLocationResponseBuilder
 
     /**
      * Sets latitude field.
+     *
+     * @param string|null $value
      */
     public function latitude(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetLocationResponseBuilder
 
     /**
      * Sets longitude field.
+     *
+     * @param string|null $value
      */
     public function longitude(?string $value): self
     {
@@ -75,7 +79,7 @@ class GetLocationResponseBuilder
     }
 
     /**
-     * Initializes a new get location response object.
+     * Initializes a new Get Location Response object.
      */
     public function build(): GetLocationResponse
     {

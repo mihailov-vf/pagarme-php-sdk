@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -367,6 +368,30 @@ class GetOrderItemResponse implements \JsonSerializable
     public function unsetUpdatedAt(): void
     {
         $this->updatedAt = [];
+    }
+
+    /**
+     * Converts the GetOrderItemResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetOrderItemResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetOrderItemResponse',
+            [
+                'id' => $this->getId(),
+                'type' => $this->getType(),
+                'description' => $this->getDescription(),
+                'amount' => $this->getAmount(),
+                'quantity' => $this->getQuantity(),
+                'category' => $this->getCategory(),
+                'code' => $this->getCode(),
+                'status' => $this->getStatus(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt()
+            ]
+        );
     }
 
     /**

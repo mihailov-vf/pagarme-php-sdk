@@ -11,6 +11,8 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetDiscountResponse;
+use PagarmeApiSDKLib\Models\GetIncrementResponse;
 use PagarmeApiSDKLib\Models\GetPricingSchemeResponse;
 use PagarmeApiSDKLib\Models\GetSubscriptionItemResponse;
 use PagarmeApiSDKLib\Models\GetSubscriptionResponse;
@@ -33,7 +35,7 @@ class GetSubscriptionItemResponseBuilder
     }
 
     /**
-     * Initializes a new get subscription item response Builder object.
+     * Initializes a new Get Subscription Item Response Builder object.
      */
     public static function init(): self
     {
@@ -42,6 +44,8 @@ class GetSubscriptionItemResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -60,6 +64,8 @@ class GetSubscriptionItemResponseBuilder
 
     /**
      * Sets description field.
+     *
+     * @param string|null $value
      */
     public function description(?string $value): self
     {
@@ -78,6 +84,8 @@ class GetSubscriptionItemResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -96,6 +104,8 @@ class GetSubscriptionItemResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -114,6 +124,8 @@ class GetSubscriptionItemResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -132,6 +144,8 @@ class GetSubscriptionItemResponseBuilder
 
     /**
      * Sets pricing scheme field.
+     *
+     * @param GetPricingSchemeResponse|null $value
      */
     public function pricingScheme(?GetPricingSchemeResponse $value): self
     {
@@ -150,6 +164,8 @@ class GetSubscriptionItemResponseBuilder
 
     /**
      * Sets discounts field.
+     *
+     * @param GetDiscountResponse[]|null $value
      */
     public function discounts(?array $value): self
     {
@@ -168,6 +184,8 @@ class GetSubscriptionItemResponseBuilder
 
     /**
      * Sets increments field.
+     *
+     * @param GetIncrementResponse[]|null $value
      */
     public function increments(?array $value): self
     {
@@ -186,6 +204,8 @@ class GetSubscriptionItemResponseBuilder
 
     /**
      * Sets subscription field.
+     *
+     * @param GetSubscriptionResponse|null $value
      */
     public function subscription(?GetSubscriptionResponse $value): self
     {
@@ -204,6 +224,8 @@ class GetSubscriptionItemResponseBuilder
 
     /**
      * Sets name field.
+     *
+     * @param string|null $value
      */
     public function name(?string $value): self
     {
@@ -222,6 +244,8 @@ class GetSubscriptionItemResponseBuilder
 
     /**
      * Sets quantity field.
+     *
+     * @param int|null $value
      */
     public function quantity(?int $value): self
     {
@@ -240,6 +264,8 @@ class GetSubscriptionItemResponseBuilder
 
     /**
      * Sets cycles field.
+     *
+     * @param int|null $value
      */
     public function cycles(?int $value): self
     {
@@ -258,6 +284,8 @@ class GetSubscriptionItemResponseBuilder
 
     /**
      * Sets deleted at field.
+     *
+     * @param \DateTime|null $value
      */
     public function deletedAt(?\DateTime $value): self
     {
@@ -275,7 +303,7 @@ class GetSubscriptionItemResponseBuilder
     }
 
     /**
-     * Initializes a new get subscription item response object.
+     * Initializes a new Get Subscription Item Response object.
      */
     public function build(): GetSubscriptionItemResponse
     {

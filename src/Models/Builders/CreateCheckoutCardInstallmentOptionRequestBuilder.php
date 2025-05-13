@@ -31,7 +31,10 @@ class CreateCheckoutCardInstallmentOptionRequestBuilder
     }
 
     /**
-     * Initializes a new create checkout card installment option request Builder object.
+     * Initializes a new Create Checkout Card Installment Option Request Builder object.
+     *
+     * @param int $number
+     * @param int $total
      */
     public static function init(int $number, int $total): self
     {
@@ -39,7 +42,7 @@ class CreateCheckoutCardInstallmentOptionRequestBuilder
     }
 
     /**
-     * Initializes a new create checkout card installment option request object.
+     * Initializes a new Create Checkout Card Installment Option Request object.
      */
     public function build(): CreateCheckoutCardInstallmentOptionRequest
     {

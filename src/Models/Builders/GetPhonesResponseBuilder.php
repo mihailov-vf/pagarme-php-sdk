@@ -32,7 +32,7 @@ class GetPhonesResponseBuilder
     }
 
     /**
-     * Initializes a new get phones response Builder object.
+     * Initializes a new Get Phones Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetPhonesResponseBuilder
 
     /**
      * Sets home phone field.
+     *
+     * @param GetPhoneResponse|null $value
      */
     public function homePhone(?GetPhoneResponse $value): self
     {
@@ -59,6 +61,8 @@ class GetPhonesResponseBuilder
 
     /**
      * Sets mobile phone field.
+     *
+     * @param GetPhoneResponse|null $value
      */
     public function mobilePhone(?GetPhoneResponse $value): self
     {
@@ -76,7 +80,7 @@ class GetPhonesResponseBuilder
     }
 
     /**
-     * Initializes a new get phones response object.
+     * Initializes a new Get Phones Response object.
      */
     public function build(): GetPhonesResponse
     {

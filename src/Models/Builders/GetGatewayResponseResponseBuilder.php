@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetGatewayErrorResponse;
 use PagarmeApiSDKLib\Models\GetGatewayResponseResponse;
 
 /**
@@ -31,7 +32,7 @@ class GetGatewayResponseResponseBuilder
     }
 
     /**
-     * Initializes a new get gateway response response Builder object.
+     * Initializes a new Get Gateway Response Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +41,8 @@ class GetGatewayResponseResponseBuilder
 
     /**
      * Sets code field.
+     *
+     * @param string|null $value
      */
     public function code(?string $value): self
     {
@@ -58,6 +61,8 @@ class GetGatewayResponseResponseBuilder
 
     /**
      * Sets errors field.
+     *
+     * @param GetGatewayErrorResponse[]|null $value
      */
     public function errors(?array $value): self
     {
@@ -75,7 +80,7 @@ class GetGatewayResponseResponseBuilder
     }
 
     /**
-     * Initializes a new get gateway response response object.
+     * Initializes a new Get Gateway Response Response object.
      */
     public function build(): GetGatewayResponseResponse
     {

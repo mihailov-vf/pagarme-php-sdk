@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -361,6 +362,30 @@ class GetDiscountResponse implements \JsonSerializable
     public function unsetSubscriptionItem(): void
     {
         $this->subscriptionItem = [];
+    }
+
+    /**
+     * Converts the GetDiscountResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetDiscountResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetDiscountResponse',
+            [
+                'id' => $this->getId(),
+                'value' => $this->getValue(),
+                'discountType' => $this->getDiscountType(),
+                'status' => $this->getStatus(),
+                'createdAt' => $this->getCreatedAt(),
+                'cycles' => $this->getCycles(),
+                'deletedAt' => $this->getDeletedAt(),
+                'description' => $this->getDescription(),
+                'subscription' => $this->getSubscription(),
+                'subscriptionItem' => $this->getSubscriptionItem()
+            ]
+        );
     }
 
     /**

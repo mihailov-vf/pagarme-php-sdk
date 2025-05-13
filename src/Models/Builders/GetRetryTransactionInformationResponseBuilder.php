@@ -31,7 +31,7 @@ class GetRetryTransactionInformationResponseBuilder
     }
 
     /**
-     * Initializes a new get retry transaction information response Builder object.
+     * Initializes a new Get Retry Transaction Information Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetRetryTransactionInformationResponseBuilder
 
     /**
      * Sets brand failure return code field.
+     *
+     * @param string|null $value
      */
     public function brandFailureReturnCode(?string $value): self
     {
@@ -49,6 +51,8 @@ class GetRetryTransactionInformationResponseBuilder
 
     /**
      * Sets transaction limit field.
+     *
+     * @param int|null $value
      */
     public function transactionLimit(?int $value): self
     {
@@ -58,6 +62,8 @@ class GetRetryTransactionInformationResponseBuilder
 
     /**
      * Sets transaction date limit field.
+     *
+     * @param \DateTime|null $value
      */
     public function transactionDateLimit(?\DateTime $value): self
     {
@@ -66,7 +72,7 @@ class GetRetryTransactionInformationResponseBuilder
     }
 
     /**
-     * Initializes a new get retry transaction information response object.
+     * Initializes a new Get Retry Transaction Information Response object.
      */
     public function build(): GetRetryTransactionInformationResponse
     {

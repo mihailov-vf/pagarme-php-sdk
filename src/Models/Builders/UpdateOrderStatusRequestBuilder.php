@@ -31,7 +31,9 @@ class UpdateOrderStatusRequestBuilder
     }
 
     /**
-     * Initializes a new update order status request Builder object.
+     * Initializes a new Update Order Status Request Builder object.
+     *
+     * @param string $status
      */
     public static function init(string $status): self
     {
@@ -39,7 +41,7 @@ class UpdateOrderStatusRequestBuilder
     }
 
     /**
-     * Initializes a new update order status request object.
+     * Initializes a new Update Order Status Request object.
      */
     public function build(): UpdateOrderStatusRequest
     {

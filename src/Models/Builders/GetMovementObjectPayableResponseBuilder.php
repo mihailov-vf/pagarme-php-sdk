@@ -31,7 +31,22 @@ class GetMovementObjectPayableResponseBuilder
     }
 
     /**
-     * Initializes a new get movement object payable response Builder object.
+     * Initializes a new Get Movement Object Payable Response Builder object.
+     *
+     * @param string $anticipationFee
+     * @param string $fraudCoverageFee
+     * @param string $installment
+     * @param string $splitId
+     * @param string $bulkAnticipationId
+     * @param string $anticipationId
+     * @param string $recipientId
+     * @param string $originatorModel
+     * @param string $originatorModelId
+     * @param string $paymentDate
+     * @param string $originalPaymentDate
+     * @param string $paymentMethod
+     * @param string $accrualAt
+     * @param string $liquidationArrangementId
      */
     public static function init(
         string $anticipationFee,
@@ -69,6 +84,8 @@ class GetMovementObjectPayableResponseBuilder
 
     /**
      * Sets object field.
+     *
+     * @param string|null $value
      */
     public function object(?string $value): self
     {
@@ -78,6 +95,8 @@ class GetMovementObjectPayableResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -96,6 +115,8 @@ class GetMovementObjectPayableResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -114,6 +135,8 @@ class GetMovementObjectPayableResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param string|null $value
      */
     public function amount(?string $value): self
     {
@@ -132,6 +155,8 @@ class GetMovementObjectPayableResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param string|null $value
      */
     public function createdAt(?string $value): self
     {
@@ -150,6 +175,8 @@ class GetMovementObjectPayableResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -168,6 +195,8 @@ class GetMovementObjectPayableResponseBuilder
 
     /**
      * Sets charge id field.
+     *
+     * @param string|null $value
      */
     public function chargeId(?string $value): self
     {
@@ -186,6 +215,8 @@ class GetMovementObjectPayableResponseBuilder
 
     /**
      * Sets gateway id field.
+     *
+     * @param string|null $value
      */
     public function gatewayId(?string $value): self
     {
@@ -204,6 +235,8 @@ class GetMovementObjectPayableResponseBuilder
 
     /**
      * Sets fee field.
+     *
+     * @param string|null $value
      */
     public function fee(?string $value): self
     {
@@ -221,7 +254,7 @@ class GetMovementObjectPayableResponseBuilder
     }
 
     /**
-     * Initializes a new get movement object payable response object.
+     * Initializes a new Get Movement Object Payable Response object.
      */
     public function build(): GetMovementObjectPayableResponse
     {

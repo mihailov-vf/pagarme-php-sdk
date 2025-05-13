@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -330,6 +331,29 @@ class CreateChargeRequest implements \JsonSerializable
     public function setOrderId(string $orderId): void
     {
         $this->orderId = $orderId;
+    }
+
+    /**
+     * Converts the CreateChargeRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateChargeRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateChargeRequest',
+            [
+                'code' => $this->getCode(),
+                'amount' => $this->amount,
+                'customerId' => $this->getCustomerId(),
+                'customer' => $this->getCustomer(),
+                'payment' => $this->payment,
+                'metadata' => $this->getMetadata(),
+                'dueAt' => $this->getDueAt(),
+                'antifraud' => $this->getAntifraud(),
+                'orderId' => $this->orderId
+            ]
+        );
     }
 
     /**

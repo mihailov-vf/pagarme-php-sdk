@@ -32,7 +32,11 @@ class CreateSetupRequestBuilder
     }
 
     /**
-     * Initializes a new create setup request Builder object.
+     * Initializes a new Create Setup Request Builder object.
+     *
+     * @param int $amount
+     * @param string $description
+     * @param CreatePaymentRequest $payment
      */
     public static function init(int $amount, string $description, CreatePaymentRequest $payment): self
     {
@@ -40,7 +44,7 @@ class CreateSetupRequestBuilder
     }
 
     /**
-     * Initializes a new create setup request object.
+     * Initializes a new Create Setup Request object.
      */
     public function build(): CreateSetupRequest
     {

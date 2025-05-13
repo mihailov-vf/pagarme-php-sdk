@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class CreateAutomaticAnticipationSettingsRequest implements \JsonSerializable
@@ -152,6 +153,26 @@ class CreateAutomaticAnticipationSettingsRequest implements \JsonSerializable
     public function setDays(array $days): void
     {
         $this->days = $days;
+    }
+
+    /**
+     * Converts the CreateAutomaticAnticipationSettingsRequest object to a human-readable string
+     * representation.
+     *
+     * @return string The string representation of the CreateAutomaticAnticipationSettingsRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateAutomaticAnticipationSettingsRequest',
+            [
+                'enabled' => $this->enabled,
+                'type' => $this->type,
+                'volumePercentage' => $this->volumePercentage,
+                'delay' => $this->delay,
+                'days' => $this->days
+            ]
+        );
     }
 
     /**

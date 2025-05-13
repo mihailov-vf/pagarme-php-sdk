@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -607,6 +608,37 @@ class GetAddressResponse implements \JsonSerializable
     public function unsetDeletedAt(): void
     {
         $this->deletedAt = [];
+    }
+
+    /**
+     * Converts the GetAddressResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetAddressResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetAddressResponse',
+            [
+                'id' => $this->getId(),
+                'street' => $this->getStreet(),
+                'number' => $this->getNumber(),
+                'complement' => $this->getComplement(),
+                'zipCode' => $this->getZipCode(),
+                'neighborhood' => $this->getNeighborhood(),
+                'city' => $this->getCity(),
+                'state' => $this->getState(),
+                'country' => $this->getCountry(),
+                'status' => $this->getStatus(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt(),
+                'customer' => $this->getCustomer(),
+                'metadata' => $this->getMetadata(),
+                'line1' => $this->getLine1(),
+                'line2' => $this->getLine2(),
+                'deletedAt' => $this->getDeletedAt()
+            ]
+        );
     }
 
     /**

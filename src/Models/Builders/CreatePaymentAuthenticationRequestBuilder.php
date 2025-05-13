@@ -32,7 +32,10 @@ class CreatePaymentAuthenticationRequestBuilder
     }
 
     /**
-     * Initializes a new create payment authentication request Builder object.
+     * Initializes a new Create Payment Authentication Request Builder object.
+     *
+     * @param string $type
+     * @param CreateThreeDSecureRequest $threedSecure
      */
     public static function init(string $type, CreateThreeDSecureRequest $threedSecure): self
     {
@@ -40,7 +43,7 @@ class CreatePaymentAuthenticationRequestBuilder
     }
 
     /**
-     * Initializes a new create payment authentication request object.
+     * Initializes a new Create Payment Authentication Request object.
      */
     public function build(): CreatePaymentAuthenticationRequest
     {

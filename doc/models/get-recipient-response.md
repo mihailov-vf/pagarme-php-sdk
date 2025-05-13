@@ -27,7 +27,7 @@ Recipient response
 | `automaticAnticipationSettings` | [`?GetAutomaticAnticipationResponse`](../../doc/models/get-automatic-anticipation-response.md) | Optional | - | getAutomaticAnticipationSettings(): ?GetAutomaticAnticipationResponse | setAutomaticAnticipationSettings(?GetAutomaticAnticipationResponse automaticAnticipationSettings): void |
 | `transferSettings` | [`?GetTransferSettingsResponse`](../../doc/models/get-transfer-settings-response.md) | Optional | - | getTransferSettings(): ?GetTransferSettingsResponse | setTransferSettings(?GetTransferSettingsResponse transferSettings): void |
 | `code` | `?string` | Optional | Recipient code | getCode(): ?string | setCode(?string code): void |
-| `paymentMode` | `?string` | Optional | Payment mode<br>**Default**: `'bank_transfer'` | getPaymentMode(): ?string | setPaymentMode(?string paymentMode): void |
+| `paymentMode` | `?string` | Optional | Payment mode<br><br>**Default**: `'bank_transfer'` | getPaymentMode(): ?string | setPaymentMode(?string paymentMode): void |
 | `registerInformation` | [`?GetRegisterInformationResponse`](../../doc/models/get-register-information-response.md) | Optional | - | getRegisterInformation(): ?GetRegisterInformationResponse | setRegisterInformation(?GetRegisterInformationResponse registerInformation): void |
 
 ## Example (as JSON)

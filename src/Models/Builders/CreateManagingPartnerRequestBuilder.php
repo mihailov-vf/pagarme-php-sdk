@@ -13,6 +13,7 @@ namespace PagarmeApiSDKLib\Models\Builders;
 use Core\Utils\CoreHelper;
 use PagarmeApiSDKLib\Models\CreateManagingPartnerRequest;
 use PagarmeApiSDKLib\Models\CreateRegisterInformationAddressRequest;
+use PagarmeApiSDKLib\Models\CreateRegisterInformationPhoneRequest;
 
 /**
  * Builder for model CreateManagingPartnerRequest
@@ -32,7 +33,17 @@ class CreateManagingPartnerRequestBuilder
     }
 
     /**
-     * Initializes a new create managing partner request Builder object.
+     * Initializes a new Create Managing Partner Request Builder object.
+     *
+     * @param string $name
+     * @param string $email
+     * @param string $document
+     * @param string $birthdate
+     * @param int $monthlyIncome
+     * @param string $professionalOccupation
+     * @param bool $selfDeclaredLegalRepresentative
+     * @param CreateRegisterInformationAddressRequest $address
+     * @param CreateRegisterInformationPhoneRequest[] $phoneNumbers
      */
     public static function init(
         string $name,
@@ -60,6 +71,8 @@ class CreateManagingPartnerRequestBuilder
 
     /**
      * Sets mother name field.
+     *
+     * @param string|null $value
      */
     public function motherName(?string $value): self
     {
@@ -77,7 +90,7 @@ class CreateManagingPartnerRequestBuilder
     }
 
     /**
-     * Initializes a new create managing partner request object.
+     * Initializes a new Create Managing Partner Request object.
      */
     public function build(): CreateManagingPartnerRequest
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -120,6 +121,24 @@ class GetMovementObjectFeeCollectionResponse extends GetMovementObjectBaseRespon
     public function unsetRecipientId(): void
     {
         $this->recipientId = [];
+    }
+
+    /**
+     * Converts the GetMovementObjectFeeCollectionResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetMovementObjectFeeCollectionResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetMovementObjectFeeCollectionResponse',
+            [
+                'description' => $this->getDescription(),
+                'paymentDate' => $this->getPaymentDate(),
+                'recipientId' => $this->getRecipientId()
+            ],
+            parent::__toString()
+        );
     }
 
     /**

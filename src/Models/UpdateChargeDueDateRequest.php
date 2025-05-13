@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -42,6 +43,16 @@ class UpdateChargeDueDateRequest implements \JsonSerializable
     public function setDueAt(?\DateTime $dueAt): void
     {
         $this->dueAt = $dueAt;
+    }
+
+    /**
+     * Converts the UpdateChargeDueDateRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateChargeDueDateRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('UpdateChargeDueDateRequest', ['dueAt' => $this->dueAt]);
     }
 
     /**

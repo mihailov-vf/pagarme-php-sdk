@@ -33,7 +33,7 @@ class GetDiscountResponseBuilder
     }
 
     /**
-     * Initializes a new get discount response Builder object.
+     * Initializes a new Get Discount Response Builder object.
      */
     public static function init(): self
     {
@@ -42,6 +42,8 @@ class GetDiscountResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -60,6 +62,8 @@ class GetDiscountResponseBuilder
 
     /**
      * Sets value field.
+     *
+     * @param float|null $value
      */
     public function value(?float $value): self
     {
@@ -78,6 +82,8 @@ class GetDiscountResponseBuilder
 
     /**
      * Sets discount type field.
+     *
+     * @param string|null $value
      */
     public function discountType(?string $value): self
     {
@@ -96,6 +102,8 @@ class GetDiscountResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -114,6 +122,8 @@ class GetDiscountResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -132,6 +142,8 @@ class GetDiscountResponseBuilder
 
     /**
      * Sets cycles field.
+     *
+     * @param int|null $value
      */
     public function cycles(?int $value): self
     {
@@ -150,6 +162,8 @@ class GetDiscountResponseBuilder
 
     /**
      * Sets deleted at field.
+     *
+     * @param \DateTime|null $value
      */
     public function deletedAt(?\DateTime $value): self
     {
@@ -168,6 +182,8 @@ class GetDiscountResponseBuilder
 
     /**
      * Sets description field.
+     *
+     * @param string|null $value
      */
     public function description(?string $value): self
     {
@@ -186,6 +202,8 @@ class GetDiscountResponseBuilder
 
     /**
      * Sets subscription field.
+     *
+     * @param GetSubscriptionResponse|null $value
      */
     public function subscription(?GetSubscriptionResponse $value): self
     {
@@ -204,6 +222,8 @@ class GetDiscountResponseBuilder
 
     /**
      * Sets subscription item field.
+     *
+     * @param GetSubscriptionItemResponse|null $value
      */
     public function subscriptionItem(?GetSubscriptionItemResponse $value): self
     {
@@ -221,7 +241,7 @@ class GetDiscountResponseBuilder
     }
 
     /**
-     * Initializes a new get discount response object.
+     * Initializes a new Get Discount Response object.
      */
     public function build(): GetDiscountResponse
     {

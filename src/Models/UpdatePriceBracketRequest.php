@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -127,6 +128,24 @@ class UpdatePriceBracketRequest implements \JsonSerializable
     public function setOveragePrice(?int $overagePrice): void
     {
         $this->overagePrice = $overagePrice;
+    }
+
+    /**
+     * Converts the UpdatePriceBracketRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdatePriceBracketRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'UpdatePriceBracketRequest',
+            [
+                'startQuantity' => $this->startQuantity,
+                'price' => $this->price,
+                'endQuantity' => $this->endQuantity,
+                'overagePrice' => $this->overagePrice
+            ]
+        );
     }
 
     /**

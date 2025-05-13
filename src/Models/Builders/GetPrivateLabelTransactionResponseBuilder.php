@@ -17,6 +17,7 @@ use PagarmeApiSDKLib\Models\GetFineResponse;
 use PagarmeApiSDKLib\Models\GetGatewayResponseResponse;
 use PagarmeApiSDKLib\Models\GetInterestResponse;
 use PagarmeApiSDKLib\Models\GetPrivateLabelTransactionResponse;
+use PagarmeApiSDKLib\Models\GetSplitResponse;
 
 /**
  * Builder for model GetPrivateLabelTransactionResponse
@@ -36,7 +37,7 @@ class GetPrivateLabelTransactionResponseBuilder
     }
 
     /**
-     * Initializes a new get private label transaction response Builder object.
+     * Initializes a new Get Private Label Transaction Response Builder object.
      */
     public static function init(): self
     {
@@ -45,6 +46,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets gateway id field.
+     *
+     * @param string|null $value
      */
     public function gatewayId(?string $value): self
     {
@@ -63,6 +66,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -81,6 +86,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -99,6 +106,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets success field.
+     *
+     * @param bool|null $value
      */
     public function success(?bool $value): self
     {
@@ -117,6 +126,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -135,6 +146,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -153,6 +166,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets attempt count field.
+     *
+     * @param int|null $value
      */
     public function attemptCount(?int $value): self
     {
@@ -171,6 +186,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets max attempts field.
+     *
+     * @param int|null $value
      */
     public function maxAttempts(?int $value): self
     {
@@ -189,6 +206,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets splits field.
+     *
+     * @param GetSplitResponse[]|null $value
      */
     public function splits(?array $value): self
     {
@@ -207,6 +226,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets next attempt field.
+     *
+     * @param \DateTime|null $value
      */
     public function nextAttempt(?\DateTime $value): self
     {
@@ -225,6 +246,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets transaction type field.
+     *
+     * @param string|null $value
      */
     public function transactionType(?string $value): self
     {
@@ -234,6 +257,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -252,6 +277,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets gateway response field.
+     *
+     * @param GetGatewayResponseResponse|null $value
      */
     public function gatewayResponse(?GetGatewayResponseResponse $value): self
     {
@@ -270,6 +297,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets antifraud response field.
+     *
+     * @param GetAntifraudResponse|null $value
      */
     public function antifraudResponse(?GetAntifraudResponse $value): self
     {
@@ -288,6 +317,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -306,6 +337,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets split field.
+     *
+     * @param GetSplitResponse[]|null $value
      */
     public function split(?array $value): self
     {
@@ -324,6 +357,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets interest field.
+     *
+     * @param GetInterestResponse|null $value
      */
     public function interest(?GetInterestResponse $value): self
     {
@@ -342,6 +377,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets fine field.
+     *
+     * @param GetFineResponse|null $value
      */
     public function fine(?GetFineResponse $value): self
     {
@@ -360,6 +397,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets max days to pay past due field.
+     *
+     * @param int|null $value
      */
     public function maxDaysToPayPastDue(?int $value): self
     {
@@ -378,6 +417,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets statement descriptor field.
+     *
+     * @param string|null $value
      */
     public function statementDescriptor(?string $value): self
     {
@@ -396,6 +437,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets acquirer name field.
+     *
+     * @param string|null $value
      */
     public function acquirerName(?string $value): self
     {
@@ -414,6 +457,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets acquirer affiliation code field.
+     *
+     * @param string|null $value
      */
     public function acquirerAffiliationCode(?string $value): self
     {
@@ -432,6 +477,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets acquirer tid field.
+     *
+     * @param string|null $value
      */
     public function acquirerTid(?string $value): self
     {
@@ -450,6 +497,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets acquirer nsu field.
+     *
+     * @param string|null $value
      */
     public function acquirerNsu(?string $value): self
     {
@@ -468,6 +517,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets acquirer auth code field.
+     *
+     * @param string|null $value
      */
     public function acquirerAuthCode(?string $value): self
     {
@@ -486,6 +537,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets operation type field.
+     *
+     * @param string|null $value
      */
     public function operationType(?string $value): self
     {
@@ -504,6 +557,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets card field.
+     *
+     * @param GetCardResponse|null $value
      */
     public function card(?GetCardResponse $value): self
     {
@@ -522,6 +577,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets acquirer message field.
+     *
+     * @param string|null $value
      */
     public function acquirerMessage(?string $value): self
     {
@@ -540,6 +597,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets acquirer return code field.
+     *
+     * @param string|null $value
      */
     public function acquirerReturnCode(?string $value): self
     {
@@ -558,6 +617,8 @@ class GetPrivateLabelTransactionResponseBuilder
 
     /**
      * Sets installments field.
+     *
+     * @param int|null $value
      */
     public function installments(?int $value): self
     {
@@ -575,7 +636,7 @@ class GetPrivateLabelTransactionResponseBuilder
     }
 
     /**
-     * Initializes a new get private label transaction response object.
+     * Initializes a new Get Private Label Transaction Response object.
      */
     public function build(): GetPrivateLabelTransactionResponse
     {

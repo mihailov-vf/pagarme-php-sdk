@@ -32,7 +32,7 @@ class GetTokenResponseBuilder
     }
 
     /**
-     * Initializes a new get token response Builder object.
+     * Initializes a new Get Token Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetTokenResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -59,6 +61,8 @@ class GetTokenResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -77,6 +81,8 @@ class GetTokenResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -95,6 +101,8 @@ class GetTokenResponseBuilder
 
     /**
      * Sets expires at field.
+     *
+     * @param string|null $value
      */
     public function expiresAt(?string $value): self
     {
@@ -113,6 +121,8 @@ class GetTokenResponseBuilder
 
     /**
      * Sets card field.
+     *
+     * @param GetCardTokenResponse|null $value
      */
     public function card(?GetCardTokenResponse $value): self
     {
@@ -130,7 +140,7 @@ class GetTokenResponseBuilder
     }
 
     /**
-     * Initializes a new get token response object.
+     * Initializes a new Get Token Response object.
      */
     public function build(): GetTokenResponse
     {

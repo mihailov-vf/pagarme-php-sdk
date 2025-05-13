@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -359,6 +360,30 @@ class GetPeriodResponse implements \JsonSerializable
     public function unsetCycle(): void
     {
         $this->cycle = [];
+    }
+
+    /**
+     * Converts the GetPeriodResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetPeriodResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetPeriodResponse',
+            [
+                'startAt' => $this->getStartAt(),
+                'endAt' => $this->getEndAt(),
+                'id' => $this->getId(),
+                'billingAt' => $this->getBillingAt(),
+                'subscription' => $this->getSubscription(),
+                'status' => $this->getStatus(),
+                'duration' => $this->getDuration(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt(),
+                'cycle' => $this->getCycle()
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -549,6 +550,38 @@ class CreatePlanRequest implements \JsonSerializable
     public function setTrialPeriodDays(?int $trialPeriodDays): void
     {
         $this->trialPeriodDays = $trialPeriodDays;
+    }
+
+    /**
+     * Converts the CreatePlanRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreatePlanRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreatePlanRequest',
+            [
+                'name' => $this->name,
+                'description' => $this->description,
+                'statementDescriptor' => $this->statementDescriptor,
+                'items' => $this->items,
+                'shippable' => $this->shippable,
+                'paymentMethods' => $this->paymentMethods,
+                'installments' => $this->installments,
+                'currency' => $this->currency,
+                'interval' => $this->interval,
+                'intervalCount' => $this->intervalCount,
+                'billingDays' => $this->billingDays,
+                'billingType' => $this->billingType,
+                'pricingScheme' => $this->pricingScheme,
+                'metadata' => $this->metadata,
+                'minimumPrice' => $this->minimumPrice,
+                'cycles' => $this->cycles,
+                'quantity' => $this->quantity,
+                'trialPeriodDays' => $this->trialPeriodDays
+            ]
+        );
     }
 
     /**

@@ -13,6 +13,7 @@ namespace PagarmeApiSDKLib\Models\Builders;
 use Core\Utils\CoreHelper;
 use PagarmeApiSDKLib\Models\GetAutomaticAnticipationResponse;
 use PagarmeApiSDKLib\Models\GetBankAccountResponse;
+use PagarmeApiSDKLib\Models\GetGatewayRecipientResponse;
 use PagarmeApiSDKLib\Models\GetRecipientResponse;
 use PagarmeApiSDKLib\Models\GetRegisterInformationResponse;
 use PagarmeApiSDKLib\Models\GetTransferSettingsResponse;
@@ -35,7 +36,7 @@ class GetRecipientResponseBuilder
     }
 
     /**
-     * Initializes a new get recipient response Builder object.
+     * Initializes a new Get Recipient Response Builder object.
      */
     public static function init(): self
     {
@@ -44,6 +45,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -62,6 +65,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets name field.
+     *
+     * @param string|null $value
      */
     public function name(?string $value): self
     {
@@ -80,6 +85,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets email field.
+     *
+     * @param string|null $value
      */
     public function email(?string $value): self
     {
@@ -98,6 +105,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets document field.
+     *
+     * @param string|null $value
      */
     public function document(?string $value): self
     {
@@ -116,6 +125,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets description field.
+     *
+     * @param string|null $value
      */
     public function description(?string $value): self
     {
@@ -134,6 +145,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -152,6 +165,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -170,6 +185,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -188,6 +205,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -206,6 +225,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets deleted at field.
+     *
+     * @param \DateTime|null $value
      */
     public function deletedAt(?\DateTime $value): self
     {
@@ -224,6 +245,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets default bank account field.
+     *
+     * @param GetBankAccountResponse|null $value
      */
     public function defaultBankAccount(?GetBankAccountResponse $value): self
     {
@@ -242,6 +265,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets gateway recipients field.
+     *
+     * @param GetGatewayRecipientResponse[]|null $value
      */
     public function gatewayRecipients(?array $value): self
     {
@@ -260,6 +285,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -278,6 +305,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets automatic anticipation settings field.
+     *
+     * @param GetAutomaticAnticipationResponse|null $value
      */
     public function automaticAnticipationSettings(?GetAutomaticAnticipationResponse $value): self
     {
@@ -296,6 +325,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets transfer settings field.
+     *
+     * @param GetTransferSettingsResponse|null $value
      */
     public function transferSettings(?GetTransferSettingsResponse $value): self
     {
@@ -314,6 +345,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets code field.
+     *
+     * @param string|null $value
      */
     public function code(?string $value): self
     {
@@ -332,6 +365,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets payment mode field.
+     *
+     * @param string|null $value
      */
     public function paymentMode(?string $value): self
     {
@@ -350,6 +385,8 @@ class GetRecipientResponseBuilder
 
     /**
      * Sets register information field.
+     *
+     * @param GetRegisterInformationResponse|null $value
      */
     public function registerInformation(?GetRegisterInformationResponse $value): self
     {
@@ -367,7 +404,7 @@ class GetRecipientResponseBuilder
     }
 
     /**
-     * Initializes a new get recipient response object.
+     * Initializes a new Get Recipient Response object.
      */
     public function build(): GetRecipientResponse
     {

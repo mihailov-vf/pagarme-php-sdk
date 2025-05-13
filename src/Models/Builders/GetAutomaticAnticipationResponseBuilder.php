@@ -31,7 +31,7 @@ class GetAutomaticAnticipationResponseBuilder
     }
 
     /**
-     * Initializes a new get automatic anticipation response Builder object.
+     * Initializes a new Get Automatic Anticipation Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetAutomaticAnticipationResponseBuilder
 
     /**
      * Sets enabled field.
+     *
+     * @param bool|null $value
      */
     public function enabled(?bool $value): self
     {
@@ -58,6 +60,8 @@ class GetAutomaticAnticipationResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetAutomaticAnticipationResponseBuilder
 
     /**
      * Sets volume percentage field.
+     *
+     * @param int|null $value
      */
     public function volumePercentage(?int $value): self
     {
@@ -94,6 +100,8 @@ class GetAutomaticAnticipationResponseBuilder
 
     /**
      * Sets delay field.
+     *
+     * @param int|null $value
      */
     public function delay(?int $value): self
     {
@@ -112,6 +120,8 @@ class GetAutomaticAnticipationResponseBuilder
 
     /**
      * Sets days field.
+     *
+     * @param int[]|null $value
      */
     public function days(?array $value): self
     {
@@ -129,7 +139,7 @@ class GetAutomaticAnticipationResponseBuilder
     }
 
     /**
-     * Initializes a new get automatic anticipation response object.
+     * Initializes a new Get Automatic Anticipation Response object.
      */
     public function build(): GetAutomaticAnticipationResponse
     {

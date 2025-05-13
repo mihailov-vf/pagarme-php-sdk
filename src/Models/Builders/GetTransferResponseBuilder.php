@@ -32,7 +32,7 @@ class GetTransferResponseBuilder
     }
 
     /**
-     * Initializes a new get transfer response Builder object.
+     * Initializes a new Get Transfer Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetTransferResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -59,6 +61,8 @@ class GetTransferResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -77,6 +81,8 @@ class GetTransferResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -95,6 +101,8 @@ class GetTransferResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -113,6 +121,8 @@ class GetTransferResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -131,6 +141,8 @@ class GetTransferResponseBuilder
 
     /**
      * Sets bank account field.
+     *
+     * @param GetBankAccountResponse|null $value
      */
     public function bankAccount(?GetBankAccountResponse $value): self
     {
@@ -149,6 +161,8 @@ class GetTransferResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -166,7 +180,7 @@ class GetTransferResponseBuilder
     }
 
     /**
-     * Initializes a new get transfer response object.
+     * Initializes a new Get Transfer Response object.
      */
     public function build(): GetTransferResponse
     {

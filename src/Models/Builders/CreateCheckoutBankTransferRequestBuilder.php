@@ -31,7 +31,10 @@ class CreateCheckoutBankTransferRequestBuilder
     }
 
     /**
-     * Initializes a new create checkout bank transfer request Builder object.
+     * Initializes a new Create Checkout Bank Transfer Request Builder object.
+     *
+     * @param string[] $bank
+     * @param int $retries
      */
     public static function init(array $bank, int $retries): self
     {
@@ -39,7 +42,7 @@ class CreateCheckoutBankTransferRequestBuilder
     }
 
     /**
-     * Initializes a new create checkout bank transfer request object.
+     * Initializes a new Create Checkout Bank Transfer Request object.
      */
     public function build(): CreateCheckoutBankTransferRequest
     {

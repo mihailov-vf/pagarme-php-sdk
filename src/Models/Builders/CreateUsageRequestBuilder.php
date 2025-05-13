@@ -31,7 +31,11 @@ class CreateUsageRequestBuilder
     }
 
     /**
-     * Initializes a new create usage request Builder object.
+     * Initializes a new Create Usage Request Builder object.
+     *
+     * @param int $quantity
+     * @param string $description
+     * @param \DateTime $usedAt
      */
     public static function init(int $quantity, string $description, \DateTime $usedAt): self
     {
@@ -40,6 +44,8 @@ class CreateUsageRequestBuilder
 
     /**
      * Sets code field.
+     *
+     * @param string|null $value
      */
     public function code(?string $value): self
     {
@@ -49,6 +55,8 @@ class CreateUsageRequestBuilder
 
     /**
      * Sets group field.
+     *
+     * @param string|null $value
      */
     public function group(?string $value): self
     {
@@ -58,6 +66,8 @@ class CreateUsageRequestBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -66,7 +76,7 @@ class CreateUsageRequestBuilder
     }
 
     /**
-     * Initializes a new create usage request object.
+     * Initializes a new Create Usage Request object.
      */
     public function build(): CreateUsageRequest
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -361,6 +362,30 @@ class GetBillingAddressResponse implements \JsonSerializable
     public function unsetLine2(): void
     {
         $this->line2 = [];
+    }
+
+    /**
+     * Converts the GetBillingAddressResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetBillingAddressResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetBillingAddressResponse',
+            [
+                'street' => $this->getStreet(),
+                'number' => $this->getNumber(),
+                'zipCode' => $this->getZipCode(),
+                'neighborhood' => $this->getNeighborhood(),
+                'city' => $this->getCity(),
+                'state' => $this->getState(),
+                'country' => $this->getCountry(),
+                'complement' => $this->getComplement(),
+                'line1' => $this->getLine1(),
+                'line2' => $this->getLine2()
+            ]
+        );
     }
 
     /**

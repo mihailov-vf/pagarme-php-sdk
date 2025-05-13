@@ -36,7 +36,7 @@ class CreateCreditCardPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create credit card payment request Builder object.
+     * Initializes a new Create Credit Card Payment Request Builder object.
      */
     public static function init(): self
     {
@@ -45,6 +45,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets installments field.
+     *
+     * @param int|null $value
      */
     public function installments(?int $value): self
     {
@@ -54,6 +56,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets statement descriptor field.
+     *
+     * @param string|null $value
      */
     public function statementDescriptor(?string $value): self
     {
@@ -63,6 +67,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets card field.
+     *
+     * @param CreateCardRequest|null $value
      */
     public function card(?CreateCardRequest $value): self
     {
@@ -72,6 +78,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets card id field.
+     *
+     * @param string|null $value
      */
     public function cardId(?string $value): self
     {
@@ -81,6 +89,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets card token field.
+     *
+     * @param string|null $value
      */
     public function cardToken(?string $value): self
     {
@@ -90,6 +100,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets recurrence field.
+     *
+     * @param bool|null $value
      */
     public function recurrence(?bool $value): self
     {
@@ -99,6 +111,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets capture field.
+     *
+     * @param bool|null $value
      */
     public function capture(?bool $value): self
     {
@@ -108,6 +122,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets extended limit enabled field.
+     *
+     * @param bool|null $value
      */
     public function extendedLimitEnabled(?bool $value): self
     {
@@ -117,6 +133,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets extended limit code field.
+     *
+     * @param string|null $value
      */
     public function extendedLimitCode(?string $value): self
     {
@@ -126,6 +144,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets merchant category code field.
+     *
+     * @param int|null $value
      */
     public function merchantCategoryCode(?int $value): self
     {
@@ -135,6 +155,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets authentication field.
+     *
+     * @param CreatePaymentAuthenticationRequest|null $value
      */
     public function authentication(?CreatePaymentAuthenticationRequest $value): self
     {
@@ -144,6 +166,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets contactless field.
+     *
+     * @param CreateCardPaymentContactlessRequest|null $value
      */
     public function contactless(?CreateCardPaymentContactlessRequest $value): self
     {
@@ -153,6 +177,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets auto recovery field.
+     *
+     * @param bool|null $value
      */
     public function autoRecovery(?bool $value): self
     {
@@ -162,6 +188,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets operation type field.
+     *
+     * @param string|null $value
      */
     public function operationType(?string $value): self
     {
@@ -171,6 +199,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets recurrency cycle field.
+     *
+     * @param string|null $value
      */
     public function recurrencyCycle(?string $value): self
     {
@@ -180,6 +210,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets payload field.
+     *
+     * @param CreateCardPayloadRequest|null $value
      */
     public function payload(?CreateCardPayloadRequest $value): self
     {
@@ -189,6 +221,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets initiated type field.
+     *
+     * @param string|null $value
      */
     public function initiatedType(?string $value): self
     {
@@ -198,6 +232,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets recurrence model field.
+     *
+     * @param string|null $value
      */
     public function recurrenceModel(?string $value): self
     {
@@ -207,6 +243,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets payment origin field.
+     *
+     * @param CreatePaymentOriginRequest|null $value
      */
     public function paymentOrigin(?CreatePaymentOriginRequest $value): self
     {
@@ -216,6 +254,8 @@ class CreateCreditCardPaymentRequestBuilder
 
     /**
      * Sets indirect acceptor field.
+     *
+     * @param string|null $value
      */
     public function indirectAcceptor(?string $value): self
     {
@@ -224,7 +264,7 @@ class CreateCreditCardPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create credit card payment request object.
+     * Initializes a new Create Credit Card Payment Request object.
      */
     public function build(): CreateCreditCardPaymentRequest
     {

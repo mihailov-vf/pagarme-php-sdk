@@ -31,7 +31,7 @@ class GetInterestResponseBuilder
     }
 
     /**
-     * Initializes a new get interest response Builder object.
+     * Initializes a new Get Interest Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetInterestResponseBuilder
 
     /**
      * Sets days field.
+     *
+     * @param int|null $value
      */
     public function days(?int $value): self
     {
@@ -58,6 +60,8 @@ class GetInterestResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetInterestResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -93,7 +99,7 @@ class GetInterestResponseBuilder
     }
 
     /**
-     * Initializes a new get interest response object.
+     * Initializes a new Get Interest Response object.
      */
     public function build(): GetInterestResponse
     {

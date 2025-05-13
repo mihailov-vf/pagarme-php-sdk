@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -423,6 +424,31 @@ class GetUsageResponse implements \JsonSerializable
     public function unsetAmount(): void
     {
         $this->amount = [];
+    }
+
+    /**
+     * Converts the GetUsageResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetUsageResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetUsageResponse',
+            [
+                'id' => $this->getId(),
+                'quantity' => $this->getQuantity(),
+                'description' => $this->getDescription(),
+                'usedAt' => $this->getUsedAt(),
+                'createdAt' => $this->getCreatedAt(),
+                'status' => $this->getStatus(),
+                'deletedAt' => $this->getDeletedAt(),
+                'subscriptionItem' => $this->getSubscriptionItem(),
+                'code' => $this->getCode(),
+                'group' => $this->getGroup(),
+                'amount' => $this->getAmount()
+            ]
+        );
     }
 
     /**

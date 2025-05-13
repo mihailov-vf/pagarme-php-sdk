@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -310,6 +311,29 @@ class GetBalanceOperationResponse implements \JsonSerializable
     public function setMovementObject(?GetMovementObjectBaseResponse $movementObject): void
     {
         $this->movementObject = $movementObject;
+    }
+
+    /**
+     * Converts the GetBalanceOperationResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetBalanceOperationResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetBalanceOperationResponse',
+            [
+                'id' => $this->getId(),
+                'status' => $this->getStatus(),
+                'balanceAmount' => $this->getBalanceAmount(),
+                'balanceOldAmount' => $this->getBalanceOldAmount(),
+                'type' => $this->getType(),
+                'amount' => $this->getAmount(),
+                'fee' => $this->getFee(),
+                'createdAt' => $this->getCreatedAt(),
+                'movementObject' => $this->movementObject
+            ]
+        );
     }
 
     /**

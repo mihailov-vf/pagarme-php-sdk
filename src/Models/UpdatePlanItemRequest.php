@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -187,6 +188,26 @@ class UpdatePlanItemRequest implements \JsonSerializable
     public function setCycles(?int $cycles): void
     {
         $this->cycles = $cycles;
+    }
+
+    /**
+     * Converts the UpdatePlanItemRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdatePlanItemRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'UpdatePlanItemRequest',
+            [
+                'name' => $this->name,
+                'description' => $this->description,
+                'status' => $this->status,
+                'pricingScheme' => $this->pricingScheme,
+                'quantity' => $this->quantity,
+                'cycles' => $this->cycles
+            ]
+        );
     }
 
     /**

@@ -31,7 +31,17 @@ class CreateBankAccountRequestBuilder
     }
 
     /**
-     * Initializes a new create bank account request Builder object.
+     * Initializes a new Create Bank Account Request Builder object.
+     *
+     * @param string $holderName
+     * @param string $holderType
+     * @param string $holderDocument
+     * @param string $bank
+     * @param string $branchNumber
+     * @param string $accountNumber
+     * @param string $accountCheckDigit
+     * @param string $type
+     * @param array<string,string> $metadata
      */
     public static function init(
         string $holderName,
@@ -59,6 +69,8 @@ class CreateBankAccountRequestBuilder
 
     /**
      * Sets branch check digit field.
+     *
+     * @param string|null $value
      */
     public function branchCheckDigit(?string $value): self
     {
@@ -77,6 +89,8 @@ class CreateBankAccountRequestBuilder
 
     /**
      * Sets pix key field.
+     *
+     * @param string|null $value
      */
     public function pixKey(?string $value): self
     {
@@ -94,7 +108,7 @@ class CreateBankAccountRequestBuilder
     }
 
     /**
-     * Initializes a new create bank account request object.
+     * Initializes a new Create Bank Account Request object.
      */
     public function build(): CreateBankAccountRequest
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class CreateCardPayloadRequest implements \JsonSerializable
@@ -80,6 +81,19 @@ class CreateCardPayloadRequest implements \JsonSerializable
     public function unsetGooglePay(): void
     {
         $this->googlePay = [];
+    }
+
+    /**
+     * Converts the CreateCardPayloadRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateCardPayloadRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateCardPayloadRequest',
+            ['type' => $this->getType(), 'googlePay' => $this->getGooglePay()]
+        );
     }
 
     /**

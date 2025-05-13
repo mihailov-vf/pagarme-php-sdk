@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -155,6 +156,25 @@ class CreateSplitRequest implements \JsonSerializable
     public function setSplitRuleId(?string $splitRuleId): void
     {
         $this->splitRuleId = $splitRuleId;
+    }
+
+    /**
+     * Converts the CreateSplitRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateSplitRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateSplitRequest',
+            [
+                'type' => $this->type,
+                'amount' => $this->amount,
+                'recipientId' => $this->recipientId,
+                'options' => $this->options,
+                'splitRuleId' => $this->splitRuleId
+            ]
+        );
     }
 
     /**

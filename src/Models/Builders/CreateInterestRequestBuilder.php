@@ -31,7 +31,11 @@ class CreateInterestRequestBuilder
     }
 
     /**
-     * Initializes a new create interest request Builder object.
+     * Initializes a new Create Interest Request Builder object.
+     *
+     * @param int $days
+     * @param string $type
+     * @param int $amount
      */
     public static function init(int $days, string $type, int $amount): self
     {
@@ -39,7 +43,7 @@ class CreateInterestRequestBuilder
     }
 
     /**
-     * Initializes a new create interest request object.
+     * Initializes a new Create Interest Request object.
      */
     public function build(): CreateInterestRequest
     {

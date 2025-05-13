@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -199,6 +200,26 @@ class UpdateRecipientRequest implements \JsonSerializable
     public function setMetadata(array $metadata): void
     {
         $this->metadata = $metadata;
+    }
+
+    /**
+     * Converts the UpdateRecipientRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateRecipientRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'UpdateRecipientRequest',
+            [
+                'name' => $this->name,
+                'email' => $this->email,
+                'description' => $this->description,
+                'type' => $this->type,
+                'status' => $this->status,
+                'metadata' => $this->metadata
+            ]
+        );
     }
 
     /**

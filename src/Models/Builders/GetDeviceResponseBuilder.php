@@ -31,7 +31,7 @@ class GetDeviceResponseBuilder
     }
 
     /**
-     * Initializes a new get device response Builder object.
+     * Initializes a new Get Device Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetDeviceResponseBuilder
 
     /**
      * Sets platform field.
+     *
+     * @param string|null $value
      */
     public function platform(?string $value): self
     {
@@ -57,7 +59,7 @@ class GetDeviceResponseBuilder
     }
 
     /**
-     * Initializes a new get device response object.
+     * Initializes a new Get Device Response object.
      */
     public function build(): GetDeviceResponse
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class CreateAntifraudRequest implements \JsonSerializable
@@ -70,6 +71,19 @@ class CreateAntifraudRequest implements \JsonSerializable
     public function setClearsale(CreateClearSaleRequest $clearsale): void
     {
         $this->clearsale = $clearsale;
+    }
+
+    /**
+     * Converts the CreateAntifraudRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateAntifraudRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateAntifraudRequest',
+            ['type' => $this->type, 'clearsale' => $this->clearsale]
+        );
     }
 
     /**

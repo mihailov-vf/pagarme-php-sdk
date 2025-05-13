@@ -32,7 +32,11 @@ class CreateSplitRequestBuilder
     }
 
     /**
-     * Initializes a new create split request Builder object.
+     * Initializes a new Create Split Request Builder object.
+     *
+     * @param string $type
+     * @param int $amount
+     * @param string $recipientId
      */
     public static function init(string $type, int $amount, string $recipientId): self
     {
@@ -41,6 +45,8 @@ class CreateSplitRequestBuilder
 
     /**
      * Sets options field.
+     *
+     * @param CreateSplitOptionsRequest|null $value
      */
     public function options(?CreateSplitOptionsRequest $value): self
     {
@@ -50,6 +56,8 @@ class CreateSplitRequestBuilder
 
     /**
      * Sets split rule id field.
+     *
+     * @param string|null $value
      */
     public function splitRuleId(?string $value): self
     {
@@ -58,7 +66,7 @@ class CreateSplitRequestBuilder
     }
 
     /**
-     * Initializes a new create split request object.
+     * Initializes a new Create Split Request object.
      */
     public function build(): CreateSplitRequest
     {

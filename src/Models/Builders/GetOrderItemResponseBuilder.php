@@ -31,7 +31,7 @@ class GetOrderItemResponseBuilder
     }
 
     /**
-     * Initializes a new get order item response Builder object.
+     * Initializes a new Get Order Item Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetOrderItemResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetOrderItemResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetOrderItemResponseBuilder
 
     /**
      * Sets description field.
+     *
+     * @param string|null $value
      */
     public function description(?string $value): self
     {
@@ -94,6 +100,8 @@ class GetOrderItemResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -112,6 +120,8 @@ class GetOrderItemResponseBuilder
 
     /**
      * Sets quantity field.
+     *
+     * @param int|null $value
      */
     public function quantity(?int $value): self
     {
@@ -130,6 +140,8 @@ class GetOrderItemResponseBuilder
 
     /**
      * Sets category field.
+     *
+     * @param string|null $value
      */
     public function category(?string $value): self
     {
@@ -148,6 +160,8 @@ class GetOrderItemResponseBuilder
 
     /**
      * Sets code field.
+     *
+     * @param string|null $value
      */
     public function code(?string $value): self
     {
@@ -166,6 +180,8 @@ class GetOrderItemResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -184,6 +200,8 @@ class GetOrderItemResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -202,6 +220,8 @@ class GetOrderItemResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -219,7 +239,7 @@ class GetOrderItemResponseBuilder
     }
 
     /**
-     * Initializes a new get order item response object.
+     * Initializes a new Get Order Item Response object.
      */
     public function build(): GetOrderItemResponse
     {

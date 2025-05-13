@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -315,6 +316,28 @@ class GetCheckoutPaymentSettingsResponse implements \JsonSerializable
     public function unsetGatewayAffiliationId(): void
     {
         $this->gatewayAffiliationId = [];
+    }
+
+    /**
+     * Converts the GetCheckoutPaymentSettingsResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetCheckoutPaymentSettingsResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetCheckoutPaymentSettingsResponse',
+            [
+                'successUrl' => $this->getSuccessUrl(),
+                'paymentUrl' => $this->getPaymentUrl(),
+                'acceptedPaymentMethods' => $this->getAcceptedPaymentMethods(),
+                'status' => $this->getStatus(),
+                'customer' => $this->getCustomer(),
+                'amount' => $this->getAmount(),
+                'defaultPaymentMethod' => $this->getDefaultPaymentMethod(),
+                'gatewayAffiliationId' => $this->getGatewayAffiliationId()
+            ]
+        );
     }
 
     /**

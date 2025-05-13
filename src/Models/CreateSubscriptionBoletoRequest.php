@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -95,6 +96,23 @@ class CreateSubscriptionBoletoRequest implements \JsonSerializable
     public function unsetMaxDaysToPayPastDue(): void
     {
         $this->maxDaysToPayPastDue = [];
+    }
+
+    /**
+     * Converts the CreateSubscriptionBoletoRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateSubscriptionBoletoRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateSubscriptionBoletoRequest',
+            [
+                'interest' => $this->interest,
+                'fine' => $this->fine,
+                'maxDaysToPayPastDue' => $this->getMaxDaysToPayPastDue()
+            ]
+        );
     }
 
     /**

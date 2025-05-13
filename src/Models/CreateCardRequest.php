@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -417,6 +418,36 @@ class CreateCardRequest implements \JsonSerializable
     public function setToken(?string $token): void
     {
         $this->token = $token;
+    }
+
+    /**
+     * Converts the CreateCardRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateCardRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateCardRequest',
+            [
+                'number' => $this->number,
+                'holderName' => $this->holderName,
+                'expMonth' => $this->expMonth,
+                'expYear' => $this->expYear,
+                'cvv' => $this->cvv,
+                'billingAddress' => $this->billingAddress,
+                'brand' => $this->brand,
+                'billingAddressId' => $this->billingAddressId,
+                'metadata' => $this->metadata,
+                'type' => $this->type,
+                'options' => $this->options,
+                'holderDocument' => $this->holderDocument,
+                'privateLabel' => $this->privateLabel,
+                'label' => $this->label,
+                'id' => $this->id,
+                'token' => $this->token
+            ]
+        );
     }
 
     /**

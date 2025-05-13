@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -277,6 +278,29 @@ class CreateShippingRequest implements \JsonSerializable
     public function setType(string $type): void
     {
         $this->type = $type;
+    }
+
+    /**
+     * Converts the CreateShippingRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateShippingRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateShippingRequest',
+            [
+                'amount' => $this->amount,
+                'description' => $this->description,
+                'recipientName' => $this->recipientName,
+                'recipientPhone' => $this->recipientPhone,
+                'addressId' => $this->addressId,
+                'address' => $this->address,
+                'maxDeliveryDate' => $this->maxDeliveryDate,
+                'estimatedDeliveryDate' => $this->estimatedDeliveryDate,
+                'type' => $this->type
+            ]
+        );
     }
 
     /**

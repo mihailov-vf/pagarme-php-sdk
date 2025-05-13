@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class CreateCashPaymentRequest implements \JsonSerializable
@@ -74,6 +75,19 @@ class CreateCashPaymentRequest implements \JsonSerializable
     public function setConfirm(bool $confirm): void
     {
         $this->confirm = $confirm;
+    }
+
+    /**
+     * Converts the CreateCashPaymentRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateCashPaymentRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateCashPaymentRequest',
+            ['description' => $this->description, 'confirm' => $this->confirm]
+        );
     }
 
     /**

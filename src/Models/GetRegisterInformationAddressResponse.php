@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -287,6 +288,28 @@ class GetRegisterInformationAddressResponse implements \JsonSerializable
     public function unsetReferencePoint(): void
     {
         $this->referencePoint = [];
+    }
+
+    /**
+     * Converts the GetRegisterInformationAddressResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetRegisterInformationAddressResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetRegisterInformationAddressResponse',
+            [
+                'street' => $this->getStreet(),
+                'complementary' => $this->getComplementary(),
+                'streetNumber' => $this->getStreetNumber(),
+                'neighborhood' => $this->getNeighborhood(),
+                'city' => $this->getCity(),
+                'state' => $this->getState(),
+                'zipCode' => $this->getZipCode(),
+                'referencePoint' => $this->getReferencePoint()
+            ]
+        );
     }
 
     /**

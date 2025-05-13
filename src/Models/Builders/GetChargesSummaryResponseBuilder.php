@@ -31,7 +31,7 @@ class GetChargesSummaryResponseBuilder
     }
 
     /**
-     * Initializes a new get charges summary response Builder object.
+     * Initializes a new Get Charges Summary Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetChargesSummaryResponseBuilder
 
     /**
      * Sets total field.
+     *
+     * @param int|null $value
      */
     public function total(?int $value): self
     {
@@ -57,7 +59,7 @@ class GetChargesSummaryResponseBuilder
     }
 
     /**
-     * Initializes a new get charges summary response object.
+     * Initializes a new Get Charges Summary Response object.
      */
     public function build(): GetChargesSummaryResponse
     {

@@ -31,7 +31,7 @@ class GetMovementObjectRefundResponseBuilder
     }
 
     /**
-     * Initializes a new get movement object refund response Builder object.
+     * Initializes a new Get Movement Object Refund Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetMovementObjectRefundResponseBuilder
 
     /**
      * Sets object field.
+     *
+     * @param string|null $value
      */
     public function object(?string $value): self
     {
@@ -49,6 +51,8 @@ class GetMovementObjectRefundResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -67,6 +71,8 @@ class GetMovementObjectRefundResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -85,6 +91,8 @@ class GetMovementObjectRefundResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param string|null $value
      */
     public function amount(?string $value): self
     {
@@ -103,6 +111,8 @@ class GetMovementObjectRefundResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param string|null $value
      */
     public function createdAt(?string $value): self
     {
@@ -121,6 +131,8 @@ class GetMovementObjectRefundResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -139,6 +151,8 @@ class GetMovementObjectRefundResponseBuilder
 
     /**
      * Sets charge id field.
+     *
+     * @param string|null $value
      */
     public function chargeId(?string $value): self
     {
@@ -157,6 +171,8 @@ class GetMovementObjectRefundResponseBuilder
 
     /**
      * Sets gateway id field.
+     *
+     * @param string|null $value
      */
     public function gatewayId(?string $value): self
     {
@@ -175,6 +191,8 @@ class GetMovementObjectRefundResponseBuilder
 
     /**
      * Sets fraud coverage fee field.
+     *
+     * @param string|null $value
      */
     public function fraudCoverageFee(?string $value): self
     {
@@ -193,6 +211,8 @@ class GetMovementObjectRefundResponseBuilder
 
     /**
      * Sets charge fee recipient id field.
+     *
+     * @param string|null $value
      */
     public function chargeFeeRecipientId(?string $value): self
     {
@@ -211,6 +231,8 @@ class GetMovementObjectRefundResponseBuilder
 
     /**
      * Sets bank account id field.
+     *
+     * @param string|null $value
      */
     public function bankAccountId(?string $value): self
     {
@@ -229,6 +251,8 @@ class GetMovementObjectRefundResponseBuilder
 
     /**
      * Sets local transaction id field.
+     *
+     * @param string|null $value
      */
     public function localTransactionId(?string $value): self
     {
@@ -247,6 +271,8 @@ class GetMovementObjectRefundResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param string|null $value
      */
     public function updatedAt(?string $value): self
     {
@@ -264,7 +290,7 @@ class GetMovementObjectRefundResponseBuilder
     }
 
     /**
-     * Initializes a new get movement object refund response object.
+     * Initializes a new Get Movement Object Refund Response object.
      */
     public function build(): GetMovementObjectRefundResponse
     {

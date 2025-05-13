@@ -31,7 +31,7 @@ class GetCheckoutBankTransferPaymentResponseBuilder
     }
 
     /**
-     * Initializes a new get checkout bank transfer payment response Builder object.
+     * Initializes a new Get Checkout Bank Transfer Payment Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetCheckoutBankTransferPaymentResponseBuilder
 
     /**
      * Sets bank field.
+     *
+     * @param string[]|null $value
      */
     public function bank(?array $value): self
     {
@@ -57,7 +59,7 @@ class GetCheckoutBankTransferPaymentResponseBuilder
     }
 
     /**
-     * Initializes a new get checkout bank transfer payment response object.
+     * Initializes a new Get Checkout Bank Transfer Payment Response object.
      */
     public function build(): GetCheckoutBankTransferPaymentResponse
     {

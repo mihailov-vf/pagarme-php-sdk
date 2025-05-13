@@ -21,6 +21,7 @@ use PagarmeApiSDKLib\Models\CreateDebitCardPaymentRequest;
 use PagarmeApiSDKLib\Models\CreatePaymentRequest;
 use PagarmeApiSDKLib\Models\CreatePixPaymentRequest;
 use PagarmeApiSDKLib\Models\CreatePrivateLabelPaymentRequest;
+use PagarmeApiSDKLib\Models\CreateSplitRequest;
 use PagarmeApiSDKLib\Models\CreateVoucherPaymentRequest;
 
 /**
@@ -41,7 +42,9 @@ class CreatePaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create payment request Builder object.
+     * Initializes a new Create Payment Request Builder object.
+     *
+     * @param string $paymentMethod
      */
     public static function init(string $paymentMethod): self
     {
@@ -50,6 +53,8 @@ class CreatePaymentRequestBuilder
 
     /**
      * Sets credit card field.
+     *
+     * @param CreateCreditCardPaymentRequest|null $value
      */
     public function creditCard(?CreateCreditCardPaymentRequest $value): self
     {
@@ -59,6 +64,8 @@ class CreatePaymentRequestBuilder
 
     /**
      * Sets debit card field.
+     *
+     * @param CreateDebitCardPaymentRequest|null $value
      */
     public function debitCard(?CreateDebitCardPaymentRequest $value): self
     {
@@ -68,6 +75,8 @@ class CreatePaymentRequestBuilder
 
     /**
      * Sets boleto field.
+     *
+     * @param CreateBoletoPaymentRequest|null $value
      */
     public function boleto(?CreateBoletoPaymentRequest $value): self
     {
@@ -77,6 +86,8 @@ class CreatePaymentRequestBuilder
 
     /**
      * Sets currency field.
+     *
+     * @param string|null $value
      */
     public function currency(?string $value): self
     {
@@ -86,6 +97,8 @@ class CreatePaymentRequestBuilder
 
     /**
      * Sets voucher field.
+     *
+     * @param CreateVoucherPaymentRequest|null $value
      */
     public function voucher(?CreateVoucherPaymentRequest $value): self
     {
@@ -95,6 +108,8 @@ class CreatePaymentRequestBuilder
 
     /**
      * Sets split field.
+     *
+     * @param CreateSplitRequest[]|null $value
      */
     public function split(?array $value): self
     {
@@ -104,6 +119,8 @@ class CreatePaymentRequestBuilder
 
     /**
      * Sets bank transfer field.
+     *
+     * @param CreateBankTransferPaymentRequest|null $value
      */
     public function bankTransfer(?CreateBankTransferPaymentRequest $value): self
     {
@@ -113,6 +130,8 @@ class CreatePaymentRequestBuilder
 
     /**
      * Sets gateway affiliation id field.
+     *
+     * @param string|null $value
      */
     public function gatewayAffiliationId(?string $value): self
     {
@@ -122,6 +141,8 @@ class CreatePaymentRequestBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -131,6 +152,8 @@ class CreatePaymentRequestBuilder
 
     /**
      * Sets checkout field.
+     *
+     * @param CreateCheckoutPaymentRequest|null $value
      */
     public function checkout(?CreateCheckoutPaymentRequest $value): self
     {
@@ -140,6 +163,8 @@ class CreatePaymentRequestBuilder
 
     /**
      * Sets customer id field.
+     *
+     * @param string|null $value
      */
     public function customerId(?string $value): self
     {
@@ -149,6 +174,8 @@ class CreatePaymentRequestBuilder
 
     /**
      * Sets customer field.
+     *
+     * @param CreateCustomerRequest|null $value
      */
     public function customer(?CreateCustomerRequest $value): self
     {
@@ -158,6 +185,8 @@ class CreatePaymentRequestBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -167,6 +196,8 @@ class CreatePaymentRequestBuilder
 
     /**
      * Sets cash field.
+     *
+     * @param CreateCashPaymentRequest|null $value
      */
     public function cash(?CreateCashPaymentRequest $value): self
     {
@@ -176,6 +207,8 @@ class CreatePaymentRequestBuilder
 
     /**
      * Sets private label field.
+     *
+     * @param CreatePrivateLabelPaymentRequest|null $value
      */
     public function privateLabel(?CreatePrivateLabelPaymentRequest $value): self
     {
@@ -185,6 +218,8 @@ class CreatePaymentRequestBuilder
 
     /**
      * Sets pix field.
+     *
+     * @param CreatePixPaymentRequest|null $value
      */
     public function pix(?CreatePixPaymentRequest $value): self
     {
@@ -193,7 +228,7 @@ class CreatePaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create payment request object.
+     * Initializes a new Create Payment Request object.
      */
     public function build(): CreatePaymentRequest
     {

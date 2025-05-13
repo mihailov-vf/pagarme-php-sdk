@@ -31,7 +31,11 @@ class CreateFineRequestBuilder
     }
 
     /**
-     * Initializes a new create fine request Builder object.
+     * Initializes a new Create Fine Request Builder object.
+     *
+     * @param int $days
+     * @param string $type
+     * @param int $amount
      */
     public static function init(int $days, string $type, int $amount): self
     {
@@ -39,7 +43,7 @@ class CreateFineRequestBuilder
     }
 
     /**
-     * Initializes a new create fine request object.
+     * Initializes a new Create Fine Request object.
      */
     public function build(): CreateFineRequest
     {

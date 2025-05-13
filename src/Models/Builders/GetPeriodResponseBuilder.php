@@ -32,7 +32,7 @@ class GetPeriodResponseBuilder
     }
 
     /**
-     * Initializes a new get period response Builder object.
+     * Initializes a new Get Period Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetPeriodResponseBuilder
 
     /**
      * Sets start at field.
+     *
+     * @param \DateTime|null $value
      */
     public function startAt(?\DateTime $value): self
     {
@@ -59,6 +61,8 @@ class GetPeriodResponseBuilder
 
     /**
      * Sets end at field.
+     *
+     * @param \DateTime|null $value
      */
     public function endAt(?\DateTime $value): self
     {
@@ -77,6 +81,8 @@ class GetPeriodResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -95,6 +101,8 @@ class GetPeriodResponseBuilder
 
     /**
      * Sets billing at field.
+     *
+     * @param \DateTime|null $value
      */
     public function billingAt(?\DateTime $value): self
     {
@@ -113,6 +121,8 @@ class GetPeriodResponseBuilder
 
     /**
      * Sets subscription field.
+     *
+     * @param GetSubscriptionResponse|null $value
      */
     public function subscription(?GetSubscriptionResponse $value): self
     {
@@ -131,6 +141,8 @@ class GetPeriodResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -149,6 +161,8 @@ class GetPeriodResponseBuilder
 
     /**
      * Sets duration field.
+     *
+     * @param int|null $value
      */
     public function duration(?int $value): self
     {
@@ -167,6 +181,8 @@ class GetPeriodResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param string|null $value
      */
     public function createdAt(?string $value): self
     {
@@ -185,6 +201,8 @@ class GetPeriodResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param string|null $value
      */
     public function updatedAt(?string $value): self
     {
@@ -203,6 +221,8 @@ class GetPeriodResponseBuilder
 
     /**
      * Sets cycle field.
+     *
+     * @param int|null $value
      */
     public function cycle(?int $value): self
     {
@@ -220,7 +240,7 @@ class GetPeriodResponseBuilder
     }
 
     /**
-     * Initializes a new get period response object.
+     * Initializes a new Get Period Response object.
      */
     public function build(): GetPeriodResponse
     {

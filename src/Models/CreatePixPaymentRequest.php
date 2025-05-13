@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -96,6 +97,23 @@ class CreatePixPaymentRequest implements \JsonSerializable
     public function setAdditionalInformation(?array $additionalInformation): void
     {
         $this->additionalInformation = $additionalInformation;
+    }
+
+    /**
+     * Converts the CreatePixPaymentRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreatePixPaymentRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreatePixPaymentRequest',
+            [
+                'expiresAt' => $this->expiresAt,
+                'expiresIn' => $this->expiresIn,
+                'additionalInformation' => $this->additionalInformation
+            ]
+        );
     }
 
     /**

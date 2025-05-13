@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -86,6 +87,19 @@ class GetPaymentAuthenticationResponse implements \JsonSerializable
     public function unsetThreedSecure(): void
     {
         $this->threedSecure = [];
+    }
+
+    /**
+     * Converts the GetPaymentAuthenticationResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetPaymentAuthenticationResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetPaymentAuthenticationResponse',
+            ['type' => $this->getType(), 'threedSecure' => $this->getThreedSecure()]
+        );
     }
 
     /**

@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetChargeResponse;
 use PagarmeApiSDKLib\Models\ListChargesResponse;
 use PagarmeApiSDKLib\Models\PagingResponse;
 
@@ -32,7 +33,7 @@ class ListChargesResponseBuilder
     }
 
     /**
-     * Initializes a new list charges response Builder object.
+     * Initializes a new List Charges Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +42,8 @@ class ListChargesResponseBuilder
 
     /**
      * Sets data field.
+     *
+     * @param GetChargeResponse[]|null $value
      */
     public function data(?array $value): self
     {
@@ -59,6 +62,8 @@ class ListChargesResponseBuilder
 
     /**
      * Sets paging field.
+     *
+     * @param PagingResponse|null $value
      */
     public function paging(?PagingResponse $value): self
     {
@@ -76,7 +81,7 @@ class ListChargesResponseBuilder
     }
 
     /**
-     * Initializes a new list charges response object.
+     * Initializes a new List Charges Response object.
      */
     public function build(): ListChargesResponse
     {

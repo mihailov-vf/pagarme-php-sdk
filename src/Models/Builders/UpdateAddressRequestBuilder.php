@@ -31,7 +31,12 @@ class UpdateAddressRequestBuilder
     }
 
     /**
-     * Initializes a new update address request Builder object.
+     * Initializes a new Update Address Request Builder object.
+     *
+     * @param string $number
+     * @param string $complement
+     * @param array<string,string> $metadata
+     * @param string $line2
      */
     public static function init(string $number, string $complement, array $metadata, string $line2): self
     {
@@ -39,7 +44,7 @@ class UpdateAddressRequestBuilder
     }
 
     /**
-     * Initializes a new update address request object.
+     * Initializes a new Update Address Request object.
      */
     public function build(): UpdateAddressRequest
     {

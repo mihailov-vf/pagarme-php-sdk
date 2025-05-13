@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -126,6 +127,19 @@ class GetFineResponse implements \JsonSerializable
     public function unsetAmount(): void
     {
         $this->amount = [];
+    }
+
+    /**
+     * Converts the GetFineResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetFineResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetFineResponse',
+            ['days' => $this->getDays(), 'type' => $this->getType(), 'amount' => $this->getAmount()]
+        );
     }
 
     /**

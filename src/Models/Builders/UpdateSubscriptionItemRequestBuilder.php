@@ -32,7 +32,12 @@ class UpdateSubscriptionItemRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription item request Builder object.
+     * Initializes a new Update Subscription Item Request Builder object.
+     *
+     * @param string $description
+     * @param string $status
+     * @param UpdatePricingSchemeRequest $pricingScheme
+     * @param string $name
      */
     public static function init(
         string $description,
@@ -45,6 +50,8 @@ class UpdateSubscriptionItemRequestBuilder
 
     /**
      * Sets cycles field.
+     *
+     * @param int|null $value
      */
     public function cycles(?int $value): self
     {
@@ -54,6 +61,8 @@ class UpdateSubscriptionItemRequestBuilder
 
     /**
      * Sets quantity field.
+     *
+     * @param int|null $value
      */
     public function quantity(?int $value): self
     {
@@ -63,6 +72,8 @@ class UpdateSubscriptionItemRequestBuilder
 
     /**
      * Sets minimum price field.
+     *
+     * @param int|null $value
      */
     public function minimumPrice(?int $value): self
     {
@@ -71,7 +82,7 @@ class UpdateSubscriptionItemRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription item request object.
+     * Initializes a new Update Subscription Item Request object.
      */
     public function build(): UpdateSubscriptionItemRequest
     {

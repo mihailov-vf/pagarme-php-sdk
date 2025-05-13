@@ -32,7 +32,9 @@ class CreateCheckoutDebitCardPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create checkout debit card payment request Builder object.
+     * Initializes a new Create Checkout Debit Card Payment Request Builder object.
+     *
+     * @param CreatePaymentAuthenticationRequest $authentication
      */
     public static function init(CreatePaymentAuthenticationRequest $authentication): self
     {
@@ -41,6 +43,8 @@ class CreateCheckoutDebitCardPaymentRequestBuilder
 
     /**
      * Sets statement descriptor field.
+     *
+     * @param string|null $value
      */
     public function statementDescriptor(?string $value): self
     {
@@ -49,7 +53,7 @@ class CreateCheckoutDebitCardPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create checkout debit card payment request object.
+     * Initializes a new Create Checkout Debit Card Payment Request object.
      */
     public function build(): CreateCheckoutDebitCardPaymentRequest
     {

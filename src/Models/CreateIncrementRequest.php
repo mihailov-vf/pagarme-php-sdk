@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -155,6 +156,25 @@ class CreateIncrementRequest implements \JsonSerializable
     public function setDescription(?string $description): void
     {
         $this->description = $description;
+    }
+
+    /**
+     * Converts the CreateIncrementRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateIncrementRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateIncrementRequest',
+            [
+                'value' => $this->value,
+                'incrementType' => $this->incrementType,
+                'itemId' => $this->itemId,
+                'cycles' => $this->cycles,
+                'description' => $this->description
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -235,6 +236,26 @@ class CreateGooglePayRequest implements \JsonSerializable
     public function unsetMerchantIdentifier(): void
     {
         $this->merchantIdentifier = [];
+    }
+
+    /**
+     * Converts the CreateGooglePayRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateGooglePayRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateGooglePayRequest',
+            [
+                'version' => $this->getVersion(),
+                'data' => $this->getData(),
+                'intermediateSigningKey' => $this->getIntermediateSigningKey(),
+                'signature' => $this->getSignature(),
+                'signedMessage' => $this->getSignedMessage(),
+                'merchantIdentifier' => $this->getMerchantIdentifier()
+            ]
+        );
     }
 
     /**

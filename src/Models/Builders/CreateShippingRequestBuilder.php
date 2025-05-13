@@ -32,7 +32,15 @@ class CreateShippingRequestBuilder
     }
 
     /**
-     * Initializes a new create shipping request Builder object.
+     * Initializes a new Create Shipping Request Builder object.
+     *
+     * @param int $amount
+     * @param string $description
+     * @param string $recipientName
+     * @param string $recipientPhone
+     * @param string $addressId
+     * @param CreateAddressRequest $address
+     * @param string $type
      */
     public static function init(
         int $amount,
@@ -56,6 +64,8 @@ class CreateShippingRequestBuilder
 
     /**
      * Sets max delivery date field.
+     *
+     * @param \DateTime|null $value
      */
     public function maxDeliveryDate(?\DateTime $value): self
     {
@@ -65,6 +75,8 @@ class CreateShippingRequestBuilder
 
     /**
      * Sets estimated delivery date field.
+     *
+     * @param \DateTime|null $value
      */
     public function estimatedDeliveryDate(?\DateTime $value): self
     {
@@ -73,7 +85,7 @@ class CreateShippingRequestBuilder
     }
 
     /**
-     * Initializes a new create shipping request object.
+     * Initializes a new Create Shipping Request object.
      */
     public function build(): CreateShippingRequest
     {

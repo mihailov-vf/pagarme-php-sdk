@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -473,6 +474,36 @@ class CreateOrderRequest implements \JsonSerializable
     public function setSubmerchant(?CreateSubMerchantRequest $submerchant): void
     {
         $this->submerchant = $submerchant;
+    }
+
+    /**
+     * Converts the CreateOrderRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateOrderRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateOrderRequest',
+            [
+                'items' => $this->items,
+                'customer' => $this->customer,
+                'payments' => $this->payments,
+                'code' => $this->code,
+                'customerId' => $this->getCustomerId(),
+                'shipping' => $this->shipping,
+                'metadata' => $this->getMetadata(),
+                'antifraudEnabled' => $this->antifraudEnabled,
+                'ip' => $this->ip,
+                'sessionId' => $this->sessionId,
+                'location' => $this->location,
+                'device' => $this->device,
+                'closed' => $this->closed,
+                'currency' => $this->currency,
+                'antifraud' => $this->antifraud,
+                'submerchant' => $this->submerchant
+            ]
+        );
     }
 
     /**

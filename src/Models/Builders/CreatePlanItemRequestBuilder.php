@@ -32,7 +32,12 @@ class CreatePlanItemRequestBuilder
     }
 
     /**
-     * Initializes a new create plan item request Builder object.
+     * Initializes a new Create Plan Item Request Builder object.
+     *
+     * @param string $name
+     * @param CreatePricingSchemeRequest $pricingScheme
+     * @param string $id
+     * @param string $description
      */
     public static function init(
         string $name,
@@ -45,6 +50,8 @@ class CreatePlanItemRequestBuilder
 
     /**
      * Sets cycles field.
+     *
+     * @param int|null $value
      */
     public function cycles(?int $value): self
     {
@@ -54,6 +61,8 @@ class CreatePlanItemRequestBuilder
 
     /**
      * Sets quantity field.
+     *
+     * @param int|null $value
      */
     public function quantity(?int $value): self
     {
@@ -62,7 +71,7 @@ class CreatePlanItemRequestBuilder
     }
 
     /**
-     * Initializes a new create plan item request object.
+     * Initializes a new Create Plan Item Request object.
      */
     public function build(): CreatePlanItemRequest
     {

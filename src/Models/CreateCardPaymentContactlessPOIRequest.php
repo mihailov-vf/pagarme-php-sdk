@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class CreateCardPaymentContactlessPOIRequest implements \JsonSerializable
@@ -163,6 +164,25 @@ class CreateCardPaymentContactlessPOIRequest implements \JsonSerializable
     public function setVersionNumber(string $versionNumber): void
     {
         $this->versionNumber = $versionNumber;
+    }
+
+    /**
+     * Converts the CreateCardPaymentContactlessPOIRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateCardPaymentContactlessPOIRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateCardPaymentContactlessPOIRequest',
+            [
+                'systemName' => $this->systemName,
+                'model' => $this->model,
+                'provider' => $this->provider,
+                'serialNumber' => $this->serialNumber,
+                'versionNumber' => $this->versionNumber
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class UpdateSubscriptionDueDaysRequest implements \JsonSerializable
@@ -44,6 +45,16 @@ class UpdateSubscriptionDueDaysRequest implements \JsonSerializable
     public function setBoletoDueDays(int $boletoDueDays): void
     {
         $this->boletoDueDays = $boletoDueDays;
+    }
+
+    /**
+     * Converts the UpdateSubscriptionDueDaysRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateSubscriptionDueDaysRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('UpdateSubscriptionDueDaysRequest', ['boletoDueDays' => $this->boletoDueDays]);
     }
 
     /**

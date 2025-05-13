@@ -11,6 +11,8 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetManagingPartnerResponse;
+use PagarmeApiSDKLib\Models\GetPhoneNumberResponse;
 use PagarmeApiSDKLib\Models\GetRegisterInformationAddressResponse;
 use PagarmeApiSDKLib\Models\GetRegisterInformationResponse;
 
@@ -32,7 +34,7 @@ class GetRegisterInformationResponseBuilder
     }
 
     /**
-     * Initializes a new get register information response Builder object.
+     * Initializes a new Get Register Information Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +43,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets email field.
+     *
+     * @param string|null $value
      */
     public function email(?string $value): self
     {
@@ -59,6 +63,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets document field.
+     *
+     * @param string|null $value
      */
     public function document(?string $value): self
     {
@@ -77,6 +83,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -95,6 +103,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets site url field.
+     *
+     * @param string|null $value
      */
     public function siteUrl(?string $value): self
     {
@@ -113,6 +123,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets phone numbers field.
+     *
+     * @param GetPhoneNumberResponse[]|null $value
      */
     public function phoneNumbers(?array $value): self
     {
@@ -131,6 +143,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets name field.
+     *
+     * @param string|null $value
      */
     public function name(?string $value): self
     {
@@ -149,6 +163,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets mother name field.
+     *
+     * @param string|null $value
      */
     public function motherName(?string $value): self
     {
@@ -167,6 +183,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets birthdate field.
+     *
+     * @param string|null $value
      */
     public function birthdate(?string $value): self
     {
@@ -185,6 +203,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets monthly income field.
+     *
+     * @param string|null $value
      */
     public function monthlyIncome(?string $value): self
     {
@@ -203,6 +223,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets professional occupation field.
+     *
+     * @param string|null $value
      */
     public function professionalOccupation(?string $value): self
     {
@@ -221,6 +243,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets address field.
+     *
+     * @param GetRegisterInformationAddressResponse|null $value
      */
     public function address(?GetRegisterInformationAddressResponse $value): self
     {
@@ -239,6 +263,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets company name field.
+     *
+     * @param string|null $value
      */
     public function companyName(?string $value): self
     {
@@ -257,6 +283,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets trading name field.
+     *
+     * @param string|null $value
      */
     public function tradingName(?string $value): self
     {
@@ -275,6 +303,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets annual revenue field.
+     *
+     * @param string|null $value
      */
     public function annualRevenue(?string $value): self
     {
@@ -293,6 +323,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets corporation type field.
+     *
+     * @param string|null $value
      */
     public function corporationType(?string $value): self
     {
@@ -311,6 +343,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets founding date field.
+     *
+     * @param string|null $value
      */
     public function foundingDate(?string $value): self
     {
@@ -329,6 +363,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets cnae field.
+     *
+     * @param string|null $value
      */
     public function cnae(?string $value): self
     {
@@ -347,6 +383,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets main address field.
+     *
+     * @param GetRegisterInformationAddressResponse|null $value
      */
     public function mainAddress(?GetRegisterInformationAddressResponse $value): self
     {
@@ -365,6 +403,8 @@ class GetRegisterInformationResponseBuilder
 
     /**
      * Sets managing partners field.
+     *
+     * @param GetManagingPartnerResponse[]|null $value
      */
     public function managingPartners(?array $value): self
     {
@@ -382,7 +422,7 @@ class GetRegisterInformationResponseBuilder
     }
 
     /**
-     * Initializes a new get register information response object.
+     * Initializes a new Get Register Information Response object.
      */
     public function build(): GetRegisterInformationResponse
     {

@@ -31,7 +31,9 @@ class CreateEmvDataDukptDecryptRequestBuilder
     }
 
     /**
-     * Initializes a new create emv data dukpt decrypt request Builder object.
+     * Initializes a new Create Emv Data Dukpt Decrypt Request Builder object.
+     *
+     * @param string $ksn
      */
     public static function init(string $ksn): self
     {
@@ -39,7 +41,7 @@ class CreateEmvDataDukptDecryptRequestBuilder
     }
 
     /**
-     * Initializes a new create emv data dukpt decrypt request object.
+     * Initializes a new Create Emv Data Dukpt Decrypt Request object.
      */
     public function build(): CreateEmvDataDukptDecryptRequest
     {

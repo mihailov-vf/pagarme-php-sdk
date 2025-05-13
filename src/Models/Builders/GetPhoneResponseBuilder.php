@@ -31,7 +31,7 @@ class GetPhoneResponseBuilder
     }
 
     /**
-     * Initializes a new get phone response Builder object.
+     * Initializes a new Get Phone Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetPhoneResponseBuilder
 
     /**
      * Sets country code field.
+     *
+     * @param string|null $value
      */
     public function countryCode(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetPhoneResponseBuilder
 
     /**
      * Sets number field.
+     *
+     * @param string|null $value
      */
     public function number(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetPhoneResponseBuilder
 
     /**
      * Sets area code field.
+     *
+     * @param string|null $value
      */
     public function areaCode(?string $value): self
     {
@@ -93,7 +99,7 @@ class GetPhoneResponseBuilder
     }
 
     /**
-     * Initializes a new get phone response object.
+     * Initializes a new Get Phone Response object.
      */
     public function build(): GetPhoneResponse
     {

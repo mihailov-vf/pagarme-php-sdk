@@ -31,7 +31,7 @@ class UpdateCurrentCycleEndDateRequestBuilder
     }
 
     /**
-     * Initializes a new update current cycle end date request Builder object.
+     * Initializes a new Update Current Cycle End Date Request Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class UpdateCurrentCycleEndDateRequestBuilder
 
     /**
      * Sets end at field.
+     *
+     * @param \DateTime|null $value
      */
     public function endAt(?\DateTime $value): self
     {
@@ -48,7 +50,7 @@ class UpdateCurrentCycleEndDateRequestBuilder
     }
 
     /**
-     * Initializes a new update current cycle end date request object.
+     * Initializes a new Update Current Cycle End Date Request object.
      */
     public function build(): UpdateCurrentCycleEndDateRequest
     {

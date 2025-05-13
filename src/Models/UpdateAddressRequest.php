@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -137,6 +138,24 @@ class UpdateAddressRequest implements \JsonSerializable
     public function setLine2(string $line2): void
     {
         $this->line2 = $line2;
+    }
+
+    /**
+     * Converts the UpdateAddressRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateAddressRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'UpdateAddressRequest',
+            [
+                'number' => $this->number,
+                'complement' => $this->complement,
+                'metadata' => $this->metadata,
+                'line2' => $this->line2
+            ]
+        );
     }
 
     /**

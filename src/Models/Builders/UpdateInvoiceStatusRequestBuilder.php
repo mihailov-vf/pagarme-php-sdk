@@ -31,7 +31,9 @@ class UpdateInvoiceStatusRequestBuilder
     }
 
     /**
-     * Initializes a new update invoice status request Builder object.
+     * Initializes a new Update Invoice Status Request Builder object.
+     *
+     * @param string $status
      */
     public static function init(string $status): self
     {
@@ -39,7 +41,7 @@ class UpdateInvoiceStatusRequestBuilder
     }
 
     /**
-     * Initializes a new update invoice status request object.
+     * Initializes a new Update Invoice Status Request object.
      */
     public function build(): UpdateInvoiceStatusRequest
     {

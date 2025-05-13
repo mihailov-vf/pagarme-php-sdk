@@ -32,7 +32,14 @@ class UpdateCardRequestBuilder
     }
 
     /**
-     * Initializes a new update card request Builder object.
+     * Initializes a new Update Card Request Builder object.
+     *
+     * @param string $holderName
+     * @param int $expMonth
+     * @param int $expYear
+     * @param CreateAddressRequest $billingAddress
+     * @param array<string,string> $metadata
+     * @param string $label
      */
     public static function init(
         string $holderName,
@@ -49,6 +56,8 @@ class UpdateCardRequestBuilder
 
     /**
      * Sets billing address id field.
+     *
+     * @param string|null $value
      */
     public function billingAddressId(?string $value): self
     {
@@ -66,7 +75,7 @@ class UpdateCardRequestBuilder
     }
 
     /**
-     * Initializes a new update card request object.
+     * Initializes a new Update Card Request object.
      */
     public function build(): UpdateCardRequest
     {

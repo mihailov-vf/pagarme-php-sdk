@@ -31,7 +31,10 @@ class CreateBankTransferPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create bank transfer payment request Builder object.
+     * Initializes a new Create Bank Transfer Payment Request Builder object.
+     *
+     * @param string $bank
+     * @param int $retries
      */
     public static function init(string $bank, int $retries): self
     {
@@ -39,7 +42,7 @@ class CreateBankTransferPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create bank transfer payment request object.
+     * Initializes a new Create Bank Transfer Payment Request object.
      */
     public function build(): CreateBankTransferPaymentRequest
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -281,6 +282,27 @@ class GetTransferResponse implements \JsonSerializable
     public function unsetMetadata(): void
     {
         $this->metadata = [];
+    }
+
+    /**
+     * Converts the GetTransferResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetTransferResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetTransferResponse',
+            [
+                'id' => $this->getId(),
+                'amount' => $this->getAmount(),
+                'status' => $this->getStatus(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt(),
+                'bankAccount' => $this->getBankAccount(),
+                'metadata' => $this->getMetadata()
+            ]
+        );
     }
 
     /**

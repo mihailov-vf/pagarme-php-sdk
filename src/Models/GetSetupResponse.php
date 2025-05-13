@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -151,6 +152,24 @@ class GetSetupResponse implements \JsonSerializable
     public function unsetStatus(): void
     {
         $this->status = [];
+    }
+
+    /**
+     * Converts the GetSetupResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetSetupResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetSetupResponse',
+            [
+                'id' => $this->getId(),
+                'description' => $this->getDescription(),
+                'amount' => $this->getAmount(),
+                'status' => $this->getStatus()
+            ]
+        );
     }
 
     /**

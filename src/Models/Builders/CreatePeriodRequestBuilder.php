@@ -31,7 +31,7 @@ class CreatePeriodRequestBuilder
     }
 
     /**
-     * Initializes a new create period request Builder object.
+     * Initializes a new Create Period Request Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class CreatePeriodRequestBuilder
 
     /**
      * Sets end at field.
+     *
+     * @param \DateTime|null $value
      */
     public function endAt(?\DateTime $value): self
     {
@@ -48,7 +50,7 @@ class CreatePeriodRequestBuilder
     }
 
     /**
-     * Initializes a new create period request object.
+     * Initializes a new Create Period Request object.
      */
     public function build(): CreatePeriodRequest
     {

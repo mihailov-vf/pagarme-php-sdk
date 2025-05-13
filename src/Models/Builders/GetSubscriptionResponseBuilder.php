@@ -13,9 +13,12 @@ namespace PagarmeApiSDKLib\Models\Builders;
 use Core\Utils\CoreHelper;
 use PagarmeApiSDKLib\Models\GetCardResponse;
 use PagarmeApiSDKLib\Models\GetCustomerResponse;
+use PagarmeApiSDKLib\Models\GetDiscountResponse;
+use PagarmeApiSDKLib\Models\GetIncrementResponse;
 use PagarmeApiSDKLib\Models\GetPeriodResponse;
 use PagarmeApiSDKLib\Models\GetSetupResponse;
 use PagarmeApiSDKLib\Models\GetSubscriptionBoletoResponse;
+use PagarmeApiSDKLib\Models\GetSubscriptionItemResponse;
 use PagarmeApiSDKLib\Models\GetSubscriptionResponse;
 use PagarmeApiSDKLib\Models\GetSubscriptionSplitResponse;
 
@@ -37,7 +40,7 @@ class GetSubscriptionResponseBuilder
     }
 
     /**
-     * Initializes a new get subscription response Builder object.
+     * Initializes a new Get Subscription Response Builder object.
      */
     public static function init(): self
     {
@@ -46,6 +49,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -64,6 +69,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets code field.
+     *
+     * @param string|null $value
      */
     public function code(?string $value): self
     {
@@ -82,6 +89,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets start at field.
+     *
+     * @param \DateTime|null $value
      */
     public function startAt(?\DateTime $value): self
     {
@@ -100,6 +109,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets interval field.
+     *
+     * @param string|null $value
      */
     public function interval(?string $value): self
     {
@@ -118,6 +129,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets interval count field.
+     *
+     * @param int|null $value
      */
     public function intervalCount(?int $value): self
     {
@@ -136,6 +149,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets billing type field.
+     *
+     * @param string|null $value
      */
     public function billingType(?string $value): self
     {
@@ -154,6 +169,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets current cycle field.
+     *
+     * @param GetPeriodResponse|null $value
      */
     public function currentCycle(?GetPeriodResponse $value): self
     {
@@ -172,6 +189,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets payment method field.
+     *
+     * @param string|null $value
      */
     public function paymentMethod(?string $value): self
     {
@@ -190,6 +209,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets currency field.
+     *
+     * @param string|null $value
      */
     public function currency(?string $value): self
     {
@@ -208,6 +229,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets installments field.
+     *
+     * @param int|null $value
      */
     public function installments(?int $value): self
     {
@@ -226,6 +249,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -244,6 +269,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -262,6 +289,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -280,6 +309,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets customer field.
+     *
+     * @param GetCustomerResponse|null $value
      */
     public function customer(?GetCustomerResponse $value): self
     {
@@ -298,6 +329,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets card field.
+     *
+     * @param GetCardResponse|null $value
      */
     public function card(?GetCardResponse $value): self
     {
@@ -316,6 +349,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets items field.
+     *
+     * @param GetSubscriptionItemResponse[]|null $value
      */
     public function items(?array $value): self
     {
@@ -334,6 +369,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets statement descriptor field.
+     *
+     * @param string|null $value
      */
     public function statementDescriptor(?string $value): self
     {
@@ -352,6 +389,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -370,6 +409,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets setup field.
+     *
+     * @param GetSetupResponse|null $value
      */
     public function setup(?GetSetupResponse $value): self
     {
@@ -388,6 +429,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets gateway affiliation id field.
+     *
+     * @param string|null $value
      */
     public function gatewayAffiliationId(?string $value): self
     {
@@ -406,6 +449,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets next billing at field.
+     *
+     * @param \DateTime|null $value
      */
     public function nextBillingAt(?\DateTime $value): self
     {
@@ -424,6 +469,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets billing day field.
+     *
+     * @param int|null $value
      */
     public function billingDay(?int $value): self
     {
@@ -442,6 +489,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets minimum price field.
+     *
+     * @param int|null $value
      */
     public function minimumPrice(?int $value): self
     {
@@ -460,6 +509,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets canceled at field.
+     *
+     * @param \DateTime|null $value
      */
     public function canceledAt(?\DateTime $value): self
     {
@@ -478,6 +529,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets discounts field.
+     *
+     * @param GetDiscountResponse[]|null $value
      */
     public function discounts(?array $value): self
     {
@@ -496,6 +549,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets increments field.
+     *
+     * @param GetIncrementResponse[]|null $value
      */
     public function increments(?array $value): self
     {
@@ -514,6 +569,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets boleto due days field.
+     *
+     * @param int|null $value
      */
     public function boletoDueDays(?int $value): self
     {
@@ -532,6 +589,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets split field.
+     *
+     * @param GetSubscriptionSplitResponse|null $value
      */
     public function split(?GetSubscriptionSplitResponse $value): self
     {
@@ -550,6 +609,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets boleto field.
+     *
+     * @param GetSubscriptionBoletoResponse|null $value
      */
     public function boleto(?GetSubscriptionBoletoResponse $value): self
     {
@@ -568,6 +629,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets manual billing field.
+     *
+     * @param bool|null $value
      */
     public function manualBilling(?bool $value): self
     {
@@ -586,6 +649,8 @@ class GetSubscriptionResponseBuilder
 
     /**
      * Sets indirect acceptor field.
+     *
+     * @param string|null $value
      */
     public function indirectAcceptor(?string $value): self
     {
@@ -603,7 +668,7 @@ class GetSubscriptionResponseBuilder
     }
 
     /**
-     * Initializes a new get subscription response object.
+     * Initializes a new Get Subscription Response object.
      */
     public function build(): GetSubscriptionResponse
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -200,6 +201,25 @@ class GetThreeDSecureResponse implements \JsonSerializable
     public function unsetSuccessUrl(): void
     {
         $this->successUrl = [];
+    }
+
+    /**
+     * Converts the GetThreeDSecureResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetThreeDSecureResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetThreeDSecureResponse',
+            [
+                'mpi' => $this->getMpi(),
+                'eci' => $this->getEci(),
+                'cavv' => $this->getCavv(),
+                'transactionId' => $this->getTransactionId(),
+                'successUrl' => $this->getSuccessUrl()
+            ]
+        );
     }
 
     /**

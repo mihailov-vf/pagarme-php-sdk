@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -505,6 +506,40 @@ class CreateCreditCardPaymentRequest implements \JsonSerializable
     public function setIndirectAcceptor(?string $indirectAcceptor): void
     {
         $this->indirectAcceptor = $indirectAcceptor;
+    }
+
+    /**
+     * Converts the CreateCreditCardPaymentRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateCreditCardPaymentRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateCreditCardPaymentRequest',
+            [
+                'installments' => $this->installments,
+                'statementDescriptor' => $this->statementDescriptor,
+                'card' => $this->card,
+                'cardId' => $this->cardId,
+                'cardToken' => $this->cardToken,
+                'recurrence' => $this->recurrence,
+                'capture' => $this->capture,
+                'extendedLimitEnabled' => $this->extendedLimitEnabled,
+                'extendedLimitCode' => $this->extendedLimitCode,
+                'merchantCategoryCode' => $this->merchantCategoryCode,
+                'authentication' => $this->authentication,
+                'contactless' => $this->contactless,
+                'autoRecovery' => $this->autoRecovery,
+                'operationType' => $this->operationType,
+                'recurrencyCycle' => $this->recurrencyCycle,
+                'payload' => $this->payload,
+                'initiatedType' => $this->initiatedType,
+                'recurrenceModel' => $this->recurrenceModel,
+                'paymentOrigin' => $this->paymentOrigin,
+                'indirectAcceptor' => $this->indirectAcceptor
+            ]
+        );
     }
 
     /**

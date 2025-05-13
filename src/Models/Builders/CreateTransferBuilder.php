@@ -31,7 +31,11 @@ class CreateTransferBuilder
     }
 
     /**
-     * Initializes a new create transfer Builder object.
+     * Initializes a new Create Transfer Builder object.
+     *
+     * @param int $amount
+     * @param string $sourceId
+     * @param string $targetId
      */
     public static function init(int $amount, string $sourceId, string $targetId): self
     {
@@ -40,6 +44,8 @@ class CreateTransferBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param string[]|null $value
      */
     public function metadata(?array $value): self
     {
@@ -48,7 +54,7 @@ class CreateTransferBuilder
     }
 
     /**
-     * Initializes a new create transfer object.
+     * Initializes a new Create Transfer object.
      */
     public function build(): CreateTransfer
     {

@@ -33,7 +33,7 @@ class GetCardResponseBuilder
     }
 
     /**
-     * Initializes a new get card response Builder object.
+     * Initializes a new Get Card Response Builder object.
      */
     public static function init(): self
     {
@@ -42,6 +42,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -60,6 +62,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets last four digits field.
+     *
+     * @param string|null $value
      */
     public function lastFourDigits(?string $value): self
     {
@@ -78,6 +82,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets brand field.
+     *
+     * @param string|null $value
      */
     public function brand(?string $value): self
     {
@@ -96,6 +102,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets holder name field.
+     *
+     * @param string|null $value
      */
     public function holderName(?string $value): self
     {
@@ -114,6 +122,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets exp month field.
+     *
+     * @param int|null $value
      */
     public function expMonth(?int $value): self
     {
@@ -132,6 +142,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets exp year field.
+     *
+     * @param int|null $value
      */
     public function expYear(?int $value): self
     {
@@ -150,6 +162,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -168,6 +182,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -186,6 +202,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -204,6 +222,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets billing address field.
+     *
+     * @param GetBillingAddressResponse|null $value
      */
     public function billingAddress(?GetBillingAddressResponse $value): self
     {
@@ -222,6 +242,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets customer field.
+     *
+     * @param GetCustomerResponse|null $value
      */
     public function customer(?GetCustomerResponse $value): self
     {
@@ -240,6 +262,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -258,6 +282,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -276,6 +302,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets holder document field.
+     *
+     * @param string|null $value
      */
     public function holderDocument(?string $value): self
     {
@@ -294,6 +322,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets deleted at field.
+     *
+     * @param \DateTime|null $value
      */
     public function deletedAt(?\DateTime $value): self
     {
@@ -312,6 +342,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets first six digits field.
+     *
+     * @param string|null $value
      */
     public function firstSixDigits(?string $value): self
     {
@@ -330,6 +362,8 @@ class GetCardResponseBuilder
 
     /**
      * Sets label field.
+     *
+     * @param string|null $value
      */
     public function label(?string $value): self
     {
@@ -347,7 +381,7 @@ class GetCardResponseBuilder
     }
 
     /**
-     * Initializes a new get card response object.
+     * Initializes a new Get Card Response object.
      */
     public function build(): GetCardResponse
     {

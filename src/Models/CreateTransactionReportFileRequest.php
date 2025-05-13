@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -92,6 +93,19 @@ class CreateTransactionReportFileRequest implements \JsonSerializable
     public function setEndAt(?string $endAt): void
     {
         $this->endAt = $endAt;
+    }
+
+    /**
+     * Converts the CreateTransactionReportFileRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateTransactionReportFileRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateTransactionReportFileRequest',
+            ['name' => $this->name, 'startAt' => $this->startAt, 'endAt' => $this->endAt]
+        );
     }
 
     /**

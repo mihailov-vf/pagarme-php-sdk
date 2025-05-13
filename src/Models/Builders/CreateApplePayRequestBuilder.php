@@ -32,7 +32,13 @@ class CreateApplePayRequestBuilder
     }
 
     /**
-     * Initializes a new create apple pay request Builder object.
+     * Initializes a new Create Apple Pay Request Builder object.
+     *
+     * @param string $version
+     * @param string $data
+     * @param CreateApplePayHeaderRequest $header
+     * @param string $signature
+     * @param string $merchantIdentifier
      */
     public static function init(
         string $version,
@@ -45,7 +51,7 @@ class CreateApplePayRequestBuilder
     }
 
     /**
-     * Initializes a new create apple pay request object.
+     * Initializes a new Create Apple Pay Request object.
      */
     public function build(): CreateApplePayRequest
     {

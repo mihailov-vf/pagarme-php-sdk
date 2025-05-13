@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -153,6 +154,25 @@ class CreatePricingSchemeRequest implements \JsonSerializable
     public function setPercentage(?float $percentage): void
     {
         $this->percentage = $percentage;
+    }
+
+    /**
+     * Converts the CreatePricingSchemeRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreatePricingSchemeRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreatePricingSchemeRequest',
+            [
+                'schemeType' => $this->schemeType,
+                'priceBrackets' => $this->priceBrackets,
+                'price' => $this->price,
+                'minimumPrice' => $this->minimumPrice,
+                'percentage' => $this->percentage
+            ]
+        );
     }
 
     /**

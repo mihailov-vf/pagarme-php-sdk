@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class ListWithdrawals implements \JsonSerializable
@@ -78,6 +79,16 @@ class ListWithdrawals implements \JsonSerializable
     public function setPaging(PagingResponse $paging): void
     {
         $this->paging = $paging;
+    }
+
+    /**
+     * Converts the ListWithdrawals object to a human-readable string representation.
+     *
+     * @return string The string representation of the ListWithdrawals object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('ListWithdrawals', ['data' => $this->data, 'paging' => $this->paging]);
     }
 
     /**

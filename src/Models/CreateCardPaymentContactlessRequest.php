@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -124,6 +125,24 @@ class CreateCardPaymentContactlessRequest implements \JsonSerializable
     public function setEmv(?CreateEmvDecryptRequest $emv): void
     {
         $this->emv = $emv;
+    }
+
+    /**
+     * Converts the CreateCardPaymentContactlessRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateCardPaymentContactlessRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateCardPaymentContactlessRequest',
+            [
+                'type' => $this->type,
+                'applePay' => $this->applePay,
+                'googlePay' => $this->googlePay,
+                'emv' => $this->emv
+            ]
+        );
     }
 
     /**

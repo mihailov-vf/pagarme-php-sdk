@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class GetAntifraudResponse implements \JsonSerializable
@@ -182,6 +183,25 @@ class GetAntifraudResponse implements \JsonSerializable
     public function unsetScore(): void
     {
         $this->score = [];
+    }
+
+    /**
+     * Converts the GetAntifraudResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetAntifraudResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetAntifraudResponse',
+            [
+                'status' => $this->getStatus(),
+                'returnCode' => $this->getReturnCode(),
+                'returnMessage' => $this->getReturnMessage(),
+                'providerName' => $this->getProviderName(),
+                'score' => $this->getScore()
+            ]
+        );
     }
 
     /**

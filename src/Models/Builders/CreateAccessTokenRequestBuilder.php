@@ -31,7 +31,7 @@ class CreateAccessTokenRequestBuilder
     }
 
     /**
-     * Initializes a new create access token request Builder object.
+     * Initializes a new Create Access Token Request Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class CreateAccessTokenRequestBuilder
 
     /**
      * Sets expires in field.
+     *
+     * @param int|null $value
      */
     public function expiresIn(?int $value): self
     {
@@ -48,7 +50,7 @@ class CreateAccessTokenRequestBuilder
     }
 
     /**
-     * Initializes a new create access token request object.
+     * Initializes a new Create Access Token Request object.
      */
     public function build(): CreateAccessTokenRequest
     {

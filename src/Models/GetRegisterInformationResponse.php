@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -669,6 +670,39 @@ class GetRegisterInformationResponse implements \JsonSerializable
     public function unsetManagingPartners(): void
     {
         $this->managingPartners = [];
+    }
+
+    /**
+     * Converts the GetRegisterInformationResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetRegisterInformationResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetRegisterInformationResponse',
+            [
+                'email' => $this->getEmail(),
+                'document' => $this->getDocument(),
+                'type' => $this->getType(),
+                'siteUrl' => $this->getSiteUrl(),
+                'phoneNumbers' => $this->getPhoneNumbers(),
+                'name' => $this->getName(),
+                'motherName' => $this->getMotherName(),
+                'birthdate' => $this->getBirthdate(),
+                'monthlyIncome' => $this->getMonthlyIncome(),
+                'professionalOccupation' => $this->getProfessionalOccupation(),
+                'address' => $this->getAddress(),
+                'companyName' => $this->getCompanyName(),
+                'tradingName' => $this->getTradingName(),
+                'annualRevenue' => $this->getAnnualRevenue(),
+                'corporationType' => $this->getCorporationType(),
+                'foundingDate' => $this->getFoundingDate(),
+                'cnae' => $this->getCnae(),
+                'mainAddress' => $this->getMainAddress(),
+                'managingPartners' => $this->getManagingPartners()
+            ]
+        );
     }
 
     /**

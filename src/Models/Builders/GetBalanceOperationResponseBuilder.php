@@ -32,7 +32,7 @@ class GetBalanceOperationResponseBuilder
     }
 
     /**
-     * Initializes a new get balance operation response Builder object.
+     * Initializes a new Get Balance Operation Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetBalanceOperationResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -59,6 +61,8 @@ class GetBalanceOperationResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -77,6 +81,8 @@ class GetBalanceOperationResponseBuilder
 
     /**
      * Sets balance amount field.
+     *
+     * @param string|null $value
      */
     public function balanceAmount(?string $value): self
     {
@@ -95,6 +101,8 @@ class GetBalanceOperationResponseBuilder
 
     /**
      * Sets balance old amount field.
+     *
+     * @param string|null $value
      */
     public function balanceOldAmount(?string $value): self
     {
@@ -113,6 +121,8 @@ class GetBalanceOperationResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -131,6 +141,8 @@ class GetBalanceOperationResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -149,6 +161,8 @@ class GetBalanceOperationResponseBuilder
 
     /**
      * Sets fee field.
+     *
+     * @param string|null $value
      */
     public function fee(?string $value): self
     {
@@ -167,6 +181,8 @@ class GetBalanceOperationResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param string|null $value
      */
     public function createdAt(?string $value): self
     {
@@ -185,6 +201,8 @@ class GetBalanceOperationResponseBuilder
 
     /**
      * Sets movement object field.
+     *
+     * @param GetMovementObjectBaseResponse|null $value
      */
     public function movementObject(?GetMovementObjectBaseResponse $value): self
     {
@@ -193,7 +211,7 @@ class GetBalanceOperationResponseBuilder
     }
 
     /**
-     * Initializes a new get balance operation response object.
+     * Initializes a new Get Balance Operation Response object.
      */
     public function build(): GetBalanceOperationResponse
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -77,6 +78,19 @@ class CreateLocationRequest implements \JsonSerializable
     public function setLongitude(string $longitude): void
     {
         $this->longitude = $longitude;
+    }
+
+    /**
+     * Converts the CreateLocationRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateLocationRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateLocationRequest',
+            ['latitude' => $this->latitude, 'longitude' => $this->longitude]
+        );
     }
 
     /**

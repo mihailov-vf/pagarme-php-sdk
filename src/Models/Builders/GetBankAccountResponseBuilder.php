@@ -32,7 +32,7 @@ class GetBankAccountResponseBuilder
     }
 
     /**
-     * Initializes a new get bank account response Builder object.
+     * Initializes a new Get Bank Account Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetBankAccountResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -59,6 +61,8 @@ class GetBankAccountResponseBuilder
 
     /**
      * Sets holder name field.
+     *
+     * @param string|null $value
      */
     public function holderName(?string $value): self
     {
@@ -77,6 +81,8 @@ class GetBankAccountResponseBuilder
 
     /**
      * Sets holder type field.
+     *
+     * @param string|null $value
      */
     public function holderType(?string $value): self
     {
@@ -95,6 +101,8 @@ class GetBankAccountResponseBuilder
 
     /**
      * Sets bank field.
+     *
+     * @param string|null $value
      */
     public function bank(?string $value): self
     {
@@ -113,6 +121,8 @@ class GetBankAccountResponseBuilder
 
     /**
      * Sets branch number field.
+     *
+     * @param string|null $value
      */
     public function branchNumber(?string $value): self
     {
@@ -131,6 +141,8 @@ class GetBankAccountResponseBuilder
 
     /**
      * Sets branch check digit field.
+     *
+     * @param string|null $value
      */
     public function branchCheckDigit(?string $value): self
     {
@@ -149,6 +161,8 @@ class GetBankAccountResponseBuilder
 
     /**
      * Sets account number field.
+     *
+     * @param string|null $value
      */
     public function accountNumber(?string $value): self
     {
@@ -167,6 +181,8 @@ class GetBankAccountResponseBuilder
 
     /**
      * Sets account check digit field.
+     *
+     * @param string|null $value
      */
     public function accountCheckDigit(?string $value): self
     {
@@ -185,6 +201,8 @@ class GetBankAccountResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -203,6 +221,8 @@ class GetBankAccountResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -221,6 +241,8 @@ class GetBankAccountResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -239,6 +261,8 @@ class GetBankAccountResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -257,6 +281,8 @@ class GetBankAccountResponseBuilder
 
     /**
      * Sets deleted at field.
+     *
+     * @param \DateTime|null $value
      */
     public function deletedAt(?\DateTime $value): self
     {
@@ -275,6 +301,8 @@ class GetBankAccountResponseBuilder
 
     /**
      * Sets recipient field.
+     *
+     * @param GetRecipientResponse|null $value
      */
     public function recipient(?GetRecipientResponse $value): self
     {
@@ -293,6 +321,8 @@ class GetBankAccountResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -311,6 +341,8 @@ class GetBankAccountResponseBuilder
 
     /**
      * Sets pix key field.
+     *
+     * @param string|null $value
      */
     public function pixKey(?string $value): self
     {
@@ -328,7 +360,7 @@ class GetBankAccountResponseBuilder
     }
 
     /**
-     * Initializes a new get bank account response object.
+     * Initializes a new Get Bank Account Response object.
      */
     public function build(): GetBankAccountResponse
     {

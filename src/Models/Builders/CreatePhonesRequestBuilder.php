@@ -32,7 +32,7 @@ class CreatePhonesRequestBuilder
     }
 
     /**
-     * Initializes a new create phones request Builder object.
+     * Initializes a new Create Phones Request Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class CreatePhonesRequestBuilder
 
     /**
      * Sets home phone field.
+     *
+     * @param CreatePhoneRequest|null $value
      */
     public function homePhone(?CreatePhoneRequest $value): self
     {
@@ -50,6 +52,8 @@ class CreatePhonesRequestBuilder
 
     /**
      * Sets mobile phone field.
+     *
+     * @param CreatePhoneRequest|null $value
      */
     public function mobilePhone(?CreatePhoneRequest $value): self
     {
@@ -58,7 +62,7 @@ class CreatePhonesRequestBuilder
     }
 
     /**
-     * Initializes a new create phones request object.
+     * Initializes a new Create Phones Request object.
      */
     public function build(): CreatePhonesRequest
     {

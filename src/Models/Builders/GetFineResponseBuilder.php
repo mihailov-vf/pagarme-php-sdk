@@ -31,7 +31,7 @@ class GetFineResponseBuilder
     }
 
     /**
-     * Initializes a new get fine response Builder object.
+     * Initializes a new Get Fine Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetFineResponseBuilder
 
     /**
      * Sets days field.
+     *
+     * @param int|null $value
      */
     public function days(?int $value): self
     {
@@ -58,6 +60,8 @@ class GetFineResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetFineResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -93,7 +99,7 @@ class GetFineResponseBuilder
     }
 
     /**
-     * Initializes a new get fine response object.
+     * Initializes a new Get Fine Response object.
      */
     public function build(): GetFineResponse
     {

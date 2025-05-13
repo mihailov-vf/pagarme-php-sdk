@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -785,6 +786,42 @@ class GetChargeResponse implements \JsonSerializable
     public function unsetPaymentOrigin(): void
     {
         $this->paymentOrigin = [];
+    }
+
+    /**
+     * Converts the GetChargeResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetChargeResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetChargeResponse',
+            [
+                'id' => $this->getId(),
+                'code' => $this->getCode(),
+                'gatewayId' => $this->getGatewayId(),
+                'amount' => $this->getAmount(),
+                'status' => $this->getStatus(),
+                'currency' => $this->getCurrency(),
+                'paymentMethod' => $this->getPaymentMethod(),
+                'dueAt' => $this->getDueAt(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt(),
+                'lastTransaction' => $this->getLastTransaction(),
+                'invoice' => $this->getInvoice(),
+                'order' => $this->getOrder(),
+                'customer' => $this->getCustomer(),
+                'metadata' => $this->getMetadata(),
+                'paidAt' => $this->getPaidAt(),
+                'canceledAt' => $this->getCanceledAt(),
+                'canceledAmount' => $this->getCanceledAmount(),
+                'paidAmount' => $this->getPaidAmount(),
+                'interestAndFinePaid' => $this->getInterestAndFinePaid(),
+                'recurrencyCycle' => $this->getRecurrencyCycle(),
+                'paymentOrigin' => $this->getPaymentOrigin()
+            ]
+        );
     }
 
     /**

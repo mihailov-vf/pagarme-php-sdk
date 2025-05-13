@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -382,6 +383,31 @@ class GetManagingPartnerResponse implements \JsonSerializable
     public function unsetPhoneNumbers(): void
     {
         $this->phoneNumbers = [];
+    }
+
+    /**
+     * Converts the GetManagingPartnerResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetManagingPartnerResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetManagingPartnerResponse',
+            [
+                'name' => $this->getName(),
+                'email' => $this->getEmail(),
+                'document' => $this->getDocument(),
+                'type' => $this->getType(),
+                'motherName' => $this->getMotherName(),
+                'birthdate' => $this->getBirthdate(),
+                'monthlyIncome' => $this->getMonthlyIncome(),
+                'professionalOccupation' => $this->getProfessionalOccupation(),
+                'selfDeclaredRepresentative' => $this->selfDeclaredRepresentative,
+                'address' => $this->getAddress(),
+                'phoneNumbers' => $this->getPhoneNumbers()
+            ]
+        );
     }
 
     /**

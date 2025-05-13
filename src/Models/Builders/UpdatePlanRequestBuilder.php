@@ -31,7 +31,21 @@ class UpdatePlanRequestBuilder
     }
 
     /**
-     * Initializes a new update plan request Builder object.
+     * Initializes a new Update Plan Request Builder object.
+     *
+     * @param string $name
+     * @param string $description
+     * @param int[] $installments
+     * @param string $statementDescriptor
+     * @param string $currency
+     * @param string $interval
+     * @param int $intervalCount
+     * @param string[] $paymentMethods
+     * @param string $billingType
+     * @param string $status
+     * @param bool $shippable
+     * @param int[] $billingDays
+     * @param array<string,string> $metadata
      */
     public static function init(
         string $name,
@@ -67,6 +81,8 @@ class UpdatePlanRequestBuilder
 
     /**
      * Sets minimum price field.
+     *
+     * @param int|null $value
      */
     public function minimumPrice(?int $value): self
     {
@@ -76,6 +92,8 @@ class UpdatePlanRequestBuilder
 
     /**
      * Sets trial period days field.
+     *
+     * @param int|null $value
      */
     public function trialPeriodDays(?int $value): self
     {
@@ -84,7 +102,7 @@ class UpdatePlanRequestBuilder
     }
 
     /**
-     * Initializes a new update plan request object.
+     * Initializes a new Update Plan Request object.
      */
     public function build(): UpdatePlanRequest
     {

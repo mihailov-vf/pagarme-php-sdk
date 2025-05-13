@@ -31,7 +31,12 @@ class UpdateOrderItemRequestBuilder
     }
 
     /**
-     * Initializes a new update order item request Builder object.
+     * Initializes a new Update Order Item Request Builder object.
+     *
+     * @param int $amount
+     * @param string $description
+     * @param int $quantity
+     * @param string $category
      */
     public static function init(int $amount, string $description, int $quantity, string $category): self
     {
@@ -39,7 +44,7 @@ class UpdateOrderItemRequestBuilder
     }
 
     /**
-     * Initializes a new update order item request object.
+     * Initializes a new Update Order Item Request object.
      */
     public function build(): UpdateOrderItemRequest
     {

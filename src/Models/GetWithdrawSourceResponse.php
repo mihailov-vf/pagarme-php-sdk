@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class GetWithdrawSourceResponse implements \JsonSerializable
@@ -80,6 +81,19 @@ class GetWithdrawSourceResponse implements \JsonSerializable
     public function unsetType(): void
     {
         $this->type = [];
+    }
+
+    /**
+     * Converts the GetWithdrawSourceResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetWithdrawSourceResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetWithdrawSourceResponse',
+            ['sourceId' => $this->getSourceId(), 'type' => $this->getType()]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -165,6 +166,25 @@ class CreateRegisterInformationBaseRequest implements \JsonSerializable
     public function setPhoneNumbers(array $phoneNumbers): void
     {
         $this->phoneNumbers = $phoneNumbers;
+    }
+
+    /**
+     * Converts the CreateRegisterInformationBaseRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateRegisterInformationBaseRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateRegisterInformationBaseRequest',
+            [
+                'email' => $this->email,
+                'document' => $this->document,
+                'type' => $this->type,
+                'siteUrl' => $this->getSiteUrl(),
+                'phoneNumbers' => $this->phoneNumbers
+            ]
+        );
     }
 
     /**

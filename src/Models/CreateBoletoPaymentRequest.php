@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -418,6 +419,32 @@ class CreateBoletoPaymentRequest implements \JsonSerializable
     public function unsetMaxDaysToPayPastDue(): void
     {
         $this->maxDaysToPayPastDue = [];
+    }
+
+    /**
+     * Converts the CreateBoletoPaymentRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateBoletoPaymentRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateBoletoPaymentRequest',
+            [
+                'retries' => $this->retries,
+                'bank' => $this->getBank(),
+                'instructions' => $this->instructions,
+                'dueAt' => $this->getDueAt(),
+                'billingAddress' => $this->billingAddress,
+                'billingAddressId' => $this->getBillingAddressId(),
+                'nossoNumero' => $this->getNossoNumero(),
+                'documentNumber' => $this->documentNumber,
+                'statementDescriptor' => $this->statementDescriptor,
+                'interest' => $this->getInterest(),
+                'fine' => $this->getFine(),
+                'maxDaysToPayPastDue' => $this->getMaxDaysToPayPastDue()
+            ]
+        );
     }
 
     /**

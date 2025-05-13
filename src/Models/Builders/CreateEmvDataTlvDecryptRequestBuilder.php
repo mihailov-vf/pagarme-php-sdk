@@ -31,7 +31,11 @@ class CreateEmvDataTlvDecryptRequestBuilder
     }
 
     /**
-     * Initializes a new create emv data tlv decrypt request Builder object.
+     * Initializes a new Create Emv Data Tlv Decrypt Request Builder object.
+     *
+     * @param string $tag
+     * @param string $lenght
+     * @param string $value
      */
     public static function init(string $tag, string $lenght, string $value): self
     {
@@ -39,7 +43,7 @@ class CreateEmvDataTlvDecryptRequestBuilder
     }
 
     /**
-     * Initializes a new create emv data tlv decrypt request object.
+     * Initializes a new Create Emv Data Tlv Decrypt Request object.
      */
     public function build(): CreateEmvDataTlvDecryptRequest
     {

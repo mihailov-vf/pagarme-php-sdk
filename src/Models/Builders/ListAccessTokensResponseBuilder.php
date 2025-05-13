@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetAccessTokenResponse;
 use PagarmeApiSDKLib\Models\ListAccessTokensResponse;
 use PagarmeApiSDKLib\Models\PagingResponse;
 
@@ -32,7 +33,7 @@ class ListAccessTokensResponseBuilder
     }
 
     /**
-     * Initializes a new list access tokens response Builder object.
+     * Initializes a new List Access Tokens Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +42,8 @@ class ListAccessTokensResponseBuilder
 
     /**
      * Sets data field.
+     *
+     * @param GetAccessTokenResponse[]|null $value
      */
     public function data(?array $value): self
     {
@@ -59,6 +62,8 @@ class ListAccessTokensResponseBuilder
 
     /**
      * Sets paging field.
+     *
+     * @param PagingResponse|null $value
      */
     public function paging(?PagingResponse $value): self
     {
@@ -76,7 +81,7 @@ class ListAccessTokensResponseBuilder
     }
 
     /**
-     * Initializes a new list access tokens response object.
+     * Initializes a new List Access Tokens Response object.
      */
     public function build(): ListAccessTokensResponse
     {

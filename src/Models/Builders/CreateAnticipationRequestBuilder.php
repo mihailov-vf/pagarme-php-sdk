@@ -31,7 +31,11 @@ class CreateAnticipationRequestBuilder
     }
 
     /**
-     * Initializes a new create anticipation request Builder object.
+     * Initializes a new Create Anticipation Request Builder object.
+     *
+     * @param int $amount
+     * @param string $timeframe
+     * @param \DateTime $paymentDate
      */
     public static function init(int $amount, string $timeframe, \DateTime $paymentDate): self
     {
@@ -39,7 +43,7 @@ class CreateAnticipationRequestBuilder
     }
 
     /**
-     * Initializes a new create anticipation request object.
+     * Initializes a new Create Anticipation Request object.
      */
     public function build(): CreateAnticipationRequest
     {

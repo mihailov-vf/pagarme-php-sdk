@@ -31,7 +31,9 @@ class UpdateSubscriptionDueDaysRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription due days request Builder object.
+     * Initializes a new Update Subscription Due Days Request Builder object.
+     *
+     * @param int $boletoDueDays
      */
     public static function init(int $boletoDueDays): self
     {
@@ -39,7 +41,7 @@ class UpdateSubscriptionDueDaysRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription due days request object.
+     * Initializes a new Update Subscription Due Days Request object.
      */
     public function build(): UpdateSubscriptionDueDaysRequest
     {

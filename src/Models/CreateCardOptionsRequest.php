@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -51,6 +52,16 @@ class CreateCardOptionsRequest implements \JsonSerializable
     public function setVerifyCard(bool $verifyCard): void
     {
         $this->verifyCard = $verifyCard;
+    }
+
+    /**
+     * Converts the CreateCardOptionsRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateCardOptionsRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('CreateCardOptionsRequest', ['verifyCard' => $this->verifyCard]);
     }
 
     /**

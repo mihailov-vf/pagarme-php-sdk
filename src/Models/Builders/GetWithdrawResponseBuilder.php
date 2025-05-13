@@ -33,7 +33,7 @@ class GetWithdrawResponseBuilder
     }
 
     /**
-     * Initializes a new get withdraw response Builder object.
+     * Initializes a new Get Withdraw Response Builder object.
      */
     public static function init(): self
     {
@@ -42,6 +42,8 @@ class GetWithdrawResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -60,6 +62,8 @@ class GetWithdrawResponseBuilder
 
     /**
      * Sets gateway id field.
+     *
+     * @param string|null $value
      */
     public function gatewayId(?string $value): self
     {
@@ -78,6 +82,8 @@ class GetWithdrawResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -96,6 +102,8 @@ class GetWithdrawResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -114,6 +122,8 @@ class GetWithdrawResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -132,6 +142,8 @@ class GetWithdrawResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -150,6 +162,8 @@ class GetWithdrawResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param string[]|null $value
      */
     public function metadata(?array $value): self
     {
@@ -168,6 +182,8 @@ class GetWithdrawResponseBuilder
 
     /**
      * Sets fee field.
+     *
+     * @param int|null $value
      */
     public function fee(?int $value): self
     {
@@ -186,6 +202,8 @@ class GetWithdrawResponseBuilder
 
     /**
      * Sets funding date field.
+     *
+     * @param \DateTime|null $value
      */
     public function fundingDate(?\DateTime $value): self
     {
@@ -204,6 +222,8 @@ class GetWithdrawResponseBuilder
 
     /**
      * Sets funding estimated date field.
+     *
+     * @param \DateTime|null $value
      */
     public function fundingEstimatedDate(?\DateTime $value): self
     {
@@ -222,6 +242,8 @@ class GetWithdrawResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -240,6 +262,8 @@ class GetWithdrawResponseBuilder
 
     /**
      * Sets source field.
+     *
+     * @param GetWithdrawSourceResponse|null $value
      */
     public function source(?GetWithdrawSourceResponse $value): self
     {
@@ -258,6 +282,8 @@ class GetWithdrawResponseBuilder
 
     /**
      * Sets target field.
+     *
+     * @param GetWithdrawTargetResponse|null $value
      */
     public function target(?GetWithdrawTargetResponse $value): self
     {
@@ -275,7 +301,7 @@ class GetWithdrawResponseBuilder
     }
 
     /**
-     * Initializes a new get withdraw response object.
+     * Initializes a new Get Withdraw Response object.
      */
     public function build(): GetWithdrawResponse
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class GetCheckoutDebitCardPaymentResponse implements \JsonSerializable
@@ -86,6 +87,22 @@ class GetCheckoutDebitCardPaymentResponse implements \JsonSerializable
     public function unsetAuthentication(): void
     {
         $this->authentication = [];
+    }
+
+    /**
+     * Converts the GetCheckoutDebitCardPaymentResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetCheckoutDebitCardPaymentResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetCheckoutDebitCardPaymentResponse',
+            [
+                'statementDescriptor' => $this->getStatementDescriptor(),
+                'authentication' => $this->getAuthentication()
+            ]
+        );
     }
 
     /**

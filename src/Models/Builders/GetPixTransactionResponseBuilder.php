@@ -17,6 +17,8 @@ use PagarmeApiSDKLib\Models\GetGatewayResponseResponse;
 use PagarmeApiSDKLib\Models\GetInterestResponse;
 use PagarmeApiSDKLib\Models\GetPixPayerResponse;
 use PagarmeApiSDKLib\Models\GetPixTransactionResponse;
+use PagarmeApiSDKLib\Models\GetSplitResponse;
+use PagarmeApiSDKLib\Models\PixAdditionalInformation;
 
 /**
  * Builder for model GetPixTransactionResponse
@@ -36,7 +38,7 @@ class GetPixTransactionResponseBuilder
     }
 
     /**
-     * Initializes a new get pix transaction response Builder object.
+     * Initializes a new Get Pix Transaction Response Builder object.
      */
     public static function init(): self
     {
@@ -45,6 +47,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets gateway id field.
+     *
+     * @param string|null $value
      */
     public function gatewayId(?string $value): self
     {
@@ -63,6 +67,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -81,6 +87,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -99,6 +107,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets success field.
+     *
+     * @param bool|null $value
      */
     public function success(?bool $value): self
     {
@@ -117,6 +127,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -135,6 +147,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -153,6 +167,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets attempt count field.
+     *
+     * @param int|null $value
      */
     public function attemptCount(?int $value): self
     {
@@ -171,6 +187,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets max attempts field.
+     *
+     * @param int|null $value
      */
     public function maxAttempts(?int $value): self
     {
@@ -189,6 +207,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets splits field.
+     *
+     * @param GetSplitResponse[]|null $value
      */
     public function splits(?array $value): self
     {
@@ -207,6 +227,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets next attempt field.
+     *
+     * @param \DateTime|null $value
      */
     public function nextAttempt(?\DateTime $value): self
     {
@@ -225,6 +247,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets transaction type field.
+     *
+     * @param string|null $value
      */
     public function transactionType(?string $value): self
     {
@@ -234,6 +258,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -252,6 +278,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets gateway response field.
+     *
+     * @param GetGatewayResponseResponse|null $value
      */
     public function gatewayResponse(?GetGatewayResponseResponse $value): self
     {
@@ -270,6 +298,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets antifraud response field.
+     *
+     * @param GetAntifraudResponse|null $value
      */
     public function antifraudResponse(?GetAntifraudResponse $value): self
     {
@@ -288,6 +318,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -306,6 +338,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets split field.
+     *
+     * @param GetSplitResponse[]|null $value
      */
     public function split(?array $value): self
     {
@@ -324,6 +358,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets interest field.
+     *
+     * @param GetInterestResponse|null $value
      */
     public function interest(?GetInterestResponse $value): self
     {
@@ -342,6 +378,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets fine field.
+     *
+     * @param GetFineResponse|null $value
      */
     public function fine(?GetFineResponse $value): self
     {
@@ -360,6 +398,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets max days to pay past due field.
+     *
+     * @param int|null $value
      */
     public function maxDaysToPayPastDue(?int $value): self
     {
@@ -378,6 +418,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets qr code field.
+     *
+     * @param string|null $value
      */
     public function qrCode(?string $value): self
     {
@@ -396,6 +438,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets qr code url field.
+     *
+     * @param string|null $value
      */
     public function qrCodeUrl(?string $value): self
     {
@@ -414,6 +458,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets expires at field.
+     *
+     * @param \DateTime|null $value
      */
     public function expiresAt(?\DateTime $value): self
     {
@@ -432,6 +478,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets additional information field.
+     *
+     * @param PixAdditionalInformation[]|null $value
      */
     public function additionalInformation(?array $value): self
     {
@@ -450,6 +498,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets end to end id field.
+     *
+     * @param string|null $value
      */
     public function endToEndId(?string $value): self
     {
@@ -468,6 +518,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets payer field.
+     *
+     * @param GetPixPayerResponse|null $value
      */
     public function payer(?GetPixPayerResponse $value): self
     {
@@ -486,6 +538,8 @@ class GetPixTransactionResponseBuilder
 
     /**
      * Sets pix provider tid field.
+     *
+     * @param string|null $value
      */
     public function pixProviderTid(?string $value): self
     {
@@ -503,7 +557,7 @@ class GetPixTransactionResponseBuilder
     }
 
     /**
-     * Initializes a new get pix transaction response object.
+     * Initializes a new Get Pix Transaction Response object.
      */
     public function build(): GetPixTransactionResponse
     {

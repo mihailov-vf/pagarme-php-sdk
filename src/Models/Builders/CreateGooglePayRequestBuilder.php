@@ -32,7 +32,7 @@ class CreateGooglePayRequestBuilder
     }
 
     /**
-     * Initializes a new create google pay request Builder object.
+     * Initializes a new Create Google Pay Request Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class CreateGooglePayRequestBuilder
 
     /**
      * Sets version field.
+     *
+     * @param string|null $value
      */
     public function version(?string $value): self
     {
@@ -59,6 +61,8 @@ class CreateGooglePayRequestBuilder
 
     /**
      * Sets data field.
+     *
+     * @param string|null $value
      */
     public function data(?string $value): self
     {
@@ -77,6 +81,8 @@ class CreateGooglePayRequestBuilder
 
     /**
      * Sets intermediate signing key field.
+     *
+     * @param CreateGooglePayIntermediateSigningKeyRequest|null $value
      */
     public function intermediateSigningKey(?CreateGooglePayIntermediateSigningKeyRequest $value): self
     {
@@ -95,6 +101,8 @@ class CreateGooglePayRequestBuilder
 
     /**
      * Sets signature field.
+     *
+     * @param string|null $value
      */
     public function signature(?string $value): self
     {
@@ -113,6 +121,8 @@ class CreateGooglePayRequestBuilder
 
     /**
      * Sets signed message field.
+     *
+     * @param string|null $value
      */
     public function signedMessage(?string $value): self
     {
@@ -131,6 +141,8 @@ class CreateGooglePayRequestBuilder
 
     /**
      * Sets merchant identifier field.
+     *
+     * @param string|null $value
      */
     public function merchantIdentifier(?string $value): self
     {
@@ -148,7 +160,7 @@ class CreateGooglePayRequestBuilder
     }
 
     /**
-     * Initializes a new create google pay request object.
+     * Initializes a new Create Google Pay Request object.
      */
     public function build(): CreateGooglePayRequest
     {

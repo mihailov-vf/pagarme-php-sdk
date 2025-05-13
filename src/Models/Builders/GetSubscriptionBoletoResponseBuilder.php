@@ -33,7 +33,7 @@ class GetSubscriptionBoletoResponseBuilder
     }
 
     /**
-     * Initializes a new get subscription boleto response Builder object.
+     * Initializes a new Get Subscription Boleto Response Builder object.
      */
     public static function init(): self
     {
@@ -42,6 +42,8 @@ class GetSubscriptionBoletoResponseBuilder
 
     /**
      * Sets interest field.
+     *
+     * @param GetInterestResponse|null $value
      */
     public function interest(?GetInterestResponse $value): self
     {
@@ -60,6 +62,8 @@ class GetSubscriptionBoletoResponseBuilder
 
     /**
      * Sets fine field.
+     *
+     * @param GetFineResponse|null $value
      */
     public function fine(?GetFineResponse $value): self
     {
@@ -78,6 +82,8 @@ class GetSubscriptionBoletoResponseBuilder
 
     /**
      * Sets max days to pay past due field.
+     *
+     * @param int|null $value
      */
     public function maxDaysToPayPastDue(?int $value): self
     {
@@ -95,7 +101,7 @@ class GetSubscriptionBoletoResponseBuilder
     }
 
     /**
-     * Initializes a new get subscription boleto response object.
+     * Initializes a new Get Subscription Boleto Response object.
      */
     public function build(): GetSubscriptionBoletoResponse
     {

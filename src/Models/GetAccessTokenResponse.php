@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -187,6 +188,25 @@ class GetAccessTokenResponse implements \JsonSerializable
     public function unsetCustomer(): void
     {
         $this->customer = [];
+    }
+
+    /**
+     * Converts the GetAccessTokenResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetAccessTokenResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetAccessTokenResponse',
+            [
+                'id' => $this->getId(),
+                'code' => $this->getCode(),
+                'status' => $this->getStatus(),
+                'createdAt' => $this->getCreatedAt(),
+                'customer' => $this->getCustomer()
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -176,6 +177,26 @@ class CreateUsageRequest implements \JsonSerializable
     public function setAmount(?int $amount): void
     {
         $this->amount = $amount;
+    }
+
+    /**
+     * Converts the CreateUsageRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateUsageRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateUsageRequest',
+            [
+                'quantity' => $this->quantity,
+                'description' => $this->description,
+                'usedAt' => $this->usedAt,
+                'code' => $this->code,
+                'group' => $this->group,
+                'amount' => $this->amount
+            ]
+        );
     }
 
     /**

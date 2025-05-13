@@ -31,7 +31,9 @@ class CreateApplePayHeaderRequestBuilder
     }
 
     /**
-     * Initializes a new create apple pay header request Builder object.
+     * Initializes a new Create Apple Pay Header Request Builder object.
+     *
+     * @param string $ephemeralPublicKey
      */
     public static function init(string $ephemeralPublicKey): self
     {
@@ -40,6 +42,8 @@ class CreateApplePayHeaderRequestBuilder
 
     /**
      * Sets public key hash field.
+     *
+     * @param string|null $value
      */
     public function publicKeyHash(?string $value): self
     {
@@ -49,6 +53,8 @@ class CreateApplePayHeaderRequestBuilder
 
     /**
      * Sets transaction id field.
+     *
+     * @param string|null $value
      */
     public function transactionId(?string $value): self
     {
@@ -57,7 +63,7 @@ class CreateApplePayHeaderRequestBuilder
     }
 
     /**
-     * Initializes a new create apple pay header request object.
+     * Initializes a new Create Apple Pay Header Request object.
      */
     public function build(): CreateApplePayHeaderRequest
     {

@@ -31,7 +31,11 @@ class UpdateTransferSettingsRequestBuilder
     }
 
     /**
-     * Initializes a new update transfer settings request Builder object.
+     * Initializes a new Update Transfer Settings Request Builder object.
+     *
+     * @param string $transferEnabled
+     * @param string $transferInterval
+     * @param string $transferDay
      */
     public static function init(string $transferEnabled, string $transferInterval, string $transferDay): self
     {
@@ -39,7 +43,7 @@ class UpdateTransferSettingsRequestBuilder
     }
 
     /**
-     * Initializes a new update transfer settings request object.
+     * Initializes a new Update Transfer Settings Request object.
      */
     public function build(): UpdateTransferSettingsRequest
     {

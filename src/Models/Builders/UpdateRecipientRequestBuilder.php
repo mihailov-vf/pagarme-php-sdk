@@ -31,7 +31,14 @@ class UpdateRecipientRequestBuilder
     }
 
     /**
-     * Initializes a new update recipient request Builder object.
+     * Initializes a new Update Recipient Request Builder object.
+     *
+     * @param string $name
+     * @param string $email
+     * @param string $description
+     * @param string $type
+     * @param string $status
+     * @param array<string,string> $metadata
      */
     public static function init(
         string $name,
@@ -45,7 +52,7 @@ class UpdateRecipientRequestBuilder
     }
 
     /**
-     * Initializes a new update recipient request object.
+     * Initializes a new Update Recipient Request object.
      */
     public function build(): UpdateRecipientRequest
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -360,6 +361,31 @@ class CreateBankAccountRequest implements \JsonSerializable
     public function unsetPixKey(): void
     {
         $this->pixKey = [];
+    }
+
+    /**
+     * Converts the CreateBankAccountRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateBankAccountRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateBankAccountRequest',
+            [
+                'holderName' => $this->holderName,
+                'holderType' => $this->holderType,
+                'holderDocument' => $this->holderDocument,
+                'bank' => $this->bank,
+                'branchNumber' => $this->branchNumber,
+                'branchCheckDigit' => $this->getBranchCheckDigit(),
+                'accountNumber' => $this->accountNumber,
+                'accountCheckDigit' => $this->accountCheckDigit,
+                'type' => $this->type,
+                'metadata' => $this->metadata,
+                'pixKey' => $this->getPixKey()
+            ]
+        );
     }
 
     /**

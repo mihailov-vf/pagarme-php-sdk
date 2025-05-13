@@ -31,7 +31,7 @@ class GetAnticipationLimitResponseBuilder
     }
 
     /**
-     * Initializes a new get anticipation limit response Builder object.
+     * Initializes a new Get Anticipation Limit Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetAnticipationLimitResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -58,6 +60,8 @@ class GetAnticipationLimitResponseBuilder
 
     /**
      * Sets anticipation fee field.
+     *
+     * @param int|null $value
      */
     public function anticipationFee(?int $value): self
     {
@@ -75,7 +79,7 @@ class GetAnticipationLimitResponseBuilder
     }
 
     /**
-     * Initializes a new get anticipation limit response object.
+     * Initializes a new Get Anticipation Limit Response object.
      */
     public function build(): GetAnticipationLimitResponse
     {

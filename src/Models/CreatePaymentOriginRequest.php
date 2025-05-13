@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -83,6 +84,19 @@ class CreatePaymentOriginRequest implements \JsonSerializable
     public function unsetChargeId(): void
     {
         $this->chargeId = [];
+    }
+
+    /**
+     * Converts the CreatePaymentOriginRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreatePaymentOriginRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreatePaymentOriginRequest',
+            ['brandId' => $this->getBrandId(), 'chargeId' => $this->getChargeId()]
+        );
     }
 
     /**

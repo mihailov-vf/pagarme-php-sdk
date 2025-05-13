@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -89,6 +90,19 @@ class GetAnticipationLimitsResponse implements \JsonSerializable
     public function unsetMin(): void
     {
         $this->min = [];
+    }
+
+    /**
+     * Converts the GetAnticipationLimitsResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetAnticipationLimitsResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetAnticipationLimitsResponse',
+            ['max' => $this->getMax(), 'min' => $this->getMin()]
+        );
     }
 
     /**

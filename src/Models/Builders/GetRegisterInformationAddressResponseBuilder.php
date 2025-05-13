@@ -31,7 +31,7 @@ class GetRegisterInformationAddressResponseBuilder
     }
 
     /**
-     * Initializes a new get register information address response Builder object.
+     * Initializes a new Get Register Information Address Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetRegisterInformationAddressResponseBuilder
 
     /**
      * Sets street field.
+     *
+     * @param string|null $value
      */
     public function street(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetRegisterInformationAddressResponseBuilder
 
     /**
      * Sets complementary field.
+     *
+     * @param string|null $value
      */
     public function complementary(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetRegisterInformationAddressResponseBuilder
 
     /**
      * Sets street number field.
+     *
+     * @param string|null $value
      */
     public function streetNumber(?string $value): self
     {
@@ -94,6 +100,8 @@ class GetRegisterInformationAddressResponseBuilder
 
     /**
      * Sets neighborhood field.
+     *
+     * @param string|null $value
      */
     public function neighborhood(?string $value): self
     {
@@ -112,6 +120,8 @@ class GetRegisterInformationAddressResponseBuilder
 
     /**
      * Sets city field.
+     *
+     * @param string|null $value
      */
     public function city(?string $value): self
     {
@@ -130,6 +140,8 @@ class GetRegisterInformationAddressResponseBuilder
 
     /**
      * Sets state field.
+     *
+     * @param string|null $value
      */
     public function state(?string $value): self
     {
@@ -148,6 +160,8 @@ class GetRegisterInformationAddressResponseBuilder
 
     /**
      * Sets zip code field.
+     *
+     * @param string|null $value
      */
     public function zipCode(?string $value): self
     {
@@ -166,6 +180,8 @@ class GetRegisterInformationAddressResponseBuilder
 
     /**
      * Sets reference point field.
+     *
+     * @param string|null $value
      */
     public function referencePoint(?string $value): self
     {
@@ -183,7 +199,7 @@ class GetRegisterInformationAddressResponseBuilder
     }
 
     /**
-     * Initializes a new get register information address response object.
+     * Initializes a new Get Register Information Address Response object.
      */
     public function build(): GetRegisterInformationAddressResponse
     {

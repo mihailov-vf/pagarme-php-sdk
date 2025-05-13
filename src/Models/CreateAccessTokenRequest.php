@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -40,6 +41,16 @@ class CreateAccessTokenRequest implements \JsonSerializable
     public function setExpiresIn(?int $expiresIn): void
     {
         $this->expiresIn = $expiresIn;
+    }
+
+    /**
+     * Converts the CreateAccessTokenRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateAccessTokenRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('CreateAccessTokenRequest', ['expiresIn' => $this->expiresIn]);
     }
 
     /**

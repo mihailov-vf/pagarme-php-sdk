@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -603,6 +604,38 @@ class GetBoletoTransactionResponse extends GetTransactionResponse implements \Js
     public function unsetStatementDescriptor(): void
     {
         $this->statementDescriptor = [];
+    }
+
+    /**
+     * Converts the GetBoletoTransactionResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetBoletoTransactionResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetBoletoTransactionResponse',
+            [
+                'url' => $this->getUrl(),
+                'barcode' => $this->getBarcode(),
+                'nossoNumero' => $this->getNossoNumero(),
+                'bank' => $this->getBank(),
+                'documentNumber' => $this->getDocumentNumber(),
+                'instructions' => $this->getInstructions(),
+                'billingAddress' => $this->getBillingAddress(),
+                'dueAt' => $this->getDueAt(),
+                'qrCode' => $this->getQrCode(),
+                'line' => $this->getLine(),
+                'pdfPassword' => $this->getPdfPassword(),
+                'pdf' => $this->getPdf(),
+                'paidAt' => $this->getPaidAt(),
+                'paidAmount' => $this->getPaidAmount(),
+                'type' => $this->getType(),
+                'creditAt' => $this->getCreditAt(),
+                'statementDescriptor' => $this->getStatementDescriptor()
+            ],
+            parent::__toString()
+        );
     }
 
     /**

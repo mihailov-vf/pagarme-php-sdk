@@ -31,7 +31,7 @@ class CreateDeviceRequestBuilder
     }
 
     /**
-     * Initializes a new create device request Builder object.
+     * Initializes a new Create Device Request Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class CreateDeviceRequestBuilder
 
     /**
      * Sets platform field.
+     *
+     * @param string|null $value
      */
     public function platform(?string $value): self
     {
@@ -48,7 +50,7 @@ class CreateDeviceRequestBuilder
     }
 
     /**
-     * Initializes a new create device request object.
+     * Initializes a new Create Device Request object.
      */
     public function build(): CreateDeviceRequest
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -535,6 +536,35 @@ class GetCustomerResponse implements \JsonSerializable
     public function unsetDocumentType(): void
     {
         $this->documentType = [];
+    }
+
+    /**
+     * Converts the GetCustomerResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetCustomerResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetCustomerResponse',
+            [
+                'id' => $this->getId(),
+                'name' => $this->getName(),
+                'email' => $this->getEmail(),
+                'delinquent' => $this->getDelinquent(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt(),
+                'document' => $this->getDocument(),
+                'type' => $this->getType(),
+                'fbAccessToken' => $this->getFbAccessToken(),
+                'address' => $this->getAddress(),
+                'metadata' => $this->getMetadata(),
+                'phones' => $this->getPhones(),
+                'fbId' => $this->getFbId(),
+                'code' => $this->getCode(),
+                'documentType' => $this->getDocumentType()
+            ]
+        );
     }
 
     /**

@@ -12,6 +12,7 @@ namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
 use PagarmeApiSDKLib\Models\GetCheckoutPixPaymentResponse;
+use PagarmeApiSDKLib\Models\PixAdditionalInformation;
 
 /**
  * Builder for model GetCheckoutPixPaymentResponse
@@ -31,7 +32,7 @@ class GetCheckoutPixPaymentResponseBuilder
     }
 
     /**
-     * Initializes a new get checkout pix payment response Builder object.
+     * Initializes a new Get Checkout Pix Payment Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +41,8 @@ class GetCheckoutPixPaymentResponseBuilder
 
     /**
      * Sets expires at field.
+     *
+     * @param \DateTime|null $value
      */
     public function expiresAt(?\DateTime $value): self
     {
@@ -58,6 +61,8 @@ class GetCheckoutPixPaymentResponseBuilder
 
     /**
      * Sets additional information field.
+     *
+     * @param PixAdditionalInformation[]|null $value
      */
     public function additionalInformation(?array $value): self
     {
@@ -75,7 +80,7 @@ class GetCheckoutPixPaymentResponseBuilder
     }
 
     /**
-     * Initializes a new get checkout pix payment response object.
+     * Initializes a new Get Checkout Pix Payment Response object.
      */
     public function build(): GetCheckoutPixPaymentResponse
     {

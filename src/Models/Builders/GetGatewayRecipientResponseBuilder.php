@@ -31,7 +31,7 @@ class GetGatewayRecipientResponseBuilder
     }
 
     /**
-     * Initializes a new get gateway recipient response Builder object.
+     * Initializes a new Get Gateway Recipient Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetGatewayRecipientResponseBuilder
 
     /**
      * Sets gateway field.
+     *
+     * @param string|null $value
      */
     public function gateway(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetGatewayRecipientResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetGatewayRecipientResponseBuilder
 
     /**
      * Sets pgid field.
+     *
+     * @param string|null $value
      */
     public function pgid(?string $value): self
     {
@@ -94,6 +100,8 @@ class GetGatewayRecipientResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param string|null $value
      */
     public function createdAt(?string $value): self
     {
@@ -112,6 +120,8 @@ class GetGatewayRecipientResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param string|null $value
      */
     public function updatedAt(?string $value): self
     {
@@ -129,7 +139,7 @@ class GetGatewayRecipientResponseBuilder
     }
 
     /**
-     * Initializes a new get gateway recipient response object.
+     * Initializes a new Get Gateway Recipient Response object.
      */
     public function build(): GetGatewayRecipientResponse
     {

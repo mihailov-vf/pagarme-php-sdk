@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class CreateEmvDataDukptDecryptRequest implements \JsonSerializable
@@ -46,6 +47,16 @@ class CreateEmvDataDukptDecryptRequest implements \JsonSerializable
     public function setKsn(string $ksn): void
     {
         $this->ksn = $ksn;
+    }
+
+    /**
+     * Converts the CreateEmvDataDukptDecryptRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateEmvDataDukptDecryptRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('CreateEmvDataDukptDecryptRequest', ['ksn' => $this->ksn]);
     }
 
     /**

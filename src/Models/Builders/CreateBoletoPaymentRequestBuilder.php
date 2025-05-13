@@ -34,7 +34,13 @@ class CreateBoletoPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create boleto payment request Builder object.
+     * Initializes a new Create Boleto Payment Request Builder object.
+     *
+     * @param int $retries
+     * @param string $instructions
+     * @param CreateAddressRequest $billingAddress
+     * @param string $documentNumber
+     * @param string $statementDescriptor
      */
     public static function init(
         int $retries,
@@ -54,6 +60,8 @@ class CreateBoletoPaymentRequestBuilder
 
     /**
      * Sets bank field.
+     *
+     * @param string|null $value
      */
     public function bank(?string $value): self
     {
@@ -72,6 +80,8 @@ class CreateBoletoPaymentRequestBuilder
 
     /**
      * Sets due at field.
+     *
+     * @param \DateTime|null $value
      */
     public function dueAt(?\DateTime $value): self
     {
@@ -90,6 +100,8 @@ class CreateBoletoPaymentRequestBuilder
 
     /**
      * Sets billing address id field.
+     *
+     * @param string|null $value
      */
     public function billingAddressId(?string $value): self
     {
@@ -108,6 +120,8 @@ class CreateBoletoPaymentRequestBuilder
 
     /**
      * Sets nosso numero field.
+     *
+     * @param string|null $value
      */
     public function nossoNumero(?string $value): self
     {
@@ -126,6 +140,8 @@ class CreateBoletoPaymentRequestBuilder
 
     /**
      * Sets interest field.
+     *
+     * @param CreateInterestRequest|null $value
      */
     public function interest(?CreateInterestRequest $value): self
     {
@@ -144,6 +160,8 @@ class CreateBoletoPaymentRequestBuilder
 
     /**
      * Sets fine field.
+     *
+     * @param CreateFineRequest|null $value
      */
     public function fine(?CreateFineRequest $value): self
     {
@@ -162,6 +180,8 @@ class CreateBoletoPaymentRequestBuilder
 
     /**
      * Sets max days to pay past due field.
+     *
+     * @param int|null $value
      */
     public function maxDaysToPayPastDue(?int $value): self
     {
@@ -179,7 +199,7 @@ class CreateBoletoPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create boleto payment request object.
+     * Initializes a new Create Boleto Payment Request object.
      */
     public function build(): CreateBoletoPaymentRequest
     {

@@ -33,7 +33,17 @@ class GetTransferBuilder
     }
 
     /**
-     * Initializes a new get transfer Builder object.
+     * Initializes a new Get Transfer Builder object.
+     *
+     * @param string $id
+     * @param string $gatewayId
+     * @param int $amount
+     * @param string $status
+     * @param \DateTime $createdAt
+     * @param \DateTime $updatedAt
+     * @param string $type
+     * @param GetTransferSourceResponse $source
+     * @param GetTransferTargetResponse $target
      */
     public static function init(
         string $id,
@@ -53,6 +63,8 @@ class GetTransferBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -62,6 +74,8 @@ class GetTransferBuilder
 
     /**
      * Sets fee field.
+     *
+     * @param int|null $value
      */
     public function fee(?int $value): self
     {
@@ -71,6 +85,8 @@ class GetTransferBuilder
 
     /**
      * Sets funding date field.
+     *
+     * @param \DateTime|null $value
      */
     public function fundingDate(?\DateTime $value): self
     {
@@ -80,6 +96,8 @@ class GetTransferBuilder
 
     /**
      * Sets funding estimated date field.
+     *
+     * @param \DateTime|null $value
      */
     public function fundingEstimatedDate(?\DateTime $value): self
     {
@@ -88,7 +106,7 @@ class GetTransferBuilder
     }
 
     /**
-     * Initializes a new get transfer object.
+     * Initializes a new Get Transfer object.
      */
     public function build(): GetTransfer
     {

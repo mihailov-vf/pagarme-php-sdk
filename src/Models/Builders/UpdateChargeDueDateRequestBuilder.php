@@ -31,7 +31,7 @@ class UpdateChargeDueDateRequestBuilder
     }
 
     /**
-     * Initializes a new update charge due date request Builder object.
+     * Initializes a new Update Charge Due Date Request Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class UpdateChargeDueDateRequestBuilder
 
     /**
      * Sets due at field.
+     *
+     * @param \DateTime|null $value
      */
     public function dueAt(?\DateTime $value): self
     {
@@ -48,7 +50,7 @@ class UpdateChargeDueDateRequestBuilder
     }
 
     /**
-     * Initializes a new update charge due date request object.
+     * Initializes a new Update Charge Due Date Request object.
      */
     public function build(): UpdateChargeDueDateRequest
     {

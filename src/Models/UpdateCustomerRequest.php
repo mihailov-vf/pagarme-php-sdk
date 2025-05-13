@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -265,6 +266,30 @@ class UpdateCustomerRequest implements \JsonSerializable
     public function setDocumentType(?string $documentType): void
     {
         $this->documentType = $documentType;
+    }
+
+    /**
+     * Converts the UpdateCustomerRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateCustomerRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'UpdateCustomerRequest',
+            [
+                'name' => $this->name,
+                'email' => $this->email,
+                'document' => $this->document,
+                'type' => $this->type,
+                'address' => $this->address,
+                'metadata' => $this->metadata,
+                'phones' => $this->phones,
+                'code' => $this->code,
+                'gender' => $this->gender,
+                'documentType' => $this->documentType
+            ]
+        );
     }
 
     /**

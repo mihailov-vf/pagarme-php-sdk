@@ -14,6 +14,7 @@ use Core\Utils\CoreHelper;
 use PagarmeApiSDKLib\Models\GetBillingAddressResponse;
 use PagarmeApiSDKLib\Models\GetChargeResponse;
 use PagarmeApiSDKLib\Models\GetCustomerResponse;
+use PagarmeApiSDKLib\Models\GetInvoiceItemResponse;
 use PagarmeApiSDKLib\Models\GetInvoiceResponse;
 use PagarmeApiSDKLib\Models\GetPeriodResponse;
 use PagarmeApiSDKLib\Models\GetShippingResponse;
@@ -37,7 +38,7 @@ class GetInvoiceResponseBuilder
     }
 
     /**
-     * Initializes a new get invoice response Builder object.
+     * Initializes a new Get Invoice Response Builder object.
      */
     public static function init(): self
     {
@@ -46,6 +47,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -64,6 +67,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets code field.
+     *
+     * @param string|null $value
      */
     public function code(?string $value): self
     {
@@ -82,6 +87,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets url field.
+     *
+     * @param string|null $value
      */
     public function url(?string $value): self
     {
@@ -100,6 +107,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -118,6 +127,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -136,6 +147,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets payment method field.
+     *
+     * @param string|null $value
      */
     public function paymentMethod(?string $value): self
     {
@@ -154,6 +167,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -172,6 +187,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets items field.
+     *
+     * @param GetInvoiceItemResponse[]|null $value
      */
     public function items(?array $value): self
     {
@@ -190,6 +207,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets customer field.
+     *
+     * @param GetCustomerResponse|null $value
      */
     public function customer(?GetCustomerResponse $value): self
     {
@@ -208,6 +227,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets charge field.
+     *
+     * @param GetChargeResponse|null $value
      */
     public function charge(?GetChargeResponse $value): self
     {
@@ -226,6 +247,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets installments field.
+     *
+     * @param int|null $value
      */
     public function installments(?int $value): self
     {
@@ -244,6 +267,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets billing address field.
+     *
+     * @param GetBillingAddressResponse|null $value
      */
     public function billingAddress(?GetBillingAddressResponse $value): self
     {
@@ -262,6 +287,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets subscription field.
+     *
+     * @param GetSubscriptionResponse|null $value
      */
     public function subscription(?GetSubscriptionResponse $value): self
     {
@@ -280,6 +307,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets cycle field.
+     *
+     * @param GetPeriodResponse|null $value
      */
     public function cycle(?GetPeriodResponse $value): self
     {
@@ -298,6 +327,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets shipping field.
+     *
+     * @param GetShippingResponse|null $value
      */
     public function shipping(?GetShippingResponse $value): self
     {
@@ -316,6 +347,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -334,6 +367,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets due at field.
+     *
+     * @param \DateTime|null $value
      */
     public function dueAt(?\DateTime $value): self
     {
@@ -352,6 +387,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets canceled at field.
+     *
+     * @param \DateTime|null $value
      */
     public function canceledAt(?\DateTime $value): self
     {
@@ -370,6 +407,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets billing at field.
+     *
+     * @param \DateTime|null $value
      */
     public function billingAt(?\DateTime $value): self
     {
@@ -388,6 +427,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets seen at field.
+     *
+     * @param \DateTime|null $value
      */
     public function seenAt(?\DateTime $value): self
     {
@@ -406,6 +447,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets total discount field.
+     *
+     * @param int|null $value
      */
     public function totalDiscount(?int $value): self
     {
@@ -424,6 +467,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets total increment field.
+     *
+     * @param int|null $value
      */
     public function totalIncrement(?int $value): self
     {
@@ -442,6 +487,8 @@ class GetInvoiceResponseBuilder
 
     /**
      * Sets subscription id field.
+     *
+     * @param string|null $value
      */
     public function subscriptionId(?string $value): self
     {
@@ -459,7 +506,7 @@ class GetInvoiceResponseBuilder
     }
 
     /**
-     * Initializes a new get invoice response object.
+     * Initializes a new Get Invoice Response object.
      */
     public function build(): GetInvoiceResponse
     {

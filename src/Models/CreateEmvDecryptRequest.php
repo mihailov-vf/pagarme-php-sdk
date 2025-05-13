@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class CreateEmvDecryptRequest implements \JsonSerializable
@@ -119,6 +120,24 @@ class CreateEmvDecryptRequest implements \JsonSerializable
     public function setPoi(?CreateCardPaymentContactlessPOIRequest $poi): void
     {
         $this->poi = $poi;
+    }
+
+    /**
+     * Converts the CreateEmvDecryptRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateEmvDecryptRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateEmvDecryptRequest',
+            [
+                'iccData' => $this->iccData,
+                'cardSequenceNumber' => $this->cardSequenceNumber,
+                'data' => $this->data,
+                'poi' => $this->poi
+            ]
+        );
     }
 
     /**

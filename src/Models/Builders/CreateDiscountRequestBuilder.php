@@ -31,7 +31,11 @@ class CreateDiscountRequestBuilder
     }
 
     /**
-     * Initializes a new create discount request Builder object.
+     * Initializes a new Create Discount Request Builder object.
+     *
+     * @param float $value
+     * @param string $discountType
+     * @param string $itemId
      */
     public static function init(float $value, string $discountType, string $itemId): self
     {
@@ -40,6 +44,8 @@ class CreateDiscountRequestBuilder
 
     /**
      * Sets cycles field.
+     *
+     * @param int|null $value
      */
     public function cycles(?int $value): self
     {
@@ -49,6 +55,8 @@ class CreateDiscountRequestBuilder
 
     /**
      * Sets description field.
+     *
+     * @param string|null $value
      */
     public function description(?string $value): self
     {
@@ -57,7 +65,7 @@ class CreateDiscountRequestBuilder
     }
 
     /**
-     * Initializes a new create discount request object.
+     * Initializes a new Create Discount Request object.
      */
     public function build(): CreateDiscountRequest
     {

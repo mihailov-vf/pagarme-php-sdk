@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -77,6 +78,19 @@ class CreatePaymentAuthenticationRequest implements \JsonSerializable
     public function setThreedSecure(CreateThreeDSecureRequest $threedSecure): void
     {
         $this->threedSecure = $threedSecure;
+    }
+
+    /**
+     * Converts the CreatePaymentAuthenticationRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreatePaymentAuthenticationRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreatePaymentAuthenticationRequest',
+            ['type' => $this->type, 'threedSecure' => $this->threedSecure]
+        );
     }
 
     /**

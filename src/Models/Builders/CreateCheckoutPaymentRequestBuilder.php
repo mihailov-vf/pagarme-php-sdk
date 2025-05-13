@@ -37,7 +37,15 @@ class CreateCheckoutPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create checkout payment request Builder object.
+     * Initializes a new Create Checkout Payment Request Builder object.
+     *
+     * @param string[] $acceptedPaymentMethods
+     * @param array[] $acceptedMultiPaymentMethods
+     * @param string $successUrl
+     * @param bool $skipCheckoutSuccessPage
+     * @param bool $billingAddressEditable
+     * @param CreateAddressRequest $billingAddress
+     * @param string[] $acceptedBrands
      */
     public static function init(
         array $acceptedPaymentMethods,
@@ -61,6 +69,8 @@ class CreateCheckoutPaymentRequestBuilder
 
     /**
      * Sets default payment method field.
+     *
+     * @param string|null $value
      */
     public function defaultPaymentMethod(?string $value): self
     {
@@ -70,6 +80,8 @@ class CreateCheckoutPaymentRequestBuilder
 
     /**
      * Sets gateway affiliation id field.
+     *
+     * @param string|null $value
      */
     public function gatewayAffiliationId(?string $value): self
     {
@@ -79,6 +91,8 @@ class CreateCheckoutPaymentRequestBuilder
 
     /**
      * Sets credit card field.
+     *
+     * @param CreateCheckoutCreditCardPaymentRequest|null $value
      */
     public function creditCard(?CreateCheckoutCreditCardPaymentRequest $value): self
     {
@@ -88,6 +102,8 @@ class CreateCheckoutPaymentRequestBuilder
 
     /**
      * Sets debit card field.
+     *
+     * @param CreateCheckoutDebitCardPaymentRequest|null $value
      */
     public function debitCard(?CreateCheckoutDebitCardPaymentRequest $value): self
     {
@@ -97,6 +113,8 @@ class CreateCheckoutPaymentRequestBuilder
 
     /**
      * Sets boleto field.
+     *
+     * @param CreateCheckoutBoletoPaymentRequest|null $value
      */
     public function boleto(?CreateCheckoutBoletoPaymentRequest $value): self
     {
@@ -106,6 +124,8 @@ class CreateCheckoutPaymentRequestBuilder
 
     /**
      * Sets customer editable field.
+     *
+     * @param bool|null $value
      */
     public function customerEditable(?bool $value): self
     {
@@ -115,6 +135,8 @@ class CreateCheckoutPaymentRequestBuilder
 
     /**
      * Sets expires in field.
+     *
+     * @param int|null $value
      */
     public function expiresIn(?int $value): self
     {
@@ -124,6 +146,8 @@ class CreateCheckoutPaymentRequestBuilder
 
     /**
      * Sets bank transfer field.
+     *
+     * @param CreateCheckoutBankTransferRequest|null $value
      */
     public function bankTransfer(?CreateCheckoutBankTransferRequest $value): self
     {
@@ -133,6 +157,8 @@ class CreateCheckoutPaymentRequestBuilder
 
     /**
      * Sets pix field.
+     *
+     * @param CreateCheckoutPixPaymentRequest|null $value
      */
     public function pix(?CreateCheckoutPixPaymentRequest $value): self
     {
@@ -141,7 +167,7 @@ class CreateCheckoutPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create checkout payment request object.
+     * Initializes a new Create Checkout Payment Request object.
      */
     public function build(): CreateCheckoutPaymentRequest
     {

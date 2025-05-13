@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetTransactionReportFileResponse;
 use PagarmeApiSDKLib\Models\ListTransactionsFilesResponse;
 use PagarmeApiSDKLib\Models\PagingResponse;
 
@@ -32,7 +33,7 @@ class ListTransactionsFilesResponseBuilder
     }
 
     /**
-     * Initializes a new list transactions files response Builder object.
+     * Initializes a new List Transactions Files Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +42,8 @@ class ListTransactionsFilesResponseBuilder
 
     /**
      * Sets data field.
+     *
+     * @param GetTransactionReportFileResponse[]|null $value
      */
     public function data(?array $value): self
     {
@@ -59,6 +62,8 @@ class ListTransactionsFilesResponseBuilder
 
     /**
      * Sets paging field.
+     *
+     * @param PagingResponse|null $value
      */
     public function paging(?PagingResponse $value): self
     {
@@ -76,7 +81,7 @@ class ListTransactionsFilesResponseBuilder
     }
 
     /**
-     * Initializes a new list transactions files response object.
+     * Initializes a new List Transactions Files Response object.
      */
     public function build(): ListTransactionsFilesResponse
     {

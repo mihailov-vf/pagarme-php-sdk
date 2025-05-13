@@ -31,7 +31,9 @@ class CreateCancelSubscriptionRequestBuilder
     }
 
     /**
-     * Initializes a new create cancel subscription request Builder object.
+     * Initializes a new Create Cancel Subscription Request Builder object.
+     *
+     * @param bool $cancelPendingInvoices
      */
     public static function init(bool $cancelPendingInvoices): self
     {
@@ -39,7 +41,7 @@ class CreateCancelSubscriptionRequestBuilder
     }
 
     /**
-     * Initializes a new create cancel subscription request object.
+     * Initializes a new Create Cancel Subscription Request object.
      */
     public function build(): CreateCancelSubscriptionRequest
     {

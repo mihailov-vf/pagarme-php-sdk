@@ -31,7 +31,9 @@ class UpdateSubscriptionBillingDateRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription billing date request Builder object.
+     * Initializes a new Update Subscription Billing Date Request Builder object.
+     *
+     * @param \DateTime $nextBillingAt
      */
     public static function init(\DateTime $nextBillingAt): self
     {
@@ -39,7 +41,7 @@ class UpdateSubscriptionBillingDateRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription billing date request object.
+     * Initializes a new Update Subscription Billing Date Request object.
      */
     public function build(): UpdateSubscriptionBillingDateRequest
     {

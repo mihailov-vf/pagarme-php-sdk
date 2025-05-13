@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class UpdateCurrentCycleStatusRequest implements \JsonSerializable
@@ -46,6 +47,16 @@ class UpdateCurrentCycleStatusRequest implements \JsonSerializable
     public function setStatus(string $status): void
     {
         $this->status = $status;
+    }
+
+    /**
+     * Converts the UpdateCurrentCycleStatusRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateCurrentCycleStatusRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('UpdateCurrentCycleStatusRequest', ['status' => $this->status]);
     }
 
     /**

@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\CreateSplitRequest;
 use PagarmeApiSDKLib\Models\UpdateSubscriptionSplitRequest;
 
 /**
@@ -31,7 +32,10 @@ class UpdateSubscriptionSplitRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription split request Builder object.
+     * Initializes a new Update Subscription Split Request Builder object.
+     *
+     * @param bool $enabled
+     * @param CreateSplitRequest[] $rules
      */
     public static function init(bool $enabled, array $rules): self
     {
@@ -39,7 +43,7 @@ class UpdateSubscriptionSplitRequestBuilder
     }
 
     /**
-     * Initializes a new update subscription split request object.
+     * Initializes a new Update Subscription Split Request object.
      */
     public function build(): UpdateSubscriptionSplitRequest
     {

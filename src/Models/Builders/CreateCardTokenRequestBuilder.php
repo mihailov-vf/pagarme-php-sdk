@@ -31,7 +31,15 @@ class CreateCardTokenRequestBuilder
     }
 
     /**
-     * Initializes a new create card token request Builder object.
+     * Initializes a new Create Card Token Request Builder object.
+     *
+     * @param string $number
+     * @param string $holderName
+     * @param int $expMonth
+     * @param int $expYear
+     * @param string $cvv
+     * @param string $brand
+     * @param string $label
      */
     public static function init(
         string $number,
@@ -48,7 +56,7 @@ class CreateCardTokenRequestBuilder
     }
 
     /**
-     * Initializes a new create card token request object.
+     * Initializes a new Create Card Token Request object.
      */
     public function build(): CreateCardTokenRequest
     {

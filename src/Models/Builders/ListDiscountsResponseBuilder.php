@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetDiscountResponse;
 use PagarmeApiSDKLib\Models\ListDiscountsResponse;
 use PagarmeApiSDKLib\Models\PagingResponse;
 
@@ -32,7 +33,7 @@ class ListDiscountsResponseBuilder
     }
 
     /**
-     * Initializes a new list discounts response Builder object.
+     * Initializes a new List Discounts Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +42,8 @@ class ListDiscountsResponseBuilder
 
     /**
      * Sets data field.
+     *
+     * @param GetDiscountResponse[]|null $value
      */
     public function data(?array $value): self
     {
@@ -59,6 +62,8 @@ class ListDiscountsResponseBuilder
 
     /**
      * Sets paging field.
+     *
+     * @param PagingResponse|null $value
      */
     public function paging(?PagingResponse $value): self
     {
@@ -76,7 +81,7 @@ class ListDiscountsResponseBuilder
     }
 
     /**
-     * Initializes a new list discounts response object.
+     * Initializes a new List Discounts Response object.
      */
     public function build(): ListDiscountsResponse
     {

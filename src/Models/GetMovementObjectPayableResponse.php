@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -434,6 +435,36 @@ class GetMovementObjectPayableResponse extends GetMovementObjectBaseResponse imp
     public function setLiquidationArrangementId(string $liquidationArrangementId): void
     {
         $this->liquidationArrangementId = $liquidationArrangementId;
+    }
+
+    /**
+     * Converts the GetMovementObjectPayableResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetMovementObjectPayableResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetMovementObjectPayableResponse',
+            [
+                'fee' => $this->getFee(),
+                'anticipationFee' => $this->anticipationFee,
+                'fraudCoverageFee' => $this->fraudCoverageFee,
+                'installment' => $this->installment,
+                'splitId' => $this->splitId,
+                'bulkAnticipationId' => $this->bulkAnticipationId,
+                'anticipationId' => $this->anticipationId,
+                'recipientId' => $this->recipientId,
+                'originatorModel' => $this->originatorModel,
+                'originatorModelId' => $this->originatorModelId,
+                'paymentDate' => $this->paymentDate,
+                'originalPaymentDate' => $this->originalPaymentDate,
+                'paymentMethod' => $this->paymentMethod,
+                'accrualAt' => $this->accrualAt,
+                'liquidationArrangementId' => $this->liquidationArrangementId
+            ],
+            parent::__toString()
+        );
     }
 
     /**

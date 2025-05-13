@@ -31,7 +31,7 @@ class GetTransactionReportFileResponseBuilder
     }
 
     /**
-     * Initializes a new get transaction report file response Builder object.
+     * Initializes a new Get Transaction Report File Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetTransactionReportFileResponseBuilder
 
     /**
      * Sets name field.
+     *
+     * @param string|null $value
      */
     public function name(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetTransactionReportFileResponseBuilder
 
     /**
      * Sets date field.
+     *
+     * @param \DateTime|null $value
      */
     public function date(?\DateTime $value): self
     {
@@ -75,7 +79,7 @@ class GetTransactionReportFileResponseBuilder
     }
 
     /**
-     * Initializes a new get transaction report file response object.
+     * Initializes a new Get Transaction Report File Response object.
      */
     public function build(): GetTransactionReportFileResponse
     {

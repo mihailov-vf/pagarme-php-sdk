@@ -31,7 +31,10 @@ class CreateConfirmPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create confirm payment request Builder object.
+     * Initializes a new Create Confirm Payment Request Builder object.
+     *
+     * @param string $description
+     * @param string $code
      */
     public static function init(string $description, string $code): self
     {
@@ -39,7 +42,9 @@ class CreateConfirmPaymentRequestBuilder
     }
 
     /**
-     * Sets amount field.
+     * Sets Amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -48,7 +53,7 @@ class CreateConfirmPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create confirm payment request object.
+     * Initializes a new Create Confirm Payment Request object.
      */
     public function build(): CreateConfirmPaymentRequest
     {

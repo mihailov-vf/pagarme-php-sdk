@@ -31,7 +31,7 @@ class GetPaymentOriginResponseBuilder
     }
 
     /**
-     * Initializes a new get payment origin response Builder object.
+     * Initializes a new Get Payment Origin Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetPaymentOriginResponseBuilder
 
     /**
      * Sets charge id field.
+     *
+     * @param string|null $value
      */
     public function chargeId(?string $value): self
     {
@@ -49,6 +51,8 @@ class GetPaymentOriginResponseBuilder
 
     /**
      * Sets brand id field.
+     *
+     * @param string|null $value
      */
     public function brandId(?string $value): self
     {
@@ -57,7 +61,7 @@ class GetPaymentOriginResponseBuilder
     }
 
     /**
-     * Initializes a new get payment origin response object.
+     * Initializes a new Get Payment Origin Response object.
      */
     public function build(): GetPaymentOriginResponse
     {

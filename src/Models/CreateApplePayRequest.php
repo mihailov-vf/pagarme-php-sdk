@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -166,6 +167,25 @@ class CreateApplePayRequest implements \JsonSerializable
     public function setMerchantIdentifier(string $merchantIdentifier): void
     {
         $this->merchantIdentifier = $merchantIdentifier;
+    }
+
+    /**
+     * Converts the CreateApplePayRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateApplePayRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateApplePayRequest',
+            [
+                'version' => $this->version,
+                'data' => $this->data,
+                'header' => $this->header,
+                'signature' => $this->signature,
+                'merchantIdentifier' => $this->merchantIdentifier
+            ]
+        );
     }
 
     /**

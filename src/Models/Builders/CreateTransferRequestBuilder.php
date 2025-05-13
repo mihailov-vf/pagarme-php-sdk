@@ -31,7 +31,10 @@ class CreateTransferRequestBuilder
     }
 
     /**
-     * Initializes a new create transfer request Builder object.
+     * Initializes a new Create Transfer Request Builder object.
+     *
+     * @param int $amount
+     * @param array<string,string> $metadata
      */
     public static function init(int $amount, array $metadata): self
     {
@@ -39,7 +42,7 @@ class CreateTransferRequestBuilder
     }
 
     /**
-     * Initializes a new create transfer request object.
+     * Initializes a new Create Transfer Request object.
      */
     public function build(): CreateTransferRequest
     {

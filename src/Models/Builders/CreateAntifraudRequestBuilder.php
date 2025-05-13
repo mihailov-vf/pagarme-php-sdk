@@ -32,7 +32,10 @@ class CreateAntifraudRequestBuilder
     }
 
     /**
-     * Initializes a new create antifraud request Builder object.
+     * Initializes a new Create Antifraud Request Builder object.
+     *
+     * @param string $type
+     * @param CreateClearSaleRequest $clearsale
      */
     public static function init(string $type, CreateClearSaleRequest $clearsale): self
     {
@@ -40,7 +43,7 @@ class CreateAntifraudRequestBuilder
     }
 
     /**
-     * Initializes a new create antifraud request object.
+     * Initializes a new Create Antifraud Request object.
      */
     public function build(): CreateAntifraudRequest
     {

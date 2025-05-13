@@ -31,7 +31,7 @@ class GetWithdrawTargetResponseBuilder
     }
 
     /**
-     * Initializes a new get withdraw target response Builder object.
+     * Initializes a new Get Withdraw Target Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetWithdrawTargetResponseBuilder
 
     /**
      * Sets target id field.
+     *
+     * @param string|null $value
      */
     public function targetId(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetWithdrawTargetResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -75,7 +79,7 @@ class GetWithdrawTargetResponseBuilder
     }
 
     /**
-     * Initializes a new get withdraw target response object.
+     * Initializes a new Get Withdraw Target Response object.
      */
     public function build(): GetWithdrawTargetResponse
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -388,6 +389,31 @@ class GetVoucherTransactionResponse extends GetTransactionResponse implements \J
     public function unsetCard(): void
     {
         $this->card = [];
+    }
+
+    /**
+     * Converts the GetVoucherTransactionResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetVoucherTransactionResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetVoucherTransactionResponse',
+            [
+                'statementDescriptor' => $this->getStatementDescriptor(),
+                'acquirerName' => $this->getAcquirerName(),
+                'acquirerAffiliationCode' => $this->getAcquirerAffiliationCode(),
+                'acquirerTid' => $this->getAcquirerTid(),
+                'acquirerNsu' => $this->getAcquirerNsu(),
+                'acquirerAuthCode' => $this->getAcquirerAuthCode(),
+                'acquirerMessage' => $this->getAcquirerMessage(),
+                'acquirerReturnCode' => $this->getAcquirerReturnCode(),
+                'operationType' => $this->getOperationType(),
+                'card' => $this->getCard()
+            ],
+            parent::__toString()
+        );
     }
 
     /**

@@ -32,7 +32,7 @@ class GetCheckoutPaymentSettingsResponseBuilder
     }
 
     /**
-     * Initializes a new get checkout payment settings response Builder object.
+     * Initializes a new Get Checkout Payment Settings Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetCheckoutPaymentSettingsResponseBuilder
 
     /**
      * Sets success url field.
+     *
+     * @param string|null $value
      */
     public function successUrl(?string $value): self
     {
@@ -59,6 +61,8 @@ class GetCheckoutPaymentSettingsResponseBuilder
 
     /**
      * Sets payment url field.
+     *
+     * @param string|null $value
      */
     public function paymentUrl(?string $value): self
     {
@@ -77,6 +81,8 @@ class GetCheckoutPaymentSettingsResponseBuilder
 
     /**
      * Sets accepted payment methods field.
+     *
+     * @param string[]|null $value
      */
     public function acceptedPaymentMethods(?array $value): self
     {
@@ -95,6 +101,8 @@ class GetCheckoutPaymentSettingsResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -113,6 +121,8 @@ class GetCheckoutPaymentSettingsResponseBuilder
 
     /**
      * Sets customer field.
+     *
+     * @param GetCustomerResponse|null $value
      */
     public function customer(?GetCustomerResponse $value): self
     {
@@ -131,6 +141,8 @@ class GetCheckoutPaymentSettingsResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -149,6 +161,8 @@ class GetCheckoutPaymentSettingsResponseBuilder
 
     /**
      * Sets default payment method field.
+     *
+     * @param string|null $value
      */
     public function defaultPaymentMethod(?string $value): self
     {
@@ -167,6 +181,8 @@ class GetCheckoutPaymentSettingsResponseBuilder
 
     /**
      * Sets gateway affiliation id field.
+     *
+     * @param string|null $value
      */
     public function gatewayAffiliationId(?string $value): self
     {
@@ -184,7 +200,7 @@ class GetCheckoutPaymentSettingsResponseBuilder
     }
 
     /**
-     * Initializes a new get checkout payment settings response object.
+     * Initializes a new Get Checkout Payment Settings Response object.
      */
     public function build(): GetCheckoutPaymentSettingsResponse
     {

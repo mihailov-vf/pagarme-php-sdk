@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -425,6 +426,32 @@ class GetPrivateLabelTransactionResponse extends GetTransactionResponse implemen
     public function unsetInstallments(): void
     {
         $this->installments = [];
+    }
+
+    /**
+     * Converts the GetPrivateLabelTransactionResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetPrivateLabelTransactionResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetPrivateLabelTransactionResponse',
+            [
+                'statementDescriptor' => $this->getStatementDescriptor(),
+                'acquirerName' => $this->getAcquirerName(),
+                'acquirerAffiliationCode' => $this->getAcquirerAffiliationCode(),
+                'acquirerTid' => $this->getAcquirerTid(),
+                'acquirerNsu' => $this->getAcquirerNsu(),
+                'acquirerAuthCode' => $this->getAcquirerAuthCode(),
+                'operationType' => $this->getOperationType(),
+                'card' => $this->getCard(),
+                'acquirerMessage' => $this->getAcquirerMessage(),
+                'acquirerReturnCode' => $this->getAcquirerReturnCode(),
+                'installments' => $this->getInstallments()
+            ],
+            parent::__toString()
+        );
     }
 
     /**

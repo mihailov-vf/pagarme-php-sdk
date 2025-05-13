@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -52,6 +53,16 @@ class GetGatewayErrorResponse implements \JsonSerializable
     public function unsetMessage(): void
     {
         $this->message = [];
+    }
+
+    /**
+     * Converts the GetGatewayErrorResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetGatewayErrorResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('GetGatewayErrorResponse', ['message' => $this->getMessage()]);
     }
 
     /**

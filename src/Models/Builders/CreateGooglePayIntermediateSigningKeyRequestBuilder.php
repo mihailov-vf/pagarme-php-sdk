@@ -31,7 +31,7 @@ class CreateGooglePayIntermediateSigningKeyRequestBuilder
     }
 
     /**
-     * Initializes a new create google pay intermediate signing key request Builder object.
+     * Initializes a new Create Google Pay Intermediate Signing Key Request Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class CreateGooglePayIntermediateSigningKeyRequestBuilder
 
     /**
      * Sets signed key field.
+     *
+     * @param string|null $value
      */
     public function signedKey(?string $value): self
     {
@@ -58,6 +60,8 @@ class CreateGooglePayIntermediateSigningKeyRequestBuilder
 
     /**
      * Sets signatures field.
+     *
+     * @param string[]|null $value
      */
     public function signatures(?array $value): self
     {
@@ -75,7 +79,7 @@ class CreateGooglePayIntermediateSigningKeyRequestBuilder
     }
 
     /**
-     * Initializes a new create google pay intermediate signing key request object.
+     * Initializes a new Create Google Pay Intermediate Signing Key Request object.
      */
     public function build(): CreateGooglePayIntermediateSigningKeyRequest
     {

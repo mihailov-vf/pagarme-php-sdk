@@ -13,6 +13,7 @@ namespace PagarmeApiSDKLib\Models\Builders;
 use Core\Utils\CoreHelper;
 use PagarmeApiSDKLib\Models\CreateEmvDataDecryptRequest;
 use PagarmeApiSDKLib\Models\CreateEmvDataDukptDecryptRequest;
+use PagarmeApiSDKLib\Models\CreateEmvDataTlvDecryptRequest;
 
 /**
  * Builder for model CreateEmvDataDecryptRequest
@@ -32,7 +33,10 @@ class CreateEmvDataDecryptRequestBuilder
     }
 
     /**
-     * Initializes a new create emv data decrypt request Builder object.
+     * Initializes a new Create Emv Data Decrypt Request Builder object.
+     *
+     * @param string $cipher
+     * @param CreateEmvDataTlvDecryptRequest[] $tags
      */
     public static function init(string $cipher, array $tags): self
     {
@@ -41,6 +45,8 @@ class CreateEmvDataDecryptRequestBuilder
 
     /**
      * Sets dukpt field.
+     *
+     * @param CreateEmvDataDukptDecryptRequest|null $value
      */
     public function dukpt(?CreateEmvDataDukptDecryptRequest $value): self
     {
@@ -49,7 +55,7 @@ class CreateEmvDataDecryptRequestBuilder
     }
 
     /**
-     * Initializes a new create emv data decrypt request object.
+     * Initializes a new Create Emv Data Decrypt Request object.
      */
     public function build(): CreateEmvDataDecryptRequest
     {

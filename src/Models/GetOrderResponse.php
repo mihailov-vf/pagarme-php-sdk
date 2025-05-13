@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -767,6 +768,41 @@ class GetOrderResponse implements \JsonSerializable
     public function unsetIntegration(): void
     {
         $this->integration = [];
+    }
+
+    /**
+     * Converts the GetOrderResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetOrderResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetOrderResponse',
+            [
+                'id' => $this->getId(),
+                'code' => $this->getCode(),
+                'amount' => $this->getAmount(),
+                'currency' => $this->getCurrency(),
+                'closed' => $this->getClosed(),
+                'items' => $this->getItems(),
+                'customer' => $this->getCustomer(),
+                'status' => $this->getStatus(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt(),
+                'closedAt' => $this->getClosedAt(),
+                'charges' => $this->getCharges(),
+                'invoiceUrl' => $this->getInvoiceUrl(),
+                'shipping' => $this->getShipping(),
+                'metadata' => $this->getMetadata(),
+                'checkouts' => $this->getCheckouts(),
+                'ip' => $this->getIp(),
+                'sessionId' => $this->getSessionId(),
+                'location' => $this->getLocation(),
+                'device' => $this->getDevice(),
+                'integration' => $this->getIntegration()
+            ]
+        );
     }
 
     /**

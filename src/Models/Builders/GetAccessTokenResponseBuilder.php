@@ -32,7 +32,7 @@ class GetAccessTokenResponseBuilder
     }
 
     /**
-     * Initializes a new get access token response Builder object.
+     * Initializes a new Get Access Token Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetAccessTokenResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -59,6 +61,8 @@ class GetAccessTokenResponseBuilder
 
     /**
      * Sets code field.
+     *
+     * @param string|null $value
      */
     public function code(?string $value): self
     {
@@ -77,6 +81,8 @@ class GetAccessTokenResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -95,6 +101,8 @@ class GetAccessTokenResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -113,6 +121,8 @@ class GetAccessTokenResponseBuilder
 
     /**
      * Sets customer field.
+     *
+     * @param GetCustomerResponse|null $value
      */
     public function customer(?GetCustomerResponse $value): self
     {
@@ -130,7 +140,7 @@ class GetAccessTokenResponseBuilder
     }
 
     /**
-     * Initializes a new get access token response object.
+     * Initializes a new Get Access Token Response object.
      */
     public function build(): GetAccessTokenResponse
     {

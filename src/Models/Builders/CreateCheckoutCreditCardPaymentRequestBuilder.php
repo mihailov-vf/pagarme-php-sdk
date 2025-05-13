@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\CreateCheckoutCardInstallmentOptionRequest;
 use PagarmeApiSDKLib\Models\CreateCheckoutCreditCardPaymentRequest;
 use PagarmeApiSDKLib\Models\CreatePaymentAuthenticationRequest;
 
@@ -32,7 +33,7 @@ class CreateCheckoutCreditCardPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create checkout credit card payment request Builder object.
+     * Initializes a new Create Checkout Credit Card Payment Request Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +42,8 @@ class CreateCheckoutCreditCardPaymentRequestBuilder
 
     /**
      * Sets statement descriptor field.
+     *
+     * @param string|null $value
      */
     public function statementDescriptor(?string $value): self
     {
@@ -50,6 +53,8 @@ class CreateCheckoutCreditCardPaymentRequestBuilder
 
     /**
      * Sets installments field.
+     *
+     * @param CreateCheckoutCardInstallmentOptionRequest[]|null $value
      */
     public function installments(?array $value): self
     {
@@ -59,6 +64,8 @@ class CreateCheckoutCreditCardPaymentRequestBuilder
 
     /**
      * Sets authentication field.
+     *
+     * @param CreatePaymentAuthenticationRequest|null $value
      */
     public function authentication(?CreatePaymentAuthenticationRequest $value): self
     {
@@ -68,6 +75,8 @@ class CreateCheckoutCreditCardPaymentRequestBuilder
 
     /**
      * Sets capture field.
+     *
+     * @param bool|null $value
      */
     public function capture(?bool $value): self
     {
@@ -76,7 +85,7 @@ class CreateCheckoutCreditCardPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create checkout credit card payment request object.
+     * Initializes a new Create Checkout Credit Card Payment Request object.
      */
     public function build(): CreateCheckoutCreditCardPaymentRequest
     {

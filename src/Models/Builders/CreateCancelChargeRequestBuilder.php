@@ -13,6 +13,8 @@ namespace PagarmeApiSDKLib\Models\Builders;
 use Core\Utils\CoreHelper;
 use PagarmeApiSDKLib\Models\CreateBankAccountRefundingDTO;
 use PagarmeApiSDKLib\Models\CreateCancelChargeRequest;
+use PagarmeApiSDKLib\Models\CreateCancelChargeSplitRulesRequest;
+use PagarmeApiSDKLib\Models\CreateSplitRequest;
 
 /**
  * Builder for model CreateCancelChargeRequest
@@ -32,7 +34,9 @@ class CreateCancelChargeRequestBuilder
     }
 
     /**
-     * Initializes a new create cancel charge request Builder object.
+     * Initializes a new Create Cancel Charge Request Builder object.
+     *
+     * @param string $operationReference
      */
     public static function init(string $operationReference): self
     {
@@ -41,6 +45,8 @@ class CreateCancelChargeRequestBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -50,6 +56,8 @@ class CreateCancelChargeRequestBuilder
 
     /**
      * Sets split rules field.
+     *
+     * @param CreateCancelChargeSplitRulesRequest[]|null $value
      */
     public function splitRules(?array $value): self
     {
@@ -59,6 +67,8 @@ class CreateCancelChargeRequestBuilder
 
     /**
      * Sets split field.
+     *
+     * @param CreateSplitRequest[]|null $value
      */
     public function split(?array $value): self
     {
@@ -68,6 +78,8 @@ class CreateCancelChargeRequestBuilder
 
     /**
      * Sets bank account field.
+     *
+     * @param CreateBankAccountRefundingDTO|null $value
      */
     public function bankAccount(?CreateBankAccountRefundingDTO $value): self
     {
@@ -76,7 +88,7 @@ class CreateCancelChargeRequestBuilder
     }
 
     /**
-     * Initializes a new create cancel charge request object.
+     * Initializes a new Create Cancel Charge Request object.
      */
     public function build(): CreateCancelChargeRequest
     {

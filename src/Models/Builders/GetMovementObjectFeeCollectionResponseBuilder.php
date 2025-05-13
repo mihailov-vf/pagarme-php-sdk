@@ -31,7 +31,7 @@ class GetMovementObjectFeeCollectionResponseBuilder
     }
 
     /**
-     * Initializes a new get movement object fee collection response Builder object.
+     * Initializes a new Get Movement Object Fee Collection Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetMovementObjectFeeCollectionResponseBuilder
 
     /**
      * Sets object field.
+     *
+     * @param string|null $value
      */
     public function object(?string $value): self
     {
@@ -49,6 +51,8 @@ class GetMovementObjectFeeCollectionResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -67,6 +71,8 @@ class GetMovementObjectFeeCollectionResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -85,6 +91,8 @@ class GetMovementObjectFeeCollectionResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param string|null $value
      */
     public function amount(?string $value): self
     {
@@ -103,6 +111,8 @@ class GetMovementObjectFeeCollectionResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param string|null $value
      */
     public function createdAt(?string $value): self
     {
@@ -121,6 +131,8 @@ class GetMovementObjectFeeCollectionResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -139,6 +151,8 @@ class GetMovementObjectFeeCollectionResponseBuilder
 
     /**
      * Sets charge id field.
+     *
+     * @param string|null $value
      */
     public function chargeId(?string $value): self
     {
@@ -157,6 +171,8 @@ class GetMovementObjectFeeCollectionResponseBuilder
 
     /**
      * Sets gateway id field.
+     *
+     * @param string|null $value
      */
     public function gatewayId(?string $value): self
     {
@@ -175,6 +191,8 @@ class GetMovementObjectFeeCollectionResponseBuilder
 
     /**
      * Sets description field.
+     *
+     * @param string|null $value
      */
     public function description(?string $value): self
     {
@@ -193,6 +211,8 @@ class GetMovementObjectFeeCollectionResponseBuilder
 
     /**
      * Sets payment date field.
+     *
+     * @param string|null $value
      */
     public function paymentDate(?string $value): self
     {
@@ -211,6 +231,8 @@ class GetMovementObjectFeeCollectionResponseBuilder
 
     /**
      * Sets recipient id field.
+     *
+     * @param string|null $value
      */
     public function recipientId(?string $value): self
     {
@@ -228,7 +250,7 @@ class GetMovementObjectFeeCollectionResponseBuilder
     }
 
     /**
-     * Initializes a new get movement object fee collection response object.
+     * Initializes a new Get Movement Object Fee Collection Response object.
      */
     public function build(): GetMovementObjectFeeCollectionResponse
     {

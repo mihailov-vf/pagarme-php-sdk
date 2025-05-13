@@ -33,7 +33,11 @@ class CreateEmvDecryptRequestBuilder
     }
 
     /**
-     * Initializes a new create emv decrypt request Builder object.
+     * Initializes a new Create Emv Decrypt Request Builder object.
+     *
+     * @param string $iccData
+     * @param string $cardSequenceNumber
+     * @param CreateEmvDataDecryptRequest $data
      */
     public static function init(string $iccData, string $cardSequenceNumber, CreateEmvDataDecryptRequest $data): self
     {
@@ -42,6 +46,8 @@ class CreateEmvDecryptRequestBuilder
 
     /**
      * Sets poi field.
+     *
+     * @param CreateCardPaymentContactlessPOIRequest|null $value
      */
     public function poi(?CreateCardPaymentContactlessPOIRequest $value): self
     {
@@ -50,7 +56,7 @@ class CreateEmvDecryptRequestBuilder
     }
 
     /**
-     * Initializes a new create emv decrypt request object.
+     * Initializes a new Create Emv Decrypt Request object.
      */
     public function build(): CreateEmvDecryptRequest
     {

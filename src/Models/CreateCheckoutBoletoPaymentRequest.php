@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -104,6 +105,19 @@ class CreateCheckoutBoletoPaymentRequest implements \JsonSerializable
     public function setDueAt(\DateTime $dueAt): void
     {
         $this->dueAt = $dueAt;
+    }
+
+    /**
+     * Converts the CreateCheckoutBoletoPaymentRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateCheckoutBoletoPaymentRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateCheckoutBoletoPaymentRequest',
+            ['bank' => $this->bank, 'instructions' => $this->instructions, 'dueAt' => $this->dueAt]
+        );
     }
 
     /**

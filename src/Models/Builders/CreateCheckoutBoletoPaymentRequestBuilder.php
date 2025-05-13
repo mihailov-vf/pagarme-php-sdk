@@ -31,7 +31,11 @@ class CreateCheckoutBoletoPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create checkout boleto payment request Builder object.
+     * Initializes a new Create Checkout Boleto Payment Request Builder object.
+     *
+     * @param string $bank
+     * @param string $instructions
+     * @param \DateTime $dueAt
      */
     public static function init(string $bank, string $instructions, \DateTime $dueAt): self
     {
@@ -39,7 +43,7 @@ class CreateCheckoutBoletoPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create checkout boleto payment request object.
+     * Initializes a new Create Checkout Boleto Payment Request object.
      */
     public function build(): CreateCheckoutBoletoPaymentRequest
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -77,6 +78,19 @@ class CreateBankTransferPaymentRequest implements \JsonSerializable
     public function setRetries(int $retries): void
     {
         $this->retries = $retries;
+    }
+
+    /**
+     * Converts the CreateBankTransferPaymentRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateBankTransferPaymentRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateBankTransferPaymentRequest',
+            ['bank' => $this->bank, 'retries' => $this->retries]
+        );
     }
 
     /**

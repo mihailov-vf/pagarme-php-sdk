@@ -11,10 +11,13 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetChargeResponse;
+use PagarmeApiSDKLib\Models\GetCheckoutPaymentResponse;
 use PagarmeApiSDKLib\Models\GetCustomerResponse;
 use PagarmeApiSDKLib\Models\GetDeviceResponse;
 use PagarmeApiSDKLib\Models\GetIntegrationResponse;
 use PagarmeApiSDKLib\Models\GetLocationResponse;
+use PagarmeApiSDKLib\Models\GetOrderItemResponse;
 use PagarmeApiSDKLib\Models\GetOrderResponse;
 use PagarmeApiSDKLib\Models\GetShippingResponse;
 
@@ -36,7 +39,7 @@ class GetOrderResponseBuilder
     }
 
     /**
-     * Initializes a new get order response Builder object.
+     * Initializes a new Get Order Response Builder object.
      */
     public static function init(): self
     {
@@ -45,6 +48,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -63,6 +68,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets code field.
+     *
+     * @param string|null $value
      */
     public function code(?string $value): self
     {
@@ -81,6 +88,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -99,6 +108,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets currency field.
+     *
+     * @param string|null $value
      */
     public function currency(?string $value): self
     {
@@ -117,6 +128,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets closed field.
+     *
+     * @param bool|null $value
      */
     public function closed(?bool $value): self
     {
@@ -135,6 +148,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets items field.
+     *
+     * @param GetOrderItemResponse[]|null $value
      */
     public function items(?array $value): self
     {
@@ -153,6 +168,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets customer field.
+     *
+     * @param GetCustomerResponse|null $value
      */
     public function customer(?GetCustomerResponse $value): self
     {
@@ -171,6 +188,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -189,6 +208,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -207,6 +228,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -225,6 +248,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets closed at field.
+     *
+     * @param \DateTime|null $value
      */
     public function closedAt(?\DateTime $value): self
     {
@@ -243,6 +268,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets charges field.
+     *
+     * @param GetChargeResponse[]|null $value
      */
     public function charges(?array $value): self
     {
@@ -261,6 +288,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets invoice url field.
+     *
+     * @param string|null $value
      */
     public function invoiceUrl(?string $value): self
     {
@@ -279,6 +308,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets shipping field.
+     *
+     * @param GetShippingResponse|null $value
      */
     public function shipping(?GetShippingResponse $value): self
     {
@@ -297,6 +328,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -315,6 +348,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets checkouts field.
+     *
+     * @param GetCheckoutPaymentResponse[]|null $value
      */
     public function checkouts(?array $value): self
     {
@@ -333,6 +368,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets ip field.
+     *
+     * @param string|null $value
      */
     public function ip(?string $value): self
     {
@@ -351,6 +388,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets session id field.
+     *
+     * @param string|null $value
      */
     public function sessionId(?string $value): self
     {
@@ -369,6 +408,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets location field.
+     *
+     * @param GetLocationResponse|null $value
      */
     public function location(?GetLocationResponse $value): self
     {
@@ -387,6 +428,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets device field.
+     *
+     * @param GetDeviceResponse|null $value
      */
     public function device(?GetDeviceResponse $value): self
     {
@@ -405,6 +448,8 @@ class GetOrderResponseBuilder
 
     /**
      * Sets integration field.
+     *
+     * @param GetIntegrationResponse|null $value
      */
     public function integration(?GetIntegrationResponse $value): self
     {
@@ -422,7 +467,7 @@ class GetOrderResponseBuilder
     }
 
     /**
-     * Initializes a new get order response object.
+     * Initializes a new Get Order Response object.
      */
     public function build(): GetOrderResponse
     {

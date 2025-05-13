@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class CreateRegisterInformationCorporationRequest extends CreateRegisterInformationBaseRequest implements \JsonSerializable
@@ -268,6 +269,30 @@ class CreateRegisterInformationCorporationRequest extends CreateRegisterInformat
     public function setMainAddress(CreateRegisterInformationAddressRequest $mainAddress): void
     {
         $this->mainAddress = $mainAddress;
+    }
+
+    /**
+     * Converts the CreateRegisterInformationCorporationRequest object to a human-readable string
+     * representation.
+     *
+     * @return string The string representation of the CreateRegisterInformationCorporationRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateRegisterInformationCorporationRequest',
+            [
+                'companyName' => $this->companyName,
+                'tradingName' => $this->tradingName,
+                'annualRevenue' => $this->annualRevenue,
+                'corporationType' => $this->getCorporationType(),
+                'foundingDate' => $this->getFoundingDate(),
+                'cnae' => $this->getCnae(),
+                'managingPartners' => $this->managingPartners,
+                'mainAddress' => $this->mainAddress
+            ],
+            parent::__toString()
+        );
     }
 
     /**

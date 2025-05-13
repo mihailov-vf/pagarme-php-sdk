@@ -31,7 +31,17 @@ class CreateBankAccountRefundingDTOBuilder
     }
 
     /**
-     * Initializes a new create bank account refunding dto Builder object.
+     * Initializes a new Create Bank Account Refunding DTO Builder object.
+     *
+     * @param string $holderName
+     * @param string $holderType
+     * @param string $holderDocument
+     * @param string $bank
+     * @param string $branchNumber
+     * @param string $branchCheckDigit
+     * @param string $accountNumber
+     * @param string $accountCheckDigit
+     * @param string $type
      */
     public static function init(
         string $holderName,
@@ -58,7 +68,7 @@ class CreateBankAccountRefundingDTOBuilder
     }
 
     /**
-     * Initializes a new create bank account refunding dto object.
+     * Initializes a new Create Bank Account Refunding DTO object.
      */
     public function build(): CreateBankAccountRefundingDTO
     {

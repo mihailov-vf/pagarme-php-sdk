@@ -31,7 +31,7 @@ class GetPhoneNumberResponseBuilder
     }
 
     /**
-     * Initializes a new get phone number response Builder object.
+     * Initializes a new Get Phone Number Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetPhoneNumberResponseBuilder
 
     /**
      * Sets ddd field.
+     *
+     * @param string|null $value
      */
     public function ddd(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetPhoneNumberResponseBuilder
 
     /**
      * Sets number field.
+     *
+     * @param string|null $value
      */
     public function number(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetPhoneNumberResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -93,7 +99,7 @@ class GetPhoneNumberResponseBuilder
     }
 
     /**
-     * Initializes a new get phone number response object.
+     * Initializes a new Get Phone Number Response object.
      */
     public function build(): GetPhoneNumberResponse
     {

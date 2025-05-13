@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class CreateSubscriptionSplitRequest implements \JsonSerializable
@@ -78,6 +79,19 @@ class CreateSubscriptionSplitRequest implements \JsonSerializable
     public function setRules(array $rules): void
     {
         $this->rules = $rules;
+    }
+
+    /**
+     * Converts the CreateSubscriptionSplitRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateSubscriptionSplitRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateSubscriptionSplitRequest',
+            ['enabled' => $this->enabled, 'rules' => $this->rules]
+        );
     }
 
     /**

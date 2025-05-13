@@ -32,7 +32,7 @@ class CreatePrivateLabelPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create private label payment request Builder object.
+     * Initializes a new Create Private Label Payment Request Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class CreatePrivateLabelPaymentRequestBuilder
 
     /**
      * Sets installments field.
+     *
+     * @param int|null $value
      */
     public function installments(?int $value): self
     {
@@ -50,6 +52,8 @@ class CreatePrivateLabelPaymentRequestBuilder
 
     /**
      * Sets statement descriptor field.
+     *
+     * @param string|null $value
      */
     public function statementDescriptor(?string $value): self
     {
@@ -59,6 +63,8 @@ class CreatePrivateLabelPaymentRequestBuilder
 
     /**
      * Sets card field.
+     *
+     * @param CreateCardRequest|null $value
      */
     public function card(?CreateCardRequest $value): self
     {
@@ -68,6 +74,8 @@ class CreatePrivateLabelPaymentRequestBuilder
 
     /**
      * Sets card id field.
+     *
+     * @param string|null $value
      */
     public function cardId(?string $value): self
     {
@@ -77,6 +85,8 @@ class CreatePrivateLabelPaymentRequestBuilder
 
     /**
      * Sets card token field.
+     *
+     * @param string|null $value
      */
     public function cardToken(?string $value): self
     {
@@ -86,6 +96,8 @@ class CreatePrivateLabelPaymentRequestBuilder
 
     /**
      * Sets recurrence field.
+     *
+     * @param bool|null $value
      */
     public function recurrence(?bool $value): self
     {
@@ -95,6 +107,8 @@ class CreatePrivateLabelPaymentRequestBuilder
 
     /**
      * Sets capture field.
+     *
+     * @param bool|null $value
      */
     public function capture(?bool $value): self
     {
@@ -104,6 +118,8 @@ class CreatePrivateLabelPaymentRequestBuilder
 
     /**
      * Sets extended limit enabled field.
+     *
+     * @param bool|null $value
      */
     public function extendedLimitEnabled(?bool $value): self
     {
@@ -113,6 +129,8 @@ class CreatePrivateLabelPaymentRequestBuilder
 
     /**
      * Sets extended limit code field.
+     *
+     * @param string|null $value
      */
     public function extendedLimitCode(?string $value): self
     {
@@ -122,6 +140,8 @@ class CreatePrivateLabelPaymentRequestBuilder
 
     /**
      * Sets recurrency cycle field.
+     *
+     * @param string|null $value
      */
     public function recurrencyCycle(?string $value): self
     {
@@ -130,7 +150,7 @@ class CreatePrivateLabelPaymentRequestBuilder
     }
 
     /**
-     * Initializes a new create private label payment request object.
+     * Initializes a new Create Private Label Payment Request object.
      */
     public function build(): CreatePrivateLabelPaymentRequest
     {

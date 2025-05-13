@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetBalanceOperationResponse;
 use PagarmeApiSDKLib\Models\ListBalanceOperationResponse;
 use PagarmeApiSDKLib\Models\PagingResponse;
 
@@ -32,7 +33,7 @@ class ListBalanceOperationResponseBuilder
     }
 
     /**
-     * Initializes a new list balance operation response Builder object.
+     * Initializes a new List Balance Operation Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +42,8 @@ class ListBalanceOperationResponseBuilder
 
     /**
      * Sets data field.
+     *
+     * @param GetBalanceOperationResponse[]|null $value
      */
     public function data(?array $value): self
     {
@@ -59,6 +62,8 @@ class ListBalanceOperationResponseBuilder
 
     /**
      * Sets paging field.
+     *
+     * @param PagingResponse|null $value
      */
     public function paging(?PagingResponse $value): self
     {
@@ -76,7 +81,7 @@ class ListBalanceOperationResponseBuilder
     }
 
     /**
-     * Initializes a new list balance operation response object.
+     * Initializes a new List Balance Operation Response object.
      */
     public function build(): ListBalanceOperationResponse
     {

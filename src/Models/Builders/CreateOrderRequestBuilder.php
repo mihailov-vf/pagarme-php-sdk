@@ -15,7 +15,9 @@ use PagarmeApiSDKLib\Models\CreateAntifraudRequest;
 use PagarmeApiSDKLib\Models\CreateCustomerRequest;
 use PagarmeApiSDKLib\Models\CreateDeviceRequest;
 use PagarmeApiSDKLib\Models\CreateLocationRequest;
+use PagarmeApiSDKLib\Models\CreateOrderItemRequest;
 use PagarmeApiSDKLib\Models\CreateOrderRequest;
+use PagarmeApiSDKLib\Models\CreatePaymentRequest;
 use PagarmeApiSDKLib\Models\CreateShippingRequest;
 use PagarmeApiSDKLib\Models\CreateSubMerchantRequest;
 
@@ -37,7 +39,13 @@ class CreateOrderRequestBuilder
     }
 
     /**
-     * Initializes a new create order request Builder object.
+     * Initializes a new Create Order Request Builder object.
+     *
+     * @param CreateOrderItemRequest[] $items
+     * @param CreateCustomerRequest $customer
+     * @param CreatePaymentRequest[] $payments
+     * @param string $code
+     * @param bool $closed
      */
     public static function init(
         array $items,
@@ -51,6 +59,8 @@ class CreateOrderRequestBuilder
 
     /**
      * Sets customer id field.
+     *
+     * @param string|null $value
      */
     public function customerId(?string $value): self
     {
@@ -69,6 +79,8 @@ class CreateOrderRequestBuilder
 
     /**
      * Sets shipping field.
+     *
+     * @param CreateShippingRequest|null $value
      */
     public function shipping(?CreateShippingRequest $value): self
     {
@@ -78,6 +90,8 @@ class CreateOrderRequestBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -96,6 +110,8 @@ class CreateOrderRequestBuilder
 
     /**
      * Sets antifraud enabled field.
+     *
+     * @param bool|null $value
      */
     public function antifraudEnabled(?bool $value): self
     {
@@ -105,6 +121,8 @@ class CreateOrderRequestBuilder
 
     /**
      * Sets ip field.
+     *
+     * @param string|null $value
      */
     public function ip(?string $value): self
     {
@@ -114,6 +132,8 @@ class CreateOrderRequestBuilder
 
     /**
      * Sets session id field.
+     *
+     * @param string|null $value
      */
     public function sessionId(?string $value): self
     {
@@ -123,6 +143,8 @@ class CreateOrderRequestBuilder
 
     /**
      * Sets location field.
+     *
+     * @param CreateLocationRequest|null $value
      */
     public function location(?CreateLocationRequest $value): self
     {
@@ -132,6 +154,8 @@ class CreateOrderRequestBuilder
 
     /**
      * Sets device field.
+     *
+     * @param CreateDeviceRequest|null $value
      */
     public function device(?CreateDeviceRequest $value): self
     {
@@ -141,6 +165,8 @@ class CreateOrderRequestBuilder
 
     /**
      * Sets currency field.
+     *
+     * @param string|null $value
      */
     public function currency(?string $value): self
     {
@@ -150,6 +176,8 @@ class CreateOrderRequestBuilder
 
     /**
      * Sets antifraud field.
+     *
+     * @param CreateAntifraudRequest|null $value
      */
     public function antifraud(?CreateAntifraudRequest $value): self
     {
@@ -159,6 +187,8 @@ class CreateOrderRequestBuilder
 
     /**
      * Sets submerchant field.
+     *
+     * @param CreateSubMerchantRequest|null $value
      */
     public function submerchant(?CreateSubMerchantRequest $value): self
     {
@@ -167,7 +197,7 @@ class CreateOrderRequestBuilder
     }
 
     /**
-     * Initializes a new create order request object.
+     * Initializes a new Create Order Request object.
      */
     public function build(): CreateOrderRequest
     {

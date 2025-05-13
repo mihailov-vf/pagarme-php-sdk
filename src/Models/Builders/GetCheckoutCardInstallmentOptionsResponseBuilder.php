@@ -31,7 +31,7 @@ class GetCheckoutCardInstallmentOptionsResponseBuilder
     }
 
     /**
-     * Initializes a new get checkout card installment options response Builder object.
+     * Initializes a new Get Checkout Card Installment Options Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetCheckoutCardInstallmentOptionsResponseBuilder
 
     /**
      * Sets number field.
+     *
+     * @param int|null $value
      */
     public function number(?int $value): self
     {
@@ -49,6 +51,8 @@ class GetCheckoutCardInstallmentOptionsResponseBuilder
 
     /**
      * Sets total field.
+     *
+     * @param int|null $value
      */
     public function total(?int $value): self
     {
@@ -57,7 +61,7 @@ class GetCheckoutCardInstallmentOptionsResponseBuilder
     }
 
     /**
-     * Initializes a new get checkout card installment options response object.
+     * Initializes a new Get Checkout Card Installment Options Response object.
      */
     public function build(): GetCheckoutCardInstallmentOptionsResponse
     {

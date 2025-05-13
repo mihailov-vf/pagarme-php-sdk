@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class ListTransfers implements \JsonSerializable
@@ -78,6 +79,16 @@ class ListTransfers implements \JsonSerializable
     public function setPaging(PagingResponse $paging): void
     {
         $this->paging = $paging;
+    }
+
+    /**
+     * Converts the ListTransfers object to a human-readable string representation.
+     *
+     * @return string The string representation of the ListTransfers object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('ListTransfers', ['data' => $this->data, 'paging' => $this->paging]);
     }
 
     /**

@@ -32,7 +32,7 @@ class GetCheckoutDebitCardPaymentResponseBuilder
     }
 
     /**
-     * Initializes a new get checkout debit card payment response Builder object.
+     * Initializes a new Get Checkout Debit Card Payment Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetCheckoutDebitCardPaymentResponseBuilder
 
     /**
      * Sets statement descriptor field.
+     *
+     * @param string|null $value
      */
     public function statementDescriptor(?string $value): self
     {
@@ -59,6 +61,8 @@ class GetCheckoutDebitCardPaymentResponseBuilder
 
     /**
      * Sets authentication field.
+     *
+     * @param GetPaymentAuthenticationResponse|null $value
      */
     public function authentication(?GetPaymentAuthenticationResponse $value): self
     {
@@ -76,7 +80,7 @@ class GetCheckoutDebitCardPaymentResponseBuilder
     }
 
     /**
-     * Initializes a new get checkout debit card payment response object.
+     * Initializes a new Get Checkout Debit Card Payment Response object.
      */
     public function build(): GetCheckoutDebitCardPaymentResponse
     {

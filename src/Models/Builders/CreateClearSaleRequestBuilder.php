@@ -31,7 +31,9 @@ class CreateClearSaleRequestBuilder
     }
 
     /**
-     * Initializes a new create clear sale request Builder object.
+     * Initializes a new Create Clear Sale Request Builder object.
+     *
+     * @param int $customSla
      */
     public static function init(int $customSla): self
     {
@@ -39,7 +41,7 @@ class CreateClearSaleRequestBuilder
     }
 
     /**
-     * Initializes a new create clear sale request object.
+     * Initializes a new Create Clear Sale Request object.
      */
     public function build(): CreateClearSaleRequest
     {

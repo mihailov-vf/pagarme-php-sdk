@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -299,6 +300,28 @@ class GetShippingResponse implements \JsonSerializable
     public function unsetType(): void
     {
         $this->type = [];
+    }
+
+    /**
+     * Converts the GetShippingResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetShippingResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetShippingResponse',
+            [
+                'amount' => $this->getAmount(),
+                'description' => $this->getDescription(),
+                'recipientName' => $this->getRecipientName(),
+                'recipientPhone' => $this->getRecipientPhone(),
+                'address' => $this->getAddress(),
+                'maxDeliveryDate' => $this->getMaxDeliveryDate(),
+                'estimatedDeliveryDate' => $this->getEstimatedDeliveryDate(),
+                'type' => $this->getType()
+            ]
+        );
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -951,6 +952,54 @@ class CreateSubscriptionRequest implements \JsonSerializable
     public function setIndirectAcceptor(?string $indirectAcceptor): void
     {
         $this->indirectAcceptor = $indirectAcceptor;
+    }
+
+    /**
+     * Converts the CreateSubscriptionRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateSubscriptionRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateSubscriptionRequest',
+            [
+                'customer' => $this->customer,
+                'card' => $this->card,
+                'code' => $this->code,
+                'paymentMethod' => $this->paymentMethod,
+                'billingType' => $this->billingType,
+                'statementDescriptor' => $this->statementDescriptor,
+                'description' => $this->description,
+                'currency' => $this->currency,
+                'interval' => $this->interval,
+                'intervalCount' => $this->intervalCount,
+                'pricingScheme' => $this->pricingScheme,
+                'items' => $this->items,
+                'shipping' => $this->shipping,
+                'discounts' => $this->discounts,
+                'metadata' => $this->metadata,
+                'setup' => $this->setup,
+                'planId' => $this->planId,
+                'customerId' => $this->customerId,
+                'cardId' => $this->cardId,
+                'billingDay' => $this->billingDay,
+                'installments' => $this->installments,
+                'startAt' => $this->startAt,
+                'minimumPrice' => $this->minimumPrice,
+                'cycles' => $this->cycles,
+                'cardToken' => $this->cardToken,
+                'gatewayAffiliationId' => $this->gatewayAffiliationId,
+                'quantity' => $this->quantity,
+                'boletoDueDays' => $this->boletoDueDays,
+                'increments' => $this->increments,
+                'period' => $this->period,
+                'submerchant' => $this->submerchant,
+                'split' => $this->split,
+                'boleto' => $this->boleto,
+                'indirectAcceptor' => $this->indirectAcceptor
+            ]
+        );
     }
 
     /**

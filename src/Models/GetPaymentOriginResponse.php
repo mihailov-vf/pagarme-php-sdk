@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class GetPaymentOriginResponse implements \JsonSerializable
@@ -58,6 +59,19 @@ class GetPaymentOriginResponse implements \JsonSerializable
     public function setBrandId(?string $brandId): void
     {
         $this->brandId = $brandId;
+    }
+
+    /**
+     * Converts the GetPaymentOriginResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetPaymentOriginResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetPaymentOriginResponse',
+            ['chargeId' => $this->chargeId, 'brandId' => $this->brandId]
+        );
     }
 
     /**

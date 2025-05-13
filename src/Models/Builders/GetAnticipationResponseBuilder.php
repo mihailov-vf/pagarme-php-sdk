@@ -32,7 +32,7 @@ class GetAnticipationResponseBuilder
     }
 
     /**
-     * Initializes a new get anticipation response Builder object.
+     * Initializes a new Get Anticipation Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +41,8 @@ class GetAnticipationResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -59,6 +61,8 @@ class GetAnticipationResponseBuilder
 
     /**
      * Sets requested amount field.
+     *
+     * @param int|null $value
      */
     public function requestedAmount(?int $value): self
     {
@@ -77,6 +81,8 @@ class GetAnticipationResponseBuilder
 
     /**
      * Sets approved amount field.
+     *
+     * @param int|null $value
      */
     public function approvedAmount(?int $value): self
     {
@@ -95,6 +101,8 @@ class GetAnticipationResponseBuilder
 
     /**
      * Sets recipient field.
+     *
+     * @param GetRecipientResponse|null $value
      */
     public function recipient(?GetRecipientResponse $value): self
     {
@@ -113,6 +121,8 @@ class GetAnticipationResponseBuilder
 
     /**
      * Sets pgid field.
+     *
+     * @param string|null $value
      */
     public function pgid(?string $value): self
     {
@@ -131,6 +141,8 @@ class GetAnticipationResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -149,6 +161,8 @@ class GetAnticipationResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -167,6 +181,8 @@ class GetAnticipationResponseBuilder
 
     /**
      * Sets payment date field.
+     *
+     * @param \DateTime|null $value
      */
     public function paymentDate(?\DateTime $value): self
     {
@@ -185,6 +201,8 @@ class GetAnticipationResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -203,6 +221,8 @@ class GetAnticipationResponseBuilder
 
     /**
      * Sets timeframe field.
+     *
+     * @param string|null $value
      */
     public function timeframe(?string $value): self
     {
@@ -220,7 +240,7 @@ class GetAnticipationResponseBuilder
     }
 
     /**
-     * Initializes a new get anticipation response object.
+     * Initializes a new Get Anticipation Response object.
      */
     public function build(): GetAnticipationResponse
     {

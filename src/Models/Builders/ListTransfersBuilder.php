@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetTransfer;
 use PagarmeApiSDKLib\Models\ListTransfers;
 use PagarmeApiSDKLib\Models\PagingResponse;
 
@@ -32,7 +33,10 @@ class ListTransfersBuilder
     }
 
     /**
-     * Initializes a new list transfers Builder object.
+     * Initializes a new List Transfers Builder object.
+     *
+     * @param GetTransfer[] $data
+     * @param PagingResponse $paging
      */
     public static function init(array $data, PagingResponse $paging): self
     {
@@ -40,7 +44,7 @@ class ListTransfersBuilder
     }
 
     /**
-     * Initializes a new list transfers object.
+     * Initializes a new List Transfers object.
      */
     public function build(): ListTransfers
     {

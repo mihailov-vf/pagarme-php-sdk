@@ -31,7 +31,13 @@ class CreateCardPaymentContactlessPOIRequestBuilder
     }
 
     /**
-     * Initializes a new create card payment contactless poirequest Builder object.
+     * Initializes a new Create Card Payment Contactless POI Request Builder object.
+     *
+     * @param string $systemName
+     * @param string $model
+     * @param string $provider
+     * @param string $serialNumber
+     * @param string $versionNumber
      */
     public static function init(
         string $systemName,
@@ -52,7 +58,7 @@ class CreateCardPaymentContactlessPOIRequestBuilder
     }
 
     /**
-     * Initializes a new create card payment contactless poirequest object.
+     * Initializes a new Create Card Payment Contactless POI Request object.
      */
     public function build(): CreateCardPaymentContactlessPOIRequest
     {

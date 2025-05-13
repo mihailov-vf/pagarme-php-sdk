@@ -10,6 +10,8 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Exceptions;
 
+use PagarmeApiSDKLib\ApiHelper;
+
 /**
  * Api Error Exception
  */
@@ -82,5 +84,23 @@ class ErrorException extends ApiException
     public function setRequestProperty(?array $requestProperty): void
     {
         $this->requestProperty = $requestProperty;
+    }
+
+    /**
+     * Converts the ErrorException object to a human-readable string representation.
+     *
+     * @return string The string representation of the ErrorException object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'ErrorException',
+            [
+                'messageProperty' => $this->messageProperty,
+                'errors' => $this->errors,
+                'requestProperty' => $this->requestProperty
+            ],
+            parent::__toString()
+        );
     }
 }

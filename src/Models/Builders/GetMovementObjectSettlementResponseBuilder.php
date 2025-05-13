@@ -31,7 +31,7 @@ class GetMovementObjectSettlementResponseBuilder
     }
 
     /**
-     * Initializes a new get movement object settlement response Builder object.
+     * Initializes a new Get Movement Object Settlement Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets object field.
+     *
+     * @param string|null $value
      */
     public function object(?string $value): self
     {
@@ -49,6 +51,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -67,6 +71,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -85,6 +91,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param string|null $value
      */
     public function amount(?string $value): self
     {
@@ -103,6 +111,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param string|null $value
      */
     public function createdAt(?string $value): self
     {
@@ -121,6 +131,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -139,6 +151,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets charge id field.
+     *
+     * @param string|null $value
      */
     public function chargeId(?string $value): self
     {
@@ -157,6 +171,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets gateway id field.
+     *
+     * @param string|null $value
      */
     public function gatewayId(?string $value): self
     {
@@ -175,6 +191,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets product field.
+     *
+     * @param string|null $value
      */
     public function product(?string $value): self
     {
@@ -193,6 +211,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets brand field.
+     *
+     * @param string|null $value
      */
     public function brand(?string $value): self
     {
@@ -211,6 +231,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets payment date field.
+     *
+     * @param string|null $value
      */
     public function paymentDate(?string $value): self
     {
@@ -229,6 +251,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets recipient id field.
+     *
+     * @param string|null $value
      */
     public function recipientId(?string $value): self
     {
@@ -247,6 +271,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets document type field.
+     *
+     * @param string|null $value
      */
     public function documentType(?string $value): self
     {
@@ -265,6 +291,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets document field.
+     *
+     * @param string|null $value
      */
     public function document(?string $value): self
     {
@@ -283,6 +311,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets contract obligation id field.
+     *
+     * @param string|null $value
      */
     public function contractObligationId(?string $value): self
     {
@@ -301,6 +331,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets liquidation arrangement id field.
+     *
+     * @param string|null $value
      */
     public function liquidationArrangementId(?string $value): self
     {
@@ -319,6 +351,8 @@ class GetMovementObjectSettlementResponseBuilder
 
     /**
      * Sets external engine payment id field.
+     *
+     * @param string|null $value
      */
     public function externalEnginePaymentId(?string $value): self
     {
@@ -336,7 +370,7 @@ class GetMovementObjectSettlementResponseBuilder
     }
 
     /**
-     * Initializes a new get movement object settlement response object.
+     * Initializes a new Get Movement Object Settlement Response object.
      */
     public function build(): GetMovementObjectSettlementResponse
     {

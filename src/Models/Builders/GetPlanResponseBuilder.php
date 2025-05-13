@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetPlanItemResponse;
 use PagarmeApiSDKLib\Models\GetPlanResponse;
 
 /**
@@ -31,7 +32,7 @@ class GetPlanResponseBuilder
     }
 
     /**
-     * Initializes a new get plan response Builder object.
+     * Initializes a new Get Plan Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +41,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -58,6 +61,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets name field.
+     *
+     * @param string|null $value
      */
     public function name(?string $value): self
     {
@@ -76,6 +81,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets description field.
+     *
+     * @param string|null $value
      */
     public function description(?string $value): self
     {
@@ -94,6 +101,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets url field.
+     *
+     * @param string|null $value
      */
     public function url(?string $value): self
     {
@@ -112,6 +121,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets statement descriptor field.
+     *
+     * @param string|null $value
      */
     public function statementDescriptor(?string $value): self
     {
@@ -130,6 +141,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets interval field.
+     *
+     * @param string|null $value
      */
     public function interval(?string $value): self
     {
@@ -148,6 +161,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets interval count field.
+     *
+     * @param int|null $value
      */
     public function intervalCount(?int $value): self
     {
@@ -166,6 +181,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets billing type field.
+     *
+     * @param string|null $value
      */
     public function billingType(?string $value): self
     {
@@ -184,6 +201,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets payment methods field.
+     *
+     * @param string[]|null $value
      */
     public function paymentMethods(?array $value): self
     {
@@ -202,6 +221,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets installments field.
+     *
+     * @param int[]|null $value
      */
     public function installments(?array $value): self
     {
@@ -220,6 +241,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -238,6 +261,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets currency field.
+     *
+     * @param string|null $value
      */
     public function currency(?string $value): self
     {
@@ -256,6 +281,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets created at field.
+     *
+     * @param \DateTime|null $value
      */
     public function createdAt(?\DateTime $value): self
     {
@@ -274,6 +301,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets updated at field.
+     *
+     * @param \DateTime|null $value
      */
     public function updatedAt(?\DateTime $value): self
     {
@@ -292,6 +321,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets items field.
+     *
+     * @param GetPlanItemResponse[]|null $value
      */
     public function items(?array $value): self
     {
@@ -310,6 +341,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets billing days field.
+     *
+     * @param int[]|null $value
      */
     public function billingDays(?array $value): self
     {
@@ -328,6 +361,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets shippable field.
+     *
+     * @param bool|null $value
      */
     public function shippable(?bool $value): self
     {
@@ -346,6 +381,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -364,6 +401,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets trial period days field.
+     *
+     * @param int|null $value
      */
     public function trialPeriodDays(?int $value): self
     {
@@ -382,6 +421,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets minimum price field.
+     *
+     * @param int|null $value
      */
     public function minimumPrice(?int $value): self
     {
@@ -400,6 +441,8 @@ class GetPlanResponseBuilder
 
     /**
      * Sets deleted at field.
+     *
+     * @param \DateTime|null $value
      */
     public function deletedAt(?\DateTime $value): self
     {
@@ -417,7 +460,7 @@ class GetPlanResponseBuilder
     }
 
     /**
-     * Initializes a new get plan response object.
+     * Initializes a new Get Plan Response object.
      */
     public function build(): GetPlanResponse
     {

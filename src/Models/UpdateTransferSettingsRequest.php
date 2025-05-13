@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class UpdateTransferSettingsRequest implements \JsonSerializable
@@ -96,6 +97,23 @@ class UpdateTransferSettingsRequest implements \JsonSerializable
     public function setTransferDay(string $transferDay): void
     {
         $this->transferDay = $transferDay;
+    }
+
+    /**
+     * Converts the UpdateTransferSettingsRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateTransferSettingsRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'UpdateTransferSettingsRequest',
+            [
+                'transferEnabled' => $this->transferEnabled,
+                'transferInterval' => $this->transferInterval,
+                'transferDay' => $this->transferDay
+            ]
+        );
     }
 
     /**

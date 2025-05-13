@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -457,6 +458,37 @@ class CreatePaymentRequest implements \JsonSerializable
     public function setPix(?CreatePixPaymentRequest $pix): void
     {
         $this->pix = $pix;
+    }
+
+    /**
+     * Converts the CreatePaymentRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreatePaymentRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreatePaymentRequest',
+            [
+                'paymentMethod' => $this->paymentMethod,
+                'creditCard' => $this->creditCard,
+                'debitCard' => $this->debitCard,
+                'boleto' => $this->boleto,
+                'currency' => $this->currency,
+                'voucher' => $this->voucher,
+                'split' => $this->split,
+                'bankTransfer' => $this->bankTransfer,
+                'gatewayAffiliationId' => $this->gatewayAffiliationId,
+                'amount' => $this->amount,
+                'checkout' => $this->checkout,
+                'customerId' => $this->customerId,
+                'customer' => $this->customer,
+                'metadata' => $this->metadata,
+                'cash' => $this->cash,
+                'privateLabel' => $this->privateLabel,
+                'pix' => $this->pix
+            ]
+        );
     }
 
     /**

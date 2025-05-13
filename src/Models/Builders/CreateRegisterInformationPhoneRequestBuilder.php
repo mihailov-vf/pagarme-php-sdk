@@ -31,7 +31,11 @@ class CreateRegisterInformationPhoneRequestBuilder
     }
 
     /**
-     * Initializes a new create register information phone request Builder object.
+     * Initializes a new Create Register Information Phone Request Builder object.
+     *
+     * @param string $ddd
+     * @param string $number
+     * @param string $type
      */
     public static function init(string $ddd, string $number, string $type): self
     {
@@ -39,7 +43,7 @@ class CreateRegisterInformationPhoneRequestBuilder
     }
 
     /**
-     * Initializes a new create register information phone request object.
+     * Initializes a new Create Register Information Phone Request object.
      */
     public function build(): CreateRegisterInformationPhoneRequest
     {

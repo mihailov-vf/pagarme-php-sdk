@@ -31,7 +31,7 @@ class GetTransferSourceResponseBuilder
     }
 
     /**
-     * Initializes a new get transfer source response Builder object.
+     * Initializes a new Get Transfer Source Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetTransferSourceResponseBuilder
 
     /**
      * Sets source id field.
+     *
+     * @param string|null $value
      */
     public function sourceId(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetTransferSourceResponseBuilder
 
     /**
      * Sets type field.
+     *
+     * @param string|null $value
      */
     public function type(?string $value): self
     {
@@ -75,7 +79,7 @@ class GetTransferSourceResponseBuilder
     }
 
     /**
-     * Initializes a new get transfer source response object.
+     * Initializes a new Get Transfer Source Response object.
      */
     public function build(): GetTransferSourceResponse
     {

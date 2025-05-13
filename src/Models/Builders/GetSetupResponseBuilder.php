@@ -31,7 +31,7 @@ class GetSetupResponseBuilder
     }
 
     /**
-     * Initializes a new get setup response Builder object.
+     * Initializes a new Get Setup Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetSetupResponseBuilder
 
     /**
      * Sets id field.
+     *
+     * @param string|null $value
      */
     public function id(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetSetupResponseBuilder
 
     /**
      * Sets description field.
+     *
+     * @param string|null $value
      */
     public function description(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetSetupResponseBuilder
 
     /**
      * Sets amount field.
+     *
+     * @param int|null $value
      */
     public function amount(?int $value): self
     {
@@ -94,6 +100,8 @@ class GetSetupResponseBuilder
 
     /**
      * Sets status field.
+     *
+     * @param string|null $value
      */
     public function status(?string $value): self
     {
@@ -111,7 +119,7 @@ class GetSetupResponseBuilder
     }
 
     /**
-     * Initializes a new get setup response object.
+     * Initializes a new Get Setup Response object.
      */
     public function build(): GetSetupResponse
     {

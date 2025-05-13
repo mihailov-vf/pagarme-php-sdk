@@ -31,7 +31,9 @@ class CreateWithdrawRequestBuilder
     }
 
     /**
-     * Initializes a new create withdraw request Builder object.
+     * Initializes a new Create Withdraw Request Builder object.
+     *
+     * @param int $amount
      */
     public static function init(int $amount): self
     {
@@ -40,6 +42,8 @@ class CreateWithdrawRequestBuilder
 
     /**
      * Sets metadata field.
+     *
+     * @param array<string,string>|null $value
      */
     public function metadata(?array $value): self
     {
@@ -48,7 +52,7 @@ class CreateWithdrawRequestBuilder
     }
 
     /**
-     * Initializes a new create withdraw request object.
+     * Initializes a new Create Withdraw Request object.
      */
     public function build(): CreateWithdrawRequest
     {

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -644,6 +645,38 @@ class GetDebitCardTransactionResponse extends GetTransactionResponse implements 
     public function unsetBrandId(): void
     {
         $this->brandId = [];
+    }
+
+    /**
+     * Converts the GetDebitCardTransactionResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetDebitCardTransactionResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetDebitCardTransactionResponse',
+            [
+                'statementDescriptor' => $this->getStatementDescriptor(),
+                'acquirerName' => $this->getAcquirerName(),
+                'acquirerAffiliationCode' => $this->getAcquirerAffiliationCode(),
+                'acquirerTid' => $this->getAcquirerTid(),
+                'acquirerNsu' => $this->getAcquirerNsu(),
+                'acquirerAuthCode' => $this->getAcquirerAuthCode(),
+                'operationType' => $this->getOperationType(),
+                'card' => $this->getCard(),
+                'acquirerMessage' => $this->getAcquirerMessage(),
+                'acquirerReturnCode' => $this->getAcquirerReturnCode(),
+                'mpi' => $this->getMpi(),
+                'eci' => $this->getEci(),
+                'authenticationType' => $this->getAuthenticationType(),
+                'threedAuthenticationUrl' => $this->getThreedAuthenticationUrl(),
+                'fundingSource' => $this->getFundingSource(),
+                'retryInfo' => $this->getRetryInfo(),
+                'brandId' => $this->getBrandId()
+            ],
+            parent::__toString()
+        );
     }
 
     /**

@@ -31,7 +31,7 @@ class GetBillingAddressResponseBuilder
     }
 
     /**
-     * Initializes a new get billing address response Builder object.
+     * Initializes a new Get Billing Address Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetBillingAddressResponseBuilder
 
     /**
      * Sets street field.
+     *
+     * @param string|null $value
      */
     public function street(?string $value): self
     {
@@ -58,6 +60,8 @@ class GetBillingAddressResponseBuilder
 
     /**
      * Sets number field.
+     *
+     * @param string|null $value
      */
     public function number(?string $value): self
     {
@@ -76,6 +80,8 @@ class GetBillingAddressResponseBuilder
 
     /**
      * Sets zip code field.
+     *
+     * @param string|null $value
      */
     public function zipCode(?string $value): self
     {
@@ -94,6 +100,8 @@ class GetBillingAddressResponseBuilder
 
     /**
      * Sets neighborhood field.
+     *
+     * @param string|null $value
      */
     public function neighborhood(?string $value): self
     {
@@ -112,6 +120,8 @@ class GetBillingAddressResponseBuilder
 
     /**
      * Sets city field.
+     *
+     * @param string|null $value
      */
     public function city(?string $value): self
     {
@@ -130,6 +140,8 @@ class GetBillingAddressResponseBuilder
 
     /**
      * Sets state field.
+     *
+     * @param string|null $value
      */
     public function state(?string $value): self
     {
@@ -148,6 +160,8 @@ class GetBillingAddressResponseBuilder
 
     /**
      * Sets country field.
+     *
+     * @param string|null $value
      */
     public function country(?string $value): self
     {
@@ -166,6 +180,8 @@ class GetBillingAddressResponseBuilder
 
     /**
      * Sets complement field.
+     *
+     * @param string|null $value
      */
     public function complement(?string $value): self
     {
@@ -184,6 +200,8 @@ class GetBillingAddressResponseBuilder
 
     /**
      * Sets line 1 field.
+     *
+     * @param string|null $value
      */
     public function line1(?string $value): self
     {
@@ -202,6 +220,8 @@ class GetBillingAddressResponseBuilder
 
     /**
      * Sets line 2 field.
+     *
+     * @param string|null $value
      */
     public function line2(?string $value): self
     {
@@ -219,7 +239,7 @@ class GetBillingAddressResponseBuilder
     }
 
     /**
-     * Initializes a new get billing address response object.
+     * Initializes a new Get Billing Address Response object.
      */
     public function build(): GetBillingAddressResponse
     {

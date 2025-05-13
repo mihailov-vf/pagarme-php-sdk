@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -753,6 +754,41 @@ class GetPlanResponse implements \JsonSerializable
     public function unsetDeletedAt(): void
     {
         $this->deletedAt = [];
+    }
+
+    /**
+     * Converts the GetPlanResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetPlanResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetPlanResponse',
+            [
+                'id' => $this->getId(),
+                'name' => $this->getName(),
+                'description' => $this->getDescription(),
+                'url' => $this->getUrl(),
+                'statementDescriptor' => $this->getStatementDescriptor(),
+                'interval' => $this->getInterval(),
+                'intervalCount' => $this->getIntervalCount(),
+                'billingType' => $this->getBillingType(),
+                'paymentMethods' => $this->getPaymentMethods(),
+                'installments' => $this->getInstallments(),
+                'status' => $this->getStatus(),
+                'currency' => $this->getCurrency(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt(),
+                'items' => $this->getItems(),
+                'billingDays' => $this->getBillingDays(),
+                'shippable' => $this->getShippable(),
+                'metadata' => $this->getMetadata(),
+                'trialPeriodDays' => $this->getTrialPeriodDays(),
+                'minimumPrice' => $this->getMinimumPrice(),
+                'deletedAt' => $this->getDeletedAt()
+            ]
+        );
     }
 
     /**

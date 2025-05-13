@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -99,6 +100,23 @@ class CreateApplePayHeaderRequest implements \JsonSerializable
     public function setTransactionId(?string $transactionId): void
     {
         $this->transactionId = $transactionId;
+    }
+
+    /**
+     * Converts the CreateApplePayHeaderRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateApplePayHeaderRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateApplePayHeaderRequest',
+            [
+                'publicKeyHash' => $this->publicKeyHash,
+                'ephemeralPublicKey' => $this->ephemeralPublicKey,
+                'transactionId' => $this->transactionId
+            ]
+        );
     }
 
     /**

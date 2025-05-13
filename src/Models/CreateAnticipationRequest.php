@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -107,6 +108,19 @@ class CreateAnticipationRequest implements \JsonSerializable
     public function setPaymentDate(\DateTime $paymentDate): void
     {
         $this->paymentDate = $paymentDate;
+    }
+
+    /**
+     * Converts the CreateAnticipationRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateAnticipationRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateAnticipationRequest',
+            ['amount' => $this->amount, 'timeframe' => $this->timeframe, 'paymentDate' => $this->paymentDate]
+        );
     }
 
     /**

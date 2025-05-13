@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -388,6 +389,31 @@ class CreateRecipientRequest implements \JsonSerializable
     public function unsetRegisterInformation(): void
     {
         $this->registerInformation = [];
+    }
+
+    /**
+     * Converts the CreateRecipientRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateRecipientRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateRecipientRequest',
+            [
+                'name' => $this->getName(),
+                'email' => $this->getEmail(),
+                'description' => $this->getDescription(),
+                'document' => $this->getDocument(),
+                'type' => $this->getType(),
+                'defaultBankAccount' => $this->defaultBankAccount,
+                'metadata' => $this->metadata,
+                'transferSettings' => $this->transferSettings,
+                'code' => $this->code,
+                'paymentMode' => $this->paymentMode,
+                'registerInformation' => $this->getRegisterInformation()
+            ]
+        );
     }
 
     /**

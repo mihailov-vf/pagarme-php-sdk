@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace PagarmeApiSDKLib\Models\Builders;
 
 use Core\Utils\CoreHelper;
+use PagarmeApiSDKLib\Models\GetInvoiceResponse;
 use PagarmeApiSDKLib\Models\ListInvoicesResponse;
 use PagarmeApiSDKLib\Models\PagingResponse;
 
@@ -32,7 +33,7 @@ class ListInvoicesResponseBuilder
     }
 
     /**
-     * Initializes a new list invoices response Builder object.
+     * Initializes a new List Invoices Response Builder object.
      */
     public static function init(): self
     {
@@ -41,6 +42,8 @@ class ListInvoicesResponseBuilder
 
     /**
      * Sets data field.
+     *
+     * @param GetInvoiceResponse[]|null $value
      */
     public function data(?array $value): self
     {
@@ -59,6 +62,8 @@ class ListInvoicesResponseBuilder
 
     /**
      * Sets paging field.
+     *
+     * @param PagingResponse|null $value
      */
     public function paging(?PagingResponse $value): self
     {
@@ -76,7 +81,7 @@ class ListInvoicesResponseBuilder
     }
 
     /**
-     * Initializes a new list invoices response object.
+     * Initializes a new List Invoices Response object.
      */
     public function build(): ListInvoicesResponse
     {

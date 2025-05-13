@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class GetAutomaticAnticipationResponse implements \JsonSerializable
@@ -186,6 +187,25 @@ class GetAutomaticAnticipationResponse implements \JsonSerializable
     public function unsetDays(): void
     {
         $this->days = [];
+    }
+
+    /**
+     * Converts the GetAutomaticAnticipationResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetAutomaticAnticipationResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetAutomaticAnticipationResponse',
+            [
+                'enabled' => $this->getEnabled(),
+                'type' => $this->getType(),
+                'volumePercentage' => $this->getVolumePercentage(),
+                'delay' => $this->getDelay(),
+                'days' => $this->getDays()
+            ]
+        );
     }
 
     /**

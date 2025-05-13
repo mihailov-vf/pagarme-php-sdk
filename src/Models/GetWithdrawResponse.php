@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use PagarmeApiSDKLib\Utils\DateTimeHelper;
 use stdClass;
 
@@ -463,6 +464,33 @@ class GetWithdrawResponse implements \JsonSerializable
     public function unsetTarget(): void
     {
         $this->target = [];
+    }
+
+    /**
+     * Converts the GetWithdrawResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetWithdrawResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetWithdrawResponse',
+            [
+                'id' => $this->getId(),
+                'gatewayId' => $this->getGatewayId(),
+                'amount' => $this->getAmount(),
+                'status' => $this->getStatus(),
+                'createdAt' => $this->getCreatedAt(),
+                'updatedAt' => $this->getUpdatedAt(),
+                'metadata' => $this->getMetadata(),
+                'fee' => $this->getFee(),
+                'fundingDate' => $this->getFundingDate(),
+                'fundingEstimatedDate' => $this->getFundingEstimatedDate(),
+                'type' => $this->getType(),
+                'source' => $this->getSource(),
+                'target' => $this->getTarget()
+            ]
+        );
     }
 
     /**

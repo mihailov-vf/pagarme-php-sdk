@@ -33,7 +33,16 @@ class CreateCustomerRequestBuilder
     }
 
     /**
-     * Initializes a new create customer request Builder object.
+     * Initializes a new Create Customer Request Builder object.
+     *
+     * @param string $name
+     * @param string $email
+     * @param string $document
+     * @param string $type
+     * @param CreateAddressRequest $address
+     * @param array<string,string> $metadata
+     * @param CreatePhonesRequest $phones
+     * @param string $code
      */
     public static function init(
         string $name,
@@ -52,6 +61,8 @@ class CreateCustomerRequestBuilder
 
     /**
      * Sets gender field.
+     *
+     * @param string|null $value
      */
     public function gender(?string $value): self
     {
@@ -61,6 +72,8 @@ class CreateCustomerRequestBuilder
 
     /**
      * Sets document type field.
+     *
+     * @param string|null $value
      */
     public function documentType(?string $value): self
     {
@@ -69,7 +82,7 @@ class CreateCustomerRequestBuilder
     }
 
     /**
-     * Initializes a new create customer request object.
+     * Initializes a new Create Customer Request object.
      */
     public function build(): CreateCustomerRequest
     {

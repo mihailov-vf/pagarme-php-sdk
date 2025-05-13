@@ -31,7 +31,9 @@ class CreateThreeDSecureRequestBuilder
     }
 
     /**
-     * Initializes a new create three dsecure request Builder object.
+     * Initializes a new Create Three D Secure Request Builder object.
+     *
+     * @param string $mpi
      */
     public static function init(string $mpi): self
     {
@@ -40,6 +42,8 @@ class CreateThreeDSecureRequestBuilder
 
     /**
      * Sets cavv field.
+     *
+     * @param string|null $value
      */
     public function cavv(?string $value): self
     {
@@ -49,6 +53,8 @@ class CreateThreeDSecureRequestBuilder
 
     /**
      * Sets eci field.
+     *
+     * @param string|null $value
      */
     public function eci(?string $value): self
     {
@@ -58,6 +64,8 @@ class CreateThreeDSecureRequestBuilder
 
     /**
      * Sets transaction id field.
+     *
+     * @param string|null $value
      */
     public function transactionId(?string $value): self
     {
@@ -67,6 +75,8 @@ class CreateThreeDSecureRequestBuilder
 
     /**
      * Sets success url field.
+     *
+     * @param string|null $value
      */
     public function successUrl(?string $value): self
     {
@@ -76,6 +86,8 @@ class CreateThreeDSecureRequestBuilder
 
     /**
      * Sets ds transaction id field.
+     *
+     * @param string|null $value
      */
     public function dsTransactionId(?string $value): self
     {
@@ -85,6 +97,8 @@ class CreateThreeDSecureRequestBuilder
 
     /**
      * Sets version field.
+     *
+     * @param string|null $value
      */
     public function version(?string $value): self
     {
@@ -93,7 +107,7 @@ class CreateThreeDSecureRequestBuilder
     }
 
     /**
-     * Initializes a new create three dsecure request object.
+     * Initializes a new Create Three D Secure Request object.
      */
     public function build(): CreateThreeDSecureRequest
     {

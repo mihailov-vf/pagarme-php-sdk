@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -49,6 +50,16 @@ class UpdateRecipientCodeRequest implements \JsonSerializable
     public function setCode(string $code): void
     {
         $this->code = $code;
+    }
+
+    /**
+     * Converts the UpdateRecipientCodeRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateRecipientCodeRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify('UpdateRecipientCodeRequest', ['code' => $this->code]);
     }
 
     /**

@@ -31,7 +31,9 @@ class UpdateCurrentCycleStatusRequestBuilder
     }
 
     /**
-     * Initializes a new update current cycle status request Builder object.
+     * Initializes a new Update Current Cycle Status Request Builder object.
+     *
+     * @param string $status
      */
     public static function init(string $status): self
     {
@@ -39,7 +41,7 @@ class UpdateCurrentCycleStatusRequestBuilder
     }
 
     /**
-     * Initializes a new update current cycle status request object.
+     * Initializes a new Update Current Cycle Status Request object.
      */
     public function build(): UpdateCurrentCycleStatusRequest
     {

@@ -13,12 +13,15 @@ namespace PagarmeApiSDKLib\Models\Builders;
 use Core\Utils\CoreHelper;
 use PagarmeApiSDKLib\Models\CreateCardRequest;
 use PagarmeApiSDKLib\Models\CreateCustomerRequest;
+use PagarmeApiSDKLib\Models\CreateDiscountRequest;
+use PagarmeApiSDKLib\Models\CreateIncrementRequest;
 use PagarmeApiSDKLib\Models\CreatePeriodRequest;
 use PagarmeApiSDKLib\Models\CreatePricingSchemeRequest;
 use PagarmeApiSDKLib\Models\CreateSetupRequest;
 use PagarmeApiSDKLib\Models\CreateShippingRequest;
 use PagarmeApiSDKLib\Models\CreateSubMerchantRequest;
 use PagarmeApiSDKLib\Models\CreateSubscriptionBoletoRequest;
+use PagarmeApiSDKLib\Models\CreateSubscriptionItemRequest;
 use PagarmeApiSDKLib\Models\CreateSubscriptionRequest;
 use PagarmeApiSDKLib\Models\CreateSubscriptionSplitRequest;
 
@@ -40,7 +43,24 @@ class CreateSubscriptionRequestBuilder
     }
 
     /**
-     * Initializes a new create subscription request Builder object.
+     * Initializes a new Create Subscription Request Builder object.
+     *
+     * @param CreateCustomerRequest $customer
+     * @param CreateCardRequest $card
+     * @param string $code
+     * @param string $paymentMethod
+     * @param string $billingType
+     * @param string $statementDescriptor
+     * @param string $description
+     * @param string $currency
+     * @param string $interval
+     * @param int $intervalCount
+     * @param CreatePricingSchemeRequest $pricingScheme
+     * @param CreateSubscriptionItemRequest[] $items
+     * @param CreateShippingRequest $shipping
+     * @param CreateDiscountRequest[] $discounts
+     * @param array<string,string> $metadata
+     * @param CreateIncrementRequest[] $increments
      */
     public static function init(
         CreateCustomerRequest $customer,
@@ -82,6 +102,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets setup field.
+     *
+     * @param CreateSetupRequest|null $value
      */
     public function setup(?CreateSetupRequest $value): self
     {
@@ -91,6 +113,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets plan id field.
+     *
+     * @param string|null $value
      */
     public function planId(?string $value): self
     {
@@ -100,6 +124,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets customer id field.
+     *
+     * @param string|null $value
      */
     public function customerId(?string $value): self
     {
@@ -109,6 +135,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets card id field.
+     *
+     * @param string|null $value
      */
     public function cardId(?string $value): self
     {
@@ -118,6 +146,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets billing day field.
+     *
+     * @param int|null $value
      */
     public function billingDay(?int $value): self
     {
@@ -127,6 +157,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets installments field.
+     *
+     * @param int|null $value
      */
     public function installments(?int $value): self
     {
@@ -136,6 +168,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets start at field.
+     *
+     * @param \DateTime|null $value
      */
     public function startAt(?\DateTime $value): self
     {
@@ -145,6 +179,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets minimum price field.
+     *
+     * @param int|null $value
      */
     public function minimumPrice(?int $value): self
     {
@@ -154,6 +190,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets cycles field.
+     *
+     * @param int|null $value
      */
     public function cycles(?int $value): self
     {
@@ -163,6 +201,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets card token field.
+     *
+     * @param string|null $value
      */
     public function cardToken(?string $value): self
     {
@@ -172,6 +212,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets gateway affiliation id field.
+     *
+     * @param string|null $value
      */
     public function gatewayAffiliationId(?string $value): self
     {
@@ -181,6 +223,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets quantity field.
+     *
+     * @param int|null $value
      */
     public function quantity(?int $value): self
     {
@@ -190,6 +234,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets boleto due days field.
+     *
+     * @param int|null $value
      */
     public function boletoDueDays(?int $value): self
     {
@@ -199,6 +245,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets period field.
+     *
+     * @param CreatePeriodRequest|null $value
      */
     public function period(?CreatePeriodRequest $value): self
     {
@@ -208,6 +256,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets submerchant field.
+     *
+     * @param CreateSubMerchantRequest|null $value
      */
     public function submerchant(?CreateSubMerchantRequest $value): self
     {
@@ -217,6 +267,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets split field.
+     *
+     * @param CreateSubscriptionSplitRequest|null $value
      */
     public function split(?CreateSubscriptionSplitRequest $value): self
     {
@@ -226,6 +278,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets boleto field.
+     *
+     * @param CreateSubscriptionBoletoRequest|null $value
      */
     public function boleto(?CreateSubscriptionBoletoRequest $value): self
     {
@@ -235,6 +289,8 @@ class CreateSubscriptionRequestBuilder
 
     /**
      * Sets indirect acceptor field.
+     *
+     * @param string|null $value
      */
     public function indirectAcceptor(?string $value): self
     {
@@ -243,7 +299,7 @@ class CreateSubscriptionRequestBuilder
     }
 
     /**
-     * Initializes a new create subscription request object.
+     * Initializes a new Create Subscription Request object.
      */
     public function build(): CreateSubscriptionRequest
     {

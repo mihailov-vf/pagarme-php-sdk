@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 class GetPhoneResponse implements \JsonSerializable
@@ -114,6 +115,23 @@ class GetPhoneResponse implements \JsonSerializable
     public function unsetAreaCode(): void
     {
         $this->areaCode = [];
+    }
+
+    /**
+     * Converts the GetPhoneResponse object to a human-readable string representation.
+     *
+     * @return string The string representation of the GetPhoneResponse object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'GetPhoneResponse',
+            [
+                'countryCode' => $this->getCountryCode(),
+                'number' => $this->getNumber(),
+                'areaCode' => $this->getAreaCode()
+            ]
+        );
     }
 
     /**

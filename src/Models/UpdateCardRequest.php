@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -234,6 +235,27 @@ class UpdateCardRequest implements \JsonSerializable
     public function setLabel(string $label): void
     {
         $this->label = $label;
+    }
+
+    /**
+     * Converts the UpdateCardRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the UpdateCardRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'UpdateCardRequest',
+            [
+                'holderName' => $this->holderName,
+                'expMonth' => $this->expMonth,
+                'expYear' => $this->expYear,
+                'billingAddressId' => $this->getBillingAddressId(),
+                'billingAddress' => $this->billingAddress,
+                'metadata' => $this->metadata,
+                'label' => $this->label
+            ]
+        );
     }
 
     /**

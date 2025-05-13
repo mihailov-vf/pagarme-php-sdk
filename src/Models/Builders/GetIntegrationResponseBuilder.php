@@ -31,7 +31,7 @@ class GetIntegrationResponseBuilder
     }
 
     /**
-     * Initializes a new get integration response Builder object.
+     * Initializes a new Get Integration Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetIntegrationResponseBuilder
 
     /**
      * Sets code field.
+     *
+     * @param string|null $value
      */
     public function code(?string $value): self
     {
@@ -48,7 +50,7 @@ class GetIntegrationResponseBuilder
     }
 
     /**
-     * Initializes a new get integration response object.
+     * Initializes a new Get Integration Response object.
      */
     public function build(): GetIntegrationResponse
     {

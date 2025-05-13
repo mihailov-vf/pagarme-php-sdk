@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PagarmeApiSDKLib\Models;
 
+use PagarmeApiSDKLib\ApiHelper;
 use stdClass;
 
 /**
@@ -58,6 +59,16 @@ class CreateSubMerchantRequest implements \JsonSerializable
     private $address;
 
     /**
+     * @var string
+     */
+    private $legalName;
+
+    /**
+     * @var string
+     */
+    private $siteUrl;
+
+    /**
      * @param string $paymentFacilitatorCode
      * @param string $code
      * @param string $name
@@ -66,6 +77,8 @@ class CreateSubMerchantRequest implements \JsonSerializable
      * @param string $type
      * @param CreatePhoneRequest $phone
      * @param CreateAddressRequest $address
+     * @param string $legalName
+     * @param string $siteUrl
      */
     public function __construct(
         string $paymentFacilitatorCode,
@@ -75,7 +88,9 @@ class CreateSubMerchantRequest implements \JsonSerializable
         string $document,
         string $type,
         CreatePhoneRequest $phone,
-        CreateAddressRequest $address
+        CreateAddressRequest $address,
+        string $legalName,
+        string $siteUrl
     ) {
         $this->paymentFacilitatorCode = $paymentFacilitatorCode;
         $this->code = $code;
@@ -85,6 +100,8 @@ class CreateSubMerchantRequest implements \JsonSerializable
         $this->type = $type;
         $this->phone = $phone;
         $this->address = $address;
+        $this->legalName = $legalName;
+        $this->siteUrl = $siteUrl;
     }
 
     /**
@@ -256,6 +273,72 @@ class CreateSubMerchantRequest implements \JsonSerializable
     }
 
     /**
+     * Returns Legal Name.
+     * Legal name
+     */
+    public function getLegalName(): string
+    {
+        return $this->legalName;
+    }
+
+    /**
+     * Sets Legal Name.
+     * Legal name
+     *
+     * @required
+     * @maps legal_name
+     */
+    public function setLegalName(string $legalName): void
+    {
+        $this->legalName = $legalName;
+    }
+
+    /**
+     * Returns Site Url.
+     * Site Url
+     */
+    public function getSiteUrl(): string
+    {
+        return $this->siteUrl;
+    }
+
+    /**
+     * Sets Site Url.
+     * Site Url
+     *
+     * @required
+     * @maps site_url
+     */
+    public function setSiteUrl(string $siteUrl): void
+    {
+        $this->siteUrl = $siteUrl;
+    }
+
+    /**
+     * Converts the CreateSubMerchantRequest object to a human-readable string representation.
+     *
+     * @return string The string representation of the CreateSubMerchantRequest object.
+     */
+    public function __toString(): string
+    {
+        return ApiHelper::stringify(
+            'CreateSubMerchantRequest',
+            [
+                'paymentFacilitatorCode' => $this->paymentFacilitatorCode,
+                'code' => $this->code,
+                'name' => $this->name,
+                'merchantCategoryCode' => $this->merchantCategoryCode,
+                'document' => $this->document,
+                'type' => $this->type,
+                'phone' => $this->phone,
+                'address' => $this->address,
+                'legalName' => $this->legalName,
+                'siteUrl' => $this->siteUrl
+            ]
+        );
+    }
+
+    /**
      * Encode this object to JSON
      *
      * @param bool $asArrayWhenEmpty Whether to serialize this model as an array whenever no fields
@@ -275,6 +358,8 @@ class CreateSubMerchantRequest implements \JsonSerializable
         $json['type']                     = $this->type;
         $json['phone']                    = $this->phone;
         $json['address']                  = $this->address;
+        $json['legal_name']               = $this->legalName;
+        $json['site_url']                 = $this->siteUrl;
 
         return (!$asArrayWhenEmpty && empty($json)) ? new stdClass() : $json;
     }

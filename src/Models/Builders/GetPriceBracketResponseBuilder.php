@@ -31,7 +31,7 @@ class GetPriceBracketResponseBuilder
     }
 
     /**
-     * Initializes a new get price bracket response Builder object.
+     * Initializes a new Get Price Bracket Response Builder object.
      */
     public static function init(): self
     {
@@ -40,6 +40,8 @@ class GetPriceBracketResponseBuilder
 
     /**
      * Sets start quantity field.
+     *
+     * @param int|null $value
      */
     public function startQuantity(?int $value): self
     {
@@ -58,6 +60,8 @@ class GetPriceBracketResponseBuilder
 
     /**
      * Sets price field.
+     *
+     * @param int|null $value
      */
     public function price(?int $value): self
     {
@@ -76,6 +80,8 @@ class GetPriceBracketResponseBuilder
 
     /**
      * Sets end quantity field.
+     *
+     * @param int|null $value
      */
     public function endQuantity(?int $value): self
     {
@@ -94,6 +100,8 @@ class GetPriceBracketResponseBuilder
 
     /**
      * Sets overage price field.
+     *
+     * @param int|null $value
      */
     public function overagePrice(?int $value): self
     {
@@ -111,7 +119,7 @@ class GetPriceBracketResponseBuilder
     }
 
     /**
-     * Initializes a new get price bracket response object.
+     * Initializes a new Get Price Bracket Response object.
      */
     public function build(): GetPriceBracketResponse
     {
